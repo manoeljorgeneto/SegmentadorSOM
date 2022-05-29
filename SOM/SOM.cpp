@@ -207,7 +207,7 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializ
     auto duracao = duration_cast<nanoseconds>(fim - inicio);
 
     // Finalizando o sumário de treinamento
-    this->Verboso(5, verboso, iteracoes,0,duracao.count());
+    this->Verboso(5, verboso, iteracoes, 0, duracao.count());
 }
 
 // Gets e sets
