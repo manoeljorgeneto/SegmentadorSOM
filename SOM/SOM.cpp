@@ -181,7 +181,7 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializ
 	
     this->desmarcaDados(dados); // Desmarca todos os dados
 
-    this->Verboso(3,verboso); // Continuando o sumário do treinamento
+    this->Verboso(3, verboso); // Continuando o sumário do treinamento
 
     auto inicio = high_resolution_clock::now(); // Início da contagem do tempo!
 
@@ -255,7 +255,7 @@ void SOM::sumario() {
     cout << "* Dimensão de entrada: " << this->dimensao_entrada << endl;
     cout << "* Valores (sigma, eta, tau1, tau2): " << "(" <<
          this->sigma_ini << ", " <<
-         this->eta_ini << ", " <<
+        this->eta_ini << ", " <<
          this->tau1 << ", " <<
          this->tau2 << ")" << endl;
     cout << "================================================================================" << endl;

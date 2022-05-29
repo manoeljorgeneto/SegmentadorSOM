@@ -2,11 +2,11 @@
 <project version="4">
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
   <component name="CidrRootsConfiguration">
-    <libraryRoots>
+    <sourceRoots>
       <file path="$PROJECT_DIR$/Calculos" />
       <file path="$PROJECT_DIR$/Codificador" />
       <file path="$PROJECT_DIR$/SOM" />
       <file path="$PROJECT_DIR$/Visualizacao" />
-    </libraryRoots>
+    </sourceRoots>
   </component>
 </project>
