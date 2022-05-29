@@ -1,1 +1,0 @@
-g++ -std=c++17 -fopenmp -O3 -Wall -Wextra -g main.cpp ./Calculos/Calculos.cpp ./Codificador/Dado.cpp ./SOM/Arranjo.cpp ./SOM/Neuronio.cpp ./SOM/SOM.cpp ./Visualizacao/MapaContextual.cpp ./Calculos/Calculos.h ./Codificador/Dado.h ./SOM/Arranjo.h ./SOM/Neuronio.h ./SOM/SOM.h ./Visualizacao/MapaContextual.h -o SegmentadorSOM
