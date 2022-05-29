@@ -23,9 +23,8 @@ using namespace std;
 int main(int argc, char *argv[]) {
     // Lidando com argumentos
     vector<string> arg(argc);
-    for (int i = 0; i < argc; i++) { // Copiando os argumentos para um vetor de strings
+    for (int i = 0; i < argc; i++) // Copiando os argumentos para um vetor de strings
         arg.at(i) = argv[i];
-    }
     cout << arg[0] << endl << endl; // Nome do programa
 
     // TODO Implementar um método de leitura de datasets
