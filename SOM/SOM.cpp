@@ -176,7 +176,7 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializ
         auto dura = duration_cast<nanoseconds>(fi - ini); // Cálculo do tempo decorrido
 
         // Fim da mensagem da inicialização dos neurônios
-        this->Verboso(2, verboso, iteracoes,0,dura.count());
+        this->Verboso(2, verboso, iteracoes, 0, dura.count());
     }
 	
     this->desmarcaDados(dados); // Desmarca todos os dados

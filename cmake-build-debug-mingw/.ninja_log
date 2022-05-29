@@ -17,3 +17,6 @@
 24	1568	6755335548014395	CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj	eb2ebd8f9a92b728
 6	1659	6755335549264337	CMakeFiles/SegmentadorSOM.dir/main.cpp.obj	5583ff0655248976
 1660	2495	6755335557545606	SegmentadorSOM.exe	8bda6ccbd47cb5e
+4	1148	6755344962218905	CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.obj	eb4edec991d9989
+14	1273	6755344963468904	CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj	eb2ebd8f9a92b728
+1273	1950	6755344970187718	SegmentadorSOM.exe	8bda6ccbd47cb5e
