@@ -15,14 +15,14 @@
 using namespace std;
 
 class MapaContextual {
-	void desmarcaNeuronios(vector<Neuronio*>* neuronios); // Desmarca todos os neurônios
-	bool todosNeuroniosMarcados(vector<Neuronio*>* neuronios); // Verifica se todos os neurônios estão marcados
+    void desmarcaNeuronios(vector<Neuronio*>* neuronios); // Desmarca todos os neurônios
+    bool todosNeuroniosMarcados(vector<Neuronio*>* neuronios); // Verifica se todos os neurônios estão marcados
 	
 public:
-	MapaContextual(); // Construtor
-	virtual ~MapaContextual(); // Destrutor
+    MapaContextual(); // Construtor
+    virtual ~MapaContextual(); // Destrutor
 
-	string geraMapa(vector<Dado*>* dados, Arranjo* arranjo); // Gera um Mapa Contextual
+    virtual string geraMapa(vector<Dado*>* dados, Arranjo* arranjo); // Gera um Mapa Contextual
 };
 
 #endif // MAPACONTEXTUAL_H_

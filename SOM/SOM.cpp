@@ -1,11 +1,11 @@
 #include "../SOM/SOM.h"
 
 double SOM::calculaSigma(unsigned int tempo) {
-	return this->sigma_ini * exp(-(double(tempo))/this->tau1);	
+    return this->sigma_ini * exp(-(double(tempo))/this->tau1);
 }
 
 double SOM::calculaEta(unsigned int tempo) {
-	return this->eta_ini * exp(-(double(tempo))/this->tau2);
+    return this->eta_ini * exp(-(double(tempo))/this->tau2);
 }
 
 // Gera um número real aleatório no intervalo [0,x), com distribuição uniforme
@@ -32,23 +32,23 @@ unsigned int SOM::geraRandInt(unsigned int n) {
 
 // Gera um vetor de pesos aleatório e normalizado
 vector<double> SOM::geraVetorRand() {
-	vector<double> vetor(this->dimensao_entrada);
+    vector<double> vetor(this->dimensao_entrada);
 	
-	// Preenche o vetor com valores aleatórios
+    // Preenche o vetor com valores aleatórios
     //#pragma omp parallel for
-	for(unsigned int i = 0; i < this->dimensao_entrada; i++) {
+    for(unsigned int i = 0; i < this->dimensao_entrada; i++) {
         double valor = this->geraRand(); // Intervalo entre 0 e 1
         unsigned int sinal = this->geraRandInt(); // Gera 0 ou 1
 
-		if(sinal == 1) 
-			vetor.at(i) = valor; // Número positivo
-		else
-			vetor.at(i) = -valor; // Negativo
-	}
+        if(sinal == 1)
+            vetor.at(i) = valor; // Número positivo
+        else
+            vetor.at(i) = -valor; // Negativo
+    }
 	
-	Calculos::normalizaVetor(&vetor); // Normaliza o vetor
+    Calculos::normalizaVetor(&vetor); // Normaliza o vetor
 
-	return vetor;
+    return vetor;
 }
 
 // Inicializa os neurônios do arranjo com valores aleatórios
@@ -80,24 +80,24 @@ Dado* SOM::getDadoRand(vector<Dado*>* dados) {
 // Desmarca todos os dados
 void SOM::desmarcaDados(vector<Dado*>* dados) {
     #pragma omp parallel for
-	for(auto i = dados->begin(); i != dados->end(); i++)
-		(*i)->setMarcado(false);
+    for(auto i = dados->begin(); i != dados->end(); i++)
+        (*i)->setMarcado(false);
 }
 
 // Retorna true quando todos estiverem marcados
 bool SOM::todosDadosMarcados(vector<Dado*>* dados) {
-	for(auto i = dados->begin(); i != dados->end(); i++)
+    for(auto i = dados->begin(); i != dados->end(); i++)
         if ((*i)->getMarcado() == false)
             return false;
-	return true;
+    return true;
 }
 
 // Atualiza todos os neurônios do arranjo
 void SOM::atualizaNeuronios(Neuronio* vencedor, Dado* dado, double eta, double sigma) {
-	// Percorre todos os neurônios e atualiza-os
+    // Percorre todos os neurônios e atualiza-os
     #pragma omp parallel for // Paralelizado FTW!!
-	for(auto i = this->arranjo->getNeuronios()->begin(); i != this->arranjo->getNeuronios()->end(); i++)
-		(*i)->atualiza(vencedor, dado, eta, sigma);
+    for(auto i = this->arranjo->getNeuronios()->begin(); i != this->arranjo->getNeuronios()->end(); i++)
+        (*i)->atualiza(vencedor, dado, eta, sigma);
 }
 
 // Mensagens durante o algoritmo de treinamento
@@ -146,19 +146,19 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
 // Construtor
 SOM::SOM(unsigned int largura, unsigned int dimensao_entrada, double sigma, double tau2, double eta, int semente) :
          ger_mt(semente) {
-	this->sigma_ini = sigma;
-	this->tau2 = tau2;
-	this->eta_ini = eta;
+    this->sigma_ini = sigma;
+    this->tau2 = tau2;
+    this->eta_ini = eta;
 	
-	this->tau1 = tau2/log(sigma);
+    this->tau1 = tau2/log(sigma);
 
     this->dimensao_entrada = dimensao_entrada;
-	this->arranjo = new Arranjo(largura, dimensao_entrada);
+    this->arranjo = new Arranjo(largura, dimensao_entrada);
 }
 
 // Destrutor
 SOM::~SOM() {
-	delete this->arranjo;
+    delete this->arranjo;
 }
 
 // Faz o treinamento do SOM segundo o algoritmo incremental
@@ -166,7 +166,7 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializ
 
     this->Verboso(0, verboso, iteracoes); // Começo do sumário do treinamento
 
-	if(inicializa) { // Inicializa os neurônios do arranjo de forma aleatória
+    if(inicializa) { // Inicializa os neurônios do arranjo de forma aleatória
         this->Verboso(1, verboso); // Começo da mensagem da inicialização dos neurônios
 
         auto ini = high_resolution_clock::now(); // Início da contagem do tempo!
@@ -179,28 +179,28 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializ
         this->Verboso(2, verboso, iteracoes,0,dura.count());
     }
 	
-	this->desmarcaDados(dados); // Desmarca todos os dados
+    this->desmarcaDados(dados); // Desmarca todos os dados
 
     this->Verboso(3,verboso); // Continuando o sumário do treinamento
 
     auto inicio = high_resolution_clock::now(); // Início da contagem do tempo!
 
-	// Repete até o número máximo de iterações
-	for(unsigned int n_it = 0; n_it < iteracoes; n_it++) {
+    // Repete até o número máximo de iterações
+    for(unsigned int n_it = 0; n_it < iteracoes; n_it++) {
         double sigma = this->calculaSigma(n_it); // Calcula a largura da vizinhança
-		double eta = this->calculaEta(n_it); // Calcula a taxa de aprendizado
+        double eta = this->calculaEta(n_it); // Calcula a taxa de aprendizado
 		
-		// Apresenta todos os dados de forma aleatória e atualiza os pesos sinápticos dos neurônios no arranjo
+        // Apresenta todos os dados de forma aleatória e atualiza os pesos sinápticos dos neurônios no arranjo
         while (!this->todosDadosMarcados(dados)) {
             auto dado = this->getDadoRand(dados); // Obtém um dado de forma aleatória
             auto vencedor = this->arranjo->getVencedor(dado); // Faz a competição
             this->atualizaNeuronios(*vencedor, dado, eta, sigma); // Atualiza os neurônios do arranjo!
         }
 
-		this->desmarcaDados(dados); // Desmarca os dados ao final de cada iteração
+        this->desmarcaDados(dados); // Desmarca os dados ao final de cada iteração
 
         this->Verboso(4, verboso, iteracoes, n_it); // Exibição do progresso
-	}
+    }
 
     auto fim = high_resolution_clock::now(); // Fim da contagem do tempo!
     // Cálculo do tempo passado para o aprendizado
@@ -212,39 +212,39 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializ
 
 // Gets e sets
 double SOM::getSigmaIni() {
-	return this->sigma_ini;
+    return this->sigma_ini;
 }
 
 double SOM::getEtaIni(){
-	return this->eta_ini;
+    return this->eta_ini;
 }
 
 double SOM::getTau1(){
-	return this->tau1;
+    return this->tau1;
 }
 
 double SOM::getTau2(){
-	return this->tau2;
+    return this->tau2;
 }
 
 Arranjo* SOM::getArranjo(){
-	return this->arranjo;
+    return this->arranjo;
 }
 	
 void SOM::setSigmaIni(double sigma){
-	this->sigma_ini = sigma;
+    this->sigma_ini = sigma;
 }
 
 void SOM::setEtaIni(double eta){
-	this->eta_ini = eta;
+    this->eta_ini = eta;
 }
 
 void SOM::setTau1(double tau1){
-	this->tau1 = tau1;
+    this->tau1 = tau1;
 }
 
 void SOM::setTau2(double tau2) {
-	this->tau2 = tau2;
+    this->tau2 = tau2;
 }
 
 // Faz um sumário do SOM
