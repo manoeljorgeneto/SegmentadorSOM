@@ -1,0 +1,12 @@
+# ninja log v5
+0	30	6753972715839055	build.ninja	e456852d3d15cab1
+0	5	0	clean	4f383cff9a27ee95
+580	657	1653678029152629051	SegmentadorSOM	fbbba5703e40fa03
+9	927	6753974657572560	CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.obj	1e63bbef9cc232f7
+25	1251	6753974660853826	CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.obj	1672758fa5547462
+21	1274	6753974661010011	CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.obj	f5c78a9c88e4e043
+14	1295	6753974661322543	CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.obj	300dab91f1638df9
+12	1391	6753974662260041	CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.obj	eb4edec991d9989
+18	1611	6753974664447577	CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj	eb2ebd8f9a92b728
+1	1631	6753974664603884	CMakeFiles/SegmentadorSOM.dir/main.cpp.obj	5583ff0655248976
+1631	2439	6753974672668858	SegmentadorSOM.exe	8bda6ccbd47cb5e

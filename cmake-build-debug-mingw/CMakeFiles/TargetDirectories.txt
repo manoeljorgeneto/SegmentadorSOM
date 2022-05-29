@@ -1,0 +1,3 @@
+D:/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-mingw/CMakeFiles/SegmentadorSOM.dir
+D:/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
+D:/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir

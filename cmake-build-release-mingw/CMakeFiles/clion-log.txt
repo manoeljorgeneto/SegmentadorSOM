@@ -1,0 +1,4 @@
+D:\Programas\msys64\mingw64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=D:/Programas/JetBrains/CLion/bin/ninja/win/ninja.exe -G Ninja -S D:\Documentos\CLionProjects\SegmentadorSOM -B D:\Documentos\CLionProjects\SegmentadorSOM\cmake-build-release-mingw
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Documentos/CLionProjects/SegmentadorSOM/cmake-build-release-mingw
