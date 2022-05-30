@@ -108,36 +108,36 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
     // Escolha das mensagens a serem exibidas
     switch (msg) {
         case 0: { // Início do sumário de treinamento
-            cout << "================================================================================" << endl;
-            cout << "- Dados de treinamento:" << endl;
+            cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << endl;
+            cout << " - Dados de treinamento:" << endl;
             if(omp_get_num_procs() > 1)
-                cout << "* Utilizando OpenMP: " << omp_get_num_procs() << " processadores" << endl;
-            cout << "* Número de iterações: " << iteracoes << endl;
+                cout << " * Utilizando OpenMP: " << omp_get_num_procs() << " processadores" << endl;
+            cout << " * Número de iterações: " << iteracoes << endl;
             break;
         }
         case 1: { // Começo da mensagem da inicialização dos neurônios
-            cout << "* Inicializando os neurônios de forma aleatória..." << endl;
+            cout << " * Inicializando os neurônios de forma aleatória..." << endl;
             break;
         }
         case 2: { // Fim da mensagem da inicialização dos neurônios
-            cout << "   * Tempo decorrido: " << tempo/1000000000.0 << " segundo(s)." << endl << endl;
+            cout << "    * Tempo decorrido: " << tempo/1000000000.0 << " segundo(s)." << endl << endl;
             break;
         }
         case 3: { // Continuando o sumário do treinamento
-            cout << "* Treinando o SOM..." << endl << endl;
+            cout << " * Treinando o SOM..." << endl << endl;
             break;
         }
         case 4: { // TODO Verificar melhor isso
             if( (10*(n_it + 1) % iteracoes) == 0) { // A cada 10%, faz uma exibição do progresso
-                cout << "   * Progresso: " << (n_it + 1) << " iterações (" << (100 * (n_it + 1) / iteracoes) << "%)" <<
+                cout << "    * Progresso: " << (n_it + 1) << " iterações (" << (100 * (n_it + 1) / iteracoes) << "%)" <<
                      endl;
             }
             break;
         }
         case 5: { // Finalizando o sumário de treinamento
-            cout << endl << "* Mapa gerado!" << endl;
-            cout << "* Tempo decorrido: " << tempo/1000000000.0 << " segundo(s)." << endl;
-            cout << "================================================================================" << endl;
+            cout << endl << " * Mapa gerado!" << endl;
+            cout << " * Tempo decorrido: " << tempo/1000000000.0 << " segundo(s)." << endl;
+            cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << endl;
             break;
         }
     }
@@ -249,14 +249,14 @@ void SOM::setTau2(double tau2) {
 
 // Faz um sumário do SOM
 void SOM::sumario() {
-    cout << "================================ Sumário do SOM ================================" << endl;
-    cout << "- Hiperparâmetros:" << endl;
-    cout << "* Dimensão do mapa: " << this->arranjo->getLargura() << " x " << this->arranjo->getLargura() << endl;
-    cout << "* Dimensão de entrada: " << this->dimensao_entrada << endl;
-    cout << "* Valores (sigma, eta, tau1, tau2): " << "(" <<
+    cout << "╔═══════════════════════════════ Sumário do SOM ═══════════════════════════════╗" << endl;
+    cout << " - Hiperparâmetros:" << endl;
+    cout << " * Dimensão do mapa: " << this->arranjo->getLargura() << " x " << this->arranjo->getLargura() << endl;
+    cout << " * Dimensão de entrada: " << this->dimensao_entrada << endl;
+    cout << " * Valores (sigma, eta, tau1, tau2): " << "(" <<
          this->sigma_ini << ", " <<
         this->eta_ini << ", " <<
          this->tau1 << ", " <<
          this->tau2 << ")" << endl;
-    cout << "================================================================================" << endl;
+    cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << endl;
 }

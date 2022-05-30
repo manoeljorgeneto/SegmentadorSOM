@@ -41,16 +41,16 @@ public:
     void setRotulo(string rotulo);
     void setMarcado(bool marcado);
 
-    double getDistancia(const vector<double> &vetor); // Distância euclidiana
+    virtual double getDistancia(const vector<double> &vetor); // Distância euclidiana
     void normaliza(); // Normaliza seus pesos sinápticos
 
-    double calculaDistanciaEspacial(Neuronio* n); // Retorna a distância espacial entre dois neurônios
+    virtual double calculaDistanciaEspacial(Neuronio* n); // Retorna a distância espacial entre dois neurônios
 
-    double calculaVizinhanca(Neuronio* n, double sigma); // Calcula a função de vizinhança do neurônio, dado um vencedor
+    virtual double calculaVizinhanca(Neuronio* n, double sigma); // Calcula a função de vizinhança do neurônio, dado um vencedor
 	
     /* Atualiza o neurônio, segundo o algoritmo da Seção 3.2.3
      * E depois normaliza o vetor de pesos */
-    void atualiza(Neuronio* vencedor, Dado* dado, double eta, double sigma);
+    virtual void atualiza(Neuronio* vencedor, Dado* dado, double eta, double sigma);
 	
     virtual string toString(); // Converte para String
 };
