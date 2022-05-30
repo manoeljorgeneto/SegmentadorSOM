@@ -254,9 +254,9 @@ void SOM::sumario() {
     cout << " * Dimensão do mapa: " << this->arranjo->getLargura() << " x " << this->arranjo->getLargura() << endl;
     cout << " * Dimensão de entrada: " << this->dimensao_entrada << endl;
     cout << " * Valores (sigma, eta, tau1, tau2): " << "(" <<
-         this->sigma_ini << ", " <<
+        this->sigma_ini << ", " <<
         this->eta_ini << ", " <<
-         this->tau1 << ", " <<
-         this->tau2 << ")" << endl;
+        this->tau1 << ", " <<
+        this->tau2 << ")" << endl;
     cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << endl;
 }
