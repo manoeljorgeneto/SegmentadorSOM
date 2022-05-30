@@ -1,0 +1,53 @@
+./SegmentadorSOM
+
+Dado(Pa): 0.316228 0 0.948683 0 0 0 
+Dado(Al): 0.218218 0.654654 0.654654 0.218218 0.218218 0 
+Dado(Ma): 0.152499 0.609994 0.762493 0 0 0.152499 
+Dado(Mi): 0 0.696311 0.696311 0.174078 0 0 
+Dado(Si): 0.229416 0.229416 0.917663 0.229416 0 0 
+Dado(Pe): 0 0.141421 0.989949 0 0 0 
+Dado(Mt): 0 0.19245 0.96225 0 0 0.19245 
+Dado(Ad): 0.258199 0.516398 0.774597 0.258199 0 0 
+Dado(Br): 0 0 1 0 0 0 
+Dado(Jo): 0 0.588348 0.784465 0.196116 0 0 
+Dado(Ti): 0 0 0.948683 0.316228 0 0 
+Dado(Ag): 0 0.5547 0.83205 0 0 0 
+Dado(Le): 0.19245 0 0.96225 0 0 0.19245 
+Dado(Fr): 0.130189 0.390567 0.911322 0 0 0 
+Dado(Ca): 0.213201 0.426401 0.852803 0.213201 0 0 
+Dado(He): 0 0.447214 0.894427 0 0 0 
+Dado(Af): 0 0.833333 0.5 0.166667 0.166667 0 
+Dado(Cr): 0 0.447214 0.894427 0 0 0 
+Dado(Ve): 0.166667 0.5 0.833333 0 0 0.166667 
+Dado(Ju): 0.140028 0.140028 0.980196 0 0 0 
+
+╔═══════════════════════════════ Sumário do SOM ═══════════════════════════════╗
+ - Hiperparâmetros:
+ * Dimensão do mapa: 1000 x 1000
+ * Dimensão de entrada: 6
+ * Valores (sigma, eta, tau1, tau2): (2.5, 0.1, 1091.36, 1000)
+╚══════════════════════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════════════════╗
+ - Dados de treinamento:
+ * Utilizando OpenMP: 12 processadores
+ * Número de iterações: 1000
+ * Inicializando os neurônios de forma aleatória...
+    * Tempo decorrido: 0.325113 segundo(s).
+
+ * Treinando o SOM...
+
+    * Progresso: 100 iterações (10%)
+    * Progresso: 200 iterações (20%)
+    * Progresso: 300 iterações (30%)
+    * Progresso: 400 iterações (40%)
+    * Progresso: 500 iterações (50%)
+    * Progresso: 600 iterações (60%)
+    * Progresso: 700 iterações (70%)
+    * Progresso: 800 iterações (80%)
+    * Progresso: 900 iterações (90%)
+    * Progresso: 1000 iterações (100%)
+
+ * Mapa gerado!
+ * Tempo decorrido: 1224.01 segundo(s).
+╚══════════════════════════════════════════════════════════════════════════════╝
+

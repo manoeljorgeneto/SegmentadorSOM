@@ -21,35 +21,35 @@ Dado(Cr): 0 0.447214 0.894427 0 0 0
 Dado(Ve): 0.166667 0.5 0.833333 0 0 0.166667 
 Dado(Ju): 0.140028 0.140028 0.980196 0 0 0 
 
-================================ Sumário do SOM ================================
-- Hiperparâmetros:
-* Dimensão do mapa: 100 x 100
-* Dimensão de entrada: 6
-* Valores (sigma, eta, tau1, tau2): (2.5, 0.1, 1091.36, 1000)
-================================================================================
-================================================================================
-- Dados de treinamento:
-* Utilizando OpenMP: 12 processadores
-* Número de iterações: 30000
-* Inicializando os neurônios de forma aleatória...
-   * Tempo decorrido: 0.0047818 segundo(s).
+╔═══════════════════════════════ Sumário do SOM ═══════════════════════════════╗
+ - Hiperparâmetros:
+ * Dimensão do mapa: 100 x 100
+ * Dimensão de entrada: 6
+ * Valores (sigma, eta, tau1, tau2): (2.5, 0.1, 1091.36, 1000)
+╚══════════════════════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════════════════╗
+ - Dados de treinamento:
+ * Utilizando OpenMP: 12 processadores
+ * Número de iterações: 30000
+ * Inicializando os neurônios de forma aleatória...
+    * Tempo decorrido: 0.00870454 segundo(s).
 
-* Treinando o SOM...
+ * Treinando o SOM...
 
-   * Progresso: 3000 iterações (10%)
-   * Progresso: 6000 iterações (20%)
-   * Progresso: 9000 iterações (30%)
-   * Progresso: 12000 iterações (40%)
-   * Progresso: 15000 iterações (50%)
-   * Progresso: 18000 iterações (60%)
-   * Progresso: 21000 iterações (70%)
-   * Progresso: 24000 iterações (80%)
-   * Progresso: 27000 iterações (90%)
-   * Progresso: 30000 iterações (100%)
+    * Progresso: 3000 iterações (10%)
+    * Progresso: 6000 iterações (20%)
+    * Progresso: 9000 iterações (30%)
+    * Progresso: 12000 iterações (40%)
+    * Progresso: 15000 iterações (50%)
+    * Progresso: 18000 iterações (60%)
+    * Progresso: 21000 iterações (70%)
+    * Progresso: 24000 iterações (80%)
+    * Progresso: 27000 iterações (90%)
+    * Progresso: 30000 iterações (100%)
 
-* Mapa gerado!
-* Tempo decorrido: 298.838 segundo(s).
-================================================================================
+ * Mapa gerado!
+ * Tempo decorrido: 297.726 segundo(s).
+╚══════════════════════════════════════════════════════════════════════════════╝
 
 Br		Af		Mi		Pa		Ju		Fr		Ca		Ti		Si		Le		Cr		Af		Pa		Af		Br		Le		Ag		Ju		Ad		Cr		Mt		Si		Ag		Ad		Ve		Mt		He		Ti		Ag		Af		Ma		Ma		Fr		Al		Ad		Ag		Ag		Ca		Mi		Fr		Ve		Ad		Si		Le		Ma		Si		Si		Br		Cr		Ve		Ca		Ju		Ve		Ca		Mt		Af		Br		Ca		He		Al		Le		Br		Al		Ju		Fr		Ju		Ca		Jo		Mi		Mi		Pe		Br		Jo		Ve		Cr		Si		Al		Si		Pe		Ca		Br		Jo		Al		Pe		Jo		Pe		Pa		Jo		Ve		Fr		Ve		Ca		Mt		Mt		Al		Af		Al		He		Jo		He		
 Ca		He		Jo		Ju		Br		Pa		Le		Ve		Pa		He		Ju		Mi		Le		Fr		Ju		Ve		Ag		Le		Ti		Jo		Ti		Pe		Mt		Le		Pe		Ju		Ju		Fr		Ti		Mi		Ma		Mt		Si		Mi		Ju		Ma		Ag		Ju		Ag		Af		Mt		Ma		Ad		Mi		Ma		Ju		Ti		Ve		Mi		Fr		Jo		Ju		He		Al		Pe		Ag		Cr		Ad		Fr		Si		Pe		Le		Ag		Cr		Si		Ag		Ju		Br		Ma		Cr		Br		Ag		Ju		Ju		Af		Ca		Pa		Mi		Af		Cr		Le		Jo		Si		Pe		Pa		He		Pa		Br		Fr		Ad		Ti		Fr		Pa		Ve		Pe		Ag		Pe		Fr		Fr		Ad		

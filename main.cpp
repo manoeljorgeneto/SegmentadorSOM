@@ -160,7 +160,7 @@ int main(int argc, char *argv[]) {
     // TODO Atualizar o algoritmo SOM, incluindo paralelização
     // TODO Incluir o método de aprendizado batch (verificar literatura)
     // Criação do SOM, definindo os hiperparâmetros
-    SOM* som = new SOM(10,6);
+    SOM* som = new SOM(10, 6);
 
     som->sumario(); // Sumário do SOM
 
