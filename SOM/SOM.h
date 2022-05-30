@@ -61,7 +61,7 @@ public:
     virtual void treinaSOM(vector<Dado*>* dados, unsigned int iteracoes = 10000, bool inicializa = true,
                            bool verboso = true);
 	
-	// Gets e sets
+    // Gets e sets
     double getSigmaIni();
     double getEtaIni();
     double getTau1();
