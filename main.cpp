@@ -168,7 +168,7 @@ int main(int argc, char *argv[]) {
 
     cout << endl;
 
-    // TODO Criação de melhores visualizações
+    // TODO Criação de melhores visualizações (verificar literatura)
     // Geração do mapa contextual
     MapaContextual* mapa = new MapaContextual();
     Arranjo* arr = som->getArranjo();
