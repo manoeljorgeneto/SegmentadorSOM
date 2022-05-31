@@ -162,7 +162,6 @@ SOM::~SOM() {
 
 // Faz o treinamento do SOM segundo o algoritmo incremental
 void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializa, bool verboso) {
-
     this->Verboso(0, verboso, iteracoes); // Começo do sumário do treinamento
 
     if(inicializa) { // Inicializa os neurônios do arranjo de forma aleatória
