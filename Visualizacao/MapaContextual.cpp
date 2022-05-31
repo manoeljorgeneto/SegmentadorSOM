@@ -2,6 +2,7 @@
 
 // Desmarca todos os neurônios
 void MapaContextual::desmarcaNeuronios(vector<Neuronio*>* neuronios) {
+    #pragma omp parallel for
     for(vector<Neuronio*>::iterator i = neuronios->begin(); i != neuronios->end(); i++)
         (*i)->setMarcado(false);
 }
@@ -38,7 +39,7 @@ string MapaContextual::geraMapa(vector<Dado*>* dados, Arranjo* arranjo) {
         while((i < dados->size()) && !this->todosNeuroniosMarcados(arranjo->getNeuronios())) {
             d = dados->at(i);
             n = arranjo->getVencedor(d,true); // Acha o vencedor e marca-o
-            (*n)->setRotulo(d->getRotulo()); // Rotula o neur�nio
+            (*n)->setRotulo(d->getRotulo()); // Rotula o neurônio
             i++;
         }
         i = 0;
