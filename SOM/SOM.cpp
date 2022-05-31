@@ -128,10 +128,9 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
             break;
         }
         case 4: { // TODO Verificar melhor isso
-            if( (10*(n_it + 1) % iteracoes) == 0) { // A cada 10%, faz uma exibição do progresso
+            if( (10*(n_it + 1) % iteracoes) == 0) // A cada 10%, faz uma exibição do progresso
                 cout << "    * Progresso: " << (n_it + 1) << " iterações (" << (100 * (n_it + 1) / iteracoes) << "%)" <<
                      endl;
-            }
             break;
         }
         case 5: { // Finalizando o sumário de treinamento
