@@ -181,6 +181,6 @@ int main(int argc, char *argv[]) {
     cout << endl;
     for(auto i = arr->getNeuronios()->begin(); i != arr->getNeuronios()->end(); i++)
         cout << (*i)->toString() << endl;
-	
+
     return EXIT_SUCCESS;
 }
