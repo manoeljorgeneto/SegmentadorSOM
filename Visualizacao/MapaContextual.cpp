@@ -54,7 +54,7 @@ string MapaContextual::geraMapa(vector<Dado*>* dados, Arranjo* arranjo) {
 
     // Percorre todos os neurônios e escreve os seus rótulos em mapa
     for(n = arranjo->getNeuronios()->begin(); n != arranjo->getNeuronios()->end(); n++, i++) {
-        if((i % largura == 0) && (i / largura != 0))
+        if((i % largura == 0) && (i != 0))
             mapa << endl;
         mapa << (*n)->getRotulo() << "		";
     }
