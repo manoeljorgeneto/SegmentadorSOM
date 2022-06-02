@@ -52,3 +52,7 @@
 68	2808	6757518272860452	CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj	eb2ebd8f9a92b728
 5	2832	6757518273172922	CMakeFiles/SegmentadorSOM.dir/main.cpp.obj	5583ff0655248976
 2832	4013	6757518284892090	SegmentadorSOM.exe	8bda6ccbd47cb5e
+78	2847	6758988717526238	CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.obj	1672758fa5547462
+73	2922	6758988718307457	CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj	eb2ebd8f9a92b728
+4	2923	6758988718307457	CMakeFiles/SegmentadorSOM.dir/main.cpp.obj	5583ff0655248976
+2923	4271	6758988731723984	SegmentadorSOM.exe	8bda6ccbd47cb5e

@@ -8,9 +8,9 @@ double SOM::calculaEta(unsigned int tempo) {
     return this->eta_ini * exp(-(double(tempo))/this->tau2);
 }
 
-// Gera um número real aleatório no intervalo [0,x), com distribuição uniforme
-double SOM::geraRand(double x) {
-    std::uniform_real_distribution<> dis_ur(0.0, x); // distribuição uniforme (reais)
+// Gera um número real aleatório no intervalo [x,y), com distribuição uniforme
+double SOM::geraRand(double x, double y) {
+    std::uniform_real_distribution<> dis_ur(x, y); // distribuição uniforme (reais)
     double r;
 
     #pragma omp critical
@@ -19,9 +19,9 @@ double SOM::geraRand(double x) {
     return r;
 }
 
-// Gera um inteiro aleatório no intervalo [0,n]
-unsigned int SOM::geraRandInt(unsigned int n) {
-    std::uniform_int_distribution<> dis_ui(0, n); // distribuição uniforme (inteiros)
+// Gera um inteiro aleatório no intervalo [m,n]
+unsigned int SOM::geraRandInt(unsigned int m, unsigned int n) {
+    std::uniform_int_distribution<> dis_ui(m, n); // distribuição uniforme (inteiros)
     unsigned int r;
 
     #pragma omp critical
@@ -36,15 +36,8 @@ vector<double> SOM::geraVetorRand() {
 	
     // Preenche o vetor com valores aleatórios
     //#pragma omp parallel for
-    for(unsigned int i = 0; i < this->dimensao_entrada; i++) {
-        double valor = this->geraRand(); // Intervalo entre 0 e 1
-        unsigned int sinal = this->geraRandInt(); // Gera 0 ou 1
-
-        if(sinal == 1)
-            vetor.at(i) = valor; // Número positivo
-        else
-            vetor.at(i) = -valor; // Negativo
-    }
+    for(unsigned int i = 0; i < this->dimensao_entrada; i++)
+        vetor.at(i) = this->geraRand(-1.0, 1.0); // Intervalo entre -1 e 1
 	
     Calculos::normalizaVetor(&vetor); // Normaliza o vetor
 
@@ -67,7 +60,7 @@ Dado* SOM::getDadoRand(vector<Dado*>* dados) {
     Dado* d;
 
     do {
-        rnd = this->geraRandInt(dados->size() - 1); // Gera um número aleatório
+        rnd = this->geraRandInt(0, dados->size() - 1); // Gera um número aleatório
         d = dados->at(rnd);	// Obtém um dado
     } while(d->getMarcado() && !this->todosDadosMarcados(dados));
 
@@ -119,21 +112,17 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
             cout << " * Inicializando os neurônios de forma aleatória..." << endl;
             break;
         }
-        case 2: { // Fim da mensagem da inicialização dos neurônios
-            cout << "    * Tempo decorrido: " << tempo/1000000000.0 << " segundo(s)." << endl << endl;
+        case 2: { // Continuando o sumário do treinamento
+            cout << endl << " * Treinando o SOM..." << endl << endl;
             break;
         }
-        case 3: { // Continuando o sumário do treinamento
-            cout << " * Treinando o SOM..." << endl << endl;
-            break;
-        }
-        case 4: { // TODO Verificar melhor isso
+        case 3: { // TODO Verificar melhor isso
             if( (10*(n_it + 1) % iteracoes) == 0) // A cada 10%, faz uma exibição do progresso
                 cout << "    * Progresso: " << (n_it + 1) << " iterações (" << (100 * (n_it + 1) / iteracoes) << "%)" <<
                      endl;
             break;
         }
-        case 5: { // Finalizando o sumário de treinamento
+        case 4: { // Finalizando o sumário de treinamento
             cout << endl << " * Mapa gerado!" << endl;
             cout << " * Tempo decorrido: " << tempo/1000000000.0 << " segundo(s)." << endl;
             cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << endl;
@@ -165,21 +154,13 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializ
     this->Verboso(0, verboso, iteracoes); // Começo do sumário do treinamento
 
     if(inicializa) { // Inicializa os neurônios do arranjo de forma aleatória
-        this->Verboso(1, verboso); // Começo da mensagem da inicialização dos neurônios
-
-        auto ini = high_resolution_clock::now(); // Início da contagem do tempo!
+        this->Verboso(1, verboso); // Mensagem de inicialização dos neurônios
         this->inicializaRand(); // Inicializa os neurônios do arranjo com valores aleatórios
-        auto fi = high_resolution_clock::now(); // Fim da contagem do tempo!
-
-        auto dura = duration_cast<nanoseconds>(fi - ini); // Cálculo do tempo decorrido
-
-        // Fim da mensagem da inicialização dos neurônios
-        this->Verboso(2, verboso, iteracoes, 0, dura.count());
     }
-	
+
     this->desmarcaDados(dados); // Desmarca todos os dados
 
-    this->Verboso(3, verboso); // Continuando o sumário do treinamento
+    this->Verboso(2, verboso); // Continuando o sumário do treinamento
 
     auto inicio = high_resolution_clock::now(); // Início da contagem do tempo!
 
@@ -197,7 +178,7 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializ
 
         this->desmarcaDados(dados); // Desmarca os dados ao final de cada iteração
 
-        this->Verboso(4, verboso, iteracoes, n_it); // Exibição do progresso
+        this->Verboso(3, verboso, iteracoes, n_it); // Exibição do progresso
     }
 
     auto fim = high_resolution_clock::now(); // Fim da contagem do tempo!
@@ -205,7 +186,7 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializ
     auto duracao = duration_cast<nanoseconds>(fim - inicio);
 
     // Finalizando o sumário de treinamento
-    this->Verboso(5, verboso, iteracoes, 0, duracao.count());
+    this->Verboso(4, verboso, iteracoes, 0, duracao.count());
 }
 
 // Gets e sets

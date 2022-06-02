@@ -34,8 +34,8 @@ class SOM {
     double calculaSigma(unsigned int tempo); // Calcula a largura da vizinhança
     double calculaEta(unsigned int tempo); // Calcula a taxa de aprendizado
 
-    double geraRand(double x = 1.0); // Gera um número real aleatório no intervalo [0,x), com distribuição uniforme
-    unsigned int geraRandInt(unsigned int n = 1); // Gera um inteiro aleatório no intervalo [0,n]
+    double geraRand(double x, double y); // Gera um número real aleatório no intervalo [x,y), com distribuição uniforme
+    unsigned int geraRandInt(unsigned int m, unsigned int n); // Gera um inteiro aleatório no intervalo [m,n]
 
     vector<double> geraVetorRand(); // Gera um vetor de pesos aleatório
     void inicializaRand(); // Inicializa os neurônios do arranjo com valores aleatórios
