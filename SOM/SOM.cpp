@@ -108,7 +108,7 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
             cout << " * Número de iterações: " << iteracoes << endl;
             break;
         }
-        case 1: { // Começo da mensagem da inicialização dos neurônios
+        case 1: { // Mensagem de inicialização dos neurônios
             cout << " * Inicializando os neurônios de forma aleatória..." << endl;
             break;
         }
