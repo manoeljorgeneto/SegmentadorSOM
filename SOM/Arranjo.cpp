@@ -21,6 +21,7 @@
 
 #include "../SOM/Arranjo.h"
 
+// Cria uma posição 2D, dado um inteiro
 vector<unsigned int>* Arranjo::criaPosicao(unsigned int n) {
     unsigned int pos_x = n % this->largura; // Cálculo das posições
     unsigned int pos_y = n / this->largura;
@@ -30,7 +31,8 @@ vector<unsigned int>* Arranjo::criaPosicao(unsigned int n) {
 	
     return pos;
 }
- 
+
+// Cria um neurônio na posição correta no arranjo
 Neuronio* Arranjo::criaNeuronio(unsigned int n) {			 
     return new Neuronio(this->dimensao,this->criaPosicao(n));
 }

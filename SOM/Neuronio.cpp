@@ -51,6 +51,7 @@ Neuronio::~Neuronio() {
     delete this->posicao;
 }
 
+// Gets e sets
 unsigned int Neuronio::getDim() {
     return this->dim_entrada;
 }
@@ -84,14 +85,17 @@ void Neuronio::setMarcado(bool marcado) {
     this->marcado = marcado;
 }
 
+// Distância euclidiana
 double Neuronio::getDistancia(const vector<double> &vetor) {
     return Calculos::calculaDistancia(vetor, *this->pesos);
 }
 
+// Normaliza seus pesos sinápticos
 void Neuronio::normaliza() {
     Calculos::normalizaVetor(this->pesos);
 }
 
+// Retorna a distância espacial entre dois neurônios
 double Neuronio::calculaDistanciaEspacial(Neuronio* n) {	
     // Converte os vetores de inteiro para double
     vector<double> this_pos(this->dim_saida);
@@ -105,6 +109,7 @@ double Neuronio::calculaDistanciaEspacial(Neuronio* n) {
     return Calculos::calculaDistancia(n_pos,this_pos);
 }
 
+// Calcula a função de vizinhança do neurônio, dado um vencedor
 double Neuronio::calculaVizinhanca(Neuronio* n,	double sigma) {
     return exp(-pow((this)->calculaDistanciaEspacial(n),2)/(2*pow(sigma,2)));
 }
@@ -129,6 +134,7 @@ void Neuronio::atualiza(Neuronio* vencedor, Dado* dado,	double eta, double sigma
     this->normaliza();
 }
 
+// Converte para String
 string Neuronio::toString() {
     ostringstream str("");
 	
