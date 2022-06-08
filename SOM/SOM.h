@@ -58,9 +58,9 @@ class SOM {
     double geraRand(double x, double y); // Gera um número real aleatório no intervalo [x,y), com distribuição uniforme
     unsigned int geraRandInt(unsigned int m, unsigned int n); // Gera um inteiro aleatório no intervalo [m,n]
 
-    vector<double> geraVetorRand(); // Gera um vetor de pesos aleatório
+    vector<double> geraVetorRand(); // Gera um vetor de pesos aleatório e normalizado
     void inicializaRand(); // Inicializa os neurônios do arranjo com valores aleatórios
-    Dado* getDadoRand(vector<Dado*>* dados); // Obtém um dado ainda não marcado
+    Dado* getDadoRand(vector<Dado*>* dados); // Obtém um dado ainda não marcado de forma aleatória
 	
     void desmarcaDados(vector<Dado*>* dados); // Desmarca todos os dados
     bool todosDadosMarcados(vector<Dado*>* dados); // Verifica se todos os dados foram marcados
