@@ -53,7 +53,9 @@ public:
     unsigned int getTamanho();
     void setNeuronios(vector<Neuronio*>* neuronios);
 
-    // Retorna o iterador para o neurônio vencedor
+    /* Faz a competição entre os neurônios para descobrir quem é o vencedor:
+     * O vencedor é o neurônio cujo vetor de pesos sinápticos tem a menor distância em relação
+     * ao vetor de dados apresentado */
     vector<Neuronio*>::iterator getVencedor(Dado* dado, bool marcar = false);
 };
 

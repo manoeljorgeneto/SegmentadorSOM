@@ -21,10 +21,12 @@
 
 #include "../SOM/SOM.h"
 
+// Calcula a largura da vizinhança
 double SOM::calculaSigma(unsigned int tempo) {
     return this->sigma_ini * exp(-(double(tempo))/this->tau1);
 }
 
+// Calcula a taxa de aprendizado
 double SOM::calculaEta(unsigned int tempo) {
     return this->eta_ini * exp(-(double(tempo))/this->tau2);
 }
@@ -98,7 +100,7 @@ void SOM::desmarcaDados(vector<Dado*>* dados) {
         (*i)->setMarcado(false);
 }
 
-// Retorna true quando todos estiverem marcados
+// Verifica se todos os dados foram marcados
 bool SOM::todosDadosMarcados(vector<Dado*>* dados) {
     for(auto i = dados->begin(); i != dados->end(); i++)
         if ((*i)->getMarcado() == false)

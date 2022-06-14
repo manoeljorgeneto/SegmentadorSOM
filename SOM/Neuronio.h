@@ -68,11 +68,13 @@ public:
     virtual double calculaDistanciaEspacial(Neuronio* n); // Retorna a distância espacial entre dois neurônios
 
     virtual double calculaVizinhanca(Neuronio* n, double sigma); // Calcula a função de vizinhança do neurônio, dado um vencedor
-	
-    /* Atualiza o neurônio, segundo o algoritmo da Seção 3.2.3
-     * E depois normaliza o vetor de pesos */
+
+    /* Faz a equação:
+     * w(n+1) = w(n) + eta(n)*h(i(x),n)*[x - w(n)]
+     * E depois normaliza o vetor de pesos sinápticos */
     virtual void atualiza(Neuronio* vencedor, Dado* dado, double eta, double sigma);
-	
+
+
     virtual string toString(); // Converte para String
 };
 
