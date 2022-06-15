@@ -122,7 +122,7 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
         return;
 
     // Escolha das mensagens a serem exibidas
-    switch (msg) {
+    switch(msg) {
         case 0: { // Início do sumário de treinamento
             cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << endl;
             cout << " - Dados de treinamento:" << endl;
@@ -150,6 +150,9 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
             cout << " * Tempo decorrido: " << tempo/1000000000.0 << " segundo(s)." << endl;
             cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << endl;
             break;
+        }
+        default: {
+            cout << "Nada para fazer..." << endl;
         }
     }
 }
@@ -193,7 +196,7 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializ
         double eta = this->calculaEta(n_it); // Calcula a taxa de aprendizado
 		
         // Apresenta todos os dados de forma aleatória e atualiza os pesos sinápticos dos neurônios no arranjo
-        while (!this->todosDadosMarcados(dados)) {
+        while(!this->todosDadosMarcados(dados)) {
             auto dado = this->getDadoRand(dados); // Obtém um dado de forma aleatória
             auto vencedor = this->arranjo->getVencedor(dado); // Faz a competição
             this->atualizaNeuronios(*vencedor, dado, eta, sigma); // Atualiza os neurônios do arranjo!
