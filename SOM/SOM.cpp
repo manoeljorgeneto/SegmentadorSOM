@@ -153,6 +153,7 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
         }
         default: {
             cout << "Nada para fazer..." << endl;
+            cout << "O bolo é uma mentira!" << endl; // GLaDOS FTW!!
         }
     }
 }
