@@ -2,7 +2,7 @@
 // Name        : SOM.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.1-alpha
+// Version     : v0.1.2-alpha
 // Copyright   : Copyright© 2007-2022, Manoel Jorge Ribeiro Neto. All rights reserved.
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -121,33 +121,65 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
     if(!verboso)
         return;
 
+    string dT, uOMP, nproc, numIt, iniNeu, trSOM, progresso, itr, mpGer, tDec, segs; // Palavras para tradução
+    switch(this->lingua) {
+        case PT_BR: {
+            dT =        " - Dados de treinamento:",
+            uOMP =      " * Utilizando OpenMP: ",
+            nproc =     " processadores",
+            numIt =     " * Número de iterações: ",
+            iniNeu =    " * Inicializando os neurônios de forma aleatória...",
+            trSOM =     " * Treinando o SOM...",
+            progresso = "    * Progresso: ",
+            itr =       " iterações (",
+            mpGer =     " * Mapa gerado!",
+            tDec =      " * Tempo decorrido: ",
+            segs =      " segundo(s).";
+            break;
+        }
+        case ENG: {
+            dT =        " - Training data:",
+            uOMP =      " * Using OpenMP: ",
+            nproc =     " processors",
+            numIt =     " * Number of iterations: ",
+            iniNeu =    " * Randomly initializing neurons...",
+            trSOM =     " * Training SOM...",
+            progresso = "    * Progress: ",
+            itr =       " iterations (",
+            mpGer =     " * Generated map!",
+            tDec =      " * Elapsed time: ",
+            segs =      " second(s).";
+            break;
+        }
+    }
+
     // Escolha das mensagens a serem exibidas
     switch(msg) {
         case 0: { // Início do sumário de treinamento
             cout << "╔══════════════════════════════════════════════════════════════════════════════╗" << endl;
-            cout << " - Dados de treinamento:" << endl;
+            cout << dT << endl;
             if(omp_get_num_procs() > 1)
-                cout << " * Utilizando OpenMP: " << omp_get_num_procs() << " processadores" << endl;
-            cout << " * Número de iterações: " << iteracoes << endl;
+                cout << uOMP << omp_get_num_procs() << nproc << endl;
+            cout << numIt << iteracoes << endl;
             break;
         }
         case 1: { // Mensagem de inicialização dos neurônios
-            cout << " * Inicializando os neurônios de forma aleatória..." << endl;
+            cout << iniNeu << endl;
             break;
         }
         case 2: { // Continuando o sumário do treinamento
-            cout << endl << " * Treinando o SOM..." << endl << endl;
+            cout << endl << trSOM << endl << endl;
             break;
         }
         case 3: { // TODO Verificar melhor isso
             if( (10*(n_it + 1) % iteracoes) == 0) // A cada 10%, faz uma exibição do progresso
-                cout << "    * Progresso: " << (n_it + 1) << " iterações (" << (100 * (n_it + 1) / iteracoes) << "%)" <<
+                cout << progresso << (n_it + 1) << itr << (100 * (n_it + 1) / iteracoes) << "%)" <<
                      endl;
             break;
         }
         case 4: { // Finalizando o sumário de treinamento
-            cout << endl << " * Mapa gerado!" << endl;
-            cout << " * Tempo decorrido: " << tempo/1000000000.0 << " segundo(s)." << endl;
+            cout << endl << mpGer << endl;
+            cout << tDec << tempo/1000000000.0 << segs << endl;
             cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << endl;
             break;
         }
@@ -159,8 +191,9 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
 }
 
 // Construtor
-SOM::SOM(unsigned int largura, unsigned int dimensao_entrada, double sigma, double tau2, double eta, int semente) :
-         ger_mt(semente) {
+SOM::SOM(unsigned int largura, unsigned int dimensao_entrada, double sigma, double tau2, double eta, int semente,
+         int lingua) :
+    ger_mt(semente) {
     this->sigma_ini = sigma;
     this->tau2 = tau2;
     this->eta_ini = eta;
@@ -169,6 +202,8 @@ SOM::SOM(unsigned int largura, unsigned int dimensao_entrada, double sigma, doub
 
     this->dimensao_entrada = dimensao_entrada;
     this->arranjo = new Arranjo(largura, dimensao_entrada);
+
+    this->lingua = lingua;
 }
 
 // Destrutor
@@ -217,35 +252,39 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializ
 }
 
 // Gets e sets
-double SOM::getSigmaIni() {
+double SOM::getSigmaIni() const {
     return this->sigma_ini;
 }
 
-double SOM::getEtaIni(){
+double SOM::getEtaIni() const {
     return this->eta_ini;
 }
 
-double SOM::getTau1(){
+double SOM::getTau1() const {
     return this->tau1;
 }
 
-double SOM::getTau2(){
+double SOM::getTau2() const {
     return this->tau2;
 }
 
-Arranjo* SOM::getArranjo(){
+int SOM::getLingua() const {
+    return this->lingua;
+}
+
+Arranjo* SOM::getArranjo() const {
     return this->arranjo;
 }
 	
-void SOM::setSigmaIni(double sigma){
+void SOM::setSigmaIni(double sigma) {
     this->sigma_ini = sigma;
 }
 
-void SOM::setEtaIni(double eta){
+void SOM::setEtaIni(double eta) {
     this->eta_ini = eta;
 }
 
-void SOM::setTau1(double tau1){
+void SOM::setTau1(double tau1) {
     this->tau1 = tau1;
 }
 
@@ -253,13 +292,37 @@ void SOM::setTau2(double tau2) {
     this->tau2 = tau2;
 }
 
+void SOM::setLingua(int lingua) {
+    this->lingua = lingua;
+}
+
 // Faz um sumário do SOM
 void SOM::sumario() {
-    cout << "╔═══════════════════════════════ Sumário do SOM ═══════════════════════════════╗" << endl;
-    cout << " - Hiperparâmetros:" << endl;
-    cout << " * Dimensão do mapa: " << this->arranjo->getLargura() << " x " << this->arranjo->getLargura() << endl;
-    cout << " * Dimensão de entrada: " << this->dimensao_entrada << endl;
-    cout << " * Valores (sigma, eta, tau1, tau2): " << "(" <<
+    string sumSOM, hipPar, dimMp, dimEnt, valSET1T2; // Palavras para tradução
+    switch(this->lingua) {
+        case PT_BR: {
+            sumSOM      = "╔═══════════════════════════════ Sumário do SOM ═══════════════════════════════╗",
+            hipPar      = " - Hiperparâmetros:",
+            dimMp       = " * Dimensão do mapa: ",
+            dimEnt      = " * Dimensão de entrada: ",
+            valSET1T2   = " * Valores ";
+            break;
+        }
+        case ENG: {
+            sumSOM      = "╔════════════════════════════════ SOM summary ═════════════════════════════════╗",
+            hipPar      = " - Hyperparameters:",
+            dimMp       = " * Map dimension: ",
+            dimEnt      = " * Input dimension: ",
+            valSET1T2   = " * Values ";
+            break;
+        }
+    }
+
+    cout << sumSOM << endl;
+    cout << hipPar << endl;
+    cout << dimMp << this->arranjo->getLargura() << " x " << this->arranjo->getLargura() << endl;
+    cout << dimEnt << this->dimensao_entrada << endl;
+    cout << valSET1T2 << "(sigma, eta, tau1, tau2): " << "(" <<
         this->sigma_ini << ", " <<
         this->eta_ini << ", " <<
         this->tau1 << ", " <<

@@ -9,16 +9,12 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fopenmp")
 add_executable(
         SegmentadorSOM
         main.cpp
-        Calculos/Calculos.cpp
-        Codificador/Dado.cpp
-        SOM/Arranjo.cpp
-        SOM/Neuronio.cpp
-        SOM/SOM.cpp
-        Visualizacao/MapaContextual.cpp
-        Calculos/Calculos.h
-        Codificador/Dado.h
-        SOM/Arranjo.h
-        SOM/Neuronio.h
-        SOM/SOM.h
-        Visualizacao/MapaContextual.h
+        versao.h
+        Controlador/Controlador.cpp Controlador/Controlador.h
+        Calculos/Calculos.cpp Calculos/Calculos.h
+        Codificador/Dado.cpp Codificador/Dado.h
+        SOM/Arranjo.cpp SOM/Arranjo.h
+        SOM/Neuronio.cpp SOM/Neuronio.h
+        SOM/SOM.cpp SOM/SOM.h
+        Visualizacao/MapaContextual.cpp Visualizacao/MapaContextual.h
         )
