@@ -3,32 +3,19 @@
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.1-alpha
-// Copyright   : Copyright© 2007-2022, Manoel Jorge Ribeiro Neto. All rights reserved.
+// Copyright   : Copyright© 2007-2022, Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
 // This file is part of SegmentadorSOM.
-//
-// SegmentadorSOM is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
-// License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
-// version.
-//
-// SegmentadorSOM is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
-// warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License along with SegmentadorSOM. If not, see
-// <https://www.gnu.org/licenses/>
+// Licensed under GNU GPL version 3 or later <https://www.gnu.org/licenses/>
+// This program comes with ABSOLUTELY NO WARRANTY.
+// This is free software, and you are welcome to redistribute it under certain conditions; see the file COPYING for
+// details.
 //======================================================================================================================
 
 #include <iostream>
-#include <vector>
-#include <string>
 
-#include "./Calculos/Calculos.h"
-#include "./Codificador/Dado.h"
-#include "./SOM/Neuronio.h"
-#include "./SOM/Arranjo.h"
-#include "./SOM/SOM.h"
-#include "./Visualizacao/MapaContextual.h"
+#include "./Controlador/Controlador.h"
 
 using namespace std;
 
@@ -37,7 +24,14 @@ int main(int argc, char *argv[]) {
     vector<string> arg(argc);
     for (int i = 0; i < argc; i++) // Copiando os argumentos para um vetor de strings
         arg.at(i) = argv[i];
-    cout << arg[0] << endl << endl; // Nome do programa
+
+    Controlador ctrl(arg); // Para o controle do programa
+
+    ctrl.executa(); // Executa
+
+    // TODO Implementar um método para tratamento de argumentos
+    /*if(arg[1] == "-v" || arg[1] == "--version") {
+    }
 
     // TODO Implementar um método de leitura de datasets
     // Criando e preparando os dados
@@ -192,7 +186,7 @@ int main(int argc, char *argv[]) {
     // Exibição dos parâmetros dos neurônios
     cout << endl;
     for(auto i = arr->getNeuronios()->begin(); i != arr->getNeuronios()->end(); i++)
-        cout << (*i)->toString() << endl;
+        cout << (*i)->toString() << endl; */
 
     return EXIT_SUCCESS;
 }

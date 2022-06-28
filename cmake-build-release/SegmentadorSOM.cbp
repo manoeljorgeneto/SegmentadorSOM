@@ -94,6 +94,12 @@
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Codificador/Dado.h">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Controlador/Controlador.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/SOM/Arranjo.cpp">
 			<Option target="SegmentadorSOM"/>
 		</Unit>

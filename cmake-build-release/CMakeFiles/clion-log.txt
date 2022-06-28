@@ -1,4 +1,13 @@
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" -S /home/manoel/CLionProjects/SegmentadorSOM -B /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release
 -- Configuring done
--- Generating done
--- Build files have been written to: /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release
+CMake Error at CMakeLists.txt:9 (add_executable):
+  Cannot find source file:
+
+    Controlador/Controlador.cpp
+
+
+CMake Error at CMakeLists.txt:9 (add_executable):
+  No SOURCES given to target: SegmentadorSOM
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

@@ -129,6 +129,30 @@ SegmentadorSOM/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/build
 .PHONY : SegmentadorSOM/fast
 
+Argumentos/Argumentos.o: Argumentos/Argumentos.cpp.o
+.PHONY : Argumentos/Argumentos.o
+
+# target to build an object file
+Argumentos/Argumentos.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Argumentos/Argumentos.cpp.o
+.PHONY : Argumentos/Argumentos.cpp.o
+
+Argumentos/Argumentos.i: Argumentos/Argumentos.cpp.i
+.PHONY : Argumentos/Argumentos.i
+
+# target to preprocess a source file
+Argumentos/Argumentos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Argumentos/Argumentos.cpp.i
+.PHONY : Argumentos/Argumentos.cpp.i
+
+Argumentos/Argumentos.s: Argumentos/Argumentos.cpp.s
+.PHONY : Argumentos/Argumentos.s
+
+# target to generate assembly for a file
+Argumentos/Argumentos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Argumentos/Argumentos.cpp.s
+.PHONY : Argumentos/Argumentos.cpp.s
+
 Calculos/Calculos.o: Calculos/Calculos.cpp.o
 .PHONY : Calculos/Calculos.o
 
@@ -306,6 +330,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SegmentadorSOM"
+	@echo "... Argumentos/Argumentos.o"
+	@echo "... Argumentos/Argumentos.i"
+	@echo "... Argumentos/Argumentos.s"
 	@echo "... Calculos/Calculos.o"
 	@echo "... Calculos/Calculos.i"
 	@echo "... Calculos/Calculos.s"

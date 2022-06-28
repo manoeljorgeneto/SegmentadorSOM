@@ -35,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -std=c++17 -fopenmp -g"
+					"fragment" : " -std=c++17 -fopenmp -O3 -DNDEBUG"
 				}
 			],
 			"language" : "CXX",
@@ -51,11 +51,12 @@
 			[
 				0,
 				1,
-				2,
 				3,
-				4,
 				5,
-				6
+				7,
+				9,
+				11,
+				13
 			]
 		}
 	],
@@ -65,7 +66,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-std=c++17 -fopenmp -g",
+				"fragment" : "-std=c++17 -fopenmp -O3 -DNDEBUG",
 				"role" : "flags"
 			},
 			{
@@ -90,23 +91,25 @@
 			[
 				0,
 				1,
-				2,
 				3,
-				4,
 				5,
-				6
+				7,
+				9,
+				11,
+				13
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				7,
+				2,
+				4,
+				6,
 				8,
-				9,
 				10,
-				11,
-				12
+				12,
+				14
 			]
 		}
 	],
@@ -121,37 +124,18 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "Controlador/Controlador.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Controlador/Controlador.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "Calculos/Calculos.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Codificador/Dado.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "SOM/Arranjo.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "SOM/Neuronio.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "SOM/SOM.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Visualizacao/MapaContextual.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -161,8 +145,20 @@
 		},
 		{
 			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Codificador/Dado.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "Codificador/Dado.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "SOM/Arranjo.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
@@ -171,13 +167,31 @@
 		},
 		{
 			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "SOM/Neuronio.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "SOM/Neuronio.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "SOM/SOM.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "SOM/SOM.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Visualizacao/MapaContextual.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,

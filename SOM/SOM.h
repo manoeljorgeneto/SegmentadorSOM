@@ -41,6 +41,8 @@
 using namespace std;
 using namespace std::chrono;
 
+#define VERSAO "v0.1.1-alpha" // Versão
+
 class SOM {
     Arranjo* arranjo; // Arranjo de neurônios
 
