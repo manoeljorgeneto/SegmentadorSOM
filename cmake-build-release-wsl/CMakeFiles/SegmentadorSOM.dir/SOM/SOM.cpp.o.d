@@ -188,6 +188,7 @@ CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: \
  /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../versao.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../Calculos/Calculos.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../Codificador/Dado.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \

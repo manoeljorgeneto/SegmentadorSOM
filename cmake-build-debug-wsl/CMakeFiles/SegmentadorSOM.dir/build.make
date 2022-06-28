@@ -83,10 +83,24 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/main.cpp -o CMakeFiles/SegmentadorSOM.dir/main.cpp.s
 
+CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
+CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: ../Controlador/Controlador.cpp
+CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp
+
+CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp > CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.i
+
+CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp -o CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.s
+
 CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o: ../Calculos/Calculos.cpp
 CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.s: cmake_force
 CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o: ../Codificador/Dado.cpp
 CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/Dado.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.s: cmake_force
 CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o: ../SOM/Arranjo.cpp
 CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/Arranjo.cpp
 
 CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.s: cmake_force
 CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o: ../SOM/Neuronio.cpp
 CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/Neuronio.cpp
 
 CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.s: cmake_force
 CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: ../SOM/SOM.cpp
 CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/SOM.cpp
 
 CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.s: cmake_force
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o: ../Visualizacao/MapaContextual.cpp
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/MapaContextual.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.i: cmake_force
@@ -170,6 +184,7 @@ CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.s: cmake_force
 # Object files for target SegmentadorSOM
 SegmentadorSOM_OBJECTS = \
 "CMakeFiles/SegmentadorSOM.dir/main.cpp.o" \
+"CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o" \
 "CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o" \
 "CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o" \
 "CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o" \
@@ -181,6 +196,7 @@ SegmentadorSOM_OBJECTS = \
 SegmentadorSOM_EXTERNAL_OBJECTS =
 
 SegmentadorSOM: CMakeFiles/SegmentadorSOM.dir/main.cpp.o
+SegmentadorSOM: CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o
 SegmentadorSOM: CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o
 SegmentadorSOM: CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o
 SegmentadorSOM: CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o
@@ -189,7 +205,7 @@ SegmentadorSOM: CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o
 SegmentadorSOM: CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o
 SegmentadorSOM: CMakeFiles/SegmentadorSOM.dir/build.make
 SegmentadorSOM: CMakeFiles/SegmentadorSOM.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable SegmentadorSOM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable SegmentadorSOM"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SegmentadorSOM.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

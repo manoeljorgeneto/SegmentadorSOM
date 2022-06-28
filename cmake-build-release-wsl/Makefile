@@ -177,6 +177,30 @@ Codificador/Dado.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.s
 .PHONY : Codificador/Dado.cpp.s
 
+Controlador/Controlador.o: Controlador/Controlador.cpp.o
+.PHONY : Controlador/Controlador.o
+
+# target to build an object file
+Controlador/Controlador.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o
+.PHONY : Controlador/Controlador.cpp.o
+
+Controlador/Controlador.i: Controlador/Controlador.cpp.i
+.PHONY : Controlador/Controlador.i
+
+# target to preprocess a source file
+Controlador/Controlador.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.i
+.PHONY : Controlador/Controlador.cpp.i
+
+Controlador/Controlador.s: Controlador/Controlador.cpp.s
+.PHONY : Controlador/Controlador.s
+
+# target to generate assembly for a file
+Controlador/Controlador.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.s
+.PHONY : Controlador/Controlador.cpp.s
+
 SOM/Arranjo.o: SOM/Arranjo.cpp.o
 .PHONY : SOM/Arranjo.o
 
@@ -312,6 +336,9 @@ help:
 	@echo "... Codificador/Dado.o"
 	@echo "... Codificador/Dado.i"
 	@echo "... Codificador/Dado.s"
+	@echo "... Controlador/Controlador.o"
+	@echo "... Controlador/Controlador.i"
+	@echo "... Controlador/Controlador.s"
 	@echo "... SOM/Arranjo.o"
 	@echo "... SOM/Arranjo.i"
 	@echo "... SOM/Arranjo.s"

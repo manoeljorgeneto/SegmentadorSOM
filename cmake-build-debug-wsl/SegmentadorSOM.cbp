@@ -94,6 +94,12 @@
 		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/Dado.h">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
+		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/Controlador.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
 		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/Arranjo.cpp">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
@@ -119,6 +125,9 @@
 			<Option target="SegmentadorSOM"/>
 		</Unit>
 		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/main.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/versao.h">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
 		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/CMakeLists.txt">

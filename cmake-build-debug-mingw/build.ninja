@@ -55,6 +55,12 @@ build CMakeFiles/SegmentadorSOM.dir/main.cpp.obj: CXX_COMPILER__SegmentadorSOM_D
   OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir
   OBJECT_FILE_DIR = CMakeFiles\SegmentadorSOM.dir
 
+build CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.obj: CXX_COMPILER__SegmentadorSOM_Debug D$:/Documentos/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp || cmake_object_order_depends_target_SegmentadorSOM
+  DEP_FILE = CMakeFiles\SegmentadorSOM.dir\Controlador\Controlador.cpp.obj.d
+  FLAGS = -std=c++17 -fopenmp -g
+  OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir
+  OBJECT_FILE_DIR = CMakeFiles\SegmentadorSOM.dir\Controlador
+
 build CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.obj: CXX_COMPILER__SegmentadorSOM_Debug D$:/Documentos/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp || cmake_object_order_depends_target_SegmentadorSOM
   DEP_FILE = CMakeFiles\SegmentadorSOM.dir\Calculos\Calculos.cpp.obj.d
   FLAGS = -std=c++17 -fopenmp -g
@@ -99,7 +105,7 @@ build CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.obj: CXX_COM
 #############################################
 # Link the executable SegmentadorSOM.exe
 
-build SegmentadorSOM.exe: CXX_EXECUTABLE_LINKER__SegmentadorSOM_Debug CMakeFiles/SegmentadorSOM.dir/main.cpp.obj CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.obj CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.obj CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.obj CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.obj CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.obj
+build SegmentadorSOM.exe: CXX_EXECUTABLE_LINKER__SegmentadorSOM_Debug CMakeFiles/SegmentadorSOM.dir/main.cpp.obj CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.obj CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.obj CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.obj CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.obj CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.obj CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.obj
   FLAGS = -std=c++17 -fopenmp -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir
