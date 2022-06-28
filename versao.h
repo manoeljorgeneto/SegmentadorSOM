@@ -29,8 +29,8 @@
 #define VERSAO "v0.1.2-alpha"   // Versão (string)
 #define VERSAO_INT 012          // Versão (int)
 
-#define COPYRIGHT_ANOS "2007-2022" // Anos de existência do programa
-#define COPYRIGHT_ANO "2022" // Ano atual de desenvolvimento do programa
+#define COPYRIGHT_ANOS "2007-2022"  // Anos de existência do programa
+#define COPYRIGHT_ANO "2022"        // Ano atual de desenvolvimento do programa
 
 #define AUTOR "Manoel Jorge Ribeiro Neto"
 #define AUTOR_EMAIL "manoeljorge.neto@gmail.com"
