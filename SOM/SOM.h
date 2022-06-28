@@ -2,7 +2,7 @@
 // Name        : SOM.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.1-alpha
+// Version     : v0.1.2-alpha
 // Copyright   : Copyright© 2007-2022, Manoel Jorge Ribeiro Neto. All rights reserved.
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -33,6 +33,7 @@
 #include <chrono>
 #include <omp.h>
 
+#include "../versao.h"
 #include "../Calculos/Calculos.h"
 #include "../Codificador/Dado.h"
 #include "../SOM/Neuronio.h"
@@ -40,8 +41,6 @@
 
 using namespace std;
 using namespace std::chrono;
-
-#define VERSAO "v0.1.1-alpha" // Versão
 
 class SOM {
     Arranjo* arranjo; // Arranjo de neurônios
@@ -53,6 +52,8 @@ class SOM {
 
     // Para geração de números aleatórios
     std::mt19937 ger_mt; // gerador mersenne_twister
+
+    int lingua; // Língua utilizada
 
     double calculaSigma(unsigned int tempo); // Calcula a largura da vizinhança
     double calculaEta(unsigned int tempo); // Calcula a taxa de aprendizado
@@ -77,7 +78,7 @@ class SOM {
 public:
     // Construtor
     SOM(unsigned int largura, unsigned int dimensao_entrada, double sigma = 2.5, double tau2 = 1000.0, double eta = 0.1,
-        int semente = 1000);
+        int semente = 1000, int lingua = ENG);
     virtual ~SOM(); // Destrutor
 
     // Faz o treinamento do SOM segundo o algoritmo incremental
@@ -85,16 +86,18 @@ public:
                            bool verboso = true);
 	
     // Gets e sets
-    double getSigmaIni();
-    double getEtaIni();
-    double getTau1();
-    double getTau2();
-    Arranjo* getArranjo();
+    double getSigmaIni() const;
+    double getEtaIni() const;
+    double getTau1() const;
+    double getTau2() const;
+    int getLingua() const;
+    Arranjo* getArranjo() const;
 	
     void setSigmaIni(double sigma);
     void setEtaIni(double eta);
     void setTau1(double tau1);
     void setTau2(double tau2);
+    void setLingua(int lingua);
 
     virtual void sumario(); // Faz um sumário do SOM
 };

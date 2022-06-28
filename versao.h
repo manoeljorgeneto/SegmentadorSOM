@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : MapaContextual.h
+// Name        : versao.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -19,31 +19,25 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-/* Mapa Contextual, visto na Seção 3.4.2
- * Serve como ferramenta para auxiliar a leitura do SOM */
+// Cabeçalho com dados de versão, autoria, direitos de cópia e língua utilizada
 
-#ifndef MAPACONTEXTUAL_H_
-#define MAPACONTEXTUAL_H_
+#ifndef VERSAO_H
+#define VERSAO_H
 
-#include <vector>
-#include <string>
-#include <sstream>
+#define PROGRAMA_NOME "SegmentadorSOM" // Nome do programa
 
-#include "../Codificador/Dado.h"
-#include "../SOM/Neuronio.h"
-#include "../SOM/Arranjo.h"
+#define VERSAO "v0.1.2-alpha"   // Versão (string)
+#define VERSAO_INT 012          // Versão (int)
 
-using namespace std;
+#define COPYRIGHT_ANOS "2007-2022" // Anos de existência do programa
+#define COPYRIGHT_ANO "2022" // Ano atual de desenvolvimento do programa
 
-class MapaContextual {
-    void desmarcaNeuronios(vector<Neuronio*>* neuronios); // Desmarca todos os neurônios
-    bool todosNeuroniosMarcados(vector<Neuronio*>* neuronios); // Verifica se todos os neurônios estão marcados
-	
-public:
-    MapaContextual(); // Construtor
-    virtual ~MapaContextual(); // Destrutor
+#define AUTOR "Manoel Jorge Ribeiro Neto"
+#define AUTOR_EMAIL "manoeljorge.neto@gmail.com"
+#define LICENCA "GNU GPL"
+#define LICENCA_VERSAO "3"
 
-    virtual string geraMapa(vector<Dado*>* dados, Arranjo* arranjo); // Gera um Mapa Contextual
-};
+#define PT_BR 0
+#define ENG 1
 
-#endif // MAPACONTEXTUAL_H_
+#endif // VERSAO_H

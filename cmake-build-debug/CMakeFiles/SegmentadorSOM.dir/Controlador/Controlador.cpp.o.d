@@ -1,7 +1,7 @@
-CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
- /home/manoel/CLionProjects/SegmentadorSOM/main.cpp \
+CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp \
  /usr/include/stdc-predef.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/Controlador.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/Controlador.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -31,7 +31,6 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/wchar2.h \
  /usr/include/c++/11/exception /usr/include/c++/11/bits/exception.h \
  /usr/include/c++/11/bits/exception_ptr.h \
  /usr/include/c++/11/bits/exception_defines.h \
@@ -119,20 +118,16 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/sys/select.h \
  /usr/include/x86_64-linux-gnu/bits/select.h \
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
- /usr/include/x86_64-linux-gnu/bits/select2.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+ /usr/include/alloca.h /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/include/c++/11/bits/std_abs.h /usr/include/c++/11/cstdio \
  /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/c++/11/cerrno \
- /usr/include/errno.h /usr/include/x86_64-linux-gnu/bits/errno.h \
- /usr/include/linux/errno.h /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/c++/11/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
@@ -156,8 +151,8 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../versao.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../Calculos/Calculos.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../versao.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Calculos/Calculos.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -181,15 +176,15 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../Codificador/Dado.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Codificador/Dado.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../Codificador/../Calculos/Calculos.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../SOM/Neuronio.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../Calculos/Calculos.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../Codificador/Dado.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../SOM/Arranjo.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../SOM/Neuronio.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../SOM/SOM.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Codificador/../Calculos/Calculos.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../SOM/Neuronio.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../SOM/../Calculos/Calculos.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../SOM/../Codificador/Dado.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../SOM/Arranjo.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../SOM/../SOM/Neuronio.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../SOM/SOM.h \
  /usr/include/c++/11/random /usr/include/c++/11/bits/random.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
@@ -200,9 +195,9 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../versao.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../SOM/Arranjo.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/MapaContextual.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../Codificador/Dado.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../SOM/Neuronio.h \
- /home/manoel/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../SOM/Arranjo.h
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../SOM/../versao.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../SOM/../SOM/Arranjo.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Visualizacao/MapaContextual.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Visualizacao/../Codificador/Dado.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Visualizacao/../SOM/Neuronio.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Visualizacao/../SOM/Arranjo.h

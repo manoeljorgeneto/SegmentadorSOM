@@ -530,6 +530,7 @@ CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: ../Controlador/Cont
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  ../versao.h \
   ../Calculos/Calculos.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
@@ -581,6 +582,7 @@ CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: ../Controlador/Cont
   /usr/include/c++/11/ctime \
   /usr/include/c++/11/bits/parse_numbers.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
+  ../versao.h \
   ../SOM/Arranjo.h \
   ../Visualizacao/MapaContextual.h \
   ../Codificador/Dado.h \
@@ -1265,6 +1267,7 @@ CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: ../SOM/SOM.cpp \
   /usr/include/c++/11/ctime \
   /usr/include/c++/11/bits/parse_numbers.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
+  ../versao.h \
   ../Calculos/Calculos.h \
   ../Codificador/Dado.h \
   /usr/include/c++/11/sstream \
@@ -1504,6 +1507,7 @@ CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o: ../Visualizacao
 
 CMakeFiles/SegmentadorSOM.dir/main.cpp.o: ../main.cpp \
   /usr/include/stdc-predef.h \
+  ../Controlador/Controlador.h \
   /usr/include/c++/11/iostream \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -1688,12 +1692,12 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../Controlador/Controlador.h \
   /usr/include/c++/11/vector \
   /usr/include/c++/11/bits/stl_uninitialized.h \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  ../versao.h \
   ../Calculos/Calculos.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
@@ -1745,6 +1749,7 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/ctime \
   /usr/include/c++/11/bits/parse_numbers.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
+  ../versao.h \
   ../SOM/Arranjo.h \
   ../Visualizacao/MapaContextual.h \
   ../Codificador/Dado.h \
@@ -2021,6 +2026,8 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/11/pstl/execution_defs.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+../versao.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 

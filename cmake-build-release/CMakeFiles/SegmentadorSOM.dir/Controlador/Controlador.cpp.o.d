@@ -156,6 +156,7 @@ CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../versao.h \
  /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Calculos/Calculos.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -199,6 +200,7 @@ CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: \
  /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../SOM/../versao.h \
  /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../SOM/../SOM/Arranjo.h \
  /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Visualizacao/MapaContextual.h \
  /home/manoel/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Visualizacao/../Codificador/Dado.h \

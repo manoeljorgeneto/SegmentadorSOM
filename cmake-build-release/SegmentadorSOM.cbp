@@ -127,6 +127,9 @@
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/main.cpp">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/versao.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

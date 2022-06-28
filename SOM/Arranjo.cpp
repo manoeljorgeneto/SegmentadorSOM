@@ -2,7 +2,7 @@
 // Name        : Arranjo.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.1-alpha
+// Version     : v0.1.2-alpha
 // Copyright   : Copyright© 2007-2022, Manoel Jorge Ribeiro Neto. All rights reserved.
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //

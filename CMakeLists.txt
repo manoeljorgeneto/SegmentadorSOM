@@ -9,6 +9,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fopenmp")
 add_executable(
         SegmentadorSOM
         main.cpp
+        versao.h
         Controlador/Controlador.cpp Controlador/Controlador.h
         Calculos/Calculos.cpp Calculos/Calculos.h
         Codificador/Dado.cpp Codificador/Dado.h

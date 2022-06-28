@@ -533,6 +533,7 @@ CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o
  /usr/include/c++/11/bits/stl_vector.h
  /usr/include/c++/11/bits/stl_bvector.h
  /usr/include/c++/11/bits/vector.tcc
+ /home/manoel/CLionProjects/SegmentadorSOM/versao.h
  /home/manoel/CLionProjects/SegmentadorSOM/Calculos/Calculos.h
  /usr/include/c++/11/cmath
  /usr/include/math.h
@@ -584,6 +585,7 @@ CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o
  /usr/include/c++/11/ctime
  /usr/include/c++/11/bits/parse_numbers.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h
+ /home/manoel/CLionProjects/SegmentadorSOM/versao.h
  /home/manoel/CLionProjects/SegmentadorSOM/SOM/Arranjo.h
  /home/manoel/CLionProjects/SegmentadorSOM/Visualizacao/MapaContextual.h
  /home/manoel/CLionProjects/SegmentadorSOM/Codificador/Dado.h
@@ -1271,6 +1273,7 @@ CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o
  /usr/include/c++/11/ctime
  /usr/include/c++/11/bits/parse_numbers.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h
+ /home/manoel/CLionProjects/SegmentadorSOM/versao.h
  /home/manoel/CLionProjects/SegmentadorSOM/Calculos/Calculos.h
  /home/manoel/CLionProjects/SegmentadorSOM/Codificador/Dado.h
  /usr/include/c++/11/sstream
@@ -1512,6 +1515,7 @@ CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o
 CMakeFiles/SegmentadorSOM.dir/main.cpp.o
  /home/manoel/CLionProjects/SegmentadorSOM/main.cpp
  /usr/include/stdc-predef.h
+ /home/manoel/CLionProjects/SegmentadorSOM/Controlador/Controlador.h
  /usr/include/c++/11/iostream
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h
@@ -1696,12 +1700,12 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o
  /usr/include/c++/11/bits/ostream.tcc
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
- /home/manoel/CLionProjects/SegmentadorSOM/Controlador/Controlador.h
  /usr/include/c++/11/vector
  /usr/include/c++/11/bits/stl_uninitialized.h
  /usr/include/c++/11/bits/stl_vector.h
  /usr/include/c++/11/bits/stl_bvector.h
  /usr/include/c++/11/bits/vector.tcc
+ /home/manoel/CLionProjects/SegmentadorSOM/versao.h
  /home/manoel/CLionProjects/SegmentadorSOM/Calculos/Calculos.h
  /usr/include/c++/11/cmath
  /usr/include/math.h
@@ -1753,6 +1757,7 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o
  /usr/include/c++/11/ctime
  /usr/include/c++/11/bits/parse_numbers.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h
+ /home/manoel/CLionProjects/SegmentadorSOM/versao.h
  /home/manoel/CLionProjects/SegmentadorSOM/SOM/Arranjo.h
  /home/manoel/CLionProjects/SegmentadorSOM/Visualizacao/MapaContextual.h
  /home/manoel/CLionProjects/SegmentadorSOM/Codificador/Dado.h
