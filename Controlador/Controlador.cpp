@@ -67,7 +67,7 @@ void Controlador::Ajuda() {
             uso = "Uso:",
             verPr = "(versão do programa)",
             exAj = "(exibe esta ajuda)",
-            nArg = " <sem argumentos> ",
+            nArg = " <sem argumento> ",
             exPdr = "(faz a execução padrão)";
             break;
         }
@@ -75,7 +75,7 @@ void Controlador::Ajuda() {
             uso = "Usage:",
             verPr = "(program version)",
             exAj = "(display this help)",
-            nArg = " <no arguments> ",
+            nArg = " <no argument> ",
             exPdr = "(do standard execution)";
             break;
         }
