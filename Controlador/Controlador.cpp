@@ -98,7 +98,7 @@ void Controlador::Ajuda() {
             verPr = "(program version)",
             exAj = "(display this help)",
             nArg = " <no argument> ",
-            exPdr = "(do standard execution)";
+            exPdr = "(do default execution)";
             break;
         }
     }
