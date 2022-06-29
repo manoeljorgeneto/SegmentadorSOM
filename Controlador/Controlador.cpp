@@ -280,7 +280,7 @@ void Controlador::Padrao() {
         cout << (*i)->toString() << endl;
 }
 
-//TODO Há outros métodos para implementar aqui
+// TODO Há outros métodos para implementar aqui
 
 // Construtor
 Controlador::Controlador(int argc, char** argv, int lingua) :
