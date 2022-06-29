@@ -51,6 +51,7 @@ class Controlador {
     void Padrao(); // Faz a execução padrão do programa
 
     // TODO Implementar outros métodos, como leitura de dataset, leitura do conjunto de neurônios etc.
+    // TODO Implementar um método para leitura de configurações
 
 public:
     Controlador(int argc, char** argv, int lingua = ENG); // Construtor
