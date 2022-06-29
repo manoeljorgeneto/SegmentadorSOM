@@ -43,6 +43,28 @@ void Controlador::listaArgumentos() {
         cout << s << endl;
 }
 
+// Exibe uma mensagem de argumento inválido
+void Controlador::argumentoInvalido() {
+    string argIn, exec, ajud; // Para tradução
+    switch(this->lingua) {
+        case PT_BR: {
+            argIn   = "Argumento(s) inválido(s)!",
+            exec    = "Execute \"",
+            ajud    = "para ajuda.";
+            break;
+        }
+        case ENG: {
+            argIn   = "Invalid argument(s)!",
+            exec    = "Run \"",
+            ajud    = "for help.";
+            break;
+        }
+    }
+
+    cout << argIn << endl;
+    cout << exec << PROGRAMA_NOME << " -h\" " << ajud << endl;
+}
+
 // Exibe a versão do programa
 void Controlador::Versao(bool verboso) {
     if(!verboso) {
@@ -265,22 +287,6 @@ Controlador::~Controlador() {
 
 // Executa o programa de acordo com os argumentos fornecidos
 void Controlador::executa() {
-    string argIn, exec, ajud; // Para tradução
-    switch(this->lingua) {
-        case PT_BR: {
-            argIn   = "Argumento(s) inválido(s)!",
-            exec    = "Execute \"",
-            ajud    = "para ajuda.";
-            break;
-        }
-        case ENG: {
-            argIn   = "Invalid argument(s)!",
-            exec    = "Run \"",
-            ajud    = "for help.";
-            break;
-        }
-    }
-
     switch(this->verificaArgumentos()) {
         case 0: { // Faz a execução padrão
             this->Padrao();
@@ -295,8 +301,7 @@ void Controlador::executa() {
             break;
         }
         default: { // Argumento inválido
-            cout << argIn << endl;
-            cout << exec << PROGRAMA_NOME << " -h\" " << ajud << endl;
+            this->argumentoInvalido();
         }
     }
 }

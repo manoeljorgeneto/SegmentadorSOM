@@ -45,10 +45,12 @@ class Controlador {
     unsigned int verificaArgumentos(); // Verifica os argumentos fornecidos
     void listaArgumentos(); // Lista os argumentos fornecidos
 
+    void argumentoInvalido(); // Exibe uma mensagem de argumento inválido
     void Versao(bool verboso = true); // Exibe a versão do programa
     void Ajuda(); // Exibe uma tela de ajuda
     void Padrao(); // Faz a execução padrão do programa
-    //TODO Implementar outros métodos, como leitura de dataset, leitura do conjunto de neurônios etc.
+
+    // TODO Implementar outros métodos, como leitura de dataset, leitura do conjunto de neurônios etc.
 
 public:
     Controlador(int argc, char** argv, int lingua = ENG); // Construtor
