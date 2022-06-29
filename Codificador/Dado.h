@@ -25,8 +25,8 @@
 #define DADO_H_
 
 #include <vector>
-#include <cmath>
 #include <string>
+#include <cmath>
 #include <sstream>
 
 #include "../Calculos/Calculos.h"

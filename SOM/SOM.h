@@ -27,8 +27,8 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 #include <cmath>
-#include <cstdlib>
 #include <random>
 #include <chrono>
 #include <omp.h>

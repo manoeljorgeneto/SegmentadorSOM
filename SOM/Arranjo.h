@@ -26,6 +26,7 @@
 #define ARRANJO_H_
 
 #include <vector>
+#include <omp.h>
 
 #include "../Codificador/Dado.h"
 #include "../SOM/Neuronio.h"

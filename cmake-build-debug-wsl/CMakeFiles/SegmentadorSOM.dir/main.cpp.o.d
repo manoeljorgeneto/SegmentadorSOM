@@ -183,6 +183,7 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../Calculos/Calculos.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../Codificador/Dado.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/Arranjo.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../SOM/Neuronio.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/SOM.h \
  /usr/include/c++/11/random /usr/include/c++/11/bits/random.h \
@@ -194,7 +195,6 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
- /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../versao.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../SOM/Arranjo.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/MapaContextual.h \

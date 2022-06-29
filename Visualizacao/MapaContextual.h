@@ -28,6 +28,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <omp.h>
 
 #include "../Codificador/Dado.h"
 #include "../SOM/Neuronio.h"
