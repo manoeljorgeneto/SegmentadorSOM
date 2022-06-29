@@ -29,7 +29,6 @@
 #include <string>
 
 #include "../versao.h"
-#include "../Calculos/Calculos.h"
 #include "../Codificador/Dado.h"
 #include "../SOM/Neuronio.h"
 #include "../SOM/Arranjo.h"
@@ -43,6 +42,7 @@ class Controlador {
     int lingua; // Língua utilizada
 
     unsigned int verificaArgumentos(); // Verifica os argumentos fornecidos
+    unsigned int verificaArgumentos_Expandido(); // Para argumentos complexos
     void listaArgumentos(); // Lista os argumentos fornecidos
 
     void argumentoInvalido(); // Exibe uma mensagem de argumento inválido

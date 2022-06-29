@@ -531,7 +531,7 @@ CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: ../Controlador/Cont
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
   ../versao.h \
-  ../Calculos/Calculos.h \
+  ../Codificador/Dado.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -557,7 +557,6 @@ CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: ../Controlador/Cont
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
-  ../Codificador/Dado.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
   ../Calculos/Calculos.h \
@@ -1700,7 +1699,7 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
   ../versao.h \
-  ../Calculos/Calculos.h \
+  ../Codificador/Dado.h \
   /usr/include/c++/11/cmath \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -1726,7 +1725,6 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
-  ../Codificador/Dado.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
   ../Calculos/Calculos.h \

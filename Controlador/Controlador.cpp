@@ -26,6 +26,9 @@ unsigned int Controlador::verificaArgumentos() {
     if(this->args.size() == 1) // Tem apenas o caminho do programa, faz a execuçao padrão
         return 0;
 
+    if(this->args.size() > 2) // Argumento complexo, requer um melhor tratamento
+        return this->verificaArgumentos_Expandido();
+
     // Versão do programa (simples)
     if(this->args.at(1) == "-v" || this->args.at(1) == "--version")
         return 1;
@@ -40,6 +43,11 @@ unsigned int Controlador::verificaArgumentos() {
         return 3;
 
     return UINT32_MAX; // Argumento inválido
+}
+
+// Para argumentos complexos
+unsigned int Controlador::verificaArgumentos_Expandido() {
+    return UINT32_MAX; // O programa ainda não lida com argumentos complexos
 }
 
 // Lista os argumentos fornecidos

@@ -152,7 +152,7 @@ CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../versao.h \
- /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Calculos/Calculos.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Codificador/Dado.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -175,9 +175,8 @@ CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: \
  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Codificador/Dado.h \
- /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
+ /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/c++/11/sstream \
+ /usr/include/c++/11/bits/sstream.tcc \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../Codificador/../Calculos/Calculos.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../SOM/Neuronio.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/../Controlador/../SOM/../Calculos/Calculos.h \

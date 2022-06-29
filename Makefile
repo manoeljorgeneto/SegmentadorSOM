@@ -9,7 +9,7 @@ SegmentadorSOM: main.o Controlador.o Calculos.o Dado.o Neuronio.o Arranjo.o SOM.
 main.o: main.cpp ./Controlador/Controlador.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic main.cpp -o main.o
 
-Controlador.o: ./Controlador/Controlador.cpp ./Controlador/Controlador.h versao.h ./Calculos/Calculos.h ./Codificador/Dado.h ./SOM/Arranjo.h ./SOM/Neuronio.h ./SOM/SOM.h ./Visualizacao/MapaContextual.h
+Controlador.o: ./Controlador/Controlador.cpp ./Controlador/Controlador.h versao.h ./Codificador/Dado.h ./SOM/Neuronio.h ./SOM/Arranjo.h ./SOM/SOM.h ./Visualizacao/MapaContextual.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Controlador/Controlador.cpp -o Controlador.o
 
 Calculos.o: ./Calculos/Calculos.cpp ./Calculos/Calculos.h
