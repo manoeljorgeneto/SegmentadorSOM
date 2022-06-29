@@ -9,7 +9,7 @@ SegmentadorSOM: main.o Controlador.o Calculos.o Dado.o Neuronio.o Arranjo.o SOM.
 main.o: main.cpp ./Controlador/Controlador.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic main.cpp -o main.o
 
-Controlador.o: ./Controlador/Controlador.cpp ./Controlador/Controlador.h ./Calculos/Calculos.h ./Codificador/Dado.h ./SOM/Arranjo.h ./SOM/Neuronio.h ./SOM/SOM.h ./Visualizacao/MapaContextual.h
+Controlador.o: ./Controlador/Controlador.cpp ./Controlador/Controlador.h versao.h ./Calculos/Calculos.h ./Codificador/Dado.h ./SOM/Arranjo.h ./SOM/Neuronio.h ./SOM/SOM.h ./Visualizacao/MapaContextual.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Controlador/Controlador.cpp -o Controlador.o
 
 Calculos.o: ./Calculos/Calculos.cpp ./Calculos/Calculos.h
@@ -24,7 +24,7 @@ Neuronio.o: ./SOM/Neuronio.cpp ./SOM/Neuronio.h ./Calculos/Calculos.h ./Codifica
 Arranjo.o: ./SOM/Arranjo.cpp ./SOM/Arranjo.h ./Codificador/Dado.h ./SOM/Neuronio.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./SOM/Arranjo.cpp -o Arranjo.o
 
-SOM.o: ./SOM/SOM.cpp ./SOM/SOM.h ./Calculos/Calculos.h ./Codificador/Dado.h ./SOM/Neuronio.h ./SOM/Arranjo.h
+SOM.o: ./SOM/SOM.cpp ./SOM/SOM.h versao.h ./Calculos/Calculos.h ./Codificador/Dado.h ./SOM/Neuronio.h ./SOM/Arranjo.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./SOM/SOM.cpp -o SOM.o
 
 MapaContextual.o: ./Visualizacao/MapaContextual.cpp ./Visualizacao/MapaContextual.h ./Codificador/Dado.h ./SOM/Neuronio.h ./SOM/Arranjo.h

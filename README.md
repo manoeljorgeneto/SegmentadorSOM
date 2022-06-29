@@ -11,6 +11,7 @@
 
 
 * Uso:
-  * $ ./SegmentadorSOM [-v] | [--version] (versão do programa)
-  * $ ./SegmentadorSOM [-h] | [--help] (exibe esta ajuda)
+  * $ ./SegmentadorSOM [-v] | [--version] (versão do programa, simples)
+  * $ ./SegmentadorSOM [-V] | [--Version] (versão do programa, verbosa)
+  * $ ./SegmentadorSOM [-h] | [-H] | [--help] | [--Help] (exibe esta ajuda)
   * $ ./SegmentadorSOM \<sem argumento\> (faz a execução padrão)

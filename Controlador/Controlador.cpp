@@ -1,9 +1,9 @@
 //======================================================================================================================
-// Name        : Controlador.cpp
+// Name        : main.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
-// Copyright   : Copyright© 2007-2022, Manoel Jorge Ribeiro Neto. All rights reserved.
+// Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
 // This file is part of SegmentadorSOM.
@@ -26,13 +26,18 @@ unsigned int Controlador::verificaArgumentos() {
     if(this->args.size() == 1) // Tem apenas o caminho do programa, faz a execuçao padrão
         return 0;
 
-    // Versão do programa
+    // Versão do programa (simples)
     if(this->args.at(1) == "-v" || this->args.at(1) == "--version")
         return 1;
 
-    // Tela de ajuda
-    if(this->args.at(1) == "-h" || this->args.at(1) == "--help")
+    // Versão do programa (verbosa)
+    if(this->args.at(1) == "-V" || this->args.at(1) == "--Version")
         return 2;
+
+    // Tela de ajuda
+    if(this->args.at(1) == "-h" || this->args.at(1) == "--help" || this->args.at(1) == "-H" ||
+       this->args.at(1) == "--Help")
+        return 3;
 
     return UINT32_MAX; // Argumento inválido
 }
@@ -73,7 +78,7 @@ void Controlador::Versao(bool verboso) {
     }
 
     cout << PROGRAMA_NOME << ", version: " << VERSAO << endl;
-    cout << "Copyright© "<< COPYRIGHT_ANOS << ", " << AUTOR << " <" << AUTOR_EMAIL << ">" << endl;
+    cout << "Copyright © "<< COPYRIGHT_ANOS << " " << AUTOR << " <" << AUTOR_EMAIL << ">" << endl;
     cout << "Licensed under " << LICENCA << " version " << LICENCA_VERSAO << " or later <https://www.gnu.org/licenses/>"
          << endl;
     cout << "This program comes with ABSOLUTELY NO WARRANTY." << endl;
@@ -83,29 +88,32 @@ void Controlador::Versao(bool verboso) {
 
 // Exibe uma tela de ajuda
 void Controlador::Ajuda() {
-    string uso, verPr, exAj, nArg, exPdr; // Para traduções
+    string uso, verPr, verPrVb, exAj, nArg, exPdr; // Para traduções
     switch(this->lingua) {
         case PT_BR: {
-            uso = "Uso:",
-            verPr = "(versão do programa)",
-            exAj = "(exibe esta ajuda)",
-            nArg = " <sem argumento> ",
-            exPdr = "(faz a execução padrão)";
+            uso     = "Uso:",
+            verPr   = "(versão do programa, simples)",
+            verPrVb = "(versão do programa, verbosa)",
+            exAj    = "(exibe esta ajuda)",
+            nArg    = " <sem argumento> ",
+            exPdr   = "(faz a execução padrão)";
             break;
         }
         case ENG: {
-            uso = "Usage:",
-            verPr = "(program version)",
-            exAj = "(display this help)",
-            nArg = " <no argument> ",
-            exPdr = "(do default execution)";
+            uso     = "Usage:",
+            verPr   = "(program version, simple)",
+            verPrVb = "(program version, verbose)",
+            exAj    = "(display this help)",
+            nArg    = " <no argument> ",
+            exPdr   = "(do default execution)";
             break;
         }
     }
 
     cout << uso << endl;
     cout << "   " << PROGRAMA_NOME << " [-v] | [--version] " << verPr << endl;
-    cout << "   " << PROGRAMA_NOME << " [-h] | [--help] " << exAj << endl;
+    cout << "   " << PROGRAMA_NOME << " [-V] | [--Version] " << verPrVb << endl;
+    cout << "   " << PROGRAMA_NOME << " [-h] | [-H] | [--help] | [--Help] " << exAj << endl;
     cout << "   " << PROGRAMA_NOME << nArg << exPdr << endl;
 }
 
@@ -292,11 +300,15 @@ void Controlador::executa() {
             this->Padrao();
             break;
         }
-        case 1: { // Versão do programa
+        case 1: { // Versão do programa (simples)
+            this->Versao(false);
+            break;
+        }
+        case 2: { // Versão do programa (verbosa)
             this->Versao();
             break;
         }
-        case 2: { // Ajuda
+        case 3: { // Ajuda
             this->Ajuda();
             break;
         }
