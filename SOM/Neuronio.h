@@ -73,7 +73,6 @@ public:
      * E depois normaliza o vetor de pesos sinápticos */
     virtual void atualiza(Neuronio* vencedor, Dado* dado, double eta, double sigma);
 
-
     virtual string toString(); // Converte para String
 };
 
