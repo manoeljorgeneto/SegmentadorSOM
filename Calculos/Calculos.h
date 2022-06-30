@@ -29,12 +29,15 @@
 
 using namespace std;
 
-vector<double> operator+ (vector<double> &a, vector<double> &b); // Soma de vetores
-vector<double> operator- (vector<double> &a, vector<double> &b); // Subtração de vetores
-vector<double> operator/ (vector<double> &a, double b); // Divisão por um Real
-vector<double> operator* (vector<double> &a, double b); // Multiplicação por um Real
-vector<double> operator* (double a, vector<double> &b); // Multiplicação por um Real
-double operator* (vector<double> &a, vector<double> &b); // Produto interno
+// *********************************************************************************************************************
+// Sobrecarga de operadores
+vector<double> operator+(vector<double> &a, vector<double> &b); // Soma de vetores
+vector<double> operator-(vector<double> &a, vector<double> &b); // Subtração de vetores
+vector<double> operator/(vector<double> &a, double b); // Divisão por um Real
+vector<double> operator*(vector<double> &a, double b); // Multiplicação por um Real
+vector<double> operator*(double a, vector<double> &b); // Multiplicação por um Real
+double operator*(vector<double> &a, vector<double> &b); // Produto interno
+// *********************************************************************************************************************
 
 class Calculos {
 	

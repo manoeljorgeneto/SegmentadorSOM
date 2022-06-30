@@ -91,11 +91,11 @@ void Controlador::Versao(bool verboso) {
 
     cout << PROGRAMA_NOME << ", version: " << VERSAO << endl;
     cout << "Copyright © "<< COPYRIGHT_ANOS << " " << AUTOR << " <" << AUTOR_EMAIL << ">" << endl;
-    cout << "Licensed under " << LICENCA << " version " << LICENCA_VERSAO << " or later <https://www.gnu.org/licenses/>"
+    cout << "Licensed under " << LICENCA << " version " << LICENCA_VERSAO << " or later <" << LICENCA_SITE << ">"
          << endl;
     cout << "This program comes with ABSOLUTELY NO WARRANTY." << endl;
     cout << "This is free software, and you are welcome to redistribute it under certain conditions; "
-         << "see the file COPYING for details." << endl;
+         << "see the file " << LICENCA_ARQUIVO << " for details." << endl;
 }
 
 // Exibe uma tela de ajuda
@@ -145,9 +145,7 @@ Controlador::Controlador(int argc, char** argv, int lingua) :
 }
 
 // Destrutor
-Controlador::~Controlador() {
-
-}
+Controlador::~Controlador() {}
 
 // Executa o programa de acordo com os argumentos fornecidos
 void Controlador::executa() {

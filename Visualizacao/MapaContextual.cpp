@@ -37,14 +37,10 @@ bool MapaContextual::todosNeuroniosMarcados(vector<Neuronio*>* neuronios) {
 }
 
 // Construtor
-MapaContextual::MapaContextual() {
-
-}
+MapaContextual::MapaContextual() {}
 
 // Destrutor
-MapaContextual::~MapaContextual() {
-
-}
+MapaContextual::~MapaContextual() {}
 
 // Gera um Mapa Contextual
 string MapaContextual::geraMapa(vector<Dado*>* dados, Arranjo* arranjo) {	

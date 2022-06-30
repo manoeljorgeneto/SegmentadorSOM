@@ -21,15 +21,65 @@
 
 #include "../Calculos/Calculos.h"
 
-// Construtor
-Calculos::Calculos() {
-	
+// *********************************************************************************************************************
+// Sobrecarga de operadores
+// Soma de dois vetores
+vector<double> operator+ (vector<double> &a, vector<double> &b) {
+    vector<double> vetorSoma(a.size());
+
+    for(unsigned int i = 0; i < a.size(); i++)
+        vetorSoma.at(i) = a.at(i) + b.at(i);
+
+    return vetorSoma;
 }
 
-// Destrutor
-Calculos::~Calculos() {
-	
+// Subtração de dois vetores
+vector<double> operator- (vector<double> &a, vector<double> &b) {
+    vector<double> vetorSub(a.size());
+
+    for(unsigned int i = 0; i < a.size(); i++)
+        vetorSub.at(i) = a.at(i) - b.at(i);
+
+    return vetorSub;
 }
+
+vector<double> operator/ (vector<double> &a, double b) { // Divisão por um Real
+    vector<double> vetorDiv(a.size());
+
+    for(unsigned int i = 0; i < a.size(); i++)
+        vetorDiv.at(i) = a.at(i)/b;
+
+    return vetorDiv;
+}
+
+vector<double> operator* (vector<double> &a, double b) { // Multiplicação por um Real
+    vector<double> vetorMult(a.size());
+
+    for (unsigned int i = 0; i < a.size(); i++)
+        vetorMult.at(i) = a.at(i) * b;
+
+    return vetorMult;
+}
+
+vector<double> operator* (double a, vector<double> &b) { // Multiplicação por um Real
+    return b*a;
+}
+
+double operator* (vector<double> &a, vector<double> &b) { // Produto interno
+    double prodInter = 0.0;
+
+    for(unsigned int i = 0; i < a.size(); i++)
+        prodInter += a.at(i)*b.at(i);
+
+    return prodInter;
+}
+// *********************************************************************************************************************
+
+// Construtor
+Calculos::Calculos() {}
+
+// Destrutor
+Calculos::~Calculos() {}
 
 // Módulo do vetor
 double Calculos::calculaNorma(const vector<double> &a) {	
@@ -60,59 +110,4 @@ double Calculos::calculaDistancia(const vector<double> &a, const vector<double> 
     }
 		
     return sqrt(distancia);
-}
-
-// ********************************************************************************************************************
-// Sobrecarga de operadores
-// ********************************************************************************************************************
-
-// Soma de dois vetores
-vector<double> operator+ (vector<double> &a, vector<double> &b) {
-    vector<double> vetorSoma(a.size());
-	
-    for(unsigned int i = 0; i < a.size(); i++)
-        vetorSoma.at(i) = a.at(i) + b.at(i);
-	
-    return vetorSoma;
-}
-
-// Subtração de dois vetores
-vector<double> operator- (vector<double> &a, vector<double> &b) {
-    vector<double> vetorSub(a.size());
-	
-    for(unsigned int i = 0; i < a.size(); i++)
-        vetorSub.at(i) = a.at(i) - b.at(i);
-	
-    return vetorSub;
-}
-
-vector<double> operator/ (vector<double> &a, double b) { // Divisão por um Real
-    vector<double> vetorDiv(a.size());
-	
-    for(unsigned int i = 0; i < a.size(); i++)
-        vetorDiv.at(i) = a.at(i)/b;
-	
-    return vetorDiv;
-}
-
-vector<double> operator* (vector<double> &a, double b) { // Multiplicação por um Real
-    vector<double> vetorMult(a.size());
-
-    for (unsigned int i = 0; i < a.size(); i++)
-        vetorMult.at(i) = a.at(i) * b;
-
-    return vetorMult;
-}
-
-vector<double> operator* (double a, vector<double> &b) { // Multiplicação por um Real
-    return b*a;
-}
-
-double operator* (vector<double> &a, vector<double> &b) { // Produto interno
-    double prodInter = 0.0;
-	
-    for(unsigned int i = 0; i < a.size(); i++)
-        prodInter += a.at(i)*b.at(i);
-	
-    return prodInter;
 }

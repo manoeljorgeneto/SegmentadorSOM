@@ -19,7 +19,7 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-// Cabeçalho com dados de versão, autoria, direitos de cópia e língua utilizada
+// Cabeçalho com dados de versão, autoria, direitos de cópia e línguas utilizadas
 
 #ifndef VERSAO_H
 #define VERSAO_H
@@ -36,6 +36,8 @@
 #define AUTOR_EMAIL "manoeljorge.neto@gmail.com"
 #define LICENCA "GNU GPL"
 #define LICENCA_VERSAO "3"
+#define LICENCA_SITE "https://www.gnu.org/licenses/"
+#define LICENCA_ARQUIVO "COPYING"
 
 #define PT_BR 0
 #define ENG 1

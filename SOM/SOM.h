@@ -74,12 +74,11 @@ protected:
 
     // Mensagens durante o algoritmo de treinamento
     virtual void Verboso(unsigned int msg, bool verboso = true, unsigned int iteracoes = 0, unsigned int n_it = 0,
-                 int64_t tempo = 0);
+                         int64_t tempo = 0);
 
 public:
-    // Construtor
     SOM(unsigned int largura, unsigned int dimensao_entrada, double sigma = 2.5, double tau2 = 1000.0, double eta = 0.1,
-        int semente = 1000, int lingua = ENG);
+        int semente = 1000, int lingua = ENG); // Construtor
     virtual ~SOM(); // Destrutor
 
     // Faz o treinamento do SOM segundo o algoritmo incremental

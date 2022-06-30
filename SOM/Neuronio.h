@@ -46,7 +46,6 @@ protected:
     bool marcado;
 	
 public:
-
     Neuronio(unsigned int dim_entrada, vector<unsigned int>* posicao, string rotulo = ""); // Construtor
     Neuronio(vector<double> *pesos, vector<unsigned int>* posicao, string rotulo = ""); // Construtor
     virtual ~Neuronio(); // Destrutor
