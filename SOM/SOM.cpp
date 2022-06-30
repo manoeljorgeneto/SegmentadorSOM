@@ -188,8 +188,7 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
 
 // Construtor
 SOM::SOM(unsigned int largura, unsigned int dimensao_entrada, double sigma, double tau2, double eta, int semente,
-         int lingua) :
-    ger_mt(semente) {
+         int lingua) : ger_mt(semente) {
     this->sigma_ini = sigma;
     this->tau2 = tau2;
     this->eta_ini = eta;
