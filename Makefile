@@ -3,13 +3,16 @@
 all: SegmentadorSOM
 	@echo "Compilação do SegmentadorSOM finalizada!"
 
-SegmentadorSOM: main.o Controlador.o Calculos.o Dado.o Neuronio.o Arranjo.o SOM.o MapaContextual.o
-	g++ -fopenmp main.o Controlador.o Calculos.o Dado.o Neuronio.o Arranjo.o SOM.o MapaContextual.o -o SegmentadorSOM
+SegmentadorSOM: main.o ControladorSegmentadorSOM.o Controlador.o Calculos.o Dado.o Neuronio.o Arranjo.o SOM.o MapaContextual.o
+	g++ -fopenmp main.o ControladorSegmentadorSOM.o Controlador.o Calculos.o Dado.o Neuronio.o Arranjo.o SOM.o MapaContextual.o -o SegmentadorSOM
 
-main.o: main.cpp ./Controlador/Controlador.h
+main.o: main.cpp ./Controlador/ControladorSegmentadorSOM.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic main.cpp -o main.o
 
-Controlador.o: ./Controlador/Controlador.cpp ./Controlador/Controlador.h versao.h ./Codificador/Dado.h ./SOM/Neuronio.h ./SOM/Arranjo.h ./SOM/SOM.h ./Visualizacao/MapaContextual.h
+ControladorSegmentadorSOM.o: ./Controlador/ControladorSegmentadorSOM.cpp ./Controlador/ControladorSegmentadorSOM.h ./Controlador/Controlador.h ./Codificador/Dado.h ./SOM/Neuronio.h ./SOM/Arranjo.h ./SOM/SOM.h ./Visualizacao/MapaContextual.h
+	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Controlador/ControladorSegmentadorSOM.cpp -o ControladorSegmentadorSOM.o
+
+Controlador.o: ./Controlador/Controlador.cpp ./Controlador/Controlador.h versao.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Controlador/Controlador.cpp -o Controlador.o
 
 Calculos.o: ./Calculos/Calculos.cpp ./Calculos/Calculos.h
@@ -37,4 +40,4 @@ clean:
 	rm -f *.o ./SegmentadorSOM
 
 # Comando completo
-# g++ -std=c++17 -fopenmp -O3 -Wall -Wextra -pedantic main.cpp ./Controlador/Controlador.cpp ./Calculos/Calculos.cpp ./Codificador/Dado.cpp ./SOM/Neuronio.cpp ./SOM/Arranjo.cpp ./SOM/SOM.cpp ./Visualizacao/MapaContextual.cpp -o SegmentadorSOM
+# g++ -std=c++17 -fopenmp -O3 -Wall -Wextra -pedantic main.cpp ./Controlador/ControladorSegmentadorSOM.cpp ./Controlador/Controlador.cpp ./Calculos/Calculos.cpp ./Codificador/Dado.cpp ./SOM/Neuronio.cpp ./SOM/Arranjo.cpp ./SOM/SOM.cpp ./Visualizacao/MapaContextual.cpp -o SegmentadorSOM

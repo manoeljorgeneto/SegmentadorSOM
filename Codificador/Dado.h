@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : main.cpp
+// Name        : Dado.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -34,6 +34,7 @@
 using namespace std;
 
 class Dado {
+protected:
     string rotulo; // Rótulo que marca o dado (serve para a formação de um Mapa Contextual)
 	 
     vector<double>* dados; // Vetor que representa o dado

@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : main.cpp
+// Name        : SOM.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -182,10 +182,6 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
             cout << tDec << tempo/1000000000.0 << segs << endl;
             cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << endl;
             break;
-        }
-        default: {
-            cout << "Nada para fazer..." << endl;
-            cout << "O bolo é uma mentira!" << endl; // GLaDOS FTW!!
         }
     }
 }

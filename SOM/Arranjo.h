@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : main.cpp
+// Name        : Arranjo.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -34,6 +34,7 @@
 using namespace std;
 
 class Arranjo {
+protected:
     vector<Neuronio*>* neuronios; // Contêiner onde estarão os neurônios
     unsigned int dimensao; // Dimensão dos vetores de pesos sinápticos do neurônios
 	

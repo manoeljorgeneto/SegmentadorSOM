@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : main.cpp
+// Name        : MapaContextual.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha

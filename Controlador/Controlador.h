@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : main.cpp
+// Name        : Controlador.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -29,35 +29,28 @@
 #include <string>
 
 #include "../versao.h"
-#include "../Codificador/Dado.h"
-#include "../SOM/Neuronio.h"
-#include "../SOM/Arranjo.h"
-#include "../SOM/SOM.h"
-#include "../Visualizacao/MapaContextual.h"
 
 using namespace std;
 
 class Controlador {
+protected:
     vector<string> args; // Argumentos
     int lingua; // Língua utilizada
 
-    unsigned int verificaArgumentos(); // Verifica os argumentos fornecidos
-    unsigned int verificaArgumentos_Expandido(); // Para argumentos complexos
+    virtual unsigned int verificaArgumentos() const; // Verifica os argumentos fornecidos
+    virtual unsigned int verificaArgumentos_Expandido() const; // Para argumentos complexos
     void listaArgumentos(); // Lista os argumentos fornecidos
 
     void argumentoInvalido(); // Exibe uma mensagem de argumento inválido
     void Versao(bool verboso = true); // Exibe a versão do programa
-    void Ajuda(); // Exibe uma tela de ajuda
-    void Padrao(); // Faz a execução padrão do programa
-
-    // TODO Implementar outros métodos, como leitura de dataset, leitura do conjunto de neurônios etc.
-    // TODO Implementar um método para leitura de configurações
+    virtual void Ajuda(); // Exibe uma tela de ajuda
+    virtual void Padrao(); // Faz a execução padrão do programa
 
 public:
     Controlador(int argc, char** argv, int lingua = ENG); // Construtor
     virtual ~Controlador(); // Destrutor
 
-    void executa(); // Executa o programa de acordo com os argumentos fornecidos
+    virtual void executa(); // Executa o programa de acordo com os argumentos fornecidos
 
     // Get e sets
     vector<string> getArgs() const;

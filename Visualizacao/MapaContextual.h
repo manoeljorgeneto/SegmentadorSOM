@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : main.cpp
+// Name        : MapaContextual.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -37,6 +37,7 @@
 using namespace std;
 
 class MapaContextual {
+protected:
     void desmarcaNeuronios(vector<Neuronio*>* neuronios); // Desmarca todos os neurônios
     bool todosNeuroniosMarcados(vector<Neuronio*>* neuronios); // Verifica se todos os neurônios estão marcados
 	

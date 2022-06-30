@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : main.cpp
+// Name        : Neuronio.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -35,7 +35,7 @@
 using namespace std;
 
 class Neuronio {
-	
+protected:
     vector<double>* pesos; // Vetor de pesos sinápticos
     vector<unsigned int>* posicao; // Vetor da posiçãoo do neurônio no arranjo
 	

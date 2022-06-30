@@ -1,7 +1,8 @@
 CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/main.cpp \
  /usr/include/stdc-predef.h \
- /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/Controlador.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/ControladorSegmentadorSOM.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Controlador/Controlador.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -156,7 +157,7 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../versao.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Controlador/../versao.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Codificador/Dado.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \

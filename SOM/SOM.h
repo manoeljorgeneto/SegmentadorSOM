@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : main.cpp
+// Name        : SOM.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -43,6 +43,7 @@ using namespace std;
 using namespace std::chrono;
 
 class SOM {
+protected:
     Arranjo* arranjo; // Arranjo de neurônios
 
     unsigned int dimensao_entrada; // Dimensão de entrada

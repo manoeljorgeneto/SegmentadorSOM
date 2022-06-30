@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : main.cpp
+// Name        : ControladorSegmentadorSOM.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -19,13 +19,27 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#include "./Controlador/ControladorSegmentadorSOM.h"
+// Classe que faz o controle do fluxo do programa, herdeira das características da classe Controlador
 
-int main(int argc, char** argv) {
+#ifndef CONTROLADORSEGMENTADORSOM_H
+#define CONTROLADORSEGMENTADORSOM_H
 
-    // Objeto que faz o controle do fluxo do programa, de acordo com os argumentos
-    ControladorSegmentadorSOM ctrl(argc, argv);
-    ctrl.executa(); // Executa o programa!
+#include "../Controlador/Controlador.h"
+#include "../Codificador/Dado.h"
+#include "../SOM/Neuronio.h"
+#include "../SOM/Arranjo.h"
+#include "../SOM/SOM.h"
+#include "../Visualizacao/MapaContextual.h"
 
-    return EXIT_SUCCESS;
-}
+class ControladorSegmentadorSOM : public Controlador {
+protected:
+    virtual void Padrao(); // Faz a execução padrão do programa
+
+    // TODO Implementar outros métodos, como leitura de dataset, leitura do conjunto de neurônios etc.
+    // TODO Implementar um método para leitura de configurações
+
+public:
+    ControladorSegmentadorSOM(int argc, char** argv, int lingua = ENG); // Construtor
+};
+
+#endif // CONTROLADORSEGMENTADORSOM_H

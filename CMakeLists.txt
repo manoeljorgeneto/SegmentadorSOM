@@ -11,6 +11,7 @@ add_executable(
         main.cpp
         versao.h
         Controlador/Controlador.cpp Controlador/Controlador.h
+        Controlador/ControladorSegmentadorSOM.cpp Controlador/ControladorSegmentadorSOM.h
         Calculos/Calculos.cpp Calculos/Calculos.h
         Codificador/Dado.cpp Codificador/Dado.h
         SOM/Arranjo.cpp SOM/Arranjo.h
