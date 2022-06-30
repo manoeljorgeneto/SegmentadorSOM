@@ -56,7 +56,7 @@ unsigned Controlador::verificaArgumentos_Expandido() const {
 
 // Lista os argumentos fornecidos
 void Controlador::listaArgumentos() {
-    for(auto const& s : this->args)
+    for(const auto& s : this->args)
         cout << s << endl;
 }
 
