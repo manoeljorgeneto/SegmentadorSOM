@@ -159,6 +159,7 @@ CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
  /home/manoel/CLionProjects/SegmentadorSOM/Visualizacao/../Visualizacao/../Codificador/Dado.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \

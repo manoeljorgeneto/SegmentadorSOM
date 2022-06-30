@@ -201,6 +201,30 @@ Controlador/Controlador.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.s
 .PHONY : Controlador/Controlador.cpp.s
 
+Controlador/ControladorSegmentadorSOM.o: Controlador/ControladorSegmentadorSOM.cpp.o
+.PHONY : Controlador/ControladorSegmentadorSOM.o
+
+# target to build an object file
+Controlador/ControladorSegmentadorSOM.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o
+.PHONY : Controlador/ControladorSegmentadorSOM.cpp.o
+
+Controlador/ControladorSegmentadorSOM.i: Controlador/ControladorSegmentadorSOM.cpp.i
+.PHONY : Controlador/ControladorSegmentadorSOM.i
+
+# target to preprocess a source file
+Controlador/ControladorSegmentadorSOM.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.i
+.PHONY : Controlador/ControladorSegmentadorSOM.cpp.i
+
+Controlador/ControladorSegmentadorSOM.s: Controlador/ControladorSegmentadorSOM.cpp.s
+.PHONY : Controlador/ControladorSegmentadorSOM.s
+
+# target to generate assembly for a file
+Controlador/ControladorSegmentadorSOM.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.s
+.PHONY : Controlador/ControladorSegmentadorSOM.cpp.s
+
 SOM/Arranjo.o: SOM/Arranjo.cpp.o
 .PHONY : SOM/Arranjo.o
 
@@ -339,6 +363,9 @@ help:
 	@echo "... Controlador/Controlador.o"
 	@echo "... Controlador/Controlador.i"
 	@echo "... Controlador/Controlador.s"
+	@echo "... Controlador/ControladorSegmentadorSOM.o"
+	@echo "... Controlador/ControladorSegmentadorSOM.i"
+	@echo "... Controlador/ControladorSegmentadorSOM.s"
 	@echo "... SOM/Arranjo.o"
 	@echo "... SOM/Arranjo.i"
 	@echo "... SOM/Arranjo.s"
