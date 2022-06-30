@@ -22,12 +22,12 @@
 #include "../SOM/SOM.h"
 
 // Calcula a largura da vizinhança
-double SOM::calculaSigma(unsigned int tempo) {
+double SOM::calculaSigma(unsigned tempo) {
     return this->sigma_ini * exp(-(double(tempo))/this->tau1);
 }
 
 // Calcula a taxa de aprendizado
-double SOM::calculaEta(unsigned int tempo) {
+double SOM::calculaEta(unsigned tempo) {
     return this->eta_ini * exp(-(double(tempo))/this->tau2);
 }
 
@@ -43,9 +43,9 @@ double SOM::geraRand(double x, double y) {
 }
 
 // Gera um inteiro aleatório no intervalo [m,n]
-unsigned int SOM::geraRandInt(unsigned int m, unsigned int n) {
+unsigned SOM::geraRandInt(unsigned m, unsigned n) {
     std::uniform_int_distribution<> dis_ui(m, n); // distribuição uniforme (inteiros)
-    unsigned int r;
+    unsigned r;
 
     #pragma omp critical
     r = dis_ui(this->ger_mt);
@@ -59,7 +59,7 @@ vector<double> SOM::geraVetorRand() {
 	
     // Preenche o vetor com valores aleatórios
     //#pragma omp parallel for
-    for(unsigned int i = 0; i < this->dimensao_entrada; i++)
+    for(unsigned i = 0; i < this->dimensao_entrada; i++)
         vetor.at(i) = this->geraRand(-1.0, 1.0); // Intervalo entre -1 e 1
 	
     Calculos::normalizaVetor(&vetor); // Normaliza o vetor
@@ -79,7 +79,7 @@ void SOM::inicializaRand() {
 
 // Obtém um dado ainda não marcado de forma aleatória
 Dado* SOM::getDadoRand(vector<Dado*>* dados) {
-    unsigned int rnd;
+    unsigned rnd;
     Dado* d;
 
     do {
@@ -117,7 +117,7 @@ void SOM::atualizaNeuronios(Neuronio* vencedor, Dado* dado, double eta, double s
 }
 
 // Mensagens durante o algoritmo de treinamento
-void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsigned int n_it, int64_t tempo) {
+void SOM::Verboso(unsigned msg, bool verboso, unsigned iteracoes, unsigned n_it, int64_t tempo) {
     if(!verboso)
         return;
 
@@ -187,8 +187,8 @@ void SOM::Verboso(unsigned int msg, bool verboso, unsigned int iteracoes, unsign
 }
 
 // Construtor
-SOM::SOM(unsigned int largura, unsigned int dimensao_entrada, double sigma, double tau2, double eta, int semente,
-         int lingua) : ger_mt(semente) {
+SOM::SOM(unsigned largura, unsigned dimensao_entrada, double sigma, double tau2, double eta, int semente, int lingua) :
+    ger_mt(semente) {
     this->sigma_ini = sigma;
     this->tau2 = tau2;
     this->eta_ini = eta;
@@ -207,7 +207,7 @@ SOM::~SOM() {
 }
 
 // Faz o treinamento do SOM segundo o algoritmo incremental
-void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializa, bool verboso) {
+void SOM::treinaSOM(vector<Dado*>* dados, unsigned iteracoes, bool inicializa, bool verboso) {
     this->Verboso(0, verboso, iteracoes); // Começo do sumário do treinamento
 
     if(inicializa) { // Inicializa os neurônios do arranjo de forma aleatória
@@ -222,7 +222,7 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned int iteracoes, bool inicializ
     auto inicio = high_resolution_clock::now(); // Início da contagem do tempo!
 
     // Repete até o número máximo de iterações
-    for(unsigned int n_it = 0; n_it < iteracoes; n_it++) {
+    for(unsigned n_it = 0; n_it < iteracoes; n_it++) {
         double sigma = this->calculaSigma(n_it); // Calcula a largura da vizinhança
         double eta = this->calculaEta(n_it); // Calcula a taxa de aprendizado
 		

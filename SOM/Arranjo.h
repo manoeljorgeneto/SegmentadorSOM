@@ -36,23 +36,23 @@ using namespace std;
 class Arranjo {
 protected:
     vector<Neuronio*>* neuronios; // Contêiner onde estarão os neurônios
-    unsigned int dimensao; // Dimensão dos vetores de pesos sinápticos do neurônios
+    unsigned dimensao; // Dimensão dos vetores de pesos sinápticos do neurônios
 	
-    unsigned int largura; // Largura (e altura também) do arranjo
-    unsigned int tamanho; // Tamanho do arranjo
+    unsigned largura; // Largura (e altura também) do arranjo
+    unsigned tamanho; // Tamanho do arranjo
 	
-    vector<unsigned int>* criaPosicao(unsigned int n); // Cria uma posição 2D, dado um inteiro
-    Neuronio* criaNeuronio(unsigned int n); // Cria um neurônio na posição correta no arranjo
+    vector<unsigned>* criaPosicao(unsigned n); // Cria uma posição 2D, dado um inteiro
+    Neuronio* criaNeuronio(unsigned n); // Cria um neurônio na posição correta no arranjo
 	
 public:
-    Arranjo(unsigned int largura, unsigned int dimensao_entrada); // Construtor
+    Arranjo(unsigned largura, unsigned dimensao_entrada); // Construtor
     virtual ~Arranjo(); // Destrutor
 	
     // Gets e sets
     vector<Neuronio*>* getNeuronios();
-    unsigned int getDimensao();
-    unsigned int getLargura();
-    unsigned int getTamanho();
+    unsigned getDimensao();
+    unsigned getLargura();
+    unsigned getTamanho();
     void setNeuronios(vector<Neuronio*>* neuronios);
 
     /* Faz a competição entre os neurônios para descobrir quem é o vencedor:

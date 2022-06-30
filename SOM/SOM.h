@@ -46,7 +46,7 @@ class SOM {
 protected:
     Arranjo* arranjo; // Arranjo de neurônios
 
-    unsigned int dimensao_entrada; // Dimensão de entrada
+    unsigned dimensao_entrada; // Dimensão de entrada
 
     double sigma_ini, eta_ini; // Valores iniciais dos parâmetros sigma e eta
     double tau1, tau2; // Valores das constantes temporais
@@ -56,11 +56,11 @@ protected:
 
     int lingua; // Língua utilizada
 
-    double calculaSigma(unsigned int tempo); // Calcula a largura da vizinhança
-    double calculaEta(unsigned int tempo); // Calcula a taxa de aprendizado
+    double calculaSigma(unsigned tempo); // Calcula a largura da vizinhança
+    double calculaEta(unsigned tempo); // Calcula a taxa de aprendizado
 
     double geraRand(double x, double y); // Gera um número real aleatório no intervalo [x,y), com distribuição uniforme
-    unsigned int geraRandInt(unsigned int m, unsigned int n); // Gera um inteiro aleatório no intervalo [m,n]
+    unsigned geraRandInt(unsigned m, unsigned n); // Gera um inteiro aleatório no intervalo [m,n]
 
     vector<double> geraVetorRand(); // Gera um vetor de pesos aleatório e normalizado
     void inicializaRand(); // Inicializa os neurônios do arranjo com valores aleatórios
@@ -73,16 +73,16 @@ protected:
     void atualizaNeuronios(Neuronio* vencedor, Dado* dado, double eta, double sigma);
 
     // Mensagens durante o algoritmo de treinamento
-    virtual void Verboso(unsigned int msg, bool verboso = true, unsigned int iteracoes = 0, unsigned int n_it = 0,
+    virtual void Verboso(unsigned msg, bool verboso = true, unsigned iteracoes = 0, unsigned n_it = 0,
                          int64_t tempo = 0);
 
 public:
-    SOM(unsigned int largura, unsigned int dimensao_entrada, double sigma = 2.5, double tau2 = 1000.0, double eta = 0.1,
+    SOM(unsigned largura, unsigned dimensao_entrada, double sigma = 2.5, double tau2 = 1000.0, double eta = 0.1,
         int semente = 1000, int lingua = ENG); // Construtor
     virtual ~SOM(); // Destrutor
 
     // Faz o treinamento do SOM segundo o algoritmo incremental
-    virtual void treinaSOM(vector<Dado*>* dados, unsigned int iteracoes = 10000, bool inicializa = true,
+    virtual void treinaSOM(vector<Dado*>* dados, unsigned iteracoes = 10000, bool inicializa = true,
                            bool verboso = true);
 	
     // Gets e sets

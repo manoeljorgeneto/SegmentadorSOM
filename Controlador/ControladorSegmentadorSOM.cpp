@@ -153,7 +153,7 @@ void ControladorSegmentadorSOM::Padrao() {
     v->at(19) = T;
 
     // Exibindo os dados
-    for(unsigned int i = 0; i < v->size(); i++)
+    for(unsigned i = 0; i < v->size(); i++)
         cout << v->at(i)->toString() << endl;
 
     cout << endl;

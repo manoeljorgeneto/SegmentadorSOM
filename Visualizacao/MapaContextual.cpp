@@ -51,7 +51,7 @@ string MapaContextual::geraMapa(vector<Dado*>* dados, Arranjo* arranjo) {
     this->desmarcaNeuronios(arranjo->getNeuronios());
 
     // Cria o Mapa Contextual
-    unsigned int i = 0;
+    unsigned i = 0;
     while(!this->todosNeuroniosMarcados(arranjo->getNeuronios())) {
         while((i < dados->size()) && !this->todosNeuroniosMarcados(arranjo->getNeuronios())) {
             d = dados->at(i);
@@ -67,7 +67,7 @@ string MapaContextual::geraMapa(vector<Dado*>* dados, Arranjo* arranjo) {
     // Constrói a string com o Mapa Contextual
     ostringstream mapa("") ;
     i = 0;
-    unsigned int largura = arranjo->getLargura();
+    unsigned largura = arranjo->getLargura();
 
     // Percorre todos os neurônios e escreve os seus rótulos em mapa
     for(n = arranjo->getNeuronios()->begin(); n != arranjo->getNeuronios()->end(); n++, i++) {

@@ -27,7 +27,7 @@
 vector<double> operator+ (vector<double> &a, vector<double> &b) {
     vector<double> vetorSoma(a.size());
 
-    for(unsigned int i = 0; i < a.size(); i++)
+    for(unsigned i = 0; i < a.size(); i++)
         vetorSoma.at(i) = a.at(i) + b.at(i);
 
     return vetorSoma;
@@ -37,7 +37,7 @@ vector<double> operator+ (vector<double> &a, vector<double> &b) {
 vector<double> operator- (vector<double> &a, vector<double> &b) {
     vector<double> vetorSub(a.size());
 
-    for(unsigned int i = 0; i < a.size(); i++)
+    for(unsigned i = 0; i < a.size(); i++)
         vetorSub.at(i) = a.at(i) - b.at(i);
 
     return vetorSub;
@@ -46,7 +46,7 @@ vector<double> operator- (vector<double> &a, vector<double> &b) {
 vector<double> operator/ (vector<double> &a, double b) { // Divisão por um Real
     vector<double> vetorDiv(a.size());
 
-    for(unsigned int i = 0; i < a.size(); i++)
+    for(unsigned i = 0; i < a.size(); i++)
         vetorDiv.at(i) = a.at(i)/b;
 
     return vetorDiv;
@@ -55,7 +55,7 @@ vector<double> operator/ (vector<double> &a, double b) { // Divisão por um Real
 vector<double> operator* (vector<double> &a, double b) { // Multiplicação por um Real
     vector<double> vetorMult(a.size());
 
-    for (unsigned int i = 0; i < a.size(); i++)
+    for (unsigned i = 0; i < a.size(); i++)
         vetorMult.at(i) = a.at(i) * b;
 
     return vetorMult;
@@ -68,7 +68,7 @@ vector<double> operator* (double a, vector<double> &b) { // Multiplicação por 
 double operator* (vector<double> &a, vector<double> &b) { // Produto interno
     double prodInter = 0.0;
 
-    for(unsigned int i = 0; i < a.size(); i++)
+    for(unsigned i = 0; i < a.size(); i++)
         prodInter += a.at(i)*b.at(i);
 
     return prodInter;
@@ -85,7 +85,7 @@ Calculos::~Calculos() {}
 double Calculos::calculaNorma(const vector<double> &a) {	
     double distancia = 0.0;
 		
-    for(unsigned int i = 0 ; i < a.size(); i++)
+    for(unsigned i = 0 ; i < a.size(); i++)
         distancia += pow(a.at(i), 2.0);
 		
     return sqrt(distancia);
@@ -96,7 +96,7 @@ void Calculos::normalizaVetor(vector<double> *a) {
     double norma = Calculos::calculaNorma(*a);
 	
     // Normaliza o vetor
-    for(unsigned int i = 0; i < a->size(); i++)
+    for(unsigned i = 0; i < a->size(); i++)
         a->at(i) /= norma;
 }
 
@@ -104,7 +104,7 @@ void Calculos::normalizaVetor(vector<double> *a) {
 double Calculos::calculaDistancia(const vector<double> &a, const vector<double> &b) {	
     double dif, distancia = 0.0;
 		
-    for(unsigned int i = 0 ; i < a.size(); i++) {
+    for(unsigned i = 0 ; i < a.size(); i++) {
         dif = a.at(i) - b.at(i);
         distancia += pow(dif, 2.0);
     }

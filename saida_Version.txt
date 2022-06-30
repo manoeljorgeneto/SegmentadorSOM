@@ -1,0 +1,5 @@
+SegmentadorSOM, version: v0.1.2-alpha
+Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
+Licensed under GNU GPL version 3 or later <https://www.gnu.org/licenses/>
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions; see the file COPYING for details.

@@ -22,32 +22,32 @@
 #include "../SOM/Arranjo.h"
 
 // Cria uma posição 2D, dado um inteiro
-vector<unsigned int>* Arranjo::criaPosicao(unsigned int n) {
-    unsigned int pos_x = n % this->largura; // Cálculo das posições
-    unsigned int pos_y = n / this->largura;
-	
-    vector<unsigned int>* pos = new vector<unsigned int>(2);
+vector<unsigned>* Arranjo::criaPosicao(unsigned n) {
+    unsigned pos_x = n % this->largura; // Cálculo das posições
+    unsigned pos_y = n / this->largura;
+
+    vector<unsigned>* pos = new vector<unsigned>(2);
     pos->at(0) = pos_x; pos->at(1) = pos_y;
-	
+
     return pos;
 }
 
 // Cria um neurônio na posição correta no arranjo
-Neuronio* Arranjo::criaNeuronio(unsigned int n) {			 
+Neuronio* Arranjo::criaNeuronio(unsigned n) {
     return new Neuronio(this->dimensao,this->criaPosicao(n));
 }
 
 // Construtor
-Arranjo::Arranjo(unsigned int largura, unsigned int dimensao_entrada) {
+Arranjo::Arranjo(unsigned largura, unsigned dimensao_entrada) {
     this->largura = largura;
     this->tamanho = largura*largura; // Pois é um arranjo quadrado
     this->dimensao = dimensao_entrada;
-		
+
     this->neuronios = new vector<Neuronio*>(this->tamanho); // Cria o vetor de neurônios
-	
-	// Criação dos neurônios
+
+    // Criação dos neurônios
     #pragma omp parallel for
-    for(unsigned int i = 0; i < this->tamanho; i++)
+    for(unsigned i = 0; i < this->tamanho; i++)
         this->neuronios->at(i) = this->criaNeuronio(i);
 }
 
@@ -61,15 +61,15 @@ vector<Neuronio*>* Arranjo::getNeuronios() {
     return this->neuronios;
 }
 
-unsigned int Arranjo::getDimensao() {
+unsigned Arranjo::getDimensao() {
     return this->dimensao;
 }
 
-unsigned int Arranjo::getLargura() {
+unsigned Arranjo::getLargura() {
     return this->largura;
 }
 
-unsigned int Arranjo::getTamanho() {
+unsigned Arranjo::getTamanho() {
     return this->tamanho;
 }
 
@@ -83,8 +83,8 @@ void Arranjo::setNeuronios(vector<Neuronio*>* neuronios) {
 vector<Neuronio*>::iterator Arranjo::getVencedor(Dado* dado, bool marcar) {
     vector<Neuronio*>::iterator vencedor = this->neuronios->begin(); // Obtém o primeiro neurônio e guarda em vencedor
     double menor_distancia = (*vencedor)->getDistancia(*(dado->getDados())); // Calcula a distância
-	
-	// Percorre os neurônios para descobrir qual tem menor distância
+
+    // Percorre os neurônios para descobrir qual tem menor distância
     //#pragma omp parallel for
     for(vector<Neuronio*>::iterator aux = this->neuronios->begin(); aux != this->neuronios->end(); aux++)
         if(((*aux)->getDistancia(*(dado)->getDados()) < menor_distancia && !(*aux)->getMarcado()) ||
@@ -92,7 +92,7 @@ vector<Neuronio*>::iterator Arranjo::getVencedor(Dado* dado, bool marcar) {
             vencedor = aux;
             menor_distancia = (*vencedor)->getDistancia(*(dado)->getDados());
         }
-	
+
     if(marcar) // Tem utilidade no Mapa Contextual
         (*vencedor)->setMarcado(true);
 

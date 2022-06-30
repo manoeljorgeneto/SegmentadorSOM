@@ -38,11 +38,11 @@ protected:
     string rotulo; // Rótulo que marca o dado (serve para a formação de um Mapa Contextual)
 	 
     vector<double>* dados; // Vetor que representa o dado
-    unsigned int dimensao; // Dimensão do dado
+    unsigned dimensao; // Dimensão do dado
     bool marcado; // Serve para os algoritmos SOM e do Mapa Contextual
 	
 public:
-    Dado(unsigned int dimensao, string rotulo = ""); // Construtor
+    Dado(unsigned dimensao, string rotulo = ""); // Construtor
     Dado(vector<double>* dados , string rotulo = ""); // Construtor
     virtual ~Dado(); // Destrutor
 	

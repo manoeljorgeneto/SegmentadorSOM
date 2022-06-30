@@ -22,7 +22,7 @@
 #include "../Codificador/Dado.h"
 
 // Construtor
-Dado::Dado(unsigned int dimensao, string rotulo) {
+Dado::Dado(unsigned dimensao, string rotulo) {
     this->dimensao = dimensao;
     this->rotulo = rotulo;
     this->marcado = false;
@@ -78,7 +78,7 @@ string Dado::toString() {
     ostringstream str("");
 	
     str << "Dado(" << this->rotulo << "): ";
-    for(unsigned int i = 0; i < this->dimensao; i++)
+    for(unsigned i = 0; i < this->dimensao; i++)
         str << this->dados->at(i) << " ";
 	
     return str.str();

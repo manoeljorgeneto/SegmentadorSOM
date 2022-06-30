@@ -37,8 +37,8 @@ protected:
     vector<string> args; // Argumentos
     int lingua; // Língua utilizada
 
-    virtual unsigned int verificaArgumentos() const; // Verifica os argumentos fornecidos
-    virtual unsigned int verificaArgumentos_Expandido() const; // Para argumentos complexos
+    virtual unsigned verificaArgumentos() const; // Verifica os argumentos fornecidos
+    virtual unsigned verificaArgumentos_Expandido() const; // Para argumentos complexos
     void listaArgumentos(); // Lista os argumentos fornecidos
 
     void argumentoInvalido(); // Exibe uma mensagem de argumento inválido

@@ -37,23 +37,23 @@ using namespace std;
 class Neuronio {
 protected:
     vector<double>* pesos; // Vetor de pesos sinápticos
-    vector<unsigned int>* posicao; // Vetor da posiçãoo do neurônio no arranjo
+    vector<unsigned>* posicao; // Vetor da posiçãoo do neurônio no arranjo
 	
-    unsigned int dim_entrada; // Dimensão de entrada
-    unsigned int dim_saida; // Dimensão de saída
+    unsigned dim_entrada; // Dimensão de entrada
+    unsigned dim_saida; // Dimensão de saída
 	
     string rotulo; // Servem para o Mapa Contextual
     bool marcado;
 	
 public:
-    Neuronio(unsigned int dim_entrada, vector<unsigned int>* posicao, string rotulo = ""); // Construtor
-    Neuronio(vector<double> *pesos, vector<unsigned int>* posicao, string rotulo = ""); // Construtor
+    Neuronio(unsigned dim_entrada, vector<unsigned>* posicao, string rotulo = ""); // Construtor
+    Neuronio(vector<double> *pesos, vector<unsigned>* posicao, string rotulo = ""); // Construtor
     virtual ~Neuronio(); // Destrutor
 	
     // Gets e sets
-    unsigned int getDim(); // Dimensão de entrada
+    unsigned getDim(); // Dimensão de entrada
     vector<double>* getPesos();
-    vector<unsigned int>* getPosicao(); // Posição do neurônio no arranjo
+    vector<unsigned>* getPosicao(); // Posição do neurônio no arranjo
     string getRotulo();
     bool getMarcado();
 	
@@ -66,7 +66,8 @@ public:
 
     virtual double calculaDistanciaEspacial(Neuronio* n); // Retorna a distância espacial entre dois neurônios
 
-    virtual double calculaVizinhanca(Neuronio* n, double sigma); // Calcula a função de vizinhança do neurônio, dado um vencedor
+    // Calcula a função de vizinhança do neurônio, dado um vencedor
+    virtual double calculaVizinhanca(Neuronio* n, double sigma);
 
     /* Faz a equação:
      * w(n+1) = w(n) + eta(n)*h(i(x),n)*[x - w(n)]

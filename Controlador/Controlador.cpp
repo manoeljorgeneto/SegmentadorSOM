@@ -22,7 +22,7 @@
 #include "../Controlador/Controlador.h"
 
 // Verifica os argumentos fornecidos
-unsigned int Controlador::verificaArgumentos() const {
+unsigned Controlador::verificaArgumentos() const {
     if(this->args.size() == 1) // Tem apenas o caminho do programa, faz a execuçao padrão
         return 0;
 
@@ -50,7 +50,7 @@ unsigned int Controlador::verificaArgumentos() const {
 }
 
 // Para argumentos complexos
-unsigned int Controlador::verificaArgumentos_Expandido() const {
+unsigned Controlador::verificaArgumentos_Expandido() const {
     return UINT32_MAX; // O programa ainda não lida com argumentos complexos
 }
 
