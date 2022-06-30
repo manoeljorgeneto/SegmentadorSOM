@@ -45,18 +45,18 @@ public:
     Dado(unsigned dimensao, string rotulo = ""); // Construtor
     Dado(vector<double>* dados , string rotulo = ""); // Construtor
     virtual ~Dado(); // Destrutor
-	
-	// Gets e sets
+
+    // Gets e sets
     string getRotulo();
     vector<double>* getDados();
     bool getMarcado();
-	
+
     void setRotulo(string rotulo);
     void setDados(vector<double>* dados);
     void setMarcado(bool marcado);
-	
+
     void normaliza(); // Normaliza o vetor de dados
-	
+
     virtual string toString(); // Converte para String
 };
 

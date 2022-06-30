@@ -54,7 +54,7 @@ vector<double>* Dado::getDados() {
 bool Dado::getMarcado() {
     return this->marcado;
 }
-	
+
 void Dado::setRotulo(string rotulo) {
     this->rotulo = rotulo;
 }
@@ -76,10 +76,10 @@ void Dado::normaliza() {
 // Converte para String
 string Dado::toString() {
     ostringstream str("");
-	
+
     str << "Dado(" << this->rotulo << "): ";
     for(unsigned i = 0; i < this->dimensao; i++)
         str << this->dados->at(i) << " ";
-	
+
     return str.str();
 }
