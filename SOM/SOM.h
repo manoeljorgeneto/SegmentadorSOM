@@ -56,24 +56,24 @@ protected:
 
     int lingua; // Língua utilizada
 
-    double calculaSigma(unsigned tempo); // Calcula a largura da vizinhança
-    double calculaEta(unsigned tempo); // Calcula a taxa de aprendizado
+    [[nodiscard]] double calculaSigma(unsigned tempo) const; // Calcula a largura da vizinhança
+    [[nodiscard]] double calculaEta(unsigned tempo) const; // Calcula a taxa de aprendizado
 
     double geraRand(double x, double y); // Gera um número real aleatório no intervalo [x,y), com distribuição uniforme
-    unsigned geraRandInt(unsigned m, unsigned n); // Gera um inteiro aleatório no intervalo [m,n]
+    unsigned geraRandInt(int m, int n); // Gera um inteiro aleatório no intervalo [m,n]
 
     vector<double> geraVetorRand(); // Gera um vetor de pesos aleatório e normalizado
     void inicializaRand(); // Inicializa os neurônios do arranjo com valores aleatórios
     Dado* getDadoRand(vector<Dado*>* dados); // Obtém um dado ainda não marcado de forma aleatória
 	
-    void desmarcaDados(vector<Dado*>* dados); // Desmarca todos os dados
-    bool todosDadosMarcados(vector<Dado*>* dados); // Verifica se todos os dados foram marcados
+    static void desmarcaDados(vector<Dado*>* dados); // Desmarca todos os dados
+    static bool todosDadosMarcados(vector<Dado*>* dados); // Verifica se todos os dados foram marcados
 
     // Atualiza todos os neurônios do arranjo
     void atualizaNeuronios(Neuronio* vencedor, Dado* dado, double eta, double sigma);
 
     // Mensagens durante o algoritmo de treinamento
-    virtual void Verboso(unsigned msg, bool verboso = true, unsigned iteracoes = 0, unsigned n_it = 0,
+    virtual void verboso(unsigned msg, bool verb = true, unsigned iteracoes = 0, unsigned n_it = 0,
                          int64_t tempo = 0);
 
 public:
@@ -86,12 +86,12 @@ public:
                            bool verboso = true);
 	
     // Gets e sets
-    double getSigmaIni() const;
-    double getEtaIni() const;
-    double getTau1() const;
-    double getTau2() const;
-    int getLingua() const;
-    Arranjo* getArranjo() const;
+    [[nodiscard]] double getSigmaIni() const;
+    [[nodiscard]] double getEtaIni() const;
+    [[nodiscard]] double getTau1() const;
+    [[nodiscard]] double getTau2() const;
+    [[nodiscard]] int getLingua() const;
+    [[nodiscard]] Arranjo* getArranjo() const;
 	
     void setSigmaIni(double sigma);
     void setEtaIni(double eta);

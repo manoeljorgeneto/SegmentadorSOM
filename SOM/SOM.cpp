@@ -22,12 +22,12 @@
 #include "../SOM/SOM.h"
 
 // Calcula a largura da vizinhança
-double SOM::calculaSigma(unsigned tempo) {
+double SOM::calculaSigma(unsigned tempo) const {
     return this->sigma_ini * exp(-(double(tempo))/this->tau1);
 }
 
 // Calcula a taxa de aprendizado
-double SOM::calculaEta(unsigned tempo) {
+double SOM::calculaEta(unsigned tempo) const {
     return this->eta_ini * exp(-(double(tempo))/this->tau2);
 }
 
@@ -43,7 +43,7 @@ double SOM::geraRand(double x, double y) {
 }
 
 // Gera um inteiro aleatório no intervalo [m,n]
-unsigned SOM::geraRandInt(unsigned m, unsigned n) {
+unsigned SOM::geraRandInt(int m, int n) {
     std::uniform_int_distribution<> dis_ui(m, n); // distribuição uniforme (inteiros)
     unsigned r;
 
@@ -59,8 +59,8 @@ vector<double> SOM::geraVetorRand() {
 	
     // Preenche o vetor com valores aleatórios
     //#pragma omp parallel for
-    for(unsigned i = 0; i < this->dimensao_entrada; i++)
-        vetor.at(i) = this->geraRand(-1.0, 1.0); // Intervalo entre -1 e 1
+    for(double & i : vetor)
+        i = this->geraRand(-1.0, 1.0); // Intervalo entre -1 e 1
 	
     Calculos::normalizaVetor(&vetor); // Normaliza o vetor
 
@@ -71,8 +71,8 @@ vector<double> SOM::geraVetorRand() {
 void SOM::inicializaRand() {
     // Percorre os neurônios do arranjo, criando valores aleatórios para seus pesos
     //#pragma omp parallel for
-    for(auto i = this->arranjo->getNeuronios()->begin(); i != this->arranjo->getNeuronios()->end(); i++) {
-        auto aux = (*i)->getPesos();
+    for(auto & i : *this->arranjo->getNeuronios()) {
+        auto aux = i->getPesos();
         *aux = this->geraVetorRand(); // Gera um vetor com valores aleatórios
     }
 }
@@ -85,10 +85,9 @@ Dado* SOM::getDadoRand(vector<Dado*>* dados) {
     do {
         rnd = this->geraRandInt(0, dados->size() - 1); // Gera um número aleatório
         d = dados->at(rnd);	// Obtém um dado
-    } while(d->getMarcado() && !this->todosDadosMarcados(dados));
+    } while(d->getMarcado() && !SOM::todosDadosMarcados(dados));
 
-    if(d != NULL)
-        d->setMarcado(true); // Marca o dado
+    d->setMarcado(true); // Marca o dado
 
     return d;
 }
@@ -96,14 +95,14 @@ Dado* SOM::getDadoRand(vector<Dado*>* dados) {
 // Desmarca todos os dados
 void SOM::desmarcaDados(vector<Dado*>* dados) {
     #pragma omp parallel for
-    for(auto i = dados->begin(); i != dados->end(); i++)
-        (*i)->setMarcado(false);
+    for(auto & dado : *dados)
+        dado->setMarcado(false);
 }
 
 // Verifica se todos os dados foram marcados
 bool SOM::todosDadosMarcados(vector<Dado*>* dados) {
-    for(auto i = dados->begin(); i != dados->end(); i++)
-        if ((*i)->getMarcado() == false)
+    for(auto & dado : *dados)
+        if (!dado->getMarcado())
             return false;
     return true;
 }
@@ -112,13 +111,13 @@ bool SOM::todosDadosMarcados(vector<Dado*>* dados) {
 void SOM::atualizaNeuronios(Neuronio* vencedor, Dado* dado, double eta, double sigma) {
     // Percorre todos os neurônios e atualiza-os
     #pragma omp parallel for // Paralelizado FTW!!
-    for(auto i = this->arranjo->getNeuronios()->begin(); i != this->arranjo->getNeuronios()->end(); i++)
-        (*i)->atualiza(vencedor, dado, eta, sigma);
+    for(auto & i : *this->arranjo->getNeuronios())
+        i->atualiza(vencedor, dado, eta, sigma);
 }
 
 // Mensagens durante o algoritmo de treinamento
-void SOM::Verboso(unsigned msg, bool verboso, unsigned iteracoes, unsigned n_it, int64_t tempo) {
-    if(!verboso)
+void SOM::verboso(unsigned msg, bool verb, unsigned iteracoes, unsigned n_it, int64_t tempo) {
+    if(!verb)
         return;
 
     string dT, uOMP, nproc, numIt, iniNeu, trSOM, progresso, itr, mpGer, tDec, segs; // Palavras para tradução
@@ -207,17 +206,17 @@ SOM::~SOM() {
 }
 
 // Faz o treinamento do SOM segundo o algoritmo incremental
-void SOM::treinaSOM(vector<Dado*>* dados, unsigned iteracoes, bool inicializa, bool verboso) {
-    this->Verboso(0, verboso, iteracoes); // Começo do sumário do treinamento
+void SOM::treinaSOM(vector<Dado*>* dados, unsigned iteracoes, bool inicializa, bool verb) {
+    this->verboso(0, verb, iteracoes); // Começo do sumário do treinamento
 
     if(inicializa) { // Inicializa os neurônios do arranjo de forma aleatória
-        this->Verboso(1, verboso); // Mensagem de inicialização dos neurônios
+        this->verboso(1, verb); // Mensagem de inicialização dos neurônios
         this->inicializaRand(); // Inicializa os neurônios do arranjo com valores aleatórios
     }
 
     this->desmarcaDados(dados); // Desmarca todos os dados
 
-    this->Verboso(2, verboso); // Continuando o sumário do treinamento
+    this->verboso(2, verb); // Continuando o sumário do treinamento
 
     auto inicio = high_resolution_clock::now(); // Início da contagem do tempo!
 
@@ -235,7 +234,7 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned iteracoes, bool inicializa, b
 
         this->desmarcaDados(dados); // Desmarca os dados ao final de cada iteração
 
-        this->Verboso(3, verboso, iteracoes, n_it); // Exibição do progresso
+        this->verboso(3, verb, iteracoes, n_it); // Exibição do progresso
     }
 
     auto fim = high_resolution_clock::now(); // Fim da contagem do tempo!
@@ -243,7 +242,7 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned iteracoes, bool inicializa, b
     auto duracao = duration_cast<nanoseconds>(fim - inicio);
 
     // Finalizando o sumário de treinamento
-    this->Verboso(4, verboso, iteracoes, 0, duracao.count());
+    this->verboso(4, verb, iteracoes, 0, duracao.count());
 }
 
 // Gets e sets

@@ -336,7 +336,9 @@ CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o: ../Codificador/Dado.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/c++/11/bits/sstream.tcc \
-  ../Calculos/Calculos.h
+  ../Calculos/Calculos.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h
 
 CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: ../Controlador/Controlador.cpp \
   /usr/include/stdc-predef.h \
@@ -1228,7 +1230,9 @@ CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o: ../SOM/Neuronio.cpp \
   /usr/include/c++/11/bits/sstream.tcc \
   ../Calculos/Calculos.h \
   ../Codificador/Dado.h \
-  ../Calculos/Calculos.h
+  ../Calculos/Calculos.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h
 
 CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: ../SOM/SOM.cpp \
   /usr/include/stdc-predef.h \
@@ -1973,6 +1977,8 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: ../main.cpp \
 
 ../Controlador/ControladorSegmentadorSOM.cpp:
 
+/usr/include/c++/11/bits/stl_relops.h:
+
 /usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/c++/11/ostream:
@@ -2010,6 +2016,8 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: ../main.cpp \
 /usr/include/wctype.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/c++/11/utility:
 
 /usr/include/errno.h:
 

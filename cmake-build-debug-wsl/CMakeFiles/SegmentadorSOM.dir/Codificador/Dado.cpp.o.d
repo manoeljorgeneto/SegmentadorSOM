@@ -177,4 +177,5 @@ CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc \
- /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/../Codificador/../Calculos/Calculos.h
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/../Codificador/../Calculos/Calculos.h \
+ /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h

@@ -37,14 +37,14 @@ protected:
     vector<string> args; // Argumentos
     int lingua; // Língua utilizada
 
-    virtual unsigned verificaArgumentos() const; // Verifica os argumentos fornecidos
-    virtual unsigned verificaArgumentos_Expandido() const; // Para argumentos complexos
+    [[nodiscard]] virtual unsigned verificaArgumentos() const; // Verifica os argumentos fornecidos
+    [[nodiscard]] virtual unsigned verificaArgumentos_Expandido() const; // Para argumentos complexos
     void listaArgumentos(); // Lista os argumentos fornecidos
 
-    void argumentoInvalido(); // Exibe uma mensagem de argumento inválido
-    void Versao(bool verboso = true); // Exibe a versão do programa
-    virtual void Ajuda(); // Exibe uma tela de ajuda
-    virtual void Padrao(); // Faz a execução padrão do programa
+    void argumentoInvalido() const; // Exibe uma mensagem de argumento inválido
+    static void versao(bool verboso = true); // Exibe a versão do programa
+    virtual void ajuda(); // Exibe uma tela de ajuda
+    virtual void padrao(); // Faz a execução padrão do programa
 
 public:
     Controlador(int argc, char** argv, int lingua = ENG); // Construtor
@@ -53,8 +53,8 @@ public:
     virtual void executa(); // Executa o programa de acordo com os argumentos fornecidos
 
     // Get e sets
-    vector<string> getArgs() const;
-    int getLingua() const;
+    [[nodiscard]] vector<string> getArgs() const;
+    [[nodiscard]] int getLingua() const;
 
     void setArgs(const vector<string> &args);
     void setLingua(int lingua);

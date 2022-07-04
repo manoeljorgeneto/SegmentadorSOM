@@ -22,11 +22,11 @@
 #include "../SOM/Arranjo.h"
 
 // Cria uma posição 2D, dado um inteiro
-vector<unsigned>* Arranjo::criaPosicao(unsigned n) {
+vector<unsigned>* Arranjo::criaPosicao(unsigned n) const {
     unsigned pos_x = n % this->largura; // Cálculo das posições
     unsigned pos_y = n / this->largura;
 
-    vector<unsigned>* pos = new vector<unsigned>(2);
+    auto* pos = new vector<unsigned>(2);
     pos->at(0) = pos_x; pos->at(1) = pos_y;
 
     return pos;
@@ -61,15 +61,15 @@ vector<Neuronio*>* Arranjo::getNeuronios() {
     return this->neuronios;
 }
 
-unsigned Arranjo::getDimensao() {
+unsigned Arranjo::getDimensao() const {
     return this->dimensao;
 }
 
-unsigned Arranjo::getLargura() {
+unsigned Arranjo::getLargura() const {
     return this->largura;
 }
 
-unsigned Arranjo::getTamanho() {
+unsigned Arranjo::getTamanho() const {
     return this->tamanho;
 }
 
@@ -81,12 +81,12 @@ void Arranjo::setNeuronios(vector<Neuronio*>* neuronios) {
  * O vencedor é o neurônio cujo vetor de pesos sinápticos tem a menor distância em relação
  * ao vetor de dados apresentado */
 vector<Neuronio*>::iterator Arranjo::getVencedor(Dado* dado, bool marcar) {
-    vector<Neuronio*>::iterator vencedor = this->neuronios->begin(); // Obtém o primeiro neurônio e guarda em vencedor
+    auto vencedor = this->neuronios->begin(); // Obtém o primeiro neurônio e guarda em vencedor
     double menor_distancia = (*vencedor)->getDistancia(*(dado->getDados())); // Calcula a distância
 
     // Percorre os neurônios para descobrir qual tem menor distância
     //#pragma omp parallel for
-    for(vector<Neuronio*>::iterator aux = this->neuronios->begin(); aux != this->neuronios->end(); aux++)
+    for(auto aux = this->neuronios->begin(); aux != this->neuronios->end(); aux++)
         if(((*aux)->getDistancia(*(dado)->getDados()) < menor_distancia && !(*aux)->getMarcado()) ||
             (*vencedor)->getMarcado()) {
             vencedor = aux;

@@ -21,10 +21,12 @@
 
 #include "../Codificador/Dado.h"
 
+#include <utility>
+
 // Construtor
 Dado::Dado(unsigned dimensao, string rotulo) {
     this->dimensao = dimensao;
-    this->rotulo = rotulo;
+    this->rotulo = std::move(rotulo);
     this->marcado = false;
     this->dados = new vector<double>(this->dimensao);
 }
@@ -33,7 +35,7 @@ Dado::Dado(unsigned dimensao, string rotulo) {
 Dado::Dado(vector<double>* dados , string rotulo) {
     this->dados = dados;
     this->dimensao = this->dados->size();
-    this->rotulo = rotulo;
+    this->rotulo = std::move(rotulo);
     this->marcado = false;
 }
 
@@ -51,12 +53,12 @@ vector<double>* Dado::getDados() {
     return this->dados;
 }
 
-bool Dado::getMarcado() {
+bool Dado::getMarcado() const {
     return this->marcado;
 }
 
 void Dado::setRotulo(string rotulo) {
-    this->rotulo = rotulo;
+    this->rotulo = std::move(rotulo);
 }
 
 void Dado::setDados(vector<double>* dados) {

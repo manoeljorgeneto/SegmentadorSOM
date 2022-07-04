@@ -21,6 +21,8 @@
 
 #include "../SOM/Neuronio.h"
 
+#include <utility>
+
 // Construtor
 Neuronio::Neuronio(unsigned dim_entrada, vector<unsigned>* posicao, string rotulo) {
     this->posicao = posicao;
@@ -29,7 +31,7 @@ Neuronio::Neuronio(unsigned dim_entrada, vector<unsigned>* posicao, string rotul
     this->dim_entrada = dim_entrada;
     this->dim_saida = this->posicao->size();
 
-    this->rotulo = rotulo;
+    this->rotulo = std::move(rotulo);
     this->marcado = false;
 }
 
@@ -41,7 +43,7 @@ Neuronio::Neuronio(vector<double> *pesos, vector<unsigned>* posicao, string rotu
     this->dim_entrada = this->pesos->size();
     this->dim_saida = this->posicao->size();
 
-    this->rotulo = rotulo;
+    this->rotulo = std::move(rotulo);
     this->marcado = false;
 }
 
@@ -52,7 +54,7 @@ Neuronio::~Neuronio() {
 }
 
 // Gets e sets
-unsigned Neuronio::getDim() {
+unsigned Neuronio::getDim() const {
     return this->dim_entrada;
 }
 
@@ -60,7 +62,7 @@ vector<double>* Neuronio::getPesos() {
     return this->pesos;
 }
 
-vector<unsigned>* Neuronio::getPosicao(){
+vector<unsigned>* Neuronio::getPosicao() {
     return this->posicao;
 }
 
@@ -68,7 +70,7 @@ string Neuronio::getRotulo() {
     return this->rotulo;
 }
 
-bool Neuronio::getMarcado() {
+bool Neuronio::getMarcado() const {
     return this->marcado;
 }
 
@@ -78,7 +80,7 @@ void Neuronio::setPesos(vector<double>* pesos) {
 }
 
 void Neuronio::setRotulo(string rotulo) {
-    this->rotulo = rotulo;
+    this->rotulo = std::move(rotulo);
 }
 
 void Neuronio::setMarcado(bool marcado) {

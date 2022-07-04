@@ -76,17 +76,17 @@ double operator* (vector<double> &a, vector<double> &b) { // Produto interno
 // *********************************************************************************************************************
 
 // Construtor
-Calculos::Calculos() {}
+Calculos::Calculos() = default;
 
 // Destrutor
-Calculos::~Calculos() {}
+Calculos::~Calculos() = default;
 
 // Módulo do vetor
 double Calculos::calculaNorma(const vector<double> &a) {	
     double distancia = 0.0;
 		
-    for(unsigned i = 0 ; i < a.size(); i++)
-        distancia += pow(a.at(i), 2.0);
+    for(double i : a)
+        distancia += pow(i, 2.0);
 		
     return sqrt(distancia);
 }
@@ -96,8 +96,8 @@ void Calculos::normalizaVetor(vector<double> *a) {
     double norma = Calculos::calculaNorma(*a);
 	
     // Normaliza o vetor
-    for(unsigned i = 0; i < a->size(); i++)
-        a->at(i) /= norma;
+    for(double & i : *a)
+        i /= norma;
 }
 
 // Distância euclidiana

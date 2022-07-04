@@ -51,11 +51,11 @@ public:
     virtual ~Neuronio(); // Destrutor
 	
     // Gets e sets
-    unsigned getDim(); // Dimensão de entrada
+    [[nodiscard]] unsigned getDim() const; // Dimensão de entrada
     vector<double>* getPesos();
     vector<unsigned>* getPosicao(); // Posição do neurônio no arranjo
     string getRotulo();
-    bool getMarcado();
+    [[nodiscard]] bool getMarcado() const;
 	
     void setPesos(vector<double>* pesos);
     void setRotulo(string rotulo);

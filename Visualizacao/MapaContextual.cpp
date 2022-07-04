@@ -24,23 +24,23 @@
 // Desmarca todos os neurônios
 void MapaContextual::desmarcaNeuronios(vector<Neuronio*>* neuronios) {
     #pragma omp parallel for
-    for(vector<Neuronio*>::iterator i = neuronios->begin(); i != neuronios->end(); i++)
-        (*i)->setMarcado(false);
+    for(auto & neuronio : *neuronios)
+        neuronio->setMarcado(false);
 }
 
 // Verifica se todos os neurônios estão marcados
 bool MapaContextual::todosNeuroniosMarcados(vector<Neuronio*>* neuronios) {
-    for(vector<Neuronio*>::iterator i = neuronios->begin(); i != neuronios->end(); i++)
-        if((*i)->getMarcado() == false)
+    for(auto & neuronio : *neuronios)
+        if(!neuronio->getMarcado())
             return false;
     return true;
 }
 
 // Construtor
-MapaContextual::MapaContextual() {}
+MapaContextual::MapaContextual() = default;
 
 // Destrutor
-MapaContextual::~MapaContextual() {}
+MapaContextual::~MapaContextual() = default;
 
 // Gera um Mapa Contextual
 string MapaContextual::geraMapa(vector<Dado*>* dados, Arranjo* arranjo) {	

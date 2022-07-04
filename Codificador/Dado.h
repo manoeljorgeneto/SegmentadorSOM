@@ -42,14 +42,14 @@ protected:
     bool marcado; // Serve para os algoritmos SOM e do Mapa Contextual
 	
 public:
-    Dado(unsigned dimensao, string rotulo = ""); // Construtor
-    Dado(vector<double>* dados , string rotulo = ""); // Construtor
+    explicit Dado(unsigned dimensao, string rotulo = ""); // Construtor
+    explicit Dado(vector<double>* dados , string rotulo = ""); // Construtor
     virtual ~Dado(); // Destrutor
 
     // Gets e sets
     string getRotulo();
     vector<double>* getDados();
-    bool getMarcado();
+    [[nodiscard]] bool getMarcado() const;
 
     void setRotulo(string rotulo);
     void setDados(vector<double>* dados);

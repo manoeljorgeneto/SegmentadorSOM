@@ -41,7 +41,7 @@ protected:
     unsigned largura; // Largura (e altura também) do arranjo
     unsigned tamanho; // Tamanho do arranjo
 	
-    vector<unsigned>* criaPosicao(unsigned n); // Cria uma posição 2D, dado um inteiro
+    [[nodiscard]] vector<unsigned>* criaPosicao(unsigned n) const; // Cria uma posição 2D, dado um inteiro
     Neuronio* criaNeuronio(unsigned n); // Cria um neurônio na posição correta no arranjo
 	
 public:
@@ -50,9 +50,9 @@ public:
 	
     // Gets e sets
     vector<Neuronio*>* getNeuronios();
-    unsigned getDimensao();
-    unsigned getLargura();
-    unsigned getTamanho();
+    [[nodiscard]] unsigned getDimensao() const;
+    [[nodiscard]] unsigned getLargura() const;
+    [[nodiscard]] unsigned getTamanho() const;
     void setNeuronios(vector<Neuronio*>* neuronios);
 
     /* Faz a competição entre os neurônios para descobrir quem é o vencedor:

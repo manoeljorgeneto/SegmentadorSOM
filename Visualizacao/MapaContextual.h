@@ -38,8 +38,8 @@ using namespace std;
 
 class MapaContextual {
 protected:
-    void desmarcaNeuronios(vector<Neuronio*>* neuronios); // Desmarca todos os neurônios
-    bool todosNeuroniosMarcados(vector<Neuronio*>* neuronios); // Verifica se todos os neurônios estão marcados
+    static void desmarcaNeuronios(vector<Neuronio*>* neuronios); // Desmarca todos os neurônios
+    static bool todosNeuroniosMarcados(vector<Neuronio*>* neuronios); // Verifica se todos os neurônios estão marcados
 	
 public:
     MapaContextual(); // Construtor

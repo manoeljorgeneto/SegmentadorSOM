@@ -61,7 +61,7 @@ void Controlador::listaArgumentos() {
 }
 
 // Exibe uma mensagem de argumento inválido
-void Controlador::argumentoInvalido() {
+void Controlador::argumentoInvalido() const {
     string argIn, exec, ajud; // Para tradução
     switch(this->lingua) {
         case PT_BR: {
@@ -83,7 +83,7 @@ void Controlador::argumentoInvalido() {
 }
 
 // Exibe a versão do programa
-void Controlador::Versao(bool verboso) {
+void Controlador::versao(bool verboso) {
     if(!verboso) {
         cout << VERSAO << endl;
         return;
@@ -99,7 +99,7 @@ void Controlador::Versao(bool verboso) {
 }
 
 // Exibe uma tela de ajuda
-void Controlador::Ajuda() {
+void Controlador::ajuda() {
     string uso, verPr, verPrVb, exAj, cake, nArg, exPdr; // Para traduções
     switch(this->lingua) {
         case PT_BR: {
@@ -133,9 +133,9 @@ void Controlador::Ajuda() {
 }
 
 // Faz a execução padrão do programa
-void Controlador::Padrao() {
+void Controlador::padrao() {
     this->listaArgumentos();
-    this->Versao();
+    this->versao();
 }
 
 // Construtor
@@ -145,25 +145,25 @@ Controlador::Controlador(int argc, char** argv, int lingua) :
 }
 
 // Destrutor
-Controlador::~Controlador() {}
+Controlador::~Controlador() = default;
 
 // Executa o programa de acordo com os argumentos fornecidos
 void Controlador::executa() {
     switch(this->verificaArgumentos()) {
         case 0: { // Faz a execução padrão
-            this->Padrao();
+            this->padrao();
             break;
         }
         case 1: { // Versão do programa (simples)
-            this->Versao(false);
+            this->versao(false);
             break;
         }
         case 2: { // Versão do programa (verbosa)
-            this->Versao();
+            this->versao();
             break;
         }
         case 3: { // Ajuda
-            this->Ajuda();
+            this->ajuda();
             break;
         }
         case (UINT32_MAX - 1): { // O bolo é uma mentira!
