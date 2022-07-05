@@ -21,10 +21,8 @@
 
 #include "../Calculos/Calculos.h"
 
-// *********************************************************************************************************************
-// Sobrecarga de operadores
 // Soma de dois vetores
-vector<double> operator+ (vector<double> &a, vector<double> &b) {
+vector<double> operator+(const vector<double>& a, const vector<double>& b) {
     vector<double> vetorSoma(a.size());
 
     for(unsigned i = 0; i < a.size(); i++)
@@ -34,7 +32,7 @@ vector<double> operator+ (vector<double> &a, vector<double> &b) {
 }
 
 // Subtração de dois vetores
-vector<double> operator- (vector<double> &a, vector<double> &b) {
+vector<double> operator-(const vector<double>& a, const vector<double>& b) {
     vector<double> vetorSub(a.size());
 
     for(unsigned i = 0; i < a.size(); i++)
@@ -43,16 +41,7 @@ vector<double> operator- (vector<double> &a, vector<double> &b) {
     return vetorSub;
 }
 
-vector<double> operator/ (vector<double> &a, double b) { // Divisão por um Real
-    vector<double> vetorDiv(a.size());
-
-    for(unsigned i = 0; i < a.size(); i++)
-        vetorDiv.at(i) = a.at(i)/b;
-
-    return vetorDiv;
-}
-
-vector<double> operator* (vector<double> &a, double b) { // Multiplicação por um Real
+vector<double> operator*(const vector<double>& a, double b) { // Multiplicação por um Real
     vector<double> vetorMult(a.size());
 
     for (unsigned i = 0; i < a.size(); i++)
@@ -61,11 +50,15 @@ vector<double> operator* (vector<double> &a, double b) { // Multiplicação por 
     return vetorMult;
 }
 
-vector<double> operator* (double a, vector<double> &b) { // Multiplicação por um Real
+vector<double> operator*(double a, const vector<double>& b) { // Multiplicação por um Real
     return b*a;
 }
 
-double operator* (vector<double> &a, vector<double> &b) { // Produto interno
+vector<double> operator/(const vector<double>& a, double b) { // Divisão por um Real
+    return a*(1.0/b);
+}
+
+double operator*(const vector<double>& a, const vector<double>& b) { // Produto interno
     double prodInter = 0.0;
 
     for(unsigned i = 0; i < a.size(); i++)
@@ -73,7 +66,6 @@ double operator* (vector<double> &a, vector<double> &b) { // Produto interno
 
     return prodInter;
 }
-// *********************************************************************************************************************
 
 // Construtor
 Calculos::Calculos() = default;
@@ -81,33 +73,25 @@ Calculos::Calculos() = default;
 // Destrutor
 Calculos::~Calculos() = default;
 
-// Módulo do vetor
-double Calculos::calculaNorma(const vector<double> &a) {	
-    double distancia = 0.0;
-		
-    for(double i : a)
-        distancia += pow(i, 2.0);
-		
-    return sqrt(distancia);
+// Módulo do vetor: ||a|| = √(a * a)
+double Calculos::calculaNorma(const vector<double>& a) {
+    return sqrt(a * a);
 }
 
-void Calculos::normalizaVetor(vector<double> *a) {
-    // Calcula a norma do vetor
-    double norma = Calculos::calculaNorma(*a);
-	
-    // Normaliza o vetor
-    for(double & i : *a)
-        i /= norma;
+// Normaliza o vetor (deixando-o com norma igual a 1)
+void Calculos::normalizaVetor(vector<double>* a) {
+    double norma = Calculos::calculaNorma(*a); // Calcula a norma do vetor
+
+    if(norma != 0.0) // Para evitar divisão por zero
+        *a = *a / norma;
 }
 
 // Distância euclidiana
-double Calculos::calculaDistancia(const vector<double> &a, const vector<double> &b) {	
-    double dif, distancia = 0.0;
-		
-    for(unsigned i = 0 ; i < a.size(); i++) {
-        dif = a.at(i) - b.at(i);
-        distancia += pow(dif, 2.0);
-    }
-		
+double Calculos::calculaDistancia(const vector<double>& a, const vector<double>& b) {
+    double distancia = 0.0;
+
+    for(unsigned i = 0 ; i < a.size(); i++)
+        distancia += pow((a.at(i) - b.at(i)), 2.0);
+
     return sqrt(distancia);
 }

@@ -19,8 +19,9 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-// Cabeçalho com dados de versão, autoria, direitos de cópia e línguas utilizadas
-
+/**
+ * Cabeçalho com dados de versão, autoria, direitos de cópia e línguas utilizadas.
+ */
 #ifndef VERSAO_H
 #define VERSAO_H
 

@@ -306,6 +306,8 @@ CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o: ../Codificador/Dado.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/ios \
@@ -336,9 +338,7 @@ CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o: ../Codificador/Dado.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/c++/11/bits/sstream.tcc \
-  ../Calculos/Calculos.h \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h
+  ../Calculos/Calculos.h
 
 CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: ../Controlador/Controlador.cpp \
   /usr/include/stdc-predef.h \
@@ -754,6 +754,8 @@ CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o: ../Co
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
   ../Calculos/Calculos.h \
@@ -975,6 +977,8 @@ CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o: ../SOM/Arranjo.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/ios \
@@ -1198,6 +1202,8 @@ CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o: ../SOM/Neuronio.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/ios \
@@ -1230,9 +1236,7 @@ CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o: ../SOM/Neuronio.cpp \
   /usr/include/c++/11/bits/sstream.tcc \
   ../Calculos/Calculos.h \
   ../Codificador/Dado.h \
-  ../Calculos/Calculos.h \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h
+  ../Calculos/Calculos.h
 
 CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: ../SOM/SOM.cpp \
   /usr/include/stdc-predef.h \
@@ -1469,6 +1473,8 @@ CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: ../SOM/SOM.cpp \
   ../versao.h \
   ../Calculos/Calculos.h \
   ../Codificador/Dado.h \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
   ../Calculos/Calculos.h \
@@ -1698,6 +1704,8 @@ CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o: ../Visualizacao
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
   ../Calculos/Calculos.h \
   ../SOM/Neuronio.h \
   ../Calculos/Calculos.h \
@@ -1925,6 +1933,8 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/tr1/poly_hermite.tcc \
   /usr/include/c++/11/tr1/poly_laguerre.tcc \
   /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
   /usr/include/c++/11/sstream \
   /usr/include/c++/11/bits/sstream.tcc \
   ../Calculos/Calculos.h \
@@ -1977,8 +1987,6 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: ../main.cpp \
 
 ../Controlador/ControladorSegmentadorSOM.cpp:
 
-/usr/include/c++/11/bits/stl_relops.h:
-
 /usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/c++/11/ostream:
@@ -2006,6 +2014,8 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: ../main.cpp \
 /usr/include/c++/11/istream:
 
 /usr/include/c++/11/sstream:
+
+/usr/include/c++/11/bits/stl_relops.h:
 
 /usr/include/c++/11/bits/basic_string.tcc:
 

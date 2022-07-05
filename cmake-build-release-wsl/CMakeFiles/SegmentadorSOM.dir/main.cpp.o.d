@@ -181,7 +181,8 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/c++/11/sstream \
+ /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Codificador/../Calculos/Calculos.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/Neuronio.h \

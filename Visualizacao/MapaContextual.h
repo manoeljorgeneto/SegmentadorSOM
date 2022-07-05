@@ -19,9 +19,6 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-/* Mapa Contextual, visto na Seção 3.4.2
- * Serve como ferramenta para auxiliar a leitura do SOM */
-
 #ifndef MAPACONTEXTUAL_H_
 #define MAPACONTEXTUAL_H_
 
@@ -36,6 +33,10 @@
 
 using namespace std;
 
+/**
+ * Mapa Contextual, visto na Seção 3.4.2
+ * Serve como ferramenta para auxiliar a leitura do SOM.
+ */
 class MapaContextual {
 protected:
     static void desmarcaNeuronios(vector<Neuronio*>* neuronios); // Desmarca todos os neurônios

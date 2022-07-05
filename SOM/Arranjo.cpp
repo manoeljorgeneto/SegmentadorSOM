@@ -77,9 +77,11 @@ void Arranjo::setNeuronios(vector<Neuronio*>* neuronios) {
     this->neuronios = neuronios;
 }
 
-/* Faz a competição entre os neurônios para descobrir quem é o vencedor:
+/**
+ * Faz a competição entre os neurônios para descobrir quem é o vencedor:
  * O vencedor é o neurônio cujo vetor de pesos sinápticos tem a menor distância em relação
- * ao vetor de dados apresentado */
+ * ao vetor de dados apresentado.
+ */
 vector<Neuronio*>::iterator Arranjo::getVencedor(Dado* dado, bool marcar) {
     auto vencedor = this->neuronios->begin(); // Obtém o primeiro neurônio e guarda em vencedor
     double menor_distancia = (*vencedor)->getDistancia(*(dado->getDados())); // Calcula a distância

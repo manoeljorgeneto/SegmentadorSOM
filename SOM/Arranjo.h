@@ -19,9 +19,6 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-/* Arranjo de neurônios bidimensional e quadrado.
- * Ou seja, com largura e altura idênticas (L*L) */
-
 #ifndef ARRANJO_H_
 #define ARRANJO_H_
 
@@ -33,6 +30,9 @@
 
 using namespace std;
 
+/**
+ * Arranjo de neurônios bidimensional e quadrado. Ou seja, com largura e altura idênticas (L*L).
+ */
 class Arranjo {
 protected:
     vector<Neuronio*>* neuronios; // Contêiner onde estarão os neurônios
@@ -55,9 +55,11 @@ public:
     [[nodiscard]] unsigned getTamanho() const;
     void setNeuronios(vector<Neuronio*>* neuronios);
 
-    /* Faz a competição entre os neurônios para descobrir quem é o vencedor:
+    /**
+     * Faz a competição entre os neurônios para descobrir quem é o vencedor:
      * O vencedor é o neurônio cujo vetor de pesos sinápticos tem a menor distância em relação
-     * ao vetor de dados apresentado */
+     * ao vetor de dados apresentado.
+     */
     vector<Neuronio*>::iterator getVencedor(Dado* dado, bool marcar = false);
 };
 

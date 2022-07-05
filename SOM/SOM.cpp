@@ -116,7 +116,7 @@ void SOM::atualizaNeuronios(Neuronio* vencedor, Dado* dado, double eta, double s
 }
 
 // Mensagens durante o algoritmo de treinamento
-void SOM::verboso(unsigned msg, bool verb, unsigned iteracoes, unsigned n_it, int64_t tempo) {
+void SOM::verboso(unsigned msg, bool verb, unsigned iteracoes, unsigned n_it, int64_t tempo) const {
     if(!verb)
         return;
 

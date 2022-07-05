@@ -179,7 +179,8 @@ CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o: \
  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/c++/11/utility \
+ /usr/include/c++/11/bits/stl_relops.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/../Visualizacao/../Codificador/../Calculos/Calculos.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/../Visualizacao/../SOM/Neuronio.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/../Visualizacao/../SOM/../Calculos/Calculos.h \

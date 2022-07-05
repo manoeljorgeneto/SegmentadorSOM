@@ -21,8 +21,6 @@
 
 #include "../SOM/Neuronio.h"
 
-#include <utility>
-
 // Construtor
 Neuronio::Neuronio(unsigned dim_entrada, vector<unsigned>* posicao, string rotulo) {
     this->posicao = posicao;
@@ -113,12 +111,14 @@ double Neuronio::calculaDistanciaEspacial(Neuronio* n) {
 
 // Calcula a função de vizinhança do neurônio, dado um vencedor
 double Neuronio::calculaVizinhanca(Neuronio* n,	double sigma) {
-    return exp(-pow((this)->calculaDistanciaEspacial(n),2)/(2*pow(sigma,2)));
+    return exp(-pow((this)->calculaDistanciaEspacial(n),2.0)/(2.0*pow(sigma,2.0)));
 }
 
-/* Faz a equação:
+/**
+ * Faz a equação:
  * w(n+1) = w(n) + eta(n)*h(i(x),n)*[x - w(n)]
- * E depois normaliza o vetor de pesos sinápticos */
+ * E depois normaliza o vetor de pesos sinápticos.
+ */
 void Neuronio::atualiza(Neuronio* vencedor, Dado* dado,	double eta, double sigma) {	
     double h = this->calculaVizinhanca(vencedor,sigma); // Acha o nível de vizinhança
     double plasticidade = eta*h; // Define o quão será atualizado o neurônio

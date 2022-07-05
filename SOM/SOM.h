@@ -19,9 +19,6 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-/* Classe que implementa o algoritmo SOM de Kohonen.
- * O algoritmo utilizado é o incremental */
-
 #ifndef SOM_H_
 #define SOM_H_
 
@@ -42,6 +39,9 @@
 using namespace std;
 using namespace std::chrono;
 
+/**
+ * Classe que implementa o algoritmo SOM de Kohonen. O algoritmo utilizado é o incremental.
+ */
 class SOM {
 protected:
     Arranjo* arranjo; // Arranjo de neurônios
@@ -73,8 +73,7 @@ protected:
     void atualizaNeuronios(Neuronio* vencedor, Dado* dado, double eta, double sigma);
 
     // Mensagens durante o algoritmo de treinamento
-    virtual void verboso(unsigned msg, bool verb = true, unsigned iteracoes = 0, unsigned n_it = 0,
-                         int64_t tempo = 0);
+    void verboso(unsigned msg, bool verb = true, unsigned iteracoes = 0, unsigned n_it = 0, int64_t tempo = 0) const;
 
 public:
     SOM(unsigned largura, unsigned dimensao_entrada, double sigma = 2.5, double tau2 = 1000.0, double eta = 0.1,
@@ -82,8 +81,7 @@ public:
     virtual ~SOM(); // Destrutor
 
     // Faz o treinamento do SOM segundo o algoritmo incremental
-    virtual void treinaSOM(vector<Dado*>* dados, unsigned iteracoes = 10000, bool inicializa = true,
-                           bool verboso = true);
+    void treinaSOM(vector<Dado*>* dados, unsigned iteracoes = 10000, bool inicializa = true, bool verboso = true);
 	
     // Gets e sets
     [[nodiscard]] double getSigmaIni() const;

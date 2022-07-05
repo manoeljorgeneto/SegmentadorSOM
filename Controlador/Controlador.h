@@ -19,8 +19,6 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-// Classe que faz o controle do fluxo do programa.
-
 #ifndef CONTROLADOR_H
 #define CONTROLADOR_H
 
@@ -32,6 +30,9 @@
 
 using namespace std;
 
+/**
+ * Classe que faz o controle do fluxo do programa.
+ */
 class Controlador {
 protected:
     vector<string> args; // Argumentos

@@ -21,8 +21,6 @@
 
 #include "../Codificador/Dado.h"
 
-#include <utility>
-
 // Construtor
 Dado::Dado(unsigned dimensao, string rotulo) {
     this->dimensao = dimensao;

@@ -19,14 +19,13 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-// Classe Neurônio, que é a base do algoritmo SOM de Kohonen
-
 #ifndef NEURONIO_H_
 #define NEURONIO_H_
 
 #include <vector>
 #include <cmath>
 #include <string>
+#include <utility>
 #include <sstream>
 
 #include "../Calculos/Calculos.h"
@@ -34,6 +33,9 @@
 
 using namespace std;
 
+/**
+ * Classe Neurônio, que é a base do algoritmo SOM de Kohonen.
+ */
 class Neuronio {
 protected:
     vector<double>* pesos; // Vetor de pesos sinápticos
@@ -69,9 +71,11 @@ public:
     // Calcula a função de vizinhança do neurônio, dado um vencedor
     virtual double calculaVizinhanca(Neuronio* n, double sigma);
 
-    /* Faz a equação:
+    /**
+     * Faz a equação:
      * w(n+1) = w(n) + eta(n)*h(i(x),n)*[x - w(n)]
-     * E depois normaliza o vetor de pesos sinápticos */
+     * E depois normaliza o vetor de pesos sinápticos.
+     */
     virtual void atualiza(Neuronio* vencedor, Dado* dado, double eta, double sigma);
 
     virtual string toString(); // Converte para String

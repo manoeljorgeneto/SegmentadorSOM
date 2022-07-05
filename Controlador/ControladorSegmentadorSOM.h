@@ -19,8 +19,6 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-// Classe que faz o controle do fluxo do programa, herdeira das características da classe Controlador
-
 #ifndef CONTROLADORSEGMENTADORSOM_H
 #define CONTROLADORSEGMENTADORSOM_H
 
@@ -31,6 +29,9 @@
 #include "../SOM/SOM.h"
 #include "../Visualizacao/MapaContextual.h"
 
+/**
+ * Classe que faz o controle do fluxo do programa, herdeira das características da classe Controlador.
+ */
 class ControladorSegmentadorSOM : public Controlador {
 protected:
     void padrao() override; // Faz a execução padrão do programa

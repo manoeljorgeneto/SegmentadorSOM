@@ -191,6 +191,7 @@ CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../versao.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../Calculos/Calculos.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../Codificador/Dado.h \
+ /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../Codificador/../Calculos/Calculos.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../SOM/Neuronio.h \

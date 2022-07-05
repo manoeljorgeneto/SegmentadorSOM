@@ -19,20 +19,22 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-// Classe que representa os dados que alimentarão o SOM
-
 #ifndef DADO_H_
 #define DADO_H_
 
 #include <vector>
 #include <string>
 #include <cmath>
+#include <utility>
 #include <sstream>
 
 #include "../Calculos/Calculos.h"
 
 using namespace std;
 
+/**
+ * Classe que representa os dados que alimentarão o SOM
+ */
 class Dado {
 protected:
     string rotulo; // Rótulo que marca o dado (serve para a formação de um Mapa Contextual)
