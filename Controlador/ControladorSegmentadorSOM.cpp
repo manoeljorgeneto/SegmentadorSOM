@@ -132,12 +132,11 @@ void ControladorSegmentadorSOM::padrao() {
 
     cout << endl;
 
-    // TODO Criação de melhores visualizações (verificar literatura)
-    // Geração do mapa contextual
-    MapaContextual mapa;
-    Arranjo* arr = som.getArranjo();
+    Arranjo* arr = som.getArranjo(); // Arranjo treinado pelo SOM
 
-    // Exibindo o mapa contextual
+    // TODO Criação de melhores visualizações (verificar literatura)
+    // Geração e exibição do mapa contextual
+    MapaContextual mapa;
     cout << mapa.geraMapa(dados, arr) << endl;
 
     // Exibição dos parâmetros dos neurônios
