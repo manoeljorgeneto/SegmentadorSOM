@@ -21,20 +21,46 @@
 
 #include "../SOM/Neuronio.h"
 
-// Construtor
-Neuronio::Neuronio(unsigned dim_entrada, vector<unsigned>* posicao, string rotulo) {
-    this->posicao = posicao;
+// Normaliza seus pesos sinápticos
+void Neuronio::normaliza() {
+    Calculos::normalizaVetor(this->pesos);
+}
+
+// Retorna a distância espacial entre o neurônio e outro no arranjo de neurônios
+double Neuronio::calculaDistanciaEspacial(Neuronio* n) {
+    // Converte os vetores de inteiro para double
+    vector<double> this_pos(this->dim_saida); // Posição do neurônio
+    for(unsigned i = 0; i < this->posicao->size(); i++)
+        this_pos.at(i) = double(this->posicao->at(i));
+
+    vector<double> n_pos(this->dim_saida); // Posição do outro neurônio
+    for(unsigned i = 0; i < n->getPosicao()->size(); i++)
+        n_pos.at(i) = (double)n->getPosicao()->at(i);
+
+    return Calculos::calculaDistancia(n_pos,this_pos);
+}
+
+// Calcula a função de vizinhança do neurônio, dado um vencedor
+double Neuronio::calculaVizinhanca(Neuronio* n,	double sigma) {
+    return exp(-pow((this)->calculaDistanciaEspacial(n), 2.0) / (2.0 * pow(sigma, 2.0)));
+}
+
+// Construtor (criando um novo neurônio)
+Neuronio::Neuronio(unsigned dim_entrada, vector<unsigned>* posicao, string rotulo, bool normalizado) {
     this->pesos = new vector<double>(dim_entrada);
+    this->posicao = posicao;
 
     this->dim_entrada = dim_entrada;
     this->dim_saida = this->posicao->size();
 
     this->rotulo = std::move(rotulo);
     this->marcado = false;
+
+    this->normalizado = normalizado;
 }
 
-// Construtor
-Neuronio::Neuronio(vector<double> *pesos, vector<unsigned>* posicao, string rotulo) {
+// Construtor (criando um novo neurônio, definindo o vetor de pesos sinápticos)
+Neuronio::Neuronio(vector<double>* pesos, vector<unsigned>* posicao, string rotulo, bool normalizado) {
     this->pesos = pesos;
     this->posicao = posicao;
 
@@ -43,6 +69,11 @@ Neuronio::Neuronio(vector<double> *pesos, vector<unsigned>* posicao, string rotu
 
     this->rotulo = std::move(rotulo);
     this->marcado = false;
+
+    this->normalizado = normalizado;
+
+    if(this->normalizado) // Normaliza o vetor de pesos do neurônio
+        this->normaliza();
 }
 
 // Destrutor
@@ -51,11 +82,34 @@ Neuronio::~Neuronio() {
     delete this->posicao;
 }
 
-// Gets e sets
-unsigned Neuronio::getDim() const {
-    return this->dim_entrada;
+// Calcula a distância euclidiana entre os pesos sinápticos do neurônio e o vetor de valores de um dado
+double Neuronio::getDistancia(Dado* d) {
+    return Calculos::calculaDistancia(*d->getDados(), *this->pesos);
 }
 
+/**
+ * Faz a equação:
+ * w(n + 1) = w(n) + eta(n) * h(i(x), n) * [x - w(n)]
+ * E depois normaliza o vetor de pesos sinápticos, caso esteja marcado para tal operação.
+ */
+void Neuronio::atualiza(Neuronio* vencedor, Dado* dado,	double eta, double sigma) {
+    double h = this->calculaVizinhanca(vencedor, sigma); // Acha o nível de vizinhança: h(i(x), n)
+    double plasticidade = eta * h; // Define o quão será atualizado o neurônio: eta(n) * h(i(x), n)
+
+    // Acha a subtração [x - w(n)]
+    vector<double> dif = *dado->getDados() - *this->pesos;
+
+    // Multiplica pela plasticidade: eta(n) * h(i(x), n) * [x - w(n)]
+    dif = plasticidade * dif;
+
+    // Altera os pesos do neurônio: w(n + 1) = w(n) + eta(n) * h(i(x), n) * [x - w(n)]
+    *this->pesos = *this->pesos + dif;
+
+    if(this->normalizado) // Normaliza o vetor de pesos do neurônio
+        this->normaliza();
+}
+
+// Gets e sets
 vector<double>* Neuronio::getPesos() {
     return this->pesos;
 }
@@ -72,9 +126,8 @@ bool Neuronio::getMarcado() const {
     return this->marcado;
 }
 
-void Neuronio::setPesos(vector<double>* pesos) {
-    this->pesos = pesos;
-    this->dim_entrada = this->pesos->size();
+bool Neuronio::getNormalizado() const {
+    return this->normalizado;
 }
 
 void Neuronio::setRotulo(string rotulo) {
@@ -85,58 +138,7 @@ void Neuronio::setMarcado(bool marcado) {
     this->marcado = marcado;
 }
 
-// Distância euclidiana
-double Neuronio::getDistancia(const vector<double> &vetor) {
-    return Calculos::calculaDistancia(vetor, *this->pesos);
-}
-
-// Normaliza seus pesos sinápticos
-void Neuronio::normaliza() {
-    Calculos::normalizaVetor(this->pesos);
-}
-
-// Retorna a distância espacial entre dois neurônios
-double Neuronio::calculaDistanciaEspacial(Neuronio* n) {	
-    // Converte os vetores de inteiro para double
-    vector<double> this_pos(this->dim_saida);
-    for(unsigned i = 0; i < this->posicao->size(); i++)
-        this_pos.at(i) = double(this->posicao->at(i));
-
-    vector<double> n_pos(this->dim_saida);
-    for(unsigned i = 0; i < n->getPosicao()->size(); i++)
-        n_pos.at(i) = (double)n->getPosicao()->at(i);
-
-    return Calculos::calculaDistancia(n_pos,this_pos);
-}
-
-// Calcula a função de vizinhança do neurônio, dado um vencedor
-double Neuronio::calculaVizinhanca(Neuronio* n,	double sigma) {
-    return exp(-pow((this)->calculaDistanciaEspacial(n),2.0)/(2.0*pow(sigma,2.0)));
-}
-
-/**
- * Faz a equação:
- * w(n+1) = w(n) + eta(n)*h(i(x),n)*[x - w(n)]
- * E depois normaliza o vetor de pesos sinápticos.
- */
-void Neuronio::atualiza(Neuronio* vencedor, Dado* dado,	double eta, double sigma) {	
-    double h = this->calculaVizinhanca(vencedor,sigma); // Acha o nível de vizinhança
-    double plasticidade = eta*h; // Define o quão será atualizado o neurônio
-
-    // Acha a subtração x - w
-    vector<double> dif = *(dado->getDados()) - *(this->pesos);
-
-    // Multiplica pela plasticidade
-    dif = plasticidade * dif;
-
-    // Altera os pesos do neurônio
-    *(this->pesos) =  *(this->pesos) + dif;
-
-    // Normaliza o vetor de pesos do neurônio
-    this->normaliza();
-}
-
-// Converte para String
+// Converte para string
 string Neuronio::toString() {
     ostringstream str("");
 

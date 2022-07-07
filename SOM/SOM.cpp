@@ -23,12 +23,12 @@
 
 // Calcula a largura da vizinhança
 double SOM::calculaSigma(unsigned tempo) const {
-    return this->sigma_ini * exp(-(double(tempo))/this->tau1);
+    return this->sigma_ini * exp(-(double(tempo)) / this->tau1);
 }
 
 // Calcula a taxa de aprendizado
 double SOM::calculaEta(unsigned tempo) const {
-    return this->eta_ini * exp(-(double(tempo))/this->tau2);
+    return this->eta_ini * exp(-(double(tempo)) / this->tau2);
 }
 
 // Gera um número real aleatório no intervalo [x,y), com distribuição uniforme
@@ -43,7 +43,7 @@ double SOM::geraRand(double x, double y) {
 }
 
 // Gera um inteiro aleatório no intervalo [m,n]
-unsigned SOM::geraRandInt(int m, int n) {
+unsigned SOM::geraRand(int m, int n) {
     std::uniform_int_distribution<> dis_ui(m, n); // distribuição uniforme (inteiros)
     unsigned r;
 
@@ -53,28 +53,25 @@ unsigned SOM::geraRandInt(int m, int n) {
     return r;
 }
 
-// Gera um vetor de pesos aleatório e normalizado
-vector<double> SOM::geraVetorRand() {
-    vector<double> vetor(this->dimensao_entrada);
-	
+// Gera um vetor de pesos aleatório para um neurônio
+void SOM::geraPesosRand(Neuronio* n) {
+    vector<double>* pesos = n->getPesos(); // Obtém o vetor de pesos do neurônio
+
     // Preenche o vetor com valores aleatórios
     //#pragma omp parallel for
-    for(double & i : vetor)
-        i = this->geraRand(-1.0, 1.0); // Intervalo entre -1 e 1
-	
-    Calculos::normalizaVetor(&vetor); // Normaliza o vetor
+    for(double & p : *pesos)
+        p = this->geraRand(-1.0, 1.0); // Intervalo entre -1 e 1
 
-    return vetor;
+    if(this->normalizados)
+        Calculos::normalizaVetor(pesos); // Normaliza o vetor
 }
 
 // Inicializa os neurônios do arranjo com valores aleatórios
 void SOM::inicializaRand() {
     // Percorre os neurônios do arranjo, criando valores aleatórios para seus pesos
     //#pragma omp parallel for
-    for(auto & i : *this->arranjo->getNeuronios()) {
-        auto aux = i->getPesos();
-        *aux = this->geraVetorRand(); // Gera um vetor com valores aleatórios
-    }
+    for(auto & n : *this->arranjo->getNeuronios())
+        this->geraPesosRand(n); // Gera um vetor com valores aleatórios para o neurônio
 }
 
 // Obtém um dado ainda não marcado de forma aleatória
@@ -83,7 +80,7 @@ Dado* SOM::getDadoRand(vector<Dado*>* dados) {
     Dado* d;
 
     do {
-        rnd = this->geraRandInt(0, dados->size() - 1); // Gera um número aleatório
+        rnd = this->geraRand(0, dados->size() - 1); // Gera um número aleatório
         d = dados->at(rnd);	// Obtém um dado
     } while(d->getMarcado() && !SOM::todosDadosMarcados(dados));
 
@@ -111,8 +108,8 @@ bool SOM::todosDadosMarcados(vector<Dado*>* dados) {
 void SOM::atualizaNeuronios(Neuronio* vencedor, Dado* dado, double eta, double sigma) {
     // Percorre todos os neurônios e atualiza-os
     #pragma omp parallel for // Paralelizado FTW!!
-    for(auto & i : *this->arranjo->getNeuronios())
-        i->atualiza(vencedor, dado, eta, sigma);
+    for(auto & n : *this->arranjo->getNeuronios())
+        n->atualiza(vencedor, dado, eta, sigma);
 }
 
 // Mensagens durante o algoritmo de treinamento
@@ -186,16 +183,18 @@ void SOM::verboso(unsigned msg, bool verb, unsigned iteracoes, unsigned n_it, in
 }
 
 // Construtor
-SOM::SOM(unsigned largura, unsigned dimensao_entrada, double sigma, double tau2, double eta, int semente, int lingua) :
-    ger_mt(semente) {
+SOM::SOM(unsigned largura, unsigned dimensao_entrada, double sigma, double tau2, double eta, bool normalizados,
+         int semente, int lingua) : ger_mt(semente) {
     this->sigma_ini = sigma;
     this->tau2 = tau2;
     this->eta_ini = eta;
 	
     this->tau1 = tau2/log(sigma);
 
+    this->normalizados = normalizados;
+
     this->dimensao_entrada = dimensao_entrada;
-    this->arranjo = new Arranjo(largura, dimensao_entrada);
+    this->arranjo = new Arranjo(largura, dimensao_entrada, normalizados);
 
     this->lingua = lingua;
 }
@@ -246,6 +245,10 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned iteracoes, bool inicializa, b
 }
 
 // Gets e sets
+Arranjo* SOM::getArranjo() const {
+    return this->arranjo;
+}
+
 double SOM::getSigmaIni() const {
     return this->sigma_ini;
 }
@@ -262,12 +265,12 @@ double SOM::getTau2() const {
     return this->tau2;
 }
 
-int SOM::getLingua() const {
-    return this->lingua;
+bool SOM::getNormalizados() const {
+    return this->normalizados;
 }
 
-Arranjo* SOM::getArranjo() const {
-    return this->arranjo;
+int SOM::getLingua() const {
+    return this->lingua;
 }
 	
 void SOM::setSigmaIni(double sigma) {

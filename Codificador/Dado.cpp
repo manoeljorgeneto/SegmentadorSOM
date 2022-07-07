@@ -42,6 +42,11 @@ Dado::~Dado() {
     delete this->dados;
 }
 
+// Normaliza o vetor de dados
+void Dado::normaliza() {
+    Calculos::normalizaVetor(this->dados);
+}
+
 // Gets e sets
 string Dado::getRotulo() {
     return this->rotulo;
@@ -68,12 +73,7 @@ void Dado::setMarcado(bool marcado) {
     this->marcado = marcado;
 }
 
-// Normaliza o vetor de dados
-void Dado::normaliza() {
-    Calculos::normalizaVetor(this->dados);
-}
-
-// Converte para String
+// Converte para string
 string Dado::toString() {
     ostringstream str("");
 

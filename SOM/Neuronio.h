@@ -39,46 +39,52 @@ using namespace std;
 class Neuronio {
 protected:
     vector<double>* pesos; // Vetor de pesos sinápticos
-    vector<unsigned>* posicao; // Vetor da posiçãoo do neurônio no arranjo
+    vector<unsigned>* posicao; // Vetor da posição do neurônio no arranjo
 	
-    unsigned dim_entrada; // Dimensão de entrada
-    unsigned dim_saida; // Dimensão de saída
+    unsigned dim_entrada; // Dimensão de entrada dos dados
+    unsigned dim_saida; // Dimensão do arranjo onde o neurônio está localizado
 	
     string rotulo; // Servem para o Mapa Contextual
     bool marcado;
-	
-public:
-    Neuronio(unsigned dim_entrada, vector<unsigned>* posicao, string rotulo = ""); // Construtor
-    Neuronio(vector<double> *pesos, vector<unsigned>* posicao, string rotulo = ""); // Construtor
-    virtual ~Neuronio(); // Destrutor
-	
-    // Gets e sets
-    [[nodiscard]] unsigned getDim() const; // Dimensão de entrada
-    vector<double>* getPesos();
-    vector<unsigned>* getPosicao(); // Posição do neurônio no arranjo
-    string getRotulo();
-    [[nodiscard]] bool getMarcado() const;
-	
-    void setPesos(vector<double>* pesos);
-    void setRotulo(string rotulo);
-    void setMarcado(bool marcado);
 
-    virtual double getDistancia(const vector<double> &vetor); // Distância euclidiana
+    bool normalizado; // Define se o neurônio sempre normalizará seus pesos ou não
+
     void normaliza(); // Normaliza seus pesos sinápticos
 
-    virtual double calculaDistanciaEspacial(Neuronio* n); // Retorna a distância espacial entre dois neurônios
+    // Retorna a distância espacial entre o neurônio e outro no arranjo de neurônios
+    virtual double calculaDistanciaEspacial(Neuronio* n);
 
     // Calcula a função de vizinhança do neurônio, dado um vencedor
     virtual double calculaVizinhanca(Neuronio* n, double sigma);
+	
+public:
+    // Construtor (criando um novo neurônio)
+    Neuronio(unsigned dim_entrada, vector<unsigned>* posicao, string rotulo = "", bool normalizado = true);
+    // Construtor (criando um novo neurônio, definindo o vetor de pesos sinápticos)
+    Neuronio(vector<double>* pesos, vector<unsigned>* posicao, string rotulo = "", bool normalizado = true);
+    virtual ~Neuronio(); // Destrutor
+
+    // Calcula a distância euclidiana entre os pesos sinápticos do neurônio e o vetor de valores de um dado
+    virtual double getDistancia(Dado* d);
 
     /**
      * Faz a equação:
-     * w(n+1) = w(n) + eta(n)*h(i(x),n)*[x - w(n)]
-     * E depois normaliza o vetor de pesos sinápticos.
+     * w(n + 1) = w(n) + eta(n) * h(i(x), n) * [x - w(n)]
+     * E depois normaliza o vetor de pesos sinápticos, caso esteja marcado para tal operação.
      */
     virtual void atualiza(Neuronio* vencedor, Dado* dado, double eta, double sigma);
 
-    virtual string toString(); // Converte para String
+    // Gets e sets
+    vector<double>* getPesos();
+    vector<unsigned>* getPosicao();
+    string getRotulo();
+    [[nodiscard]] bool getMarcado() const;
+    [[nodiscard]] bool getNormalizado() const;
+
+    void setRotulo(string rotulo);
+    void setMarcado(bool marcado);
+
+    virtual string toString(); // Converte para string
 };
 
 #endif // NEURONIO_H_

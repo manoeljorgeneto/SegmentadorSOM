@@ -45,8 +45,10 @@ protected:
 	
 public:
     explicit Dado(unsigned dimensao, string rotulo = ""); // Construtor
-    explicit Dado(vector<double>* dados , string rotulo = ""); // Construtor
+    explicit Dado(vector<double>* dados, string rotulo = ""); // Construtor
     virtual ~Dado(); // Destrutor
+
+    void normaliza(); // Normaliza o vetor de dados
 
     // Gets e sets
     string getRotulo();
@@ -57,9 +59,7 @@ public:
     void setDados(vector<double>* dados);
     void setMarcado(bool marcado);
 
-    void normaliza(); // Normaliza o vetor de dados
-
-    virtual string toString(); // Converte para String
+    virtual string toString(); // Converte para string
 };
 
 #endif // DADO_H_

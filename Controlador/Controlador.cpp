@@ -139,8 +139,7 @@ void Controlador::padrao() {
 }
 
 // Construtor
-Controlador::Controlador(int argc, char** argv, int lingua) :
-    args(argv, argv + argc) { // Lidando com argumentos
+Controlador::Controlador(int argc, char** argv, int lingua) : args(argv, argv + argc) { // Lidando com argumentos
     this->lingua = lingua;
 }
 

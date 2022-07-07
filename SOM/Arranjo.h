@@ -35,25 +35,21 @@ using namespace std;
  */
 class Arranjo {
 protected:
-    vector<Neuronio*>* neuronios; // Contêiner onde estarão os neurônios
-    unsigned dimensao; // Dimensão dos vetores de pesos sinápticos do neurônios
-	
-    unsigned largura; // Largura (e altura também) do arranjo
+    unsigned largura; // Largura do arranjo
+    unsigned altura; // Altura do arranjo
     unsigned tamanho; // Tamanho do arranjo
+
+    bool normalizados; // Define se os neurônios terão seus pesos normalizados
+
+    unsigned dimensao; // Dimensão dos vetores de pesos sinápticos do neurônios
+    vector<Neuronio*>* neuronios; // Contêiner onde estarão os neurônios
 	
-    [[nodiscard]] vector<unsigned>* criaPosicao(unsigned n) const; // Cria uma posição 2D, dado um inteiro
+    [[nodiscard]] vector<unsigned>* criaPosicao2D(unsigned n) const; // Cria uma posição 2D, dado um inteiro
     Neuronio* criaNeuronio(unsigned n); // Cria um neurônio na posição correta no arranjo
 	
 public:
-    Arranjo(unsigned largura, unsigned dimensao_entrada); // Construtor
+    Arranjo(unsigned largura, unsigned dimensao_entrada, bool normalizados = true); // Construtor
     virtual ~Arranjo(); // Destrutor
-	
-    // Gets e sets
-    vector<Neuronio*>* getNeuronios();
-    [[nodiscard]] unsigned getDimensao() const;
-    [[nodiscard]] unsigned getLargura() const;
-    [[nodiscard]] unsigned getTamanho() const;
-    void setNeuronios(vector<Neuronio*>* neuronios);
 
     /**
      * Faz a competição entre os neurônios para descobrir quem é o vencedor:
@@ -61,6 +57,14 @@ public:
      * ao vetor de dados apresentado.
      */
     vector<Neuronio*>::iterator getVencedor(Dado* dado, bool marcar = false);
+	
+    // Gets
+    [[nodiscard]] unsigned getLargura() const;
+    [[nodiscard]] unsigned getAltura() const;
+    [[nodiscard]] unsigned getTamanho() const;
+    [[nodiscard]] bool getNormalizados() const;
+    [[nodiscard]] unsigned getDimensao() const;
+    vector<Neuronio*>* getNeuronios();
 };
 
 #endif // ARRANJO_H_

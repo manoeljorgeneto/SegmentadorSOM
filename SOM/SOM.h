@@ -51,6 +51,8 @@ protected:
     double sigma_ini, eta_ini; // Valores iniciais dos parâmetros sigma e eta
     double tau1, tau2; // Valores das constantes temporais
 
+    bool normalizados; // Define se os neurônios terão seus pesos normalizados
+
     // Para geração de números aleatórios
     std::mt19937 ger_mt; // gerador mersenne_twister
 
@@ -60,9 +62,9 @@ protected:
     [[nodiscard]] double calculaEta(unsigned tempo) const; // Calcula a taxa de aprendizado
 
     double geraRand(double x, double y); // Gera um número real aleatório no intervalo [x,y), com distribuição uniforme
-    unsigned geraRandInt(int m, int n); // Gera um inteiro aleatório no intervalo [m,n]
+    unsigned geraRand(int m, int n); // Gera um inteiro aleatório no intervalo [m,n]
 
-    vector<double> geraVetorRand(); // Gera um vetor de pesos aleatório e normalizado
+    void geraPesosRand(Neuronio* n); // Gera um vetor de pesos aleatório para um neurônio
     void inicializaRand(); // Inicializa os neurônios do arranjo com valores aleatórios
     Dado* getDadoRand(vector<Dado*>* dados); // Obtém um dado ainda não marcado de forma aleatória
 	
@@ -77,19 +79,20 @@ protected:
 
 public:
     SOM(unsigned largura, unsigned dimensao_entrada, double sigma = 2.5, double tau2 = 1000.0, double eta = 0.1,
-        int semente = 1000, int lingua = ENG); // Construtor
+        bool normalizados = true, int semente = 1000, int lingua = ENG); // Construtor
     virtual ~SOM(); // Destrutor
 
     // Faz o treinamento do SOM segundo o algoritmo incremental
     void treinaSOM(vector<Dado*>* dados, unsigned iteracoes = 10000, bool inicializa = true, bool verboso = true);
 	
     // Gets e sets
+    [[nodiscard]] Arranjo* getArranjo() const;
     [[nodiscard]] double getSigmaIni() const;
     [[nodiscard]] double getEtaIni() const;
     [[nodiscard]] double getTau1() const;
     [[nodiscard]] double getTau2() const;
+    [[nodiscard]] bool getNormalizados() const;
     [[nodiscard]] int getLingua() const;
-    [[nodiscard]] Arranjo* getArranjo() const;
 	
     void setSigmaIni(double sigma);
     void setEtaIni(double eta);
