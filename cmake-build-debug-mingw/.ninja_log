@@ -88,3 +88,14 @@
 123	2710	6788630077597479	CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj	eb2ebd8f9a92b728
 98	2768	6788630078066204	CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.obj	ab60fcbd8deedbf8
 2768	3691	6788630087285082	SegmentadorSOM.exe	42209c58bfb8cc46
+0	24	0	clean	212d04b3f049f2ea
+6	2502	6789162106011815	CMakeFiles/SegmentadorSOM.dir/main.cpp.obj	5583ff0655248976
+119	2519	6789162106168076	CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.obj	1672758fa5547462
+85	2527	6789162106324319	CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.obj	1e63bbef9cc232f7
+92	2536	6789162106324319	CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.obj	f5c78a9c88e4e043
+104	2547	6789162106480605	CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.obj	eb4edec991d9989
+96	2564	6789162106636807	CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.obj	300dab91f1638df9
+77	2573	6789162106793110	CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.obj	6aae45be2915bc32
+110	2656	6789162107574322	CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj	eb2ebd8f9a92b728
+81	2737	6789162108355549	CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.obj	ab60fcbd8deedbf8
+2738	3926	6789162120230716	SegmentadorSOM.exe	42209c58bfb8cc46

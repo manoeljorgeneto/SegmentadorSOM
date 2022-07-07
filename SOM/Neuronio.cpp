@@ -21,28 +21,24 @@
 
 #include "../SOM/Neuronio.h"
 
-// Normaliza seus pesos sinápticos
-void Neuronio::normaliza() {
-    Calculos::normalizaVetor(this->pesos);
-}
-
 // Retorna a distância espacial entre o neurônio e outro no arranjo de neurônios
 double Neuronio::calculaDistanciaEspacial(Neuronio* n) {
-    // Converte os vetores de inteiro para double
-    vector<double> this_pos(this->dim_saida); // Posição do neurônio
-    for(unsigned i = 0; i < this->posicao->size(); i++)
+    // Vetores auxiliares, que servirão para a conversão de inteiro para double
+    vector<double> this_pos(this->dim_saida), n_pos(this->dim_saida);
+
+    // Converte os vetores de posição de inteiro para double
+    for(unsigned i = 0; i < this->posicao->size(); i++) // Posição do neurônio
         this_pos.at(i) = double(this->posicao->at(i));
 
-    vector<double> n_pos(this->dim_saida); // Posição do outro neurônio
-    for(unsigned i = 0; i < n->getPosicao()->size(); i++)
+    for(unsigned i = 0; i < n->getPosicao()->size(); i++) // Posição do outro neurônio
         n_pos.at(i) = (double)n->getPosicao()->at(i);
 
-    return Calculos::calculaDistancia(n_pos,this_pos);
+    return Calculos::calculaDistancia(this_pos,n_pos);
 }
 
 // Calcula a função de vizinhança do neurônio, dado um vencedor
 double Neuronio::calculaVizinhanca(Neuronio* n,	double sigma) {
-    return exp(-pow((this)->calculaDistanciaEspacial(n), 2.0) / (2.0 * pow(sigma, 2.0)));
+    return exp(-pow(this->calculaDistanciaEspacial(n), 2.0) / (2.0 * pow(sigma, 2.0)));
 }
 
 // Construtor (criando um novo neurônio)
@@ -82,9 +78,14 @@ Neuronio::~Neuronio() {
     delete this->posicao;
 }
 
+// Normaliza seus pesos sinápticos
+void Neuronio::normaliza() {
+    Calculos::normalizaVetor(this->pesos);
+}
+
 // Calcula a distância euclidiana entre os pesos sinápticos do neurônio e o vetor de valores de um dado
 double Neuronio::getDistancia(Dado* d) {
-    return Calculos::calculaDistancia(*d->getDados(), *this->pesos);
+    return Calculos::calculaDistancia(*this->pesos, *d->getDados());
 }
 
 /**

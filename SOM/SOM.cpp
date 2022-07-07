@@ -58,12 +58,11 @@ void SOM::geraPesosRand(Neuronio* n) {
     vector<double>* pesos = n->getPesos(); // Obtém o vetor de pesos do neurônio
 
     // Preenche o vetor com valores aleatórios
-    //#pragma omp parallel for
     for(double & p : *pesos)
         p = this->geraRand(-1.0, 1.0); // Intervalo entre -1 e 1
 
     if(this->normalizados)
-        Calculos::normalizaVetor(pesos); // Normaliza o vetor
+        n->normaliza(); // Normaliza o vetor
 }
 
 // Inicializa os neurônios do arranjo com valores aleatórios

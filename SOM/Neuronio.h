@@ -49,8 +49,6 @@ protected:
 
     bool normalizado; // Define se o neurônio sempre normalizará seus pesos ou não
 
-    void normaliza(); // Normaliza seus pesos sinápticos
-
     // Retorna a distância espacial entre o neurônio e outro no arranjo de neurônios
     virtual double calculaDistanciaEspacial(Neuronio* n);
 
@@ -63,6 +61,8 @@ public:
     // Construtor (criando um novo neurônio, definindo o vetor de pesos sinápticos)
     Neuronio(vector<double>* pesos, vector<unsigned>* posicao, string rotulo = "", bool normalizado = true);
     virtual ~Neuronio(); // Destrutor
+
+    void normaliza(); // Normaliza seus pesos sinápticos
 
     // Calcula a distância euclidiana entre os pesos sinápticos do neurônio e o vetor de valores de um dado
     virtual double getDistancia(Dado* d);
