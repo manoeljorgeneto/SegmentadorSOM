@@ -34,8 +34,7 @@ vector<unsigned>* Arranjo::criaPosicao2D(unsigned n) const {
 
 // Cria um neurônio na posição correta no arranjo
 Neuronio* Arranjo::criaNeuronio(unsigned n) {
-    return new Neuronio(this->dimensao, this->criaPosicao2D(n), "",
-                        this->normalizados);
+    return new Neuronio(this->dimensao, this->criaPosicao2D(n), "", this->normalizados);
 }
 
 // Construtor

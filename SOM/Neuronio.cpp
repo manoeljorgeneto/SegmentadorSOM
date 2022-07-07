@@ -33,11 +33,11 @@ double Neuronio::calculaDistanciaEspacial(Neuronio* n) {
     for(unsigned i = 0; i < n->getPosicao()->size(); i++) // Posição do outro neurônio
         n_pos.at(i) = (double)n->getPosicao()->at(i);
 
-    return Calculos::calculaDistancia(this_pos,n_pos);
+    return Calculos::calculaDistancia(this_pos, n_pos);
 }
 
 // Calcula a função de vizinhança do neurônio, dado um vencedor
-double Neuronio::calculaVizinhanca(Neuronio* n,	double sigma) {
+double Neuronio::calculaVizinhanca(Neuronio* n, double sigma) {
     return exp(-pow(this->calculaDistanciaEspacial(n), 2.0) / (2.0 * pow(sigma, 2.0)));
 }
 

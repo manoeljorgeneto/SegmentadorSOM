@@ -124,20 +124,20 @@ void ControladorSegmentadorSOM::padrao() {
     // TODO Incluir o método de aprendizado batch (verificar literatura)
     // TODO Incluir métodos para salvar e ler o SOM em disco
     // Criação do SOM, definindo os hiperparâmetros
-    SOM som(10, 6);
+    SOM* som = new SOM(10, 6);
 
-    som.sumario(); // Sumário do SOM
+    som->sumario(); // Sumário do SOM
 
-    som.treinaSOM(dados); // Treinando o SOM!
+    som->treinaSOM(dados); // Treinando o SOM!
 
     cout << endl;
 
-    Arranjo* arr = som.getArranjo(); // Arranjo treinado pelo SOM
+    Arranjo* arr = som->getArranjo(); // Arranjo treinado pelo SOM
 
     // TODO Criação de melhores visualizações (verificar literatura)
     // Geração e exibição do mapa contextual
-    MapaContextual mapa;
-    cout << mapa.geraMapa(dados, arr) << endl;
+    auto* mapa = new MapaContextual();
+    cout << mapa->geraMapa(dados, arr) << endl;
 
     // Exibição dos parâmetros dos neurônios
     cout << endl;
