@@ -212,7 +212,7 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned iteracoes, bool inicializa, b
         this->inicializaRand(); // Inicializa os neurônios do arranjo com valores aleatórios
     }
 
-    this->desmarcaDados(dados); // Desmarca todos os dados
+    SOM::desmarcaDados(dados); // Desmarca todos os dados
 
     this->verboso(2, verb); // Continuando o sumário do treinamento
 
@@ -224,13 +224,13 @@ void SOM::treinaSOM(vector<Dado*>* dados, unsigned iteracoes, bool inicializa, b
         double eta = this->calculaEta(n_it); // Calcula a taxa de aprendizado
 		
         // Apresenta todos os dados de forma aleatória e atualiza os pesos sinápticos dos neurônios no arranjo
-        while(!this->todosDadosMarcados(dados)) {
+        while(!SOM::todosDadosMarcados(dados)) {
             auto dado = this->getDadoRand(dados); // Obtém um dado de forma aleatória
             auto vencedor = this->arranjo->getVencedor(dado); // Faz a competição
             this->atualizaNeuronios(*vencedor, dado, eta, sigma); // Atualiza os neurônios do arranjo!
         }
 
-        this->desmarcaDados(dados); // Desmarca os dados ao final de cada iteração
+        SOM::desmarcaDados(dados); // Desmarca os dados ao final de cada iteração
 
         this->verboso(3, verb, iteracoes, n_it); // Exibição do progresso
     }

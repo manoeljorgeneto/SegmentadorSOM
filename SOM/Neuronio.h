@@ -57,9 +57,9 @@ protected:
 	
 public:
     // Construtor (criando um novo neurônio)
-    Neuronio(unsigned dim_entrada, vector<unsigned>* posicao, string rotulo = "", bool normalizado = true);
+    explicit Neuronio(unsigned dim_entrada, vector<unsigned>* posicao, string rotulo = "", bool normalizado = true);
     // Construtor (criando um novo neurônio, definindo o vetor de pesos sinápticos)
-    Neuronio(vector<double>* pesos, vector<unsigned>* posicao, string rotulo = "", bool normalizado = true);
+    explicit Neuronio(vector<double>* pesos, vector<unsigned>* posicao, string rotulo = "", bool normalizado = true);
     virtual ~Neuronio(); // Destrutor
 
     void normaliza(); // Normaliza seus pesos sinápticos

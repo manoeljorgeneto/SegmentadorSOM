@@ -57,5 +57,5 @@ string MapaContextual::geraMapa(vector<Dado*>* dados, Arranjo* arranjo) {
 
     MapaContextual::desmarcaNeuronios(arranjo); // Desmarca todos os neurônios
 
-    return this->geraStrMapa(arranjo); // Retorna a string com o Mapa Contextual
+    return MapaContextual::geraStrMapa(arranjo); // Retorna a string com o Mapa Contextual
 }

@@ -135,7 +135,7 @@ void Controlador::ajuda() {
 // Faz a execução padrão do programa
 void Controlador::padrao() {
     this->listaArgumentos();
-    this->versao();
+    Controlador::versao();
 }
 
 // Construtor
@@ -154,11 +154,11 @@ void Controlador::executa() {
             break;
         }
         case 1: { // Versão do programa (simples)
-            this->versao(false);
+            Controlador::versao(false);
             break;
         }
         case 2: { // Versão do programa (verbosa)
-            this->versao();
+            Controlador::versao();
             break;
         }
         case 3: { // Ajuda
