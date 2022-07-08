@@ -199,6 +199,7 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../versao.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../SOM/Arranjo.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/MapaContextual.h \
- /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../Codificador/Dado.h \
- /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../SOM/Neuronio.h \
- /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../SOM/Arranjo.h
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../Visualizacao/Visualizacao.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../Visualizacao/../Codificador/Dado.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../Visualizacao/../SOM/Neuronio.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../Visualizacao/../SOM/Arranjo.h

@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS =  -std=c++17 -fopenmp -O3 -DNDEBUG
+CXX_FLAGS =  -fopenmp -O3 -DNDEBUG
 

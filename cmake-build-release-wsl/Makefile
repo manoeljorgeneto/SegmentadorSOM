@@ -321,6 +321,30 @@ Visualizacao/MapaContextual.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.s
 .PHONY : Visualizacao/MapaContextual.cpp.s
 
+Visualizacao/Visualizacao.o: Visualizacao/Visualizacao.cpp.o
+.PHONY : Visualizacao/Visualizacao.o
+
+# target to build an object file
+Visualizacao/Visualizacao.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o
+.PHONY : Visualizacao/Visualizacao.cpp.o
+
+Visualizacao/Visualizacao.i: Visualizacao/Visualizacao.cpp.i
+.PHONY : Visualizacao/Visualizacao.i
+
+# target to preprocess a source file
+Visualizacao/Visualizacao.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.i
+.PHONY : Visualizacao/Visualizacao.cpp.i
+
+Visualizacao/Visualizacao.s: Visualizacao/Visualizacao.cpp.s
+.PHONY : Visualizacao/Visualizacao.s
+
+# target to generate assembly for a file
+Visualizacao/Visualizacao.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.s
+.PHONY : Visualizacao/Visualizacao.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -378,6 +402,9 @@ help:
 	@echo "... Visualizacao/MapaContextual.o"
 	@echo "... Visualizacao/MapaContextual.i"
 	@echo "... Visualizacao/MapaContextual.s"
+	@echo "... Visualizacao/Visualizacao.o"
+	@echo "... Visualizacao/Visualizacao.i"
+	@echo "... Visualizacao/Visualizacao.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

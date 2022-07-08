@@ -19,28 +19,25 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#ifndef MAPACONTEXTUAL_H_
-#define MAPACONTEXTUAL_H_
-
-#include <string>
-#include <sstream>
-
 #include "../Visualizacao/Visualizacao.h"
 
-using namespace std;
+// Desmarca todos os neurônios
+void Visualizacao::desmarcaNeuronios(Arranjo* arranjo) {
+    #pragma omp parallel for
+    for(auto & neuronio : *arranjo->getNeuronios())
+        neuronio->setMarcado(false);
+}
 
-/**
- * Mapa Contextual, visto na Seção 3.4.2.
- * Serve como ferramenta para auxiliar a leitura do SOM.
- */
-class MapaContextual : public Visualizacao {
-protected:
-    static string geraStrMapa(Arranjo* arranjo); // Constrói a string com o Mapa Contextual
-	
-public:
-    MapaContextual(); // Construtor
+// Verifica se todos os neurônios estão marcados
+bool Visualizacao::todosNeuroniosMarcados(Arranjo* arranjo) {
+    for(auto & neuronio : *arranjo->getNeuronios())
+        if(!neuronio->getMarcado())
+            return false;
+    return true;
+}
 
-    virtual string geraMapa(vector<Dado*>* dados, Arranjo* arranjo); // Gera um Mapa Contextual
-};
+// Construtor
+Visualizacao::Visualizacao() = default;
 
-#endif // MAPACONTEXTUAL_H_
+// Destrutor
+Visualizacao::~Visualizacao() = default;

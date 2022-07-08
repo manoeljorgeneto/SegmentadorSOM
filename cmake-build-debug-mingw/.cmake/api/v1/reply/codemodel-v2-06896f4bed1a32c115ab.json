@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.22"
@@ -19,7 +19,7 @@
 					]
 				}
 			],
-			"name" : "Release",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SegmentadorSOM::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SegmentadorSOM-Release-32b98500138adff7d69f.json",
+					"jsonFile" : "target-SegmentadorSOM-Debug-5bccd5d477b090a3b355.json",
 					"name" : "SegmentadorSOM",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Documentos/CLionProjects/SegmentadorSOM/cmake-build-release-mingw",
+		"build" : "D:/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-mingw",
 		"source" : "D:/Documentos/CLionProjects/SegmentadorSOM"
 	},
 	"version" : 

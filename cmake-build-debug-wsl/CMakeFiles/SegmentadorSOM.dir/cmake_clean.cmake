@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o.d"
   "CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o"
   "CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o.d"
+  "CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o"
+  "CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o.d"
   "CMakeFiles/SegmentadorSOM.dir/main.cpp.o"
   "CMakeFiles/SegmentadorSOM.dir/main.cpp.o.d"
   "SegmentadorSOM"

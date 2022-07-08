@@ -19,28 +19,29 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#ifndef MAPACONTEXTUAL_H_
-#define MAPACONTEXTUAL_H_
+#ifndef VISUALIZACAO_H
+#define VISUALIZACAO_H
 
-#include <string>
-#include <sstream>
+#include <vector>
+#include <omp.h>
 
-#include "../Visualizacao/Visualizacao.h"
+#include "../Codificador/Dado.h"
+#include "../SOM/Neuronio.h"
+#include "../SOM/Arranjo.h"
 
 using namespace std;
 
 /**
- * Mapa Contextual, visto na Seção 3.4.2.
- * Serve como ferramenta para auxiliar a leitura do SOM.
+ * Classe que serve como super classe para diferentes formas de visualização do SOM.
  */
-class MapaContextual : public Visualizacao {
+class Visualizacao {
 protected:
-    static string geraStrMapa(Arranjo* arranjo); // Constrói a string com o Mapa Contextual
-	
-public:
-    MapaContextual(); // Construtor
+    static void desmarcaNeuronios(Arranjo* arranjo); // Desmarca todos os neurônios do arranjo
+    static bool todosNeuroniosMarcados(Arranjo* arranjo); // Verifica se todos os neurônios do arranjo estão marcados
 
-    virtual string geraMapa(vector<Dado*>* dados, Arranjo* arranjo); // Gera um Mapa Contextual
+public:
+    Visualizacao(); // Construtor
+    virtual ~Visualizacao(); // Destrutor
 };
 
-#endif // MAPACONTEXTUAL_H_
+#endif // VISUALIZACAO_H

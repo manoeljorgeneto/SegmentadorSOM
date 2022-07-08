@@ -4,7 +4,7 @@ project(SegmentadorSOM)
 set(CMAKE_CXX_STANDARD 17)
 
 # added -fopenmp
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fopenmp")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 
 add_executable(
         SegmentadorSOM
@@ -17,5 +17,6 @@ add_executable(
         SOM/Arranjo.cpp SOM/Arranjo.h
         SOM/Neuronio.cpp SOM/Neuronio.h
         SOM/SOM.cpp SOM/SOM.h
+        Visualizacao/Visualizacao.cpp Visualizacao/Visualizacao.h
         Visualizacao/MapaContextual.cpp Visualizacao/MapaContextual.h
         )

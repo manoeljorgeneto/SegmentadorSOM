@@ -21,21 +21,6 @@
 
 #include "../Visualizacao/MapaContextual.h"
 
-// Desmarca todos os neurônios
-void MapaContextual::desmarcaNeuronios(Arranjo* arranjo) {
-    #pragma omp parallel for
-    for(auto & neuronio : *arranjo->getNeuronios())
-        neuronio->setMarcado(false);
-}
-
-// Verifica se todos os neurônios estão marcados
-bool MapaContextual::todosNeuroniosMarcados(Arranjo* arranjo) {
-    for(auto & neuronio : *arranjo->getNeuronios())
-        if(!neuronio->getMarcado())
-            return false;
-    return true;
-}
-
 // Constrói a string com o Mapa Contextual
 string MapaContextual::geraStrMapa(Arranjo* arranjo) {
     ostringstream mapa("");
@@ -53,27 +38,24 @@ string MapaContextual::geraStrMapa(Arranjo* arranjo) {
 }
 
 // Construtor
-MapaContextual::MapaContextual() = default;
-
-// Destrutor
-MapaContextual::~MapaContextual() = default;
+MapaContextual::MapaContextual() : Visualizacao() {}
 
 // Gera um Mapa Contextual
 string MapaContextual::geraMapa(vector<Dado*>* dados, Arranjo* arranjo) {
-    this->desmarcaNeuronios(arranjo); // Desmarca todos os neurônios
+    MapaContextual::desmarcaNeuronios(arranjo); // Desmarca todos os neurônios
 
     // Cria o Mapa Contextual
-    while(!this->todosNeuroniosMarcados(arranjo)) {
+    while(!MapaContextual::todosNeuroniosMarcados(arranjo)) {
         unsigned i = 0;
         do {
             auto* d = dados->at(i);
             auto vencedor = arranjo->getVencedor(d, true); // Acha o vencedor e marca-o
             (*vencedor)->setRotulo(d->getRotulo()); // Rotula o neurônio
             i++;
-        } while((i < dados->size()) && !this->todosNeuroniosMarcados(arranjo));
+        } while((i < dados->size()) && !MapaContextual::todosNeuroniosMarcados(arranjo));
     }
 
-    this->desmarcaNeuronios(arranjo); // Desmarca todos os neurônios
+    MapaContextual::desmarcaNeuronios(arranjo); // Desmarca todos os neurônios
 
     return this->geraStrMapa(arranjo); // Retorna a string com o Mapa Contextual
 }
