@@ -159,6 +159,9 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /usr/include/c++/11/bits/vector.tcc \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Controlador/../versao.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Codificador/Dado.h \
+ /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
+ /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Codificador/../Calculos/Calculos.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -181,10 +184,9 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/c++/11/utility \
- /usr/include/c++/11/bits/stl_relops.h /usr/include/c++/11/sstream \
- /usr/include/c++/11/bits/sstream.tcc \
- /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Codificador/../Calculos/Calculos.h \
+ /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Codificador/ConjuntoDados.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Codificador/../Codificador/Dado.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/Neuronio.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../Calculos/Calculos.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../Codificador/Dado.h \
@@ -202,9 +204,11 @@ CMakeFiles/SegmentadorSOM.dir/main.cpp.o: \
  /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../versao.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../Codificador/ConjuntoDados.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../SOM/../SOM/Arranjo.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/MapaContextual.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../Visualizacao/Visualizacao.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../Visualizacao/../Codificador/Dado.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../Visualizacao/../Codificador/ConjuntoDados.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../Visualizacao/../SOM/Neuronio.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/./Controlador/../Visualizacao/../Visualizacao/../SOM/Arranjo.h

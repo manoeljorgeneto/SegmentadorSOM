@@ -24,7 +24,6 @@
 
 #include <vector>
 #include <string>
-#include <cmath>
 #include <utility>
 #include <sstream>
 
@@ -53,10 +52,9 @@ public:
     // Gets e sets
     string getRotulo();
     vector<double>* getDados();
+    unsigned getDimensao();
     [[nodiscard]] bool getMarcado() const;
 
-    void setRotulo(string rotulo);
-    void setDados(vector<double>* dados);
     void setMarcado(bool marcado);
 
     virtual string toString(); // Converte para string

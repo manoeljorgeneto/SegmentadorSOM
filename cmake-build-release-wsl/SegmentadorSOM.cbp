@@ -88,6 +88,12 @@
 		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Calculos/Calculos.h">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
+		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/ConjuntoDados.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/ConjuntoDados.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
 		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/Dado.cpp">
 			<Option target="SegmentadorSOM"/>
 		</Unit>

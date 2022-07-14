@@ -41,18 +41,18 @@ string MapaContextual::geraStrMapa(Arranjo* arranjo) {
 MapaContextual::MapaContextual() : Visualizacao() {}
 
 // Gera um Mapa Contextual
-string MapaContextual::geraMapa(vector<Dado*>* dados, Arranjo* arranjo) {
+string MapaContextual::geraMapa(ConjuntoDados* dados, Arranjo* arranjo) {
     MapaContextual::desmarcaNeuronios(arranjo); // Desmarca todos os neurônios
 
     // Cria o Mapa Contextual
     while(!MapaContextual::todosNeuroniosMarcados(arranjo)) {
         unsigned i = 0;
         do {
-            auto* d = dados->at(i);
+            auto* d = dados->getDados()->at(i);
             auto vencedor = arranjo->getVencedor(d, true); // Acha o vencedor e marca-o
             (*vencedor)->setRotulo(d->getRotulo()); // Rotula o neurônio
             i++;
-        } while((i < dados->size()) && !MapaContextual::todosNeuroniosMarcados(arranjo));
+        } while((i < dados->getTamanho()) && !MapaContextual::todosNeuroniosMarcados(arranjo));
     }
 
     MapaContextual::desmarcaNeuronios(arranjo); // Desmarca todos os neurônios

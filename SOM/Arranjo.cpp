@@ -105,3 +105,13 @@ unsigned Arranjo::getDimensao() const {
 vector<Neuronio*>* Arranjo::getNeuronios() {
     return this->neuronios;
 }
+
+// Retorna uma string exibindo os parâmetros dos neurônios
+string Arranjo::toString() {
+    ostringstream str("");
+
+    for(const auto & neuronio : *(this->neuronios))
+        str << neuronio->toString() << endl;
+
+    return str.str();
+}

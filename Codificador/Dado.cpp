@@ -56,17 +56,12 @@ vector<double>* Dado::getDados() {
     return this->dados;
 }
 
+unsigned Dado::getDimensao() {
+    return this->dimensao;
+}
+
 bool Dado::getMarcado() const {
     return this->marcado;
-}
-
-void Dado::setRotulo(string rotulo) {
-    this->rotulo = std::move(rotulo);
-}
-
-void Dado::setDados(vector<double>* dados) {
-    this->dados = dados;
-    this->dimensao = this->dados->size();
 }
 
 void Dado::setMarcado(bool marcado) {

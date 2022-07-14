@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o"
   "CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o.d"
+  "CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o"
+  "CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o.d"
   "CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o"
   "CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o.d"
   "CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o"

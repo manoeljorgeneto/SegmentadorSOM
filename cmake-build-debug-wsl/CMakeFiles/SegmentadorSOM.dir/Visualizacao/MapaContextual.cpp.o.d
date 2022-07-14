@@ -159,6 +159,8 @@ CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o: \
  /usr/include/c++/11/bits/vector.tcc \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/../Visualizacao/../Visualizacao/../Codificador/Dado.h \
+ /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/../Visualizacao/../Visualizacao/../Codificador/../Calculos/Calculos.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -181,9 +183,9 @@ CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o: \
  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
- /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/c++/11/utility \
- /usr/include/c++/11/bits/stl_relops.h \
- /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/../Visualizacao/../Visualizacao/../Codificador/../Calculos/Calculos.h \
+ /usr/include/c++/11/tr1/riemann_zeta.tcc \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/../Visualizacao/../Visualizacao/../Codificador/ConjuntoDados.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/../Visualizacao/../Visualizacao/../Codificador/../Codificador/Dado.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/../Visualizacao/../Visualizacao/../SOM/Neuronio.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/../Visualizacao/../Visualizacao/../SOM/../Calculos/Calculos.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/../Visualizacao/../Visualizacao/../SOM/../Codificador/Dado.h \

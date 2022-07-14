@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : ControladorSegmentadorSOM.h
+// Name        : Arranjo.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -19,29 +19,50 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#ifndef CONTROLADORSEGMENTADORSOM_H
-#define CONTROLADORSEGMENTADORSOM_H
+#include "ConjuntoDados.h"
 
-#include "../Controlador/Controlador.h"
-#include "../Codificador/Dado.h"
-#include "../Codificador/ConjuntoDados.h"
-#include "../SOM/Neuronio.h"
-#include "../SOM/Arranjo.h"
-#include "../SOM/SOM.h"
-#include "../Visualizacao/MapaContextual.h"
+// Construtor
+ConjuntoDados::ConjuntoDados(bool normalizados) {
+    this->normalizados = normalizados;
 
-/**
- * Classe que faz o controle do fluxo do programa, herdeira das características da classe Controlador.
- */
-class ControladorSegmentadorSOM : public Controlador {
-protected:
-    void padrao() override; // Faz a execução padrão do programa
+    this->dados = new vector<Dado*>; // Cria o vetor de dados
+}
 
-    // TODO Implementar outros métodos, como leitura de dataset, leitura do conjunto de neurônios etc.
-    // TODO Implementar um método para leitura de configurações
+// Adiciona um dado ao conjunto
+void ConjuntoDados::adicionaDado(Dado* d) {
+    if(this->dados->empty())
+        this->dimensao = d->getDimensao(); // Define a dimensão dos dados armazenados
 
-public:
-    ControladorSegmentadorSOM(int argc, char** argv, int lingua = ENG); // Construtor
-};
+    if(this->normalizados)
+        d->normaliza(); // Normaliza o dado
 
-#endif // CONTROLADORSEGMENTADORSOM_H
+    this->dados->push_back(d); // Adiciona
+    this->tamanho = this->dados->size(); // Atualiza o tamanho do conjunto
+}
+
+// Gets
+unsigned ConjuntoDados::getTamanho() const {
+    return this->tamanho;
+}
+
+unsigned ConjuntoDados::getDimensao() const {
+    return this->dimensao;
+}
+
+bool ConjuntoDados::getNormalizados() const {
+    return this->normalizados;
+}
+
+vector<Dado*>* ConjuntoDados::getDados() {
+    return this->dados;
+}
+
+// Retorna uma string com os dados armazenados
+string ConjuntoDados::toString() {
+    ostringstream str("");
+
+    for(const auto & dado : *(this->dados))
+        str << dado->toString() << endl;
+
+    return str.str();
+}

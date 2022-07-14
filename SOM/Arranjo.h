@@ -23,6 +23,7 @@
 #define ARRANJO_H_
 
 #include <vector>
+#include <sstream>
 #include <omp.h>
 
 #include "../Codificador/Dado.h"
@@ -65,6 +66,8 @@ public:
     [[nodiscard]] bool getNormalizados() const;
     [[nodiscard]] unsigned getDimensao() const;
     vector<Neuronio*>* getNeuronios();
+
+    virtual string toString(); // Retorna uma string exibindo os parâmetros dos neurônios
 };
 
 #endif // ARRANJO_H_

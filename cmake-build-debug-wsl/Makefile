@@ -153,6 +153,30 @@ Calculos/Calculos.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.s
 .PHONY : Calculos/Calculos.cpp.s
 
+Codificador/ConjuntoDados.o: Codificador/ConjuntoDados.cpp.o
+.PHONY : Codificador/ConjuntoDados.o
+
+# target to build an object file
+Codificador/ConjuntoDados.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o
+.PHONY : Codificador/ConjuntoDados.cpp.o
+
+Codificador/ConjuntoDados.i: Codificador/ConjuntoDados.cpp.i
+.PHONY : Codificador/ConjuntoDados.i
+
+# target to preprocess a source file
+Codificador/ConjuntoDados.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.i
+.PHONY : Codificador/ConjuntoDados.cpp.i
+
+Codificador/ConjuntoDados.s: Codificador/ConjuntoDados.cpp.s
+.PHONY : Codificador/ConjuntoDados.s
+
+# target to generate assembly for a file
+Codificador/ConjuntoDados.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.s
+.PHONY : Codificador/ConjuntoDados.cpp.s
+
 Codificador/Dado.o: Codificador/Dado.cpp.o
 .PHONY : Codificador/Dado.o
 
@@ -381,6 +405,9 @@ help:
 	@echo "... Calculos/Calculos.o"
 	@echo "... Calculos/Calculos.i"
 	@echo "... Calculos/Calculos.s"
+	@echo "... Codificador/ConjuntoDados.o"
+	@echo "... Codificador/ConjuntoDados.i"
+	@echo "... Codificador/ConjuntoDados.s"
 	@echo "... Codificador/Dado.o"
 	@echo "... Codificador/Dado.i"
 	@echo "... Codificador/Dado.s"

@@ -155,7 +155,8 @@ CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: \
  /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/cmath \
+ /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/sstream \
+ /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/cmath \
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
@@ -192,8 +193,9 @@ CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../Calculos/Calculos.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../Codificador/Dado.h \
  /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
- /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../Codificador/../Calculos/Calculos.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../Codificador/ConjuntoDados.h \
+ /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../Codificador/../Codificador/Dado.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../SOM/Neuronio.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../SOM/../Calculos/Calculos.h \
  /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/../SOM/../SOM/../Codificador/Dado.h \

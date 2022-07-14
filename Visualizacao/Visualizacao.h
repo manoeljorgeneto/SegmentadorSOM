@@ -26,6 +26,7 @@
 #include <omp.h>
 
 #include "../Codificador/Dado.h"
+#include "../Codificador/ConjuntoDados.h"
 #include "../SOM/Neuronio.h"
 #include "../SOM/Arranjo.h"
 

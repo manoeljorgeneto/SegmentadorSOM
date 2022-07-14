@@ -25,6 +25,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <sstream>
 #include <cmath>
 #include <random>
 #include <chrono>
@@ -33,6 +34,7 @@
 #include "../versao.h"
 #include "../Calculos/Calculos.h"
 #include "../Codificador/Dado.h"
+#include "../Codificador/ConjuntoDados.h"
 #include "../SOM/Neuronio.h"
 #include "../SOM/Arranjo.h"
 
@@ -66,10 +68,10 @@ protected:
 
     void geraPesosRand(Neuronio* n); // Gera um vetor de pesos aleatório para um neurônio
     void inicializaRand(); // Inicializa os neurônios do arranjo com valores aleatórios
-    Dado* getDadoRand(vector<Dado*>* dados); // Obtém um dado ainda não marcado de forma aleatória
+    Dado* getDadoRand(ConjuntoDados* dados); // Obtém um dado ainda não marcado de forma aleatória
 	
-    static void desmarcaDados(vector<Dado*>* dados); // Desmarca todos os dados
-    static bool todosDadosMarcados(vector<Dado*>* dados); // Verifica se todos os dados foram marcados
+    static void desmarcaDados(ConjuntoDados* dados); // Desmarca todos os dados
+    static bool todosDadosMarcados(ConjuntoDados* dados); // Verifica se todos os dados foram marcados
 
     // Atualiza todos os neurônios do arranjo
     void atualizaNeuronios(Neuronio* vencedor, Dado* dado, double eta, double sigma);
@@ -83,7 +85,7 @@ public:
     virtual ~SOM(); // Destrutor
 
     // Faz o treinamento do SOM segundo o algoritmo incremental
-    void treinaSOM(vector<Dado*>* dados, unsigned iteracoes = 10000, bool inicializa = true, bool verboso = true);
+    void treinaSOM(ConjuntoDados* dados, unsigned iteracoes = 10000, bool inicializa = true, bool verboso = true);
 	
     // Gets e sets
     [[nodiscard]] Arranjo* getArranjo() const;
@@ -100,7 +102,7 @@ public:
     void setTau2(double tau2);
     void setLingua(int lingua);
 
-    virtual void sumario(); // Faz um sumário do SOM
+    virtual string sumario(); // Faz um sumário do SOM
 };
 
 #endif // SOM_H_

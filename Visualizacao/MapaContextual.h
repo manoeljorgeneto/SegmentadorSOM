@@ -40,7 +40,7 @@ protected:
 public:
     MapaContextual(); // Construtor
 
-    virtual string geraMapa(vector<Dado*>* dados, Arranjo* arranjo); // Gera um Mapa Contextual
+    virtual string geraMapa(ConjuntoDados* dados, Arranjo* arranjo); // Gera um Mapa Contextual
 };
 
 #endif // MAPACONTEXTUAL_H_

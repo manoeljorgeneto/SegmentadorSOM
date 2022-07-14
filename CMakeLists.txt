@@ -14,6 +14,7 @@ add_executable(
         Controlador/ControladorSegmentadorSOM.cpp Controlador/ControladorSegmentadorSOM.h
         Calculos/Calculos.cpp Calculos/Calculos.h
         Codificador/Dado.cpp Codificador/Dado.h
+        Codificador/ConjuntoDados.cpp Codificador/ConjuntoDados.h
         SOM/Arranjo.cpp SOM/Arranjo.h
         SOM/Neuronio.cpp SOM/Neuronio.h
         SOM/SOM.cpp SOM/SOM.h

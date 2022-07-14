@@ -74,13 +74,13 @@ void SOM::inicializaRand() {
 }
 
 // Obtém um dado ainda não marcado de forma aleatória
-Dado* SOM::getDadoRand(vector<Dado*>* dados) {
+Dado* SOM::getDadoRand(ConjuntoDados* dados) {
     unsigned rnd;
     Dado* d;
 
     do {
-        rnd = this->geraRand(0, dados->size() - 1); // Gera um número aleatório
-        d = dados->at(rnd);	// Obtém um dado
+        rnd = this->geraRand(0, dados->getTamanho() - 1); // Gera um número aleatório
+        d = dados->getDados()->at(rnd);	// Obtém um dado
     } while(d->getMarcado() && !SOM::todosDadosMarcados(dados));
 
     d->setMarcado(true); // Marca o dado
@@ -89,15 +89,15 @@ Dado* SOM::getDadoRand(vector<Dado*>* dados) {
 }
 
 // Desmarca todos os dados
-void SOM::desmarcaDados(vector<Dado*>* dados) {
+void SOM::desmarcaDados(ConjuntoDados* dados) {
     #pragma omp parallel for
-    for(auto & dado : *dados)
+    for(auto & dado : *(dados->getDados()))
         dado->setMarcado(false);
 }
 
 // Verifica se todos os dados foram marcados
-bool SOM::todosDadosMarcados(vector<Dado*>* dados) {
-    for(auto & dado : *dados)
+bool SOM::todosDadosMarcados(ConjuntoDados* dados) {
+    for(auto & dado : *(dados->getDados()))
         if (!dado->getMarcado())
             return false;
     return true;
@@ -204,7 +204,7 @@ SOM::~SOM() {
 }
 
 // Faz o treinamento do SOM segundo o algoritmo incremental
-void SOM::treinaSOM(vector<Dado*>* dados, unsigned iteracoes, bool inicializa, bool verb) {
+void SOM::treinaSOM(ConjuntoDados* dados, unsigned iteracoes, bool inicializa, bool verb) {
     this->verboso(0, verb, iteracoes); // Começo do sumário do treinamento
 
     if(inicializa) { // Inicializa os neurônios do arranjo de forma aleatória
@@ -293,7 +293,9 @@ void SOM::setLingua(int lingua) {
 }
 
 // Faz um sumário do SOM
-void SOM::sumario() {
+string SOM::sumario() {
+    ostringstream str("");
+
     string sumSOM, hipPar, dimMp, dimEnt, valSET1T2; // Palavras para tradução
     switch(this->lingua) {
         case PT_BR: {
@@ -314,14 +316,16 @@ void SOM::sumario() {
         }
     }
 
-    cout << sumSOM << endl;
-    cout << hipPar << endl;
-    cout << dimMp << this->arranjo->getLargura() << " x " << this->arranjo->getLargura() << endl;
-    cout << dimEnt << this->dimensao_entrada << endl;
-    cout << valSET1T2 << "(sigma, eta, tau1, tau2): " << "(" <<
+    str << sumSOM << endl;
+    str << hipPar << endl;
+    str << dimMp << this->arranjo->getLargura() << " x " << this->arranjo->getLargura() << endl;
+    str << dimEnt << this->dimensao_entrada << endl;
+    str << valSET1T2 << "(sigma, eta, tau1, tau2): " << "(" <<
         this->sigma_ini << ", " <<
         this->eta_ini << ", " <<
         this->tau1 << ", " <<
         this->tau2 << ")" << endl;
-    cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << endl;
+    str << "╚══════════════════════════════════════════════════════════════════════════════╝" << endl;
+
+    return str.str();
 }

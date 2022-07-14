@@ -29,120 +29,118 @@ void ControladorSegmentadorSOM::padrao() {
     cout << endl;
 
     // TODO Implementar um método de leitura de datasets
+
     // Criando e preparando os dados
     vector<double>* v; // Ponteiro para um vetor com os valores dos dados
     Dado* d; // Ponteiro para um objeto Dado
-    auto* dados = new vector<Dado*>(20); // Vetor onde os dados serão armazenados
+    auto* dados_treinamento = new ConjuntoDados(); // Conjunto dos dados de treinamento
 
     v = new vector<double>(6); *v = {2, 0, 6, 0, 0, 0};
-    d = new Dado(v, "Pa"); d->normaliza();
-    dados->at(0) = d;
+    d = new Dado(v, "Pa");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {1, 3, 3, 1, 1, 0};
-    d = new Dado(v, "Al"); d->normaliza();
-    dados->at(1) = d;
+    d = new Dado(v, "Al");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {1, 4, 5, 0, 0, 1};
-    d = new Dado(v, "Ma"); d->normaliza();
-    dados->at(2) = d;
+    d = new Dado(v, "Ma");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {0, 4, 4, 1, 0, 0};
-    d = new Dado(v, "Mi"); d->normaliza();
-    dados->at(3) = d;
+    d = new Dado(v, "Mi");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {1, 1, 4, 1, 0, 0};
-    d = new Dado(v, "Si"); d->normaliza();
-    dados->at(4) = d;
+    d = new Dado(v, "Si");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {0, 1, 7, 0, 0, 0};
-    d = new Dado(v, "Pe"); d->normaliza();
-    dados->at(5) = d;
+    d = new Dado(v, "Pe");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {0, 1, 5, 0, 0, 1};
-    d = new Dado(v, "Mt"); d->normaliza();
-    dados->at(6) = d;
+    d = new Dado(v, "Mt");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {1, 2, 3, 1, 0, 0};
-    d = new Dado(v, "Ad"); d->normaliza();
-    dados->at(7) = d;
+    d = new Dado(v, "Ad");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {0, 0, 7, 0, 0, 0};
-    d = new Dado(v, "Br"); d->normaliza();
-    dados->at(8) = d;
+    d = new Dado(v, "Br");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {0, 3, 4, 1, 0, 0};
-    d = new Dado(v, "Jo"); d->normaliza();
-    dados->at(9) = d;
+    d = new Dado(v, "Jo");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {0, 0, 3, 1, 0, 0};
-    d = new Dado(v, "Ti"); d->normaliza();
-    dados->at(10) = d;
+    d = new Dado(v, "Ti");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {0, 4, 6, 0, 0, 0};
-    d = new Dado(v, "Ag"); d->normaliza();
-    dados->at(11) = d;
+    d = new Dado(v, "Ag");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {1, 0, 5, 0, 0, 1};
-    d = new Dado(v, "Le"); d->normaliza();
-    dados->at(12) = d;
+    d = new Dado(v, "Le");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {1, 3, 7, 0, 0, 0};
-    d = new Dado(v, "Fr"); d->normaliza();
-    dados->at(13) = d;
+    d = new Dado(v, "Fr");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {1, 2, 4, 1, 0, 0};
-    d = new Dado(v, "Ca"); d->normaliza();
-    dados->at(14) = d;
+    d = new Dado(v, "Ca");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {0, 2, 4, 0, 0, 0};
-    d = new Dado(v, "He"); d->normaliza();
-    dados->at(15) = d;
+    d = new Dado(v, "He");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {0, 5, 3, 1, 1, 0};
-    d = new Dado(v, "Af"); d->normaliza();
-    dados->at(16) = d;
+    d = new Dado(v, "Af");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {0, 3, 6, 0, 0, 0};
-    d = new Dado(v, "Cr"); d->normaliza();
-    dados->at(17) = d;
+    d = new Dado(v, "Cr");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {1, 3, 5, 0, 0, 1};
-    d = new Dado(v, "Ve"); d->normaliza();
-    dados->at(18) = d;
+    d = new Dado(v, "Ve");
+    dados_treinamento->adicionaDado(d);
 
     v = new vector<double>(6); *v = {1, 1, 7, 0, 0, 0};
-    d = new Dado(v, "Ju"); d->normaliza();
-    dados->at(19) = d;
+    d = new Dado(v, "Ju");
+    dados_treinamento->adicionaDado(d);
 
-    // Exibindo os dados
-    for(const auto & dado : *dados)
-        cout << dado->toString() << endl;
+    // Exibindo os dados de treinamento
+    cout << dados_treinamento->toString() << endl;
 
-    cout << endl;
-
-    // TODO Atualizar o algoritmo SOM, incluindo paralelização
+    // TODO Atualizar o algoritmo SOM, incluindo paralelização e otimizações
     // TODO Incluir o método de aprendizado batch (verificar literatura)
     // TODO Incluir métodos para salvar e ler o SOM em disco
+
     // Criação do SOM, definindo os hiperparâmetros
-    SOM* som = new SOM(10, 6);
+    auto* som = new SOM(10, dados_treinamento->getDimensao());
 
-    som->sumario(); // Sumário do SOM
+    cout << som->sumario(); // Sumário do SOM
 
-    som->treinaSOM(dados); // Treinando o SOM!
+    som->treinaSOM(dados_treinamento); // Treinando o SOM!
 
-    cout << endl;
-
-    Arranjo* arr = som->getArranjo(); // Arranjo treinado pelo SOM
+    auto* arr = som->getArranjo(); // Arranjo treinado pelo SOM
 
     // TODO Criação de melhores visualizações (verificar literatura)
+
+    cout << endl;
+
     // Geração e exibição do mapa contextual
     auto* mapa = new MapaContextual();
-    cout << mapa->geraMapa(dados, arr) << endl;
+    cout << mapa->geraMapa(dados_treinamento, arr) << endl << endl;
 
-    // Exibição dos parâmetros dos neurônios
-    cout << endl;
-    for(const auto & neuronio : *arr->getNeuronios())
-        cout << neuronio->toString() << endl;
+    // Exibição dos parâmetros dos neurônios no arranjo
+    cout << arr->toString();
 }
 
 // TODO Há outros métodos para implementar aqui
