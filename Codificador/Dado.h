@@ -52,7 +52,7 @@ public:
     // Gets e sets
     string getRotulo();
     vector<double>* getDados();
-    unsigned getDimensao();
+    [[nodiscard]] unsigned getDimensao() const;
     [[nodiscard]] bool getMarcado() const;
 
     void setMarcado(bool marcado);

@@ -4,6 +4,7 @@
   <component name="CidrRootsConfiguration">
     <sourceRoots>
       <file path="$PROJECT_DIR$/Argumentos" />
+      <file path="$PROJECT_DIR$/Arquivos" />
       <file path="$PROJECT_DIR$/Calculos" />
       <file path="$PROJECT_DIR$/Codificador" />
       <file path="$PROJECT_DIR$/Controlador" />

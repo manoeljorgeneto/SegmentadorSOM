@@ -56,7 +56,7 @@ vector<double>* Dado::getDados() {
     return this->dados;
 }
 
-unsigned Dado::getDimensao() {
+unsigned Dado::getDimensao() const {
     return this->dimensao;
 }
 

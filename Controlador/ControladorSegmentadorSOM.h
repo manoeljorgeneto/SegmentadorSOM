@@ -23,6 +23,7 @@
 #define CONTROLADORSEGMENTADORSOM_H
 
 #include "../Controlador/Controlador.h"
+#include "../Arquivos/ArquivoCSV.h"
 #include "../Codificador/Dado.h"
 #include "../Codificador/ConjuntoDados.h"
 #include "../SOM/Neuronio.h"

@@ -55,17 +55,11 @@ build CMakeFiles/SegmentadorSOM.dir/main.cpp.obj: CXX_COMPILER__SegmentadorSOM_R
   OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir
   OBJECT_FILE_DIR = CMakeFiles\SegmentadorSOM.dir
 
-build CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.obj: CXX_COMPILER__SegmentadorSOM_Release D$:/Documentos/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp || cmake_object_order_depends_target_SegmentadorSOM
-  DEP_FILE = CMakeFiles\SegmentadorSOM.dir\Controlador\Controlador.cpp.obj.d
+build CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.obj: CXX_COMPILER__SegmentadorSOM_Release D$:/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV.cpp || cmake_object_order_depends_target_SegmentadorSOM
+  DEP_FILE = CMakeFiles\SegmentadorSOM.dir\Arquivos\ArquivoCSV.cpp.obj.d
   FLAGS = -fopenmp -O3 -DNDEBUG
   OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir
-  OBJECT_FILE_DIR = CMakeFiles\SegmentadorSOM.dir\Controlador
-
-build CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.obj: CXX_COMPILER__SegmentadorSOM_Release D$:/Documentos/CLionProjects/SegmentadorSOM/Controlador/ControladorSegmentadorSOM.cpp || cmake_object_order_depends_target_SegmentadorSOM
-  DEP_FILE = CMakeFiles\SegmentadorSOM.dir\Controlador\ControladorSegmentadorSOM.cpp.obj.d
-  FLAGS = -fopenmp -O3 -DNDEBUG
-  OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir
-  OBJECT_FILE_DIR = CMakeFiles\SegmentadorSOM.dir\Controlador
+  OBJECT_FILE_DIR = CMakeFiles\SegmentadorSOM.dir\Arquivos
 
 build CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.obj: CXX_COMPILER__SegmentadorSOM_Release D$:/Documentos/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp || cmake_object_order_depends_target_SegmentadorSOM
   DEP_FILE = CMakeFiles\SegmentadorSOM.dir\Calculos\Calculos.cpp.obj.d
@@ -85,6 +79,18 @@ build CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.obj: CXX_COMPI
   OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir
   OBJECT_FILE_DIR = CMakeFiles\SegmentadorSOM.dir\Codificador
 
+build CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.obj: CXX_COMPILER__SegmentadorSOM_Release D$:/Documentos/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp || cmake_object_order_depends_target_SegmentadorSOM
+  DEP_FILE = CMakeFiles\SegmentadorSOM.dir\Controlador\Controlador.cpp.obj.d
+  FLAGS = -fopenmp -O3 -DNDEBUG
+  OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir
+  OBJECT_FILE_DIR = CMakeFiles\SegmentadorSOM.dir\Controlador
+
+build CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.obj: CXX_COMPILER__SegmentadorSOM_Release D$:/Documentos/CLionProjects/SegmentadorSOM/Controlador/ControladorSegmentadorSOM.cpp || cmake_object_order_depends_target_SegmentadorSOM
+  DEP_FILE = CMakeFiles\SegmentadorSOM.dir\Controlador\ControladorSegmentadorSOM.cpp.obj.d
+  FLAGS = -fopenmp -O3 -DNDEBUG
+  OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir
+  OBJECT_FILE_DIR = CMakeFiles\SegmentadorSOM.dir\Controlador
+
 build CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.obj: CXX_COMPILER__SegmentadorSOM_Release D$:/Documentos/CLionProjects/SegmentadorSOM/SOM/Arranjo.cpp || cmake_object_order_depends_target_SegmentadorSOM
   DEP_FILE = CMakeFiles\SegmentadorSOM.dir\SOM\Arranjo.cpp.obj.d
   FLAGS = -fopenmp -O3 -DNDEBUG
@@ -103,14 +109,14 @@ build CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj: CXX_COMPILER__SegmentadorSO
   OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir
   OBJECT_FILE_DIR = CMakeFiles\SegmentadorSOM.dir\SOM
 
-build CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.obj: CXX_COMPILER__SegmentadorSOM_Release D$:/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/Visualizacao.cpp || cmake_object_order_depends_target_SegmentadorSOM
-  DEP_FILE = CMakeFiles\SegmentadorSOM.dir\Visualizacao\Visualizacao.cpp.obj.d
+build CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.obj: CXX_COMPILER__SegmentadorSOM_Release D$:/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/MapaContextual.cpp || cmake_object_order_depends_target_SegmentadorSOM
+  DEP_FILE = CMakeFiles\SegmentadorSOM.dir\Visualizacao\MapaContextual.cpp.obj.d
   FLAGS = -fopenmp -O3 -DNDEBUG
   OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir
   OBJECT_FILE_DIR = CMakeFiles\SegmentadorSOM.dir\Visualizacao
 
-build CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.obj: CXX_COMPILER__SegmentadorSOM_Release D$:/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/MapaContextual.cpp || cmake_object_order_depends_target_SegmentadorSOM
-  DEP_FILE = CMakeFiles\SegmentadorSOM.dir\Visualizacao\MapaContextual.cpp.obj.d
+build CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.obj: CXX_COMPILER__SegmentadorSOM_Release D$:/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/Visualizacao.cpp || cmake_object_order_depends_target_SegmentadorSOM
+  DEP_FILE = CMakeFiles\SegmentadorSOM.dir\Visualizacao\Visualizacao.cpp.obj.d
   FLAGS = -fopenmp -O3 -DNDEBUG
   OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir
   OBJECT_FILE_DIR = CMakeFiles\SegmentadorSOM.dir\Visualizacao
@@ -123,7 +129,7 @@ build CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.obj: CXX_COM
 #############################################
 # Link the executable SegmentadorSOM.exe
 
-build SegmentadorSOM.exe: CXX_EXECUTABLE_LINKER__SegmentadorSOM_Release CMakeFiles/SegmentadorSOM.dir/main.cpp.obj CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.obj CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.obj CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.obj CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.obj CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.obj CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.obj CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.obj CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.obj CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.obj
+build SegmentadorSOM.exe: CXX_EXECUTABLE_LINKER__SegmentadorSOM_Release CMakeFiles/SegmentadorSOM.dir/main.cpp.obj CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.obj CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.obj CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.obj CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.obj CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.obj CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.obj CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.obj CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.obj CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.obj CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.obj
   FLAGS = -fopenmp -O3 -DNDEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\SegmentadorSOM.dir

@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
 		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp">
 			<Option target="SegmentadorSOM"/>
 		</Unit>

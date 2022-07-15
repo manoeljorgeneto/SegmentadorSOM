@@ -28,99 +28,15 @@ void ControladorSegmentadorSOM::padrao() {
 
     cout << endl;
 
-    // TODO Implementar um método de leitura de datasets
-
-    // Criando e preparando os dados
-    vector<double>* v; // Ponteiro para um vetor com os valores dos dados
-    Dado* d; // Ponteiro para um objeto Dado
-    auto* dados_treinamento = new ConjuntoDados(); // Conjunto dos dados de treinamento
-
-    v = new vector<double>(6); *v = {2, 0, 6, 0, 0, 0};
-    d = new Dado(v, "Pa");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {1, 3, 3, 1, 1, 0};
-    d = new Dado(v, "Al");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {1, 4, 5, 0, 0, 1};
-    d = new Dado(v, "Ma");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {0, 4, 4, 1, 0, 0};
-    d = new Dado(v, "Mi");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {1, 1, 4, 1, 0, 0};
-    d = new Dado(v, "Si");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {0, 1, 7, 0, 0, 0};
-    d = new Dado(v, "Pe");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {0, 1, 5, 0, 0, 1};
-    d = new Dado(v, "Mt");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {1, 2, 3, 1, 0, 0};
-    d = new Dado(v, "Ad");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {0, 0, 7, 0, 0, 0};
-    d = new Dado(v, "Br");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {0, 3, 4, 1, 0, 0};
-    d = new Dado(v, "Jo");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {0, 0, 3, 1, 0, 0};
-    d = new Dado(v, "Ti");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {0, 4, 6, 0, 0, 0};
-    d = new Dado(v, "Ag");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {1, 0, 5, 0, 0, 1};
-    d = new Dado(v, "Le");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {1, 3, 7, 0, 0, 0};
-    d = new Dado(v, "Fr");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {1, 2, 4, 1, 0, 0};
-    d = new Dado(v, "Ca");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {0, 2, 4, 0, 0, 0};
-    d = new Dado(v, "He");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {0, 5, 3, 1, 1, 0};
-    d = new Dado(v, "Af");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {0, 3, 6, 0, 0, 0};
-    d = new Dado(v, "Cr");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {1, 3, 5, 0, 0, 1};
-    d = new Dado(v, "Ve");
-    dados_treinamento->adicionaDado(d);
-
-    v = new vector<double>(6); *v = {1, 1, 7, 0, 0, 0};
-    d = new Dado(v, "Ju");
-    dados_treinamento->adicionaDado(d);
+    // Criando e preparando os dados a partir do arquivo
+    auto* dados_treinamento = ArquivoCSV::lerArquivo("teste.csv");
 
     // Exibindo os dados de treinamento
     cout << dados_treinamento->toString() << endl;
 
-    // TODO Atualizar o algoritmo SOM, incluindo paralelização e otimizações
-    // TODO Incluir o método de aprendizado batch (verificar literatura)
-    // TODO Incluir métodos para salvar e ler o SOM em disco
+    //TODO Atualizar o algoritmo SOM, incluindo paralelização e otimizações
+    //TODO Incluir o método de aprendizado batch (verificar literatura)
+    //TODO Incluir métodos para salvar e ler o SOM em disco
 
     // Criação do SOM, definindo os hiperparâmetros
     auto* som = new SOM(10, dados_treinamento->getDimensao());
@@ -131,7 +47,7 @@ void ControladorSegmentadorSOM::padrao() {
 
     auto* arr = som->getArranjo(); // Arranjo treinado pelo SOM
 
-    // TODO Criação de melhores visualizações (verificar literatura)
+    //TODO Criação de melhores visualizações (verificar literatura)
 
     cout << endl;
 

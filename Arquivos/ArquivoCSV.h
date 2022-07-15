@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : ConjuntoDados.cpp
+// Name        : ArquivoCSV.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -19,55 +19,41 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#include "ConjuntoDados.h"
+#ifndef ARQUIVOCSV_H
+#define ARQUIVOCSV_H
 
-// Construtor
-ConjuntoDados::ConjuntoDados(bool normalizados) {
-    this->normalizados = normalizados;
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <string>
 
-    this->dados = new vector<Dado*>; // Cria o vetor de dados
-}
+#include "../Codificador/Dado.h"
+#include "../Codificador/ConjuntoDados.h"
 
-// Destrutor
-ConjuntoDados::~ConjuntoDados() {
-    delete this->dados;
-}
+using namespace std;
 
-// Adiciona um dado ao conjunto
-void ConjuntoDados::adicionaDado(Dado* d) {
-    if(this->dados->empty())
-        this->dimensao = d->getDimensao(); // Define a dimensão dos dados armazenados
+/**
+ * Classe para a leitura de arquivos CSV, formatados da seguinte forma:
+ * \<rótulo\>, \<dado_1\>, \<dado_2\>, ..., \<dado_n\>\n
+ *
+ * Exemplo:\n
+ * Ma, 1, 4, 5, 0, 0, 1\n
+ * Mi, 0, 4, 4, 1, 0, 0\n
+ */
+class ArquivoCSV {
+protected:
+    // Obtém um vetor de strings com valores delimitados a partir de uma linha do arquivo
+    static vector<string> obtemLinha(fstream& arquivo);
 
-    if(this->normalizados)
-        d->normaliza(); // Normaliza o dado
+    // Cria um objeto Dado a partir de uma linha do arquivo
+    static Dado* criaDado(const vector<string>& linha);
 
-    this->dados->push_back(d); // Adiciona
-    this->tamanho = this->dados->size(); // Atualiza o tamanho do conjunto
-}
+public:
+    ArquivoCSV(); // Construtor
+    ~ArquivoCSV(); // Destrutor
 
-// Gets
-unsigned ConjuntoDados::getTamanho() const {
-    return this->tamanho;
-}
+    // Faz a leitura do arquivo e retorna um objeto com o conjunto de dados
+    static ConjuntoDados* lerArquivo(const string& nomeArquivo);
+};
 
-unsigned ConjuntoDados::getDimensao() const {
-    return this->dimensao;
-}
-
-bool ConjuntoDados::getNormalizados() const {
-    return this->normalizados;
-}
-
-vector<Dado*>* ConjuntoDados::getDados() {
-    return this->dados;
-}
-
-// Retorna uma string com os dados armazenados
-string ConjuntoDados::toString() {
-    ostringstream str("");
-
-    for(const auto & dado : *(this->dados))
-        str << dado->toString() << endl;
-
-    return str.str();
-}
+#endif // ARQUIVOCSV_H

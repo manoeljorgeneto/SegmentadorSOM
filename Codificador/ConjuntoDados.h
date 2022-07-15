@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : Arranjo.h
+// Name        : ConjuntoDados.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -43,6 +43,7 @@ protected:
 
 public:
     explicit ConjuntoDados(bool normalizados = true); // Construtor
+    virtual ~ConjuntoDados(); // Destrutor
 
     void adicionaDado(Dado* d); // Adiciona um dado ao conjunto
 
