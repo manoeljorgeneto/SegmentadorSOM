@@ -67,9 +67,7 @@ void ControladorSegmentadorSOM::padrao() {
 // TODO Há outros métodos para implementar aqui
 
 // Construtor
-ControladorSegmentadorSOM::ControladorSegmentadorSOM(int argc, char** argv) :
-    Controlador(argc, argv) {
-
+ControladorSegmentadorSOM::ControladorSegmentadorSOM(int argc, char** argv) : Controlador(argc, argv) {
     // Atualiza as configurações de acordo com o arquivo de configurações
     auto* cf = ArquivoCSV_configs::obtemConfigs(c.cfg);
 
