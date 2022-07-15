@@ -23,27 +23,32 @@
 
 // Faz a execução padrão do programa
 void ControladorSegmentadorSOM::padrao() {
-
     Controlador::padrao(); // Chama o método da classe mãe
 
     cout << endl;
 
-    // Criando e preparando os dados a partir do arquivo
-    auto* dados_treinamento = ArquivoCSV::lerArquivo("teste.csv");
+    // Criando e preparando os dados de treinamento a partir do arquivo
+    auto* dados_treinamento = ArquivoCSV_dados::obtemDados(c.dados, c.normalizados);
+
+    if(dados_treinamento == nullptr) { // Erro ao ler o arquivo
+        this->erroArquivo();
+        return;
+    }
 
     // Exibindo os dados de treinamento
     cout << dados_treinamento->toString() << endl;
 
+    //TODO Incluir métodos para salvar e ler o SOM em disco
     //TODO Atualizar o algoritmo SOM, incluindo paralelização e otimizações
     //TODO Incluir o método de aprendizado batch (verificar literatura)
-    //TODO Incluir métodos para salvar e ler o SOM em disco
 
     // Criação do SOM, definindo os hiperparâmetros
-    auto* som = new SOM(10, dados_treinamento->getDimensao());
+    auto* som = new SOM(c.largura, dados_treinamento->getDimensao(), c.sigma, c.tau2, c.eta, c.normalizados, c.semente,
+                        this->lingua);
 
     cout << som->sumario(); // Sumário do SOM
 
-    som->treinaSOM(dados_treinamento); // Treinando o SOM!
+    som->treinaSOM(dados_treinamento, c.iteracoes, c.inicializa, c.verboso); // Treinando o SOM!
 
     auto* arr = som->getArranjo(); // Arranjo treinado pelo SOM
 
@@ -62,5 +67,19 @@ void ControladorSegmentadorSOM::padrao() {
 // TODO Há outros métodos para implementar aqui
 
 // Construtor
-ControladorSegmentadorSOM::ControladorSegmentadorSOM(int argc, char** argv, int lingua) :
-    Controlador(argc, argv, lingua) {}
+ControladorSegmentadorSOM::ControladorSegmentadorSOM(int argc, char** argv) :
+    Controlador(argc, argv) {
+
+    // Atualiza as configurações de acordo com o arquivo de configurações
+    auto* cf = ArquivoCSV_configs::obtemConfigs(c.cfg);
+
+    if(cf == nullptr) { // Erro ao ler o arquivo
+        this->erroArquivo();
+        cout << "Using default configs." << endl;
+    } else { // Atualiza
+        c.largura = cf->largura; c.sigma = cf->sigma; c.tau2 = cf->tau2; c.eta = cf->eta;
+        c.normalizados = cf->normalizados; c.semente = cf->semente;
+        c.lingua = cf->lingua; this->lingua = cf->lingua;
+        c.iteracoes = cf->iteracoes; c.inicializa = cf->inicializa; c.verboso = cf->verboso;
+    }
+}

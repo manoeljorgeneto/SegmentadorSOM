@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o"
   "CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o.d"
+  "CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o"
+  "CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o.d"
+  "CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o"
+  "CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o.d"
   "CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o"
   "CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o.d"
   "CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o"

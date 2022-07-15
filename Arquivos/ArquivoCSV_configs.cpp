@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : ArquivoCSV.h
+// Name        : ArquivoCSV_configs.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -19,34 +19,28 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#ifndef ARQUIVOCSV_H
-#define ARQUIVOCSV_H
+#include "../Arquivos/ArquivoCSV_configs.h"
 
-#include <fstream>
-#include <vector>
-#include <string>
-#include <sstream>
+// Faz a leitura do arquivo e retorna uma estrutura com as configurações do programa
+configs* ArquivoCSV_configs::obtemConfigs(const string& nomeArquivo) {
+    auto* linhas = ArquivoCSV_configs::lerArquivo(nomeArquivo);
 
-using namespace std;
+    if(linhas == nullptr) // O arquivo não existe
+        return nullptr;
 
-/**
- * Classe para a leitura de arquivos CSV.
- */
-class ArquivoCSV {
-protected:
-    // Abre o arquivo no modo de leitura
-    static fstream abreArquivo(const string& nomeArquivo);
+    auto* c = new configs; // Cria a estrutura para as configurações
 
-    // Obtém um vetor de strings com valores delimitados, a partir de uma linha do arquivo
-    static vector<string> obtemLinha(fstream& arquivo);
+    // Preenche com as configurações
+    c->largura =        stoul((linhas->at(0)).at(1));
+    c->sigma =          stod((linhas->at(1)).at(1));
+    c->tau2 =           stod((linhas->at(2)).at(1));
+    c->eta =            stod((linhas->at(3)).at(1));
+    c->normalizados =   stoi((linhas->at(4)).at(1));
+    c->semente =        stoi((linhas->at(5)).at(1));
+    c->lingua =         stoi((linhas->at(6)).at(1));
+    c->iteracoes =      stoul((linhas->at(7)).at(1));
+    c->inicializa =     stoi((linhas->at(8)).at(1));
+    c->verboso =        stoi((linhas->at(9)).at(1));
 
-public:
-    ArquivoCSV(); // Construtor
-    virtual ~ArquivoCSV(); // Destrutor
-
-    // Faz a leitura do arquivo e retorna um vetor com as linhas do arquivo
-    // Cada linha é um vetor de strings com os valores
-    static vector<vector<string>>* lerArquivo(const string& nomeArquivo);
-};
-
-#endif // ARQUIVOCSV_H
+    return c;
+}

@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : ArquivoCSV.h
+// Name        : ArquivoCSV_dados.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -19,34 +19,31 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#ifndef ARQUIVOCSV_H
-#define ARQUIVOCSV_H
+#include "../Arquivos/ArquivoCSV_dados.h"
 
-#include <fstream>
-#include <vector>
-#include <string>
-#include <sstream>
+// Cria um objeto Dado a partir de uma linha do arquivo
+Dado* ArquivoCSV_dados::criaDado(const vector<string>& linha) {
+    auto* v = new vector<double>; // Vetor de valores do dado
 
-using namespace std;
+    for(unsigned i = 1; i < linha.size(); i++) // Percorre o vetor de strings, ignorando a posição 0
+        v->push_back(stod(linha.at(i))); // Conversão de string para double
 
-/**
- * Classe para a leitura de arquivos CSV.
- */
-class ArquivoCSV {
-protected:
-    // Abre o arquivo no modo de leitura
-    static fstream abreArquivo(const string& nomeArquivo);
+    // Cria um objeto Dado e retorna
+    return new Dado(v, linha.at(0)); // O rótulo está na posição 0 do vetor
+}
 
-    // Obtém um vetor de strings com valores delimitados, a partir de uma linha do arquivo
-    static vector<string> obtemLinha(fstream& arquivo);
+// Faz a leitura do arquivo e retorna um objeto com o conjunto de dados
+ConjuntoDados* ArquivoCSV_dados::obtemDados(const string& nomeArquivo, bool normalizados) {
+    auto* linhas = ArquivoCSV_dados::lerArquivo(nomeArquivo);
 
-public:
-    ArquivoCSV(); // Construtor
-    virtual ~ArquivoCSV(); // Destrutor
+    if(linhas == nullptr) // O arquivo não existe
+        return nullptr;
 
-    // Faz a leitura do arquivo e retorna um vetor com as linhas do arquivo
-    // Cada linha é um vetor de strings com os valores
-    static vector<vector<string>>* lerArquivo(const string& nomeArquivo);
-};
+    auto* dados = new ConjuntoDados(normalizados); // Conjunto dos dados
 
-#endif // ARQUIVOCSV_H
+    // Percorre o vetor de linhas
+    for(const auto & linha : *linhas)
+        dados->adicionaDado(ArquivoCSV_dados::criaDado(linha)); // Adiciona o dado ao conjunto
+
+    return dados;
+}

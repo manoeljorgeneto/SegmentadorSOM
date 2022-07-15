@@ -70,16 +70,30 @@ void Controlador::argumentoInvalido() const {
             ajud    = "para ajuda.";
             break;
         }
-        case ENG: {
+        default: {
             argIn   = "Invalid argument(s)!",
             exec    = "Run \"",
             ajud    = "for help.";
-            break;
         }
     }
 
     cout << argIn << endl;
     cout << exec << PROGRAMA_NOME << " -h\" " << ajud << endl;
+}
+
+// Exibe uma mensagem de erro de arquivo
+void Controlador::erroArquivo() const {
+    string erro_arquivo;
+    switch(this->lingua) {
+        case PT_BR: {
+            erro_arquivo = "Erro ao ler o arquivo!";
+            break;
+        }
+        default:
+            erro_arquivo = "Error reading file!";
+    }
+
+    cout << erro_arquivo << endl;
 }
 
 // Exibe a versão do programa
@@ -112,7 +126,7 @@ void Controlador::ajuda() {
             exPdr   = "(faz a execução padrão)";
             break;
         }
-        case ENG: {
+        default: {
             uso     = "Usage:",
             verPr   = "(program version, simple)",
             verPrVb = "(program version, verbose)",
@@ -120,7 +134,6 @@ void Controlador::ajuda() {
             cake    = "(to win a cake)",
             nArg    = " <no argument> ",
             exPdr   = "(do default execution)";
-            break;
         }
     }
 
@@ -172,21 +185,4 @@ void Controlador::executa() {
         default: // Argumento inválido
             this->argumentoInvalido();
     }
-}
-
-// Gets e sets
-vector<string> Controlador::getArgs() const {
-    return this->args;
-}
-
-int Controlador::getLingua() const {
-    return this->lingua;
-}
-
-void Controlador::setArgs(const vector<string> &args) {
-    this->args = args;
-}
-
-void Controlador::setLingua(int lingua) {
-    this->lingua = lingua;
 }

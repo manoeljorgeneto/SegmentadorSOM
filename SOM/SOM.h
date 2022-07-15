@@ -87,20 +87,8 @@ public:
     // Faz o treinamento do SOM segundo o algoritmo incremental
     void treinaSOM(ConjuntoDados* dados, unsigned iteracoes = 10000, bool inicializa = true, bool verboso = true);
 	
-    // Gets e sets
+    // Get
     [[nodiscard]] Arranjo* getArranjo() const;
-    [[nodiscard]] double getSigmaIni() const;
-    [[nodiscard]] double getEtaIni() const;
-    [[nodiscard]] double getTau1() const;
-    [[nodiscard]] double getTau2() const;
-    [[nodiscard]] bool getNormalizados() const;
-    [[nodiscard]] int getLingua() const;
-	
-    void setSigmaIni(double sigma);
-    void setEtaIni(double eta);
-    void setTau1(double tau1);
-    void setTau2(double tau2);
-    void setLingua(int lingua);
 
     virtual string sumario(); // Faz um sumário do SOM
 };

@@ -11,6 +11,8 @@ add_executable(
         main.cpp
         versao.h
         Arquivos/ArquivoCSV.cpp Arquivos/ArquivoCSV.h
+        Arquivos/ArquivoCSV_configs.cpp Arquivos/ArquivoCSV_configs.h
+        Arquivos/ArquivoCSV_dados.cpp Arquivos/ArquivoCSV_dados.h
         Calculos/Calculos.cpp Calculos/Calculos.h
         Codificador/Dado.cpp Codificador/Dado.h
         Codificador/ConjuntoDados.cpp Codificador/ConjuntoDados.h

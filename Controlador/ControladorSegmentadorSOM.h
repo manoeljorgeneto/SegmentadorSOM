@@ -23,7 +23,8 @@
 #define CONTROLADORSEGMENTADORSOM_H
 
 #include "../Controlador/Controlador.h"
-#include "../Arquivos/ArquivoCSV.h"
+#include "../Arquivos/ArquivoCSV_configs.h"
+#include "../Arquivos/ArquivoCSV_dados.h"
 #include "../Codificador/Dado.h"
 #include "../Codificador/ConjuntoDados.h"
 #include "../SOM/Neuronio.h"
@@ -36,13 +37,14 @@
  */
 class ControladorSegmentadorSOM : public Controlador {
 protected:
+    configs c; // Estrutura com as configurações do programa
+
     void padrao() override; // Faz a execução padrão do programa
 
-    // TODO Implementar outros métodos, como leitura de dataset, leitura do conjunto de neurônios etc.
-    // TODO Implementar um método para leitura de configurações
+    // TODO Implementar outros métodos, como leitura do conjunto de neurônios, saída do programa etc.
 
 public:
-    ControladorSegmentadorSOM(int argc, char** argv, int lingua = ENG); // Construtor
+    ControladorSegmentadorSOM(int argc, char** argv); // Construtor
 };
 
 #endif // CONTROLADORSEGMENTADORSOM_H

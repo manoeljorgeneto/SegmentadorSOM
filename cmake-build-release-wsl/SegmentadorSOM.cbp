@@ -88,6 +88,18 @@
 		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV.h">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
+		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_configs.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_configs.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_dados.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_dados.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
 		<Unit filename="/mnt/d/Documentos/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp">
 			<Option target="SegmentadorSOM"/>
 		</Unit>

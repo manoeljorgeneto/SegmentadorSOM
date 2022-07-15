@@ -79,7 +79,7 @@ Dado* SOM::getDadoRand(ConjuntoDados* dados) {
     Dado* d;
 
     do {
-        rnd = this->geraRand(0, dados->getTamanho() - 1); // Gera um número aleatório
+        rnd = this->geraRand(0, int(dados->getTamanho() - 1)); // Gera um número aleatório
         d = dados->getDados()->at(rnd);	// Obtém um dado
     } while(d->getMarcado() && !SOM::todosDadosMarcados(dados));
 
@@ -132,7 +132,7 @@ void SOM::verboso(unsigned msg, bool verb, unsigned iteracoes, unsigned n_it, in
             segs =      " segundo(s).";
             break;
         }
-        case ENG: {
+        default: {
             dT =        " - Training data:",
             uOMP =      " * Using OpenMP: ",
             nproc =     " processors",
@@ -144,7 +144,6 @@ void SOM::verboso(unsigned msg, bool verb, unsigned iteracoes, unsigned n_it, in
             mpGer =     " * Generated map!",
             tDec =      " * Elapsed time: ",
             segs =      " second(s).";
-            break;
         }
     }
 
@@ -174,7 +173,7 @@ void SOM::verboso(unsigned msg, bool verb, unsigned iteracoes, unsigned n_it, in
         }
         case 4: { // Finalizando o sumário de treinamento
             cout << endl << mpGer << endl;
-            cout << tDec << tempo/1000000000.0 << segs << endl;
+            cout << tDec << double(tempo)/1000000000.0 << segs << endl;
             cout << "╚══════════════════════════════════════════════════════════════════════════════╝" << endl;
             break;
         }
@@ -243,53 +242,9 @@ void SOM::treinaSOM(ConjuntoDados* dados, unsigned iteracoes, bool inicializa, b
     this->verboso(4, verb, iteracoes, 0, duracao.count());
 }
 
-// Gets e sets
+// Get
 Arranjo* SOM::getArranjo() const {
     return this->arranjo;
-}
-
-double SOM::getSigmaIni() const {
-    return this->sigma_ini;
-}
-
-double SOM::getEtaIni() const {
-    return this->eta_ini;
-}
-
-double SOM::getTau1() const {
-    return this->tau1;
-}
-
-double SOM::getTau2() const {
-    return this->tau2;
-}
-
-bool SOM::getNormalizados() const {
-    return this->normalizados;
-}
-
-int SOM::getLingua() const {
-    return this->lingua;
-}
-	
-void SOM::setSigmaIni(double sigma) {
-    this->sigma_ini = sigma;
-}
-
-void SOM::setEtaIni(double eta) {
-    this->eta_ini = eta;
-}
-
-void SOM::setTau1(double tau1) {
-    this->tau1 = tau1;
-}
-
-void SOM::setTau2(double tau2) {
-    this->tau2 = tau2;
-}
-
-void SOM::setLingua(int lingua) {
-    this->lingua = lingua;
 }
 
 // Faz um sumário do SOM
@@ -306,13 +261,12 @@ string SOM::sumario() {
             valSET1T2   = " * Valores ";
             break;
         }
-        case ENG: {
+        default: {
             sumSOM      = "╔════════════════════════════════ SOM summary ═════════════════════════════════╗",
             hipPar      = " - Hyperparameters:",
             dimMp       = " * Map dimension: ",
             dimEnt      = " * Input dimension: ",
             valSET1T2   = " * Values ";
-            break;
         }
     }
 

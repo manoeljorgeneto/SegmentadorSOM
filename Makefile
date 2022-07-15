@@ -3,14 +3,20 @@
 all: SegmentadorSOM
 	@echo "Compilação do SegmentadorSOM finalizada!"
 
-SegmentadorSOM: main.o ArquivoCSV.o Calculos.o Dado.o ConjuntoDados.o Controlador.o ControladorSegmentadorSOM.o Arranjo.o Neuronio.o SOM.o MapaContextual.o Visualizacao.o
-	g++ -fopenmp main.o ArquivoCSV.o Calculos.o Dado.o ConjuntoDados.o Controlador.o ControladorSegmentadorSOM.o Arranjo.o Neuronio.o SOM.o MapaContextual.o Visualizacao.o -o SegmentadorSOM
+SegmentadorSOM: main.o ArquivoCSV.o ArquivoCSV_configs.o ArquivoCSV_dados.o Calculos.o Dado.o ConjuntoDados.o Controlador.o ControladorSegmentadorSOM.o Arranjo.o Neuronio.o SOM.o MapaContextual.o Visualizacao.o
+	g++ -fopenmp main.o ArquivoCSV.o ArquivoCSV_configs.o ArquivoCSV_dados.o Calculos.o Dado.o ConjuntoDados.o Controlador.o ControladorSegmentadorSOM.o Arranjo.o Neuronio.o SOM.o MapaContextual.o Visualizacao.o -o SegmentadorSOM
 
 main.o: main.cpp ./Controlador/ControladorSegmentadorSOM.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic main.cpp -o main.o
 
-ArquivoCSV.o: ./Arquivos/ArquivoCSV.cpp ./Arquivos/ArquivoCSV.h ./Codificador/Dado.h ./Codificador/ConjuntoDados.h
+ArquivoCSV.o: ./Arquivos/ArquivoCSV.cpp ./Arquivos/ArquivoCSV.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Arquivos/ArquivoCSV.cpp -o ArquivoCSV.o
+
+ArquivoCSV_configs.o: ./Arquivos/ArquivoCSV_configs.cpp ./Arquivos/ArquivoCSV_configs.h ./versao.h ./Arquivos/ArquivoCSV.h
+	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Arquivos/ArquivoCSV_configs.cpp -o ArquivoCSV_configs.o
+
+ArquivoCSV_dados.o: ./Arquivos/ArquivoCSV_dados.cpp ./Arquivos/ArquivoCSV_dados.h ./Arquivos/ArquivoCSV.h ./Codificador/Dado.h ./Codificador/ConjuntoDados.h
+	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Arquivos/ArquivoCSV_dados.cpp -o ArquivoCSV_dados.o
 
 Calculos.o: ./Calculos/Calculos.cpp ./Calculos/Calculos.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Calculos/Calculos.cpp -o Calculos.o
@@ -49,4 +55,4 @@ clean:
 	rm -f *.o ./SegmentadorSOM
 
 # Comando completo
-# g++ -std=c++17 -fopenmp -O3 -Wall -Wextra -pedantic main.cpp ./Arquivos/ArquivoCSV.cpp ./Calculos/Calculos.cpp ./Codificador/Dado.cpp ./Codificador/ConjuntoDados.cpp ./Controlador/Controlador.cpp ./Controlador/ControladorSegmentadorSOM.cpp ./SOM/Arranjo.cpp ./SOM/Neuronio.cpp ./SOM/SOM.cpp ./Visualizacao/MapaContextual.cpp ./Visualizacao/Visualizacao.cpp -o SegmentadorSOM
+# g++ -std=c++17 -fopenmp -O3 -Wall -Wextra -pedantic main.cpp ./Arquivos/ArquivoCSV.cpp ./Arquivos/ArquivoCSV_configs.cpp ./Arquivos/ArquivoCSV_dados.cpp ./Calculos/Calculos.cpp ./Codificador/Dado.cpp ./Codificador/ConjuntoDados.cpp ./Controlador/Controlador.cpp ./Controlador/ControladorSegmentadorSOM.cpp ./SOM/Arranjo.cpp ./SOM/Neuronio.cpp ./SOM/SOM.cpp ./Visualizacao/MapaContextual.cpp ./Visualizacao/Visualizacao.cpp -o SegmentadorSOM

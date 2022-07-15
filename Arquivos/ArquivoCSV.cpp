@@ -21,30 +21,27 @@
 
 #include "../Arquivos/ArquivoCSV.h"
 
-// Obtém um vetor de strings com valores delimitados a partir de uma linha do arquivo
+// Abre o arquivo no modo de leitura
+fstream ArquivoCSV::abreArquivo(const string& nomeArquivo) {
+    fstream arquivo; // Referência para o arquivo
+    arquivo.open(nomeArquivo, ios::in); // Abre o arquivo
+
+    return arquivo;
+}
+
+// Obtém um vetor de strings com valores delimitados, a partir de uma linha do arquivo
 vector<string> ArquivoCSV::obtemLinha(fstream& arquivo) {
     vector<string> resultado; // Vetor de strings, que armazenará os valores da linha
-    string linha, celula; // Variáveis auxiliares
+    string linha, valor; // Variáveis auxiliares
 
     std::getline(arquivo, linha); // Lê uma linha do arquivo e armazena na string 'linha'
     stringstream s(linha); // Cria um fluxo de string a partir de linha, que contém os dados "brutos" (não delimitados)
 
-    // Armazena os valores da string linha no vetor de strings
-    while(std::getline(s, celula, ',')) // Cada 'celula' é um valor da linha, já delimitado
-        resultado.push_back(celula); // Adiciona o valor no vetor
+    // Armazena os valores do fluxo no vetor de strings
+    while(std::getline(s, valor, ',')) // Cada 'valor' é um valor da linha, já delimitado
+        resultado.push_back(valor); // Adiciona o valor ao vetor
 
     return resultado;
-}
-
-// Cria um objeto Dado a partir de uma linha do arquivo
-Dado* ArquivoCSV::criaDado(const vector<string>& linha) {
-    auto* v = new vector<double>; // Vetor de valores do dado
-
-    for(unsigned i = 1; i < linha.size(); i++) // Percorre o vetor de strings, ignorando a posição 0
-        v->push_back(stod(linha.at(i))); // Conversão de string para double
-
-    // Cria um objeto Dado e retorna
-    return new Dado(v, linha.at(0)); // O rótulo está na posição 0 do vetor
 }
 
 // Construtor
@@ -53,26 +50,26 @@ ArquivoCSV::ArquivoCSV() = default;
 // Destrutor
 ArquivoCSV::~ArquivoCSV() = default;
 
-// Faz a leitura do arquivo e retorna um objeto com o conjunto de dados
-ConjuntoDados* ArquivoCSV::lerArquivo(const string& nomeArquivo) {
-    fstream arquivo; // Referência para o arquivo
-    arquivo.open(nomeArquivo, ios::in); // Abre o arquivo
+// Faz a leitura do arquivo e retorna um vetor com as linhas do arquivo
+// Cada linha é um vetor de strings com os valores
+vector<vector<string>>* ArquivoCSV::lerArquivo(const string& nomeArquivo) {
+    fstream arquivo = ArquivoCSV::abreArquivo(nomeArquivo); // Abre o arquivo
 
     if(!arquivo) // O arquivo não existe
         return nullptr;
 
-    auto* dados = new ConjuntoDados(); // Conjunto dos dados
+    auto linhas = new vector<vector<string>>; // Vetor das linhas do arquivo
 
     // Percorre o arquivo, linha a linha
     do {
         vector<string> linha = ArquivoCSV::obtemLinha(arquivo); // Obtém o vetor de strings
 
-        if(!linha.empty()) // Se o vetor conter dados, cria um novo objeto do tipo Dado e armazena-o no conjunto
-            dados->adicionaDado(ArquivoCSV::criaDado(linha)); // Adiciona o dado no conjunto
+        if(!linha.empty()) // Se o vetor conter dados, adiciona no vetor 'linhas'
+            linhas->push_back(linha); // Adiciona o dado no conjunto
 
     } while(arquivo);
 
     arquivo.close(); // Fecha o arquivo
 
-    return dados;
+    return linhas;
 }

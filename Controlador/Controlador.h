@@ -43,6 +43,7 @@ protected:
     void listaArgumentos(); // Lista os argumentos fornecidos
 
     void argumentoInvalido() const; // Exibe uma mensagem de argumento inválido
+    void erroArquivo() const; // Exibe uma mensagem de erro de arquivo
     static void versao(bool verboso = true); // Exibe a versão do programa
     virtual void ajuda(); // Exibe uma tela de ajuda
     virtual void padrao(); // Faz a execução padrão do programa
@@ -52,13 +53,6 @@ public:
     virtual ~Controlador(); // Destrutor
 
     virtual void executa(); // Executa o programa de acordo com os argumentos fornecidos
-
-    // Get e sets
-    [[nodiscard]] vector<string> getArgs() const;
-    [[nodiscard]] int getLingua() const;
-
-    void setArgs(const vector<string> &args);
-    void setLingua(int lingua);
 };
 
 #endif // CONTROLADOR_H

@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : ArquivoCSV.h
+// Name        : ArquivoCSV_dados.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.2-alpha
@@ -19,34 +19,36 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#ifndef ARQUIVOCSV_H
-#define ARQUIVOCSV_H
+#ifndef ARQUIVOCSV_DADOS_H
+#define ARQUIVOCSV_DADOS_H
 
-#include <fstream>
 #include <vector>
 #include <string>
-#include <sstream>
+
+#include "../Arquivos/ArquivoCSV.h"
+#include "../Codificador/Dado.h"
+#include "../Codificador/ConjuntoDados.h"
 
 using namespace std;
 
 /**
- * Classe para a leitura de arquivos CSV.
+ * Classe ArquivoCSV_dados, herdeira da classe ArquivoCSV.
+ *
+ * O arquivo CVS deve ser formatado da seguinte forma:\n
+ * \<rótulo\>, \<dado_1\>, \<dado_2\>, ..., \<dado_n\>\n
+ *
+ * Exemplo:\n
+ * Ma, 1, 4, 5, 0, 0, 1\n
+ * Mi, 0, 4, 4, 1, 0, 0\n
  */
-class ArquivoCSV {
+class ArquivoCSV_dados : public ArquivoCSV {
 protected:
-    // Abre o arquivo no modo de leitura
-    static fstream abreArquivo(const string& nomeArquivo);
-
-    // Obtém um vetor de strings com valores delimitados, a partir de uma linha do arquivo
-    static vector<string> obtemLinha(fstream& arquivo);
+    // Cria um objeto Dado a partir de uma linha do arquivo
+    static Dado* criaDado(const vector<string>& linha);
 
 public:
-    ArquivoCSV(); // Construtor
-    virtual ~ArquivoCSV(); // Destrutor
-
-    // Faz a leitura do arquivo e retorna um vetor com as linhas do arquivo
-    // Cada linha é um vetor de strings com os valores
-    static vector<vector<string>>* lerArquivo(const string& nomeArquivo);
+    // Faz a leitura do arquivo e retorna um objeto com o conjunto de dados
+    static ConjuntoDados* obtemDados(const string& nomeArquivo, bool normalizados = true);
 };
 
-#endif // ARQUIVOCSV_H
+#endif // ARQUIVOCSV_DADOS_H
