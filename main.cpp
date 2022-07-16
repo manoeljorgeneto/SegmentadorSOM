@@ -2,7 +2,7 @@
 // Name        : main.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.2-alpha
+// Version     : v0.1.3-alpha
 // Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -24,7 +24,7 @@
 int main(int argc, char** argv) {
 
     // Objeto que faz o controle do fluxo do programa, de acordo com os argumentos
-    ControladorSegmentadorSOM ctrl(argc, argv);
+    ControladorSegmentadorSOM ctrl(argc, argv, "configs.csv");
     ctrl.executa(); // Executa o programa!
 
     return EXIT_SUCCESS;

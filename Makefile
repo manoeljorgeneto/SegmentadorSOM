@@ -30,7 +30,7 @@ ConjuntoDados.o: ./Codificador/ConjuntoDados.cpp ./Codificador/ConjuntoDados.h .
 Controlador.o: ./Controlador/Controlador.cpp ./Controlador/Controlador.h versao.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Controlador/Controlador.cpp -o Controlador.o
 
-ControladorSegmentadorSOM.o: ./Controlador/ControladorSegmentadorSOM.cpp ./Controlador/ControladorSegmentadorSOM.h ./Controlador/Controlador.h ./Arquivos/ArquivoCSV.h ./Codificador/Dado.h ./Codificador/ConjuntoDados.h ./SOM/Neuronio.h ./SOM/Arranjo.h ./SOM/SOM.h ./Visualizacao/MapaContextual.h
+ControladorSegmentadorSOM.o: ./Controlador/ControladorSegmentadorSOM.cpp ./Controlador/ControladorSegmentadorSOM.h ./Controlador/Controlador.h ./Arquivos/ArquivoCSV_configs.h ./Arquivos/ArquivoCSV_dados.h ./Codificador/Dado.h ./Codificador/ConjuntoDados.h ./SOM/Neuronio.h ./SOM/Arranjo.h ./SOM/SOM.h ./Visualizacao/MapaContextual.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Controlador/ControladorSegmentadorSOM.cpp -o ControladorSegmentadorSOM.o
 
 Arranjo.o: ./SOM/Arranjo.cpp ./SOM/Arranjo.h ./Codificador/Dado.h ./SOM/Neuronio.h

@@ -2,7 +2,7 @@
 // Name        : Controlador.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.2-alpha
+// Version     : v0.1.3-alpha
 // Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -81,21 +81,6 @@ void Controlador::argumentoInvalido() const {
     cout << exec << PROGRAMA_NOME << " -h\" " << ajud << endl;
 }
 
-// Exibe uma mensagem de erro de arquivo
-void Controlador::erroArquivo() const {
-    string erro_arquivo;
-    switch(this->lingua) {
-        case PT_BR: {
-            erro_arquivo = "Erro ao ler o arquivo!";
-            break;
-        }
-        default:
-            erro_arquivo = "Error reading file!";
-    }
-
-    cout << erro_arquivo << endl;
-}
-
 // Exibe a versão do programa
 void Controlador::versao(bool verboso) {
     if(!verboso) {
@@ -114,10 +99,9 @@ void Controlador::versao(bool verboso) {
 
 // Exibe uma tela de ajuda
 void Controlador::ajuda() {
-    string uso, verPr, verPrVb, exAj, cake, nArg, exPdr; // Para traduções
+    string verPr, verPrVb, exAj, cake, nArg, exPdr; // Para traduções
     switch(this->lingua) {
         case PT_BR: {
-            uso     = "Uso:",
             verPr   = "(versão do programa, simples)",
             verPrVb = "(versão do programa, verbosa)",
             exAj    = "(exibe esta ajuda)",
@@ -127,7 +111,6 @@ void Controlador::ajuda() {
             break;
         }
         default: {
-            uso     = "Usage:",
             verPr   = "(program version, simple)",
             verPrVb = "(program version, verbose)",
             exAj    = "(display this help)",
@@ -137,7 +120,6 @@ void Controlador::ajuda() {
         }
     }
 
-    cout << uso << endl;
     cout << "   " << PROGRAMA_NOME << " [-v] | [--version] " << verPr << endl;
     cout << "   " << PROGRAMA_NOME << " [-V] | [--Version] " << verPrVb << endl;
     cout << "   " << PROGRAMA_NOME << " [-h] | [-H] | [--help] | [--Help] " << exAj << endl;
@@ -161,7 +143,7 @@ Controlador::~Controlador() = default;
 
 // Executa o programa de acordo com os argumentos fornecidos
 void Controlador::executa() {
-    switch(this->verificaArgumentos()) {
+    switch(Controlador::verificaArgumentos()) {
         case 0: { // Faz a execução padrão
             this->padrao();
             break;

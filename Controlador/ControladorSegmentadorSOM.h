@@ -2,7 +2,7 @@
 // Name        : ControladorSegmentadorSOM.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.2-alpha
+// Version     : v0.1.3-alpha
 // Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -39,12 +39,25 @@ class ControladorSegmentadorSOM : public Controlador {
 protected:
     configs c; // Estrutura com as configurações do programa
 
+    [[nodiscard]] unsigned verificaArgumentos() const override; // Verifica os argumentos fornecidos
+
+    void erroArquivo(); // Exibe uma mensagem de erro de arquivo
+    // Atualiza as configurações de acordo com o arquivo de configurações
+    bool configuraArquivo(const string& arqConfigs);
+
+    void ajuda() override; // Exibe uma tela de ajuda
+
     void padrao() override; // Faz a execução padrão do programa
+    void padrao(const string& arqDados); // Execução informando o arquivo de dados
+    // Execução informando os arquivos de dados e configurações
+    void padrao(const string& arqDados, const string& arqConfigs);
 
     // TODO Implementar outros métodos, como leitura do conjunto de neurônios, saída do programa etc.
 
 public:
-    ControladorSegmentadorSOM(int argc, char** argv); // Construtor
+    ControladorSegmentadorSOM(int argc, char** argv, const string& arqConfigs = ""); // Construtor
+
+    void executa() override; // Executa o programa de acordo com os argumentos fornecidos
 };
 
 #endif // CONTROLADORSEGMENTADORSOM_H

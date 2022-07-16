@@ -2,7 +2,7 @@
 // Name        : Controlador.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.2-alpha
+// Version     : v0.1.3-alpha
 // Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -41,11 +41,11 @@ protected:
     [[nodiscard]] virtual unsigned verificaArgumentos() const; // Verifica os argumentos fornecidos
     [[nodiscard]] virtual unsigned verificaArgumentos_Expandido() const; // Para argumentos complexos
     void listaArgumentos(); // Lista os argumentos fornecidos
-
     void argumentoInvalido() const; // Exibe uma mensagem de argumento inválido
-    void erroArquivo() const; // Exibe uma mensagem de erro de arquivo
+
     static void versao(bool verboso = true); // Exibe a versão do programa
     virtual void ajuda(); // Exibe uma tela de ajuda
+    
     virtual void padrao(); // Faz a execução padrão do programa
 
 public:
