@@ -1,0 +1,1120 @@
+./SegmentadorSOM
+-t
+_datasets/iris.data_mod.csv
+SegmentadorSOM, version: v0.1.3-alpha
+Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
+Licensed under GNU GPL version 3 or later <https://www.gnu.org/licenses/>
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions; see the file COPYING for details.
+
+Dado(Iris-setosa): 0.803773 0.551609 0.220644 0.0315205 
+Dado(Iris-setosa): 0.828133 0.50702 0.236609 0.0338013 
+Dado(Iris-setosa): 0.805333 0.548312 0.222752 0.0342695 
+Dado(Iris-setosa): 0.80003 0.539151 0.260879 0.0347839 
+Dado(Iris-setosa): 0.790965 0.569495 0.22147 0.0316386 
+Dado(Iris-setosa): 0.784175 0.566349 0.24687 0.058087 
+Dado(Iris-setosa): 0.780109 0.576603 0.237425 0.0508767 
+Dado(Iris-setosa): 0.802185 0.545486 0.240655 0.0320874 
+Dado(Iris-setosa): 0.806424 0.531507 0.256589 0.0366556 
+Dado(Iris-setosa): 0.818031 0.51753 0.250418 0.0166945 
+Dado(Iris-setosa): 0.803735 0.550707 0.22326 0.029768 
+Dado(Iris-setosa): 0.786991 0.557452 0.26233 0.0327913 
+Dado(Iris-setosa): 0.823072 0.51442 0.240063 0.0171473 
+Dado(Iris-setosa): 0.802513 0.559893 0.205294 0.0186631 
+Dado(Iris-setosa): 0.811209 0.559454 0.167836 0.0279727 
+Dado(Iris-setosa): 0.773811 0.597328 0.203635 0.0543025 
+Dado(Iris-setosa): 0.794289 0.573653 0.191218 0.0588363 
+Dado(Iris-setosa): 0.803274 0.551267 0.220507 0.0472514 
+Dado(Iris-setosa): 0.806828 0.537885 0.240633 0.0424646 
+Dado(Iris-setosa): 0.779649 0.580915 0.229308 0.0458617 
+Dado(Iris-setosa): 0.817338 0.51462 0.25731 0.0302718 
+Dado(Iris-setosa): 0.785919 0.570176 0.231153 0.0616407 
+Dado(Iris-setosa): 0.775771 0.607125 0.168646 0.0337292 
+Dado(Iris-setosa): 0.805978 0.521515 0.268659 0.0790174 
+Dado(Iris-setosa): 0.776114 0.549747 0.307212 0.0323381 
+Dado(Iris-setosa): 0.826475 0.495885 0.264472 0.033059 
+Dado(Iris-setosa): 0.797782 0.542492 0.25529 0.0638226 
+Dado(Iris-setosa): 0.80642 0.542782 0.232621 0.0310161 
+Dado(Iris-setosa): 0.816094 0.5336 0.219718 0.0313882 
+Dado(Iris-setosa): 0.795241 0.54144 0.27072 0.03384 
+Dado(Iris-setosa): 0.808466 0.522134 0.269489 0.0336861 
+Dado(Iris-setosa): 0.82225 0.517713 0.228403 0.0609074 
+Dado(Iris-setosa): 0.765783 0.603791 0.220899 0.0147266 
+Dado(Iris-setosa): 0.778674 0.594624 0.198208 0.0283154 
+Dado(Iris-setosa): 0.818031 0.51753 0.250418 0.0166945 
+Dado(Iris-setosa): 0.825123 0.528079 0.19803 0.0330049 
+Dado(Iris-setosa): 0.826998 0.526271 0.195472 0.0300726 
+Dado(Iris-setosa): 0.818031 0.51753 0.250418 0.0166945 
+Dado(Iris-setosa): 0.802124 0.546903 0.236991 0.0364602 
+Dado(Iris-setosa): 0.807796 0.53853 0.237587 0.0316783 
+Dado(Iris-setosa): 0.800333 0.560233 0.208087 0.04802 
+Dado(Iris-setosa): 0.860939 0.440035 0.248716 0.0573959 
+Dado(Iris-setosa): 0.78609 0.571702 0.232254 0.0357314 
+Dado(Iris-setosa): 0.788895 0.552226 0.252446 0.0946674 
+Dado(Iris-setosa): 0.766939 0.571445 0.285722 0.0601521 
+Dado(Iris-setosa): 0.822106 0.513816 0.239781 0.0513816 
+Dado(Iris-setosa): 0.777291 0.579158 0.243856 0.030482 
+Dado(Iris-setosa): 0.795948 0.553703 0.242245 0.0346064 
+Dado(Iris-setosa): 0.79837 0.557353 0.225954 0.0301272 
+Dado(Iris-setosa): 0.812284 0.536107 0.227439 0.0324913 
+Dado(Iris-versicolor): 0.767011 0.350634 0.514993 0.153402 
+Dado(Iris-versicolor): 0.745498 0.372749 0.524178 0.174726 
+Dado(Iris-versicolor): 0.755193 0.33929 0.536296 0.164172 
+Dado(Iris-versicolor): 0.753849 0.315246 0.548254 0.178183 
+Dado(Iris-versicolor): 0.758175 0.326599 0.536555 0.174964 
+Dado(Iris-versicolor): 0.72233 0.354829 0.57026 0.164742 
+Dado(Iris-versicolor): 0.726348 0.380468 0.541879 0.184469 
+Dado(Iris-versicolor): 0.759165 0.371836 0.511275 0.154932 
+Dado(Iris-versicolor): 0.763019 0.335266 0.531801 0.150292 
+Dado(Iris-versicolor): 0.724602 0.376236 0.543452 0.195085 
+Dado(Iris-versicolor): 0.769231 0.307692 0.538462 0.153846 
+Dado(Iris-versicolor): 0.739235 0.375882 0.526235 0.187941 
+Dado(Iris-versicolor): 0.788928 0.289273 0.525952 0.131488 
+Dado(Iris-versicolor): 0.730814 0.347436 0.563086 0.167728 
+Dado(Iris-versicolor): 0.759117 0.393114 0.488004 0.176224 
+Dado(Iris-versicolor): 0.769454 0.356016 0.505313 0.160782 
+Dado(Iris-versicolor): 0.706319 0.378385 0.567578 0.189193 
+Dado(Iris-versicolor): 0.756765 0.352287 0.534955 0.130477 
+Dado(Iris-versicolor): 0.764442 0.271254 0.554837 0.184946 
+Dado(Iris-versicolor): 0.761852 0.340112 0.530575 0.149649 
+Dado(Iris-versicolor): 0.69858 0.378891 0.568336 0.213126 
+Dado(Iris-versicolor): 0.770119 0.353497 0.504996 0.164124 
+Dado(Iris-versicolor): 0.741433 0.294219 0.57667 0.176532 
+Dado(Iris-versicolor): 0.736599 0.338111 0.567543 0.144905 
+Dado(Iris-versicolor): 0.767417 0.347736 0.515608 0.155882 
+Dado(Iris-versicolor): 0.767857 0.349026 0.511905 0.162879 
+Dado(Iris-versicolor): 0.764673 0.314865 0.539769 0.157433 
+Dado(Iris-versicolor): 0.740886 0.33174 0.5529 0.187986 
+Dado(Iris-versicolor): 0.733509 0.35453 0.550132 0.183377 
+Dado(Iris-versicolor): 0.786675 0.358834 0.483046 0.138013 
+Dado(Iris-versicolor): 0.765219 0.333914 0.528696 0.153044 
+Dado(Iris-versicolor): 0.772429 0.33706 0.519634 0.140442 
+Dado(Iris-versicolor): 0.76435 0.355818 0.513959 0.158141 
+Dado(Iris-versicolor): 0.707795 0.318508 0.601626 0.188745 
+Dado(Iris-versicolor): 0.693334 0.385186 0.577778 0.192593 
+Dado(Iris-versicolor): 0.715249 0.405308 0.536437 0.190733 
+Dado(Iris-versicolor): 0.754573 0.349131 0.529328 0.168934 
+Dado(Iris-versicolor): 0.7753 0.283046 0.54148 0.159983 
+Dado(Iris-versicolor): 0.729924 0.391031 0.534409 0.169447 
+Dado(Iris-versicolor): 0.747142 0.33961 0.543376 0.176597 
+Dado(Iris-versicolor): 0.723371 0.341957 0.578697 0.157826 
+Dado(Iris-versicolor): 0.732604 0.360297 0.552455 0.168139 
+Dado(Iris-versicolor): 0.76263 0.341869 0.525952 0.157786 
+Dado(Iris-versicolor): 0.769869 0.35414 0.508113 0.153974 
+Dado(Iris-versicolor): 0.735443 0.354589 0.551582 0.170728 
+Dado(Iris-versicolor): 0.732396 0.385472 0.53966 0.154189 
+Dado(Iris-versicolor): 0.73446 0.373673 0.541181 0.167509 
+Dado(Iris-versicolor): 0.757281 0.354212 0.525211 0.158785 
+Dado(Iris-versicolor): 0.782581 0.383618 0.460341 0.168792 
+Dado(Iris-versicolor): 0.743148 0.365055 0.534545 0.16949 
+Dado(Iris-virginica): 0.653877 0.342507 0.62274 0.259475 
+Dado(Iris-virginica): 0.690525 0.321451 0.607186 0.226207 
+Dado(Iris-virginica): 0.714914 0.302076 0.594084 0.211453 
+Dado(Iris-virginica): 0.692768 0.318893 0.615794 0.197934 
+Dado(Iris-virginica): 0.68619 0.316703 0.612293 0.232249 
+Dado(Iris-virginica): 0.709537 0.28008 0.616177 0.196056 
+Dado(Iris-virginica): 0.670541 0.342113 0.615803 0.232637 
+Dado(Iris-virginica): 0.713666 0.283511 0.615903 0.175972 
+Dado(Iris-virginica): 0.714141 0.266471 0.618212 0.191859 
+Dado(Iris-virginica): 0.691988 0.345994 0.586268 0.240274 
+Dado(Iris-virginica): 0.715626 0.352308 0.561492 0.220193 
+Dado(Iris-virginica): 0.715765 0.301964 0.592743 0.212493 
+Dado(Iris-virginica): 0.717181 0.316404 0.580073 0.221483 
+Dado(Iris-virginica): 0.692552 0.303751 0.607502 0.243001 
+Dado(Iris-virginica): 0.677679 0.327155 0.59589 0.280419 
+Dado(Iris-virginica): 0.695899 0.347949 0.576291 0.250089 
+Dado(Iris-virginica): 0.706105 0.325894 0.597473 0.195537 
+Dado(Iris-virginica): 0.692991 0.341996 0.602992 0.197997 
+Dado(Iris-virginica): 0.706006 0.238392 0.632655 0.210885 
+Dado(Iris-virginica): 0.727126 0.266613 0.605938 0.181781 
+Dado(Iris-virginica): 0.705589 0.32723 0.582878 0.235196 
+Dado(Iris-virginica): 0.683079 0.34154 0.597694 0.243957 
+Dado(Iris-virginica): 0.714865 0.259951 0.622026 0.185679 
+Dado(Iris-virginica): 0.731225 0.313382 0.56873 0.208921 
+Dado(Iris-virginica): 0.695956 0.342784 0.592082 0.218135 
+Dado(Iris-virginica): 0.715295 0.317909 0.596079 0.178824 
+Dado(Iris-virginica): 0.727852 0.328707 0.563498 0.211312 
+Dado(Iris-virginica): 0.711712 0.350022 0.571703 0.210013 
+Dado(Iris-virginica): 0.69594 0.304474 0.608948 0.228355 
+Dado(Iris-virginica): 0.730899 0.304541 0.588779 0.162422 
+Dado(Iris-virginica): 0.727662 0.275331 0.599829 0.186832 
+Dado(Iris-virginica): 0.71579 0.344304 0.57988 0.181213 
+Dado(Iris-virginica): 0.694177 0.303703 0.607405 0.238624 
+Dado(Iris-virginica): 0.72366 0.321627 0.58582 0.1723 
+Dado(Iris-virginica): 0.693854 0.295741 0.636981 0.159245 
+Dado(Iris-virginica): 0.731544 0.285017 0.579535 0.218513 
+Dado(Iris-virginica): 0.670175 0.361682 0.595711 0.255305 
+Dado(Iris-virginica): 0.698048 0.338117 0.599885 0.196326 
+Dado(Iris-virginica): 0.710669 0.355335 0.568535 0.213201 
+Dado(Iris-virginica): 0.724153 0.325344 0.566728 0.220394 
+Dado(Iris-virginica): 0.69997 0.323867 0.58505 0.250736 
+Dado(Iris-virginica): 0.733379 0.329489 0.542063 0.24446 
+Dado(Iris-virginica): 0.690525 0.321451 0.607186 0.226207 
+Dado(Iris-virginica): 0.691935 0.325616 0.600355 0.234037 
+Dado(Iris-virginica): 0.689149 0.339431 0.586291 0.257145 
+Dado(Iris-virginica): 0.721557 0.323085 0.560015 0.247699 
+Dado(Iris-virginica): 0.729654 0.289545 0.57909 0.220054 
+Dado(Iris-virginica): 0.716539 0.33071 0.573231 0.220474 
+Dado(Iris-virginica): 0.674671 0.369981 0.587616 0.250281 
+Dado(Iris-virginica): 0.690259 0.350979 0.596665 0.210588 
+
+╔════════════════════════════════ SOM summary ═════════════════════════════════╗
+ - Hyperparameters:
+ * Map dimension: 30 x 30
+ * Input dimension: 4
+ * Values (sigma, eta, tau1, tau2): (2.5, 0.1, 1091.36, 1000)
+╚══════════════════════════════════════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════════════════════════════════╗
+ - Training data:
+ * Using OpenMP: 12 processors
+ * Number of iterations: 1000
+ * Randomly initializing neurons...
+
+ * Training SOM...
+
+    * Progress: 100 iterations (10%)
+    * Progress: 200 iterations (20%)
+    * Progress: 300 iterations (30%)
+    * Progress: 400 iterations (40%)
+    * Progress: 500 iterations (50%)
+    * Progress: 600 iterations (60%)
+    * Progress: 700 iterations (70%)
+    * Progress: 800 iterations (80%)
+    * Progress: 900 iterations (90%)
+    * Progress: 1000 iterations (100%)
+
+ * Generated map!
+ * Elapsed time: 8.23707 second(s).
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		
+Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		
+Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		
+Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		
+Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		
+Iris-virginica		Iris-virginica		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-setosa		
+Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-versicolor		
+Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		
+Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		
+Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		
+Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		
+Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		
+Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-versicolor		
+Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-versicolor		Iris-versicolor		
+Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-setosa		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-versicolor		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		Iris-virginica		
+
+Neuronio pos(0,0): 0.695684 0.294478 0.635169 0.160831 
+Neuronio pos(1,0): 0.699744 0.289738 0.631789 0.165084 
+Neuronio pos(2,0): 0.710043 0.271243 0.624734 0.178812 
+Neuronio pos(3,0): 0.713205 0.257702 0.623695 0.189558 
+Neuronio pos(4,0): 0.710037 0.248592 0.627634 0.200313 
+Neuronio pos(5,0): 0.707742 0.243924 0.629996 0.206656 
+Neuronio pos(6,0): 0.707443 0.247305 0.62889 0.207033 
+Neuronio pos(7,0): 0.705402 0.271339 0.620342 0.209662 
+Neuronio pos(8,0): 0.697849 0.299253 0.610258 0.225919 
+Neuronio pos(9,0): 0.695056 0.303687 0.608248 0.233892 
+Neuronio pos(10,0): 0.693989 0.303932 0.607766 0.237961 
+Neuronio pos(11,0): 0.692753 0.304933 0.607906 0.239914 
+Neuronio pos(12,0): 0.690004 0.310995 0.609356 0.236351 
+Neuronio pos(13,0): 0.688458 0.317608 0.609855 0.23071 
+Neuronio pos(14,0): 0.689157 0.31979 0.608893 0.228136 
+Neuronio pos(15,0): 0.690308 0.320502 0.60908 0.223104 
+Neuronio pos(16,0): 0.692569 0.319676 0.613439 0.204569 
+Neuronio pos(17,0): 0.694877 0.319235 0.613482 0.197168 
+Neuronio pos(18,0): 0.700837 0.31931 0.607839 0.193394 
+Neuronio pos(19,0): 0.706893 0.319264 0.602091 0.189366 
+Neuronio pos(20,0): 0.711099 0.318757 0.598867 0.184637 
+Neuronio pos(21,0): 0.714878 0.318381 0.596035 0.179792 
+Neuronio pos(22,0): 0.718337 0.319338 0.592323 0.176548 
+Neuronio pos(23,0): 0.722155 0.320966 0.587676 0.17352 
+Neuronio pos(24,0): 0.725818 0.322674 0.582896 0.17118 
+Neuronio pos(25,0): 0.743264 0.331147 0.55856 0.160969 
+Neuronio pos(26,0): 0.758769 0.34009 0.535094 0.149275 
+Neuronio pos(27,0): 0.75892 0.347292 0.533231 0.138179 
+Neuronio pos(28,0): 0.757192 0.351623 0.534578 0.131328 
+Neuronio pos(29,0): 0.75699 0.35206 0.534743 0.13065 
+Neuronio pos(0,1): 0.701779 0.290657 0.628874 0.16596 
+Neuronio pos(1,1): 0.707742 0.284301 0.623484 0.171875 
+Neuronio pos(2,1): 0.713895 0.270593 0.620105 0.180563 
+Neuronio pos(3,1): 0.715444 0.261452 0.620481 0.186513 
+Neuronio pos(4,1): 0.713339 0.256929 0.622661 0.193466 
+Neuronio pos(5,1): 0.710965 0.255168 0.624273 0.19925 
+Neuronio pos(6,1): 0.710014 0.262211 0.622265 0.199781 
+Neuronio pos(7,1): 0.707626 0.278929 0.616805 0.202521 
+Neuronio pos(8,1): 0.701012 0.295478 0.61141 0.217836 
+Neuronio pos(9,1): 0.69645 0.302875 0.608703 0.229573 
+Neuronio pos(10,1): 0.694719 0.303981 0.607948 0.235288 
+Neuronio pos(11,1): 0.693016 0.305449 0.60782 0.238713 
+Neuronio pos(12,1): 0.690293 0.313459 0.608418 0.234664 
+Neuronio pos(13,1): 0.689462 0.319549 0.608257 0.229248 
+Neuronio pos(14,1): 0.689957 0.320855 0.607738 0.227302 
+Neuronio pos(15,1): 0.690575 0.321428 0.607812 0.224399 
+Neuronio pos(16,1): 0.692886 0.322516 0.610289 0.208425 
+Neuronio pos(17,1): 0.696185 0.322677 0.610103 0.197432 
+Neuronio pos(18,1): 0.702029 0.32237 0.604587 0.194183 
+Neuronio pos(19,1): 0.706491 0.321989 0.600358 0.191738 
+Neuronio pos(20,1): 0.709794 0.320818 0.598393 0.187602 
+Neuronio pos(21,1): 0.71501 0.319335 0.595186 0.180384 
+Neuronio pos(22,1): 0.720277 0.320258 0.589901 0.175077 
+Neuronio pos(23,1): 0.72335 0.321498 0.586173 0.17264 
+Neuronio pos(24,1): 0.729212 0.32424 0.578339 0.169241 
+Neuronio pos(25,1): 0.751752 0.335061 0.546142 0.155987 
+Neuronio pos(26,1): 0.76101 0.3398 0.531918 0.149879 
+Neuronio pos(27,1): 0.761397 0.342241 0.530985 0.145602 
+Neuronio pos(28,1): 0.760277 0.347753 0.531724 0.135338 
+Neuronio pos(29,1): 0.75989 0.349236 0.531988 0.132628 
+Neuronio pos(0,2): 0.710532 0.285749 0.619379 0.172807 
+Neuronio pos(1,2): 0.7135 0.281693 0.616966 0.175841 
+Neuronio pos(2,2): 0.717546 0.272737 0.615044 0.180176 
+Neuronio pos(3,2): 0.71995 0.265744 0.614084 0.184264 
+Neuronio pos(4,2): 0.718094 0.264517 0.615466 0.18861 
+Neuronio pos(5,2): 0.714581 0.265325 0.617898 0.19282 
+Neuronio pos(6,2): 0.711806 0.271219 0.617822 0.195111 
+Neuronio pos(7,2): 0.709348 0.280339 0.61545 0.198637 
+Neuronio pos(8,2): 0.706061 0.291275 0.610569 0.209385 
+Neuronio pos(9,2): 0.702404 0.300801 0.605933 0.221342 
+Neuronio pos(10,2): 0.69984 0.303642 0.605124 0.227708 
+Neuronio pos(11,2): 0.695555 0.309033 0.605017 0.233788 
+Neuronio pos(12,2): 0.691743 0.319997 0.60407 0.232794 
+Neuronio pos(13,2): 0.690878 0.322418 0.604821 0.230055 
+Neuronio pos(14,2): 0.690726 0.322414 0.605873 0.227737 
+Neuronio pos(15,2): 0.691524 0.324805 0.605978 0.221555 
+Neuronio pos(16,2): 0.695069 0.332599 0.603892 0.203892 
+Neuronio pos(17,2): 0.698128 0.333381 0.60224 0.19693 
+Neuronio pos(18,2): 0.70252 0.329016 0.600014 0.195442 
+Neuronio pos(19,2): 0.70578 0.325809 0.598284 0.194367 
+Neuronio pos(20,2): 0.707716 0.324556 0.597425 0.192054 
+Neuronio pos(21,2): 0.713987 0.322318 0.594019 0.182961 
+Neuronio pos(22,2): 0.721885 0.32143 0.587659 0.17384 
+Neuronio pos(23,2): 0.725704 0.322489 0.583128 0.171217 
+Neuronio pos(24,2): 0.739203 0.328309 0.564806 0.163664 
+Neuronio pos(25,2): 0.758218 0.337342 0.536777 0.152236 
+Neuronio pos(26,2): 0.76179 0.339521 0.530998 0.14981 
+Neuronio pos(27,2): 0.763068 0.339887 0.529427 0.148025 
+Neuronio pos(28,2): 0.767571 0.340063 0.524637 0.141236 
+Neuronio pos(29,2): 0.769294 0.340041 0.522795 0.138723 
+Neuronio pos(0,3): 0.718255 0.288945 0.609086 0.172151 
+Neuronio pos(1,3): 0.717769 0.282406 0.611691 0.175754 
+Neuronio pos(2,3): 0.722137 0.272977 0.609503 0.180302 
+Neuronio pos(3,3): 0.724997 0.269062 0.606912 0.183417 
+Neuronio pos(4,3): 0.723734 0.269516 0.607375 0.186186 
+Neuronio pos(5,3): 0.719465 0.269909 0.611132 0.189833 
+Neuronio pos(6,3): 0.714164 0.273991 0.614137 0.194252 
+Neuronio pos(7,3): 0.711554 0.283662 0.61092 0.200011 
+Neuronio pos(8,3): 0.71239 0.295246 0.601606 0.208329 
+Neuronio pos(9,3): 0.713044 0.30099 0.596383 0.212838 
+Neuronio pos(10,3): 0.712579 0.302825 0.595336 0.214715 
+Neuronio pos(11,3): 0.706235 0.312523 0.594799 0.223107 
+Neuronio pos(12,3): 0.696809 0.322913 0.597328 0.231048 
+Neuronio pos(13,3): 0.693488 0.324395 0.600073 0.231852 
+Neuronio pos(14,3): 0.692258 0.325791 0.60222 0.227969 
+Neuronio pos(15,3): 0.693327 0.33407 0.602995 0.209983 
+Neuronio pos(16,3): 0.695414 0.339095 0.601687 0.198464 
+Neuronio pos(17,3): 0.697242 0.338155 0.600664 0.196744 
+Neuronio pos(18,3): 0.700919 0.33411 0.599077 0.195424 
+Neuronio pos(19,3): 0.706554 0.329666 0.596141 0.191619 
+Neuronio pos(20,3): 0.71122 0.330383 0.592396 0.184608 
+Neuronio pos(21,3): 0.719363 0.332531 0.585278 0.171433 
+Neuronio pos(22,3): 0.728857 0.33017 0.577492 0.16204 
+Neuronio pos(23,3): 0.73972 0.329314 0.564406 0.160661 
+Neuronio pos(24,3): 0.756673 0.333978 0.540613 0.153757 
+Neuronio pos(25,3): 0.762073 0.336571 0.532209 0.150725 
+Neuronio pos(26,3): 0.762723 0.33768 0.530716 0.150219 
+Neuronio pos(27,3): 0.764636 0.33809 0.528262 0.148211 
+Neuronio pos(28,3): 0.770622 0.337491 0.521619 0.141969 
+Neuronio pos(29,3): 0.772131 0.337259 0.519957 0.140411 
+Neuronio pos(0,4): 0.728717 0.301321 0.592547 0.164514 
+Neuronio pos(1,4): 0.726928 0.293434 0.597324 0.169341 
+Neuronio pos(2,4): 0.727741 0.27751 0.601006 0.179368 
+Neuronio pos(3,4): 0.728383 0.273534 0.600809 0.183482 
+Neuronio pos(4,4): 0.727546 0.273912 0.600937 0.185806 
+Neuronio pos(5,4): 0.726016 0.274971 0.600769 0.190703 
+Neuronio pos(6,4): 0.723777 0.280456 0.596969 0.202776 
+Neuronio pos(7,4): 0.719471 0.29123 0.594455 0.210167 
+Neuronio pos(8,4): 0.71604 0.299652 0.593881 0.211662 
+Neuronio pos(9,4): 0.715334 0.301754 0.593533 0.21204 
+Neuronio pos(10,4): 0.715255 0.303111 0.592654 0.212827 
+Neuronio pos(11,4): 0.713664 0.31201 0.58758 0.219279 
+Neuronio pos(12,4): 0.708092 0.319429 0.587901 0.225704 
+Neuronio pos(13,4): 0.701656 0.322313 0.592894 0.228625 
+Neuronio pos(14,4): 0.696103 0.328063 0.598352 0.223139 
+Neuronio pos(15,4): 0.693963 0.339105 0.602019 0.202478 
+Neuronio pos(16,4): 0.694589 0.340799 0.601937 0.19767 
+Neuronio pos(17,4): 0.696024 0.339846 0.601104 0.196798 
+Neuronio pos(18,4): 0.701514 0.337901 0.597502 0.191551 
+Neuronio pos(19,4): 0.715261 0.337744 0.586823 0.173117 
+Neuronio pos(20,4): 0.721568 0.339793 0.580927 0.162493 
+Neuronio pos(21,4): 0.726096 0.340196 0.576738 0.156282 
+Neuronio pos(22,4): 0.733895 0.33846 0.569628 0.149557 
+Neuronio pos(23,4): 0.747955 0.336266 0.552505 0.149083 
+Neuronio pos(24,4): 0.761768 0.335211 0.53352 0.150662 
+Neuronio pos(25,4): 0.763439 0.335187 0.53105 0.150984 
+Neuronio pos(26,4): 0.763939 0.335158 0.53023 0.151401 
+Neuronio pos(27,4): 0.765358 0.335257 0.52842 0.150342 
+Neuronio pos(28,4): 0.770694 0.335711 0.522303 0.143277 
+Neuronio pos(29,4): 0.77267 0.335932 0.520002 0.140459 
+Neuronio pos(0,5): 0.731258 0.304733 0.588144 0.162747 
+Neuronio pos(1,5): 0.732406 0.302165 0.587296 0.165412 
+Neuronio pos(2,5): 0.735996 0.291144 0.585398 0.175651 
+Neuronio pos(3,5): 0.735179 0.284958 0.587924 0.180713 
+Neuronio pos(4,5): 0.732386 0.281575 0.591431 0.185838 
+Neuronio pos(5,5): 0.730564 0.281944 0.58844 0.201303 
+Neuronio pos(6,5): 0.730207 0.285918 0.581823 0.215712 
+Neuronio pos(7,5): 0.727911 0.289777 0.582007 0.217814 
+Neuronio pos(8,5): 0.720965 0.296915 0.58815 0.21478 
+Neuronio pos(9,5): 0.71658 0.301421 0.592043 0.21247 
+Neuronio pos(10,5): 0.716478 0.304864 0.590155 0.213154 
+Neuronio pos(11,5): 0.717889 0.313632 0.581885 0.21836 
+Neuronio pos(12,5): 0.71706 0.316581 0.580398 0.22077 
+Neuronio pos(13,5): 0.714216 0.318018 0.582658 0.221969 
+Neuronio pos(14,5): 0.706039 0.326682 0.590245 0.215403 
+Neuronio pos(15,5): 0.698137 0.340669 0.597994 0.197364 
+Neuronio pos(16,5): 0.697565 0.341943 0.598699 0.195032 
+Neuronio pos(17,5): 0.698411 0.341441 0.598285 0.194154 
+Neuronio pos(18,5): 0.70874 0.341143 0.590614 0.180234 
+Neuronio pos(19,5): 0.721936 0.341739 0.579868 0.160548 
+Neuronio pos(20,5): 0.724302 0.341618 0.57791 0.157173 
+Neuronio pos(21,5): 0.728502 0.340479 0.574429 0.152942 
+Neuronio pos(22,5): 0.734564 0.338737 0.569157 0.147425 
+Neuronio pos(23,5): 0.742174 0.337248 0.560291 0.146682 
+Neuronio pos(24,5): 0.759515 0.33491 0.537013 0.150295 
+Neuronio pos(25,5): 0.763974 0.33435 0.530613 0.151668 
+Neuronio pos(26,5): 0.764681 0.334015 0.529638 0.152249 
+Neuronio pos(27,5): 0.765915 0.332632 0.528887 0.151685 
+Neuronio pos(28,5): 0.773674 0.32278 0.525882 0.14384 
+Neuronio pos(29,5): 0.780054 0.314448 0.52333 0.136982 
+Neuronio pos(0,6): 0.737101 0.312047 0.576742 0.163333 
+Neuronio pos(1,6): 0.740303 0.310054 0.57257 0.167278 
+Neuronio pos(2,6): 0.743208 0.301062 0.571328 0.174895 
+Neuronio pos(3,6): 0.741468 0.295011 0.575887 0.177616 
+Neuronio pos(4,6): 0.73806 0.290419 0.58018 0.185242 
+Neuronio pos(5,6): 0.732544 0.286277 0.580939 0.209605 
+Neuronio pos(6,6): 0.730871 0.286762 0.579603 0.218302 
+Neuronio pos(7,6): 0.730108 0.288462 0.579455 0.219007 
+Neuronio pos(8,6): 0.72786 0.292865 0.580818 0.217025 
+Neuronio pos(9,6): 0.724541 0.304286 0.581693 0.209959 
+Neuronio pos(10,6): 0.726217 0.314555 0.575287 0.206659 
+Neuronio pos(11,6): 0.725499 0.316036 0.573304 0.212357 
+Neuronio pos(12,6): 0.724289 0.315241 0.57433 0.214882 
+Neuronio pos(13,6): 0.723551 0.315568 0.575014 0.215059 
+Neuronio pos(14,6): 0.7184 0.326258 0.579367 0.20443 
+Neuronio pos(15,6): 0.711664 0.342625 0.584372 0.186148 
+Neuronio pos(16,6): 0.711334 0.34383 0.584556 0.184604 
+Neuronio pos(17,6): 0.711633 0.344168 0.584316 0.18358 
+Neuronio pos(18,6): 0.717464 0.346235 0.579577 0.171634 
+Neuronio pos(19,6): 0.723044 0.345337 0.576438 0.160213 
+Neuronio pos(20,6): 0.725495 0.34272 0.575946 0.156478 
+Neuronio pos(21,6): 0.731379 0.339916 0.571797 0.150299 
+Neuronio pos(22,6): 0.736121 0.338014 0.567863 0.146299 
+Neuronio pos(23,6): 0.741541 0.334952 0.562402 0.147062 
+Neuronio pos(24,6): 0.75716 0.328456 0.543887 0.151696 
+Neuronio pos(25,6): 0.764758 0.328524 0.532739 0.152996 
+Neuronio pos(26,6): 0.765915 0.328829 0.530943 0.152795 
+Neuronio pos(27,6): 0.769699 0.322797 0.53006 0.149671 
+Neuronio pos(28,6): 0.783308 0.299699 0.527128 0.136913 
+Neuronio pos(29,6): 0.788144 0.291146 0.525931 0.132131 
+Neuronio pos(0,7): 0.753164 0.333226 0.542927 0.164118 
+Neuronio pos(1,7): 0.753874 0.327961 0.543781 0.168574 
+Neuronio pos(2,7): 0.752125 0.316648 0.551098 0.174161 
+Neuronio pos(3,7): 0.747902 0.306683 0.56171 0.176265 
+Neuronio pos(4,7): 0.742713 0.298313 0.570675 0.183621 
+Neuronio pos(5,7): 0.734338 0.289534 0.577056 0.209584 
+Neuronio pos(6,7): 0.731641 0.288464 0.578142 0.217352 
+Neuronio pos(7,7): 0.732027 0.292625 0.576204 0.215631 
+Neuronio pos(8,7): 0.73493 0.30494 0.569273 0.206923 
+Neuronio pos(9,7): 0.738749 0.324107 0.558399 0.193375 
+Neuronio pos(10,7): 0.738172 0.327261 0.557396 0.193164 
+Neuronio pos(11,7): 0.733522 0.320082 0.564291 0.202655 
+Neuronio pos(12,7): 0.730314 0.315102 0.568965 0.208882 
+Neuronio pos(13,7): 0.729251 0.314662 0.570259 0.209726 
+Neuronio pos(14,7): 0.723048 0.328371 0.574954 0.196984 
+Neuronio pos(15,7): 0.716136 0.343626 0.579578 0.1821 
+Neuronio pos(16,7): 0.715821 0.344483 0.579745 0.181183 
+Neuronio pos(17,7): 0.716637 0.345763 0.578613 0.179124 
+Neuronio pos(18,7): 0.720602 0.351398 0.573296 0.16907 
+Neuronio pos(19,7): 0.722553 0.352768 0.571462 0.164018 
+Neuronio pos(20,7): 0.724741 0.349397 0.571713 0.160677 
+Neuronio pos(21,7): 0.732083 0.341901 0.569169 0.152331 
+Neuronio pos(22,7): 0.739783 0.335623 0.564005 0.148246 
+Neuronio pos(23,7): 0.751692 0.325979 0.552874 0.151748 
+Neuronio pos(24,7): 0.762369 0.317246 0.542164 0.155585 
+Neuronio pos(25,7): 0.766479 0.314279 0.538193 0.155198 
+Neuronio pos(26,7): 0.768386 0.312804 0.536754 0.153729 
+Neuronio pos(27,7): 0.773358 0.307157 0.534283 0.148707 
+Neuronio pos(28,7): 0.785549 0.29291 0.527967 0.135529 
+Neuronio pos(29,7): 0.788605 0.289493 0.526195 0.131962 
+Neuronio pos(0,8): 0.757955 0.338988 0.533012 0.162758 
+Neuronio pos(1,8): 0.757968 0.334631 0.534512 0.166743 
+Neuronio pos(2,8): 0.75724 0.327142 0.538329 0.172534 
+Neuronio pos(3,8): 0.755575 0.321826 0.543188 0.174589 
+Neuronio pos(4,8): 0.754868 0.321236 0.544198 0.175584 
+Neuronio pos(5,8): 0.751873 0.319989 0.54553 0.186254 
+Neuronio pos(6,8): 0.743385 0.312227 0.557536 0.197602 
+Neuronio pos(7,8): 0.742144 0.321 0.556081 0.192237 
+Neuronio pos(8,8): 0.744159 0.331804 0.549749 0.184147 
+Neuronio pos(9,8): 0.742941 0.333561 0.550153 0.184683 
+Neuronio pos(10,8): 0.740707 0.330989 0.553348 0.188696 
+Neuronio pos(11,8): 0.737454 0.325151 0.558692 0.195707 
+Neuronio pos(12,8): 0.733142 0.317375 0.56556 0.204738 
+Neuronio pos(13,8): 0.73113 0.315601 0.568282 0.207126 
+Neuronio pos(14,8): 0.725488 0.332512 0.571171 0.192008 
+Neuronio pos(15,8): 0.72011 0.345769 0.574091 0.179736 
+Neuronio pos(16,8): 0.719766 0.346522 0.574321 0.178925 
+Neuronio pos(17,8): 0.720558 0.348579 0.573106 0.175605 
+Neuronio pos(18,8): 0.72218 0.353565 0.570568 0.16703 
+Neuronio pos(19,8): 0.722617 0.35449 0.570064 0.164891 
+Neuronio pos(20,8): 0.724012 0.353088 0.569265 0.164542 
+Neuronio pos(21,8): 0.730024 0.347203 0.56577 0.16254 
+Neuronio pos(22,8): 0.744241 0.33378 0.556545 0.157972 
+Neuronio pos(23,8): 0.760399 0.318653 0.54384 0.156499 
+Neuronio pos(24,8): 0.764632 0.314497 0.540185 0.156938 
+Neuronio pos(25,8): 0.766781 0.311487 0.539196 0.15585 
+Neuronio pos(26,8): 0.768786 0.308356 0.53856 0.154397 
+Neuronio pos(27,8): 0.772035 0.303329 0.5374 0.152164 
+Neuronio pos(28,8): 0.781678 0.292157 0.53221 0.142746 
+Neuronio pos(29,8): 0.786809 0.288864 0.528279 0.135683 
+Neuronio pos(0,9): 0.760473 0.341015 0.528842 0.160366 
+Neuronio pos(1,9): 0.760783 0.33906 0.528961 0.162632 
+Neuronio pos(2,9): 0.760222 0.333821 0.531419 0.167987 
+Neuronio pos(3,9): 0.760576 0.332649 0.530929 0.170244 
+Neuronio pos(4,9): 0.765439 0.343478 0.518381 0.16555 
+Neuronio pos(5,9): 0.766615 0.347228 0.514491 0.164415 
+Neuronio pos(6,9): 0.760879 0.343805 0.523679 0.169175 
+Neuronio pos(7,9): 0.749329 0.339183 0.540708 0.176337 
+Neuronio pos(8,9): 0.746765 0.338725 0.544097 0.177666 
+Neuronio pos(9,9): 0.74512 0.336979 0.546485 0.180542 
+Neuronio pos(10,9): 0.743335 0.334632 0.549068 0.184388 
+Neuronio pos(11,9): 0.74303 0.333452 0.549552 0.186301 
+Neuronio pos(12,9): 0.74075 0.329084 0.553393 0.191701 
+Neuronio pos(13,9): 0.736821 0.329685 0.557663 0.193431 
+Neuronio pos(14,9): 0.733262 0.347894 0.556452 0.177926 
+Neuronio pos(15,9): 0.731818 0.35265 0.556927 0.172953 
+Neuronio pos(16,9): 0.731658 0.352902 0.557099 0.172559 
+Neuronio pos(17,9): 0.730486 0.354011 0.558409 0.171013 
+Neuronio pos(18,9): 0.726471 0.355574 0.563843 0.167001 
+Neuronio pos(19,9): 0.724637 0.354552 0.567253 0.165584 
+Neuronio pos(20,9): 0.726858 0.351304 0.566233 0.166264 
+Neuronio pos(21,9): 0.730255 0.347918 0.563726 0.167016 
+Neuronio pos(22,9): 0.737213 0.341381 0.559121 0.165409 
+Neuronio pos(23,9): 0.757373 0.321584 0.545249 0.160231 
+Neuronio pos(24,9): 0.763557 0.314526 0.540943 0.159482 
+Neuronio pos(25,9): 0.764966 0.3117 0.540644 0.159294 
+Neuronio pos(26,9): 0.767914 0.306667 0.539924 0.157307 
+Neuronio pos(27,9): 0.772204 0.295941 0.53991 0.156897 
+Neuronio pos(28,9): 0.776062 0.286567 0.539587 0.156376 
+Neuronio pos(29,9): 0.7787 0.284889 0.537674 0.152875 
+Neuronio pos(0,10): 0.764381 0.345178 0.521493 0.156906 
+Neuronio pos(1,10): 0.765415 0.346223 0.519351 0.156663 
+Neuronio pos(2,10): 0.765775 0.345922 0.518695 0.157742 
+Neuronio pos(3,10): 0.766579 0.346668 0.516335 0.159921 
+Neuronio pos(4,10): 0.767814 0.349001 0.512264 0.162005 
+Neuronio pos(5,10): 0.767729 0.349063 0.51208 0.162854 
+Neuronio pos(6,10): 0.765199 0.347949 0.516038 0.16464 
+Neuronio pos(7,10): 0.753609 0.343103 0.533672 0.171895 
+Neuronio pos(8,10): 0.748926 0.341635 0.540402 0.174242 
+Neuronio pos(9,10): 0.749552 0.34294 0.53899 0.17336 
+Neuronio pos(10,10): 0.751177 0.344924 0.535668 0.172686 
+Neuronio pos(11,10): 0.752638 0.346684 0.532832 0.171573 
+Neuronio pos(12,10): 0.752357 0.347864 0.532495 0.171459 
+Neuronio pos(13,10): 0.746376 0.354413 0.536474 0.171785 
+Neuronio pos(14,10): 0.7395 0.358838 0.543397 0.170571 
+Neuronio pos(15,10): 0.736186 0.355876 0.549771 0.170685 
+Neuronio pos(16,10): 0.735119 0.355127 0.551702 0.170614 
+Neuronio pos(17,10): 0.733982 0.356645 0.55251 0.16973 
+Neuronio pos(18,10): 0.731952 0.35853 0.554431 0.168252 
+Neuronio pos(19,10): 0.730109 0.356318 0.558519 0.167438 
+Neuronio pos(20,10): 0.730088 0.349895 0.562541 0.167608 
+Neuronio pos(21,10): 0.730769 0.34772 0.562932 0.167855 
+Neuronio pos(22,10): 0.732549 0.34584 0.561815 0.167721 
+Neuronio pos(23,10): 0.747863 0.328525 0.551906 0.167846 
+Neuronio pos(24,10): 0.756848 0.315653 0.546032 0.171445 
+Neuronio pos(25,10): 0.757224 0.313842 0.546131 0.172787 
+Neuronio pos(26,10): 0.762156 0.306758 0.544608 0.168584 
+Neuronio pos(27,10): 0.772043 0.289207 0.542292 0.161954 
+Neuronio pos(28,10): 0.774304 0.282873 0.542456 0.161794 
+Neuronio pos(29,10): 0.773529 0.281026 0.543789 0.164226 
+Neuronio pos(0,11): 0.768568 0.349351 0.513509 0.153508 
+Neuronio pos(1,11): 0.767836 0.349365 0.514381 0.15422 
+Neuronio pos(2,11): 0.76794 0.350166 0.513581 0.154551 
+Neuronio pos(3,11): 0.76889 0.352074 0.510606 0.155351 
+Neuronio pos(4,11): 0.768925 0.351723 0.509678 0.158977 
+Neuronio pos(5,11): 0.768321 0.350514 0.510449 0.162061 
+Neuronio pos(6,11): 0.766789 0.350606 0.512492 0.162671 
+Neuronio pos(7,11): 0.760487 0.350677 0.521518 0.163415 
+Neuronio pos(8,11): 0.756149 0.350945 0.527685 0.163168 
+Neuronio pos(9,11): 0.755885 0.351893 0.527632 0.162522 
+Neuronio pos(10,11): 0.755331 0.350879 0.528189 0.165458 
+Neuronio pos(11,11): 0.754631 0.349684 0.529118 0.168186 
+Neuronio pos(12,11): 0.753068 0.351321 0.530017 0.168949 
+Neuronio pos(13,11): 0.746203 0.360512 0.533389 0.169437 
+Neuronio pos(14,11): 0.742399 0.363408 0.53665 0.169663 
+Neuronio pos(15,11): 0.739223 0.359854 0.543253 0.170089 
+Neuronio pos(16,11): 0.735785 0.356745 0.54991 0.170152 
+Neuronio pos(17,11): 0.733753 0.358291 0.551937 0.169115 
+Neuronio pos(18,11): 0.732773 0.359858 0.552456 0.16834 
+Neuronio pos(19,11): 0.732304 0.35864 0.553814 0.168518 
+Neuronio pos(20,11): 0.731614 0.352066 0.558383 0.170292 
+Neuronio pos(21,11): 0.731447 0.349182 0.560198 0.170984 
+Neuronio pos(22,11): 0.732706 0.347571 0.559307 0.17179 
+Neuronio pos(23,11): 0.746051 0.328016 0.552282 0.175495 
+Neuronio pos(24,11): 0.753449 0.315953 0.54846 0.177987 
+Neuronio pos(25,11): 0.753906 0.315107 0.548277 0.178118 
+Neuronio pos(26,11): 0.756765 0.310738 0.547545 0.175909 
+Neuronio pos(27,11): 0.768543 0.289505 0.545219 0.168122 
+Neuronio pos(28,11): 0.770999 0.279155 0.546669 0.169664 
+Neuronio pos(29,11): 0.768665 0.275846 0.549796 0.175461 
+Neuronio pos(0,12): 0.775932 0.353548 0.501218 0.147357 
+Neuronio pos(1,12): 0.771685 0.351699 0.507925 0.15107 
+Neuronio pos(2,12): 0.769537 0.351925 0.510281 0.153544 
+Neuronio pos(3,12): 0.769593 0.353533 0.508585 0.155185 
+Neuronio pos(4,12): 0.769699 0.353748 0.507253 0.158497 
+Neuronio pos(5,12): 0.769253 0.353395 0.507123 0.161827 
+Neuronio pos(6,12): 0.767225 0.354097 0.509899 0.161193 
+Neuronio pos(7,12): 0.763732 0.355038 0.515099 0.159169 
+Neuronio pos(8,12): 0.759877 0.354926 0.520946 0.15884 
+Neuronio pos(9,12): 0.757676 0.355117 0.523873 0.159302 
+Neuronio pos(10,12): 0.756688 0.354773 0.5248 0.161693 
+Neuronio pos(11,12): 0.755329 0.352759 0.52683 0.165799 
+Neuronio pos(12,12): 0.751609 0.355166 0.529663 0.168515 
+Neuronio pos(13,12): 0.744724 0.363359 0.533478 0.169583 
+Neuronio pos(14,12): 0.743112 0.364811 0.534736 0.169575 
+Neuronio pos(15,12): 0.742038 0.363749 0.536917 0.169663 
+Neuronio pos(16,12): 0.737545 0.360851 0.545052 0.169507 
+Neuronio pos(17,12): 0.733653 0.361685 0.550043 0.168494 
+Neuronio pos(18,12): 0.733059 0.362544 0.550339 0.168267 
+Neuronio pos(19,12): 0.733019 0.361061 0.550689 0.170471 
+Neuronio pos(20,12): 0.733056 0.355286 0.551995 0.17805 
+Neuronio pos(21,12): 0.733054 0.353383 0.552466 0.180371 
+Neuronio pos(22,12): 0.733522 0.352374 0.552311 0.180917 
+Neuronio pos(23,12): 0.741176 0.335096 0.551945 0.183646 
+Neuronio pos(24,12): 0.748248 0.318941 0.55153 0.184977 
+Neuronio pos(25,12): 0.748734 0.317897 0.55147 0.184987 
+Neuronio pos(26,12): 0.74983 0.315306 0.551543 0.184765 
+Neuronio pos(27,12): 0.761102 0.291194 0.550874 0.180188 
+Neuronio pos(28,12): 0.765917 0.275004 0.55224 0.181039 
+Neuronio pos(29,12): 0.765004 0.27297 0.553646 0.183662 
+Neuronio pos(0,13): 0.78397 0.359664 0.486379 0.139529 
+Neuronio pos(1,13): 0.779765 0.357455 0.493528 0.143603 
+Neuronio pos(2,13): 0.772491 0.354807 0.504319 0.151766 
+Neuronio pos(3,13): 0.769887 0.35461 0.506783 0.157154 
+Neuronio pos(4,13): 0.769763 0.354598 0.50595 0.160437 
+Neuronio pos(5,13): 0.769438 0.354299 0.506071 0.162264 
+Neuronio pos(6,13): 0.76738 0.35476 0.509249 0.161052 
+Neuronio pos(7,13): 0.764565 0.355601 0.513567 0.158863 
+Neuronio pos(8,13): 0.761588 0.35659 0.517498 0.158189 
+Neuronio pos(9,13): 0.758783 0.360122 0.519336 0.157642 
+Neuronio pos(10,13): 0.758233 0.363762 0.517644 0.157496 
+Neuronio pos(11,13): 0.757076 0.364277 0.518272 0.159791 
+Neuronio pos(12,13): 0.750214 0.365493 0.524823 0.167793 
+Neuronio pos(13,13): 0.744605 0.36705 0.530678 0.170936 
+Neuronio pos(14,13): 0.743517 0.366279 0.532943 0.170277 
+Neuronio pos(15,13): 0.742729 0.366176 0.534318 0.169628 
+Neuronio pos(16,13): 0.737723 0.368713 0.540043 0.167838 
+Neuronio pos(17,13): 0.734284 0.37083 0.543373 0.167502 
+Neuronio pos(18,13): 0.73411 0.370777 0.543521 0.167903 
+Neuronio pos(19,13): 0.733988 0.367051 0.545115 0.17142 
+Neuronio pos(20,13): 0.733592 0.357068 0.549244 0.180767 
+Neuronio pos(21,13): 0.733439 0.354598 0.550264 0.183132 
+Neuronio pos(22,13): 0.733218 0.353901 0.550669 0.184146 
+Neuronio pos(23,13): 0.732526 0.342177 0.555401 0.19455 
+Neuronio pos(24,13): 0.732493 0.32736 0.560563 0.20508 
+Neuronio pos(25,13): 0.732043 0.32613 0.561303 0.206619 
+Neuronio pos(26,13): 0.731666 0.325024 0.561858 0.208182 
+Neuronio pos(27,13): 0.741089 0.309964 0.559102 0.205216 
+Neuronio pos(28,13): 0.757075 0.286133 0.553226 0.19725 
+Neuronio pos(29,13): 0.758932 0.282965 0.552629 0.196355 
+Neuronio pos(0,14): 0.789001 0.397726 0.45291 0.119013 
+Neuronio pos(1,14): 0.787303 0.396959 0.455865 0.12151 
+Neuronio pos(2,14): 0.777859 0.379895 0.480448 0.140658 
+Neuronio pos(3,14): 0.77035 0.35868 0.502852 0.158269 
+Neuronio pos(4,14): 0.769704 0.355651 0.505102 0.161063 
+Neuronio pos(5,14): 0.769552 0.355157 0.505413 0.161899 
+Neuronio pos(6,14): 0.768297 0.356576 0.506806 0.160375 
+Neuronio pos(7,14): 0.766318 0.359082 0.508897 0.15761 
+Neuronio pos(8,14): 0.763383 0.361918 0.511617 0.156556 
+Neuronio pos(9,14): 0.759654 0.367554 0.513385 0.155772 
+Neuronio pos(10,14): 0.75898 0.370262 0.51253 0.155464 
+Neuronio pos(11,14): 0.757267 0.371079 0.513724 0.157906 
+Neuronio pos(12,14): 0.74911 0.371839 0.521425 0.169367 
+Neuronio pos(13,14): 0.745473 0.371765 0.525274 0.173633 
+Neuronio pos(14,14): 0.744404 0.371294 0.527479 0.172536 
+Neuronio pos(15,14): 0.740388 0.374312 0.532846 0.166707 
+Neuronio pos(16,14): 0.734636 0.378063 0.539525 0.162149 
+Neuronio pos(17,14): 0.734191 0.375025 0.541115 0.165875 
+Neuronio pos(18,14): 0.734328 0.373652 0.541376 0.167509 
+Neuronio pos(19,14): 0.734175 0.371247 0.542504 0.169859 
+Neuronio pos(20,14): 0.733571 0.360295 0.547667 0.179227 
+Neuronio pos(21,14): 0.732733 0.354944 0.550461 0.184691 
+Neuronio pos(22,14): 0.729853 0.353315 0.552938 0.191683 
+Neuronio pos(23,14): 0.724975 0.343251 0.559755 0.208003 
+Neuronio pos(24,14): 0.726505 0.330967 0.563412 0.212645 
+Neuronio pos(25,14): 0.72691 0.328009 0.56426 0.213595 
+Neuronio pos(26,14): 0.726199 0.326961 0.564939 0.215812 
+Neuronio pos(27,14): 0.727869 0.324868 0.562194 0.220465 
+Neuronio pos(28,14): 0.73692 0.319664 0.549248 0.230414 
+Neuronio pos(29,14): 0.739379 0.318546 0.545436 0.233123 
+Neuronio pos(0,15): 0.782633 0.517294 0.342087 0.0535612 
+Neuronio pos(1,15): 0.781121 0.521714 0.338273 0.0568799 
+Neuronio pos(2,15): 0.779685 0.506486 0.358963 0.0819113 
+Neuronio pos(3,15): 0.777594 0.415549 0.451933 0.135731 
+Neuronio pos(4,15): 0.772165 0.368427 0.493465 0.156577 
+Neuronio pos(5,15): 0.773139 0.366504 0.493125 0.157348 
+Neuronio pos(6,15): 0.782951 0.396048 0.457659 0.14381 
+Neuronio pos(7,15): 0.790891 0.428182 0.418028 0.128084 
+Neuronio pos(8,15): 0.783907 0.418401 0.439096 0.132759 
+Neuronio pos(9,15): 0.765395 0.383797 0.494701 0.148798 
+Neuronio pos(10,15): 0.760926 0.376585 0.505885 0.152498 
+Neuronio pos(11,15): 0.757136 0.375721 0.510528 0.157925 
+Neuronio pos(12,15): 0.747841 0.373418 0.521468 0.171359 
+Neuronio pos(13,15): 0.745565 0.372919 0.524125 0.17423 
+Neuronio pos(14,15): 0.74376 0.374454 0.52642 0.171718 
+Neuronio pos(15,15): 0.736085 0.381711 0.535588 0.160062 
+Neuronio pos(16,15): 0.732909 0.383738 0.539507 0.156596 
+Neuronio pos(17,15): 0.733212 0.379798 0.540378 0.161696 
+Neuronio pos(18,15): 0.733272 0.375934 0.541072 0.168007 
+Neuronio pos(19,15): 0.732207 0.374921 0.541782 0.172567 
+Neuronio pos(20,15): 0.730725 0.368861 0.545365 0.180444 
+Neuronio pos(21,15): 0.726375 0.35677 0.553578 0.196585 
+Neuronio pos(22,15): 0.719348 0.352422 0.559502 0.212824 
+Neuronio pos(23,15): 0.717909 0.348786 0.561716 0.217782 
+Neuronio pos(24,15): 0.722218 0.337541 0.563638 0.216287 
+Neuronio pos(25,15): 0.724819 0.328727 0.565481 0.21635 
+Neuronio pos(26,15): 0.724399 0.32683 0.566328 0.218406 
+Neuronio pos(27,15): 0.725275 0.326672 0.563201 0.223755 
+Neuronio pos(28,15): 0.730586 0.327663 0.549163 0.239376 
+Neuronio pos(29,15): 0.732196 0.328027 0.544798 0.243889 
+Neuronio pos(0,16): 0.776063 0.549592 0.307226 0.0358733 
+Neuronio pos(1,16): 0.773387 0.556329 0.300722 0.0440076 
+Neuronio pos(2,16): 0.770608 0.56178 0.295145 0.0587781 
+Neuronio pos(3,16): 0.776422 0.54038 0.314244 0.0800529 
+Neuronio pos(4,16): 0.786994 0.493671 0.353302 0.11003 
+Neuronio pos(5,16): 0.795605 0.477268 0.355325 0.113891 
+Neuronio pos(6,16): 0.804318 0.505727 0.298689 0.0899823 
+Neuronio pos(7,16): 0.805611 0.516381 0.278594 0.0820205 
+Neuronio pos(8,16): 0.804429 0.511818 0.289955 0.0828401 
+Neuronio pos(9,16): 0.795624 0.4841 0.353083 0.0892307 
+Neuronio pos(10,16): 0.788796 0.466926 0.388538 0.093915 
+Neuronio pos(11,16): 0.781505 0.447291 0.420436 0.111418 
+Neuronio pos(12,16): 0.758868 0.39722 0.492215 0.155113 
+Neuronio pos(13,16): 0.749343 0.380394 0.515198 0.168395 
+Neuronio pos(14,16): 0.743638 0.381165 0.523991 0.164771 
+Neuronio pos(15,16): 0.734249 0.384664 0.536973 0.156754 
+Neuronio pos(16,16): 0.732321 0.385597 0.539149 0.15601 
+Neuronio pos(17,16): 0.731673 0.384731 0.539242 0.160796 
+Neuronio pos(18,16): 0.729497 0.381406 0.540557 0.173672 
+Neuronio pos(19,16): 0.727354 0.379899 0.541927 0.181516 
+Neuronio pos(20,16): 0.725744 0.377969 0.544066 0.185545 
+Neuronio pos(21,16): 0.7197 0.362125 0.555666 0.205264 
+Neuronio pos(22,16): 0.715767 0.352613 0.56177 0.21853 
+Neuronio pos(23,16): 0.715593 0.351341 0.562611 0.218986 
+Neuronio pos(24,16): 0.717098 0.345302 0.564856 0.217887 
+Neuronio pos(25,16): 0.720149 0.332575 0.568372 0.218479 
+Neuronio pos(26,16): 0.720687 0.328573 0.569397 0.220083 
+Neuronio pos(27,16): 0.72169 0.327794 0.566574 0.225186 
+Neuronio pos(28,16): 0.726024 0.326664 0.555054 0.24103 
+Neuronio pos(29,16): 0.727401 0.326316 0.551386 0.245723 
+Neuronio pos(0,17): 0.776631 0.554555 0.296548 0.0370335 
+Neuronio pos(1,17): 0.772272 0.562706 0.290851 0.0486131 
+Neuronio pos(2,17): 0.769985 0.567955 0.284451 0.0603111 
+Neuronio pos(3,17): 0.776052 0.562755 0.275039 0.0735036 
+Neuronio pos(4,17): 0.786004 0.552284 0.26339 0.0883515 
+Neuronio pos(5,17): 0.794124 0.541531 0.261802 0.0870139 
+Neuronio pos(6,17): 0.802832 0.527919 0.265732 0.0784192 
+Neuronio pos(7,17): 0.805134 0.523517 0.267718 0.0775697 
+Neuronio pos(8,17): 0.804334 0.524785 0.269201 0.0719576 
+Neuronio pos(9,17): 0.798753 0.53439 0.272498 0.0465329 
+Neuronio pos(10,17): 0.796567 0.537684 0.273827 0.0373548 
+Neuronio pos(11,17): 0.796864 0.532541 0.282324 0.0412485 
+Neuronio pos(12,17): 0.797611 0.503294 0.32612 0.0644786 
+Neuronio pos(13,17): 0.794048 0.474381 0.37006 0.0866405 
+Neuronio pos(14,17): 0.773761 0.440109 0.44072 0.115603 
+Neuronio pos(15,17): 0.738008 0.393643 0.526479 0.152346 
+Neuronio pos(16,17): 0.731721 0.387819 0.537162 0.160121 
+Neuronio pos(17,17): 0.730341 0.387757 0.537195 0.166338 
+Neuronio pos(18,17): 0.727814 0.384347 0.539702 0.176879 
+Neuronio pos(19,17): 0.725254 0.381072 0.543269 0.183439 
+Neuronio pos(20,17): 0.722458 0.379452 0.547219 0.186068 
+Neuronio pos(21,17): 0.716917 0.368256 0.557459 0.199139 
+Neuronio pos(22,17): 0.714105 0.353749 0.564414 0.215296 
+Neuronio pos(23,17): 0.713701 0.351637 0.566082 0.215719 
+Neuronio pos(24,17): 0.713652 0.348126 0.568742 0.214571 
+Neuronio pos(25,17): 0.715473 0.337891 0.571558 0.21737 
+Neuronio pos(26,17): 0.71648 0.331197 0.572814 0.221018 
+Neuronio pos(27,17): 0.71675 0.328813 0.571556 0.22688 
+Neuronio pos(28,17): 0.72038 0.325324 0.562906 0.241565 
+Neuronio pos(29,17): 0.72245 0.324046 0.558711 0.246784 
+Neuronio pos(0,18): 0.783186 0.557987 0.271949 0.0362576 
+Neuronio pos(1,18): 0.778013 0.563245 0.274315 0.0469257 
+Neuronio pos(2,18): 0.774845 0.566459 0.273718 0.061786 
+Neuronio pos(3,18): 0.781348 0.560202 0.26352 0.0789065 
+Neuronio pos(4,18): 0.788083 0.553166 0.255028 0.0888428 
+Neuronio pos(5,18): 0.793313 0.546695 0.254981 0.0822497 
+Neuronio pos(6,18): 0.799484 0.536879 0.259409 0.0727501 
+Neuronio pos(7,18): 0.802657 0.530148 0.263465 0.0725983 
+Neuronio pos(8,18): 0.80221 0.530908 0.266072 0.0616575 
+Neuronio pos(9,18): 0.798171 0.538878 0.266602 0.0381715 
+Neuronio pos(10,18): 0.797688 0.539905 0.266456 0.0346054 
+Neuronio pos(11,18): 0.799031 0.537948 0.266378 0.0347172 
+Neuronio pos(12,18): 0.804271 0.528233 0.269885 0.0357752 
+Neuronio pos(13,18): 0.807561 0.520498 0.274898 0.0368601 
+Neuronio pos(14,18): 0.804834 0.509962 0.29981 0.0479061 
+Neuronio pos(15,18): 0.764828 0.435256 0.458348 0.12453 
+Neuronio pos(16,18): 0.73317 0.393245 0.530062 0.163873 
+Neuronio pos(17,18): 0.729949 0.390018 0.535152 0.169333 
+Neuronio pos(18,18): 0.72693 0.386324 0.539794 0.175921 
+Neuronio pos(19,18): 0.720254 0.381175 0.549575 0.184137 
+Neuronio pos(20,18): 0.714121 0.379075 0.557795 0.18761 
+Neuronio pos(21,18): 0.710437 0.372684 0.564329 0.194729 
+Neuronio pos(22,18): 0.711088 0.356948 0.568208 0.209956 
+Neuronio pos(23,18): 0.711591 0.352679 0.569351 0.212356 
+Neuronio pos(24,18): 0.711828 0.350175 0.570671 0.212161 
+Neuronio pos(25,18): 0.712721 0.342331 0.572819 0.21614 
+Neuronio pos(26,18): 0.712386 0.332042 0.576113 0.224384 
+Neuronio pos(27,18): 0.710712 0.328323 0.577612 0.231207 
+Neuronio pos(28,18): 0.712842 0.325677 0.572737 0.240341 
+Neuronio pos(29,18): 0.716476 0.323872 0.566528 0.246605 
+Neuronio pos(0,19): 0.786199 0.558655 0.261816 0.0353216 
+Neuronio pos(1,19): 0.784398 0.561953 0.258788 0.0442357 
+Neuronio pos(2,19): 0.782762 0.564996 0.254375 0.0579435 
+Neuronio pos(3,19): 0.785014 0.561587 0.251266 0.072375 
+Neuronio pos(4,19): 0.7891 0.554986 0.250307 0.0816005 
+Neuronio pos(5,19): 0.794076 0.547716 0.252867 0.0742221 
+Neuronio pos(6,19): 0.797634 0.542233 0.255556 0.0667465 
+Neuronio pos(7,19): 0.799496 0.538953 0.257173 0.0647901 
+Neuronio pos(8,19): 0.801024 0.537639 0.258504 0.0498098 
+Neuronio pos(9,19): 0.799975 0.538973 0.261178 0.0365205 
+Neuronio pos(10,19): 0.800138 0.538318 0.26221 0.0351908 
+Neuronio pos(11,19): 0.802026 0.53562 0.261963 0.0352374 
+Neuronio pos(12,19): 0.805952 0.528408 0.264607 0.0347678 
+Neuronio pos(13,19): 0.808283 0.522984 0.268351 0.0339611 
+Neuronio pos(14,19): 0.809069 0.519655 0.272232 0.03542 
+Neuronio pos(15,19): 0.800241 0.490455 0.338231 0.0683233 
+Neuronio pos(16,19): 0.756355 0.422187 0.479579 0.140322 
+Neuronio pos(17,19): 0.733875 0.395459 0.526872 0.165668 
+Neuronio pos(18,19): 0.724325 0.387069 0.542745 0.175951 
+Neuronio pos(19,19): 0.711975 0.380307 0.560085 0.186448 
+Neuronio pos(20,19): 0.707114 0.37888 0.566232 0.189263 
+Neuronio pos(21,19): 0.70567 0.375384 0.56882 0.193805 
+Neuronio pos(22,19): 0.708671 0.360972 0.569607 0.207445 
+Neuronio pos(23,19): 0.710463 0.35438 0.569716 0.212323 
+Neuronio pos(24,19): 0.709988 0.351747 0.571339 0.21392 
+Neuronio pos(25,19): 0.707761 0.344489 0.575712 0.221262 
+Neuronio pos(26,19): 0.706451 0.332131 0.580548 0.231475 
+Neuronio pos(27,19): 0.705919 0.327866 0.581943 0.235638 
+Neuronio pos(28,19): 0.705004 0.326076 0.581667 0.241469 
+Neuronio pos(29,19): 0.704328 0.324481 0.580722 0.247782 
+Neuronio pos(0,20): 0.784905 0.562869 0.256387 0.036991 
+Neuronio pos(1,20): 0.784258 0.565517 0.250713 0.0476716 
+Neuronio pos(2,20): 0.783926 0.56734 0.245838 0.0561223 
+Neuronio pos(3,20): 0.784857 0.567312 0.241714 0.0610896 
+Neuronio pos(4,20): 0.787387 0.564332 0.239354 0.0652703 
+Neuronio pos(5,20): 0.792647 0.554581 0.245322 0.062992 
+Neuronio pos(6,20): 0.796807 0.546624 0.25075 0.0585194 
+Neuronio pos(7,20): 0.799602 0.543691 0.249589 0.0523574 
+Neuronio pos(8,20): 0.803497 0.540411 0.246161 0.0418666 
+Neuronio pos(9,20): 0.803775 0.538383 0.250214 0.0384945 
+Neuronio pos(10,20): 0.803442 0.536459 0.255597 0.0369086 
+Neuronio pos(11,20): 0.804585 0.533624 0.258037 0.0361359 
+Neuronio pos(12,20): 0.806765 0.528852 0.261187 0.0350358 
+Neuronio pos(13,20): 0.809393 0.522911 0.265242 0.0330739 
+Neuronio pos(14,20): 0.812892 0.518332 0.263664 0.0319503 
+Neuronio pos(15,20): 0.814941 0.512627 0.268059 0.0350508 
+Neuronio pos(16,20): 0.807284 0.494622 0.316491 0.0589537 
+Neuronio pos(17,20): 0.770756 0.441016 0.443157 0.122684 
+Neuronio pos(18,20): 0.724156 0.392816 0.539323 0.174422 
+Neuronio pos(19,20): 0.706122 0.381175 0.566105 0.18874 
+Neuronio pos(20,20): 0.70185 0.381005 0.570883 0.190614 
+Neuronio pos(21,20): 0.699493 0.380297 0.573366 0.193226 
+Neuronio pos(22,20): 0.702801 0.370341 0.572725 0.202247 
+Neuronio pos(23,20): 0.707091 0.357417 0.571619 0.213371 
+Neuronio pos(24,20): 0.702913 0.350932 0.576552 0.224385 
+Neuronio pos(25,20): 0.697347 0.345623 0.582076 0.235456 
+Neuronio pos(26,20): 0.698844 0.338574 0.582896 0.239201 
+Neuronio pos(27,20): 0.701559 0.331336 0.58311 0.24086 
+Neuronio pos(28,20): 0.700545 0.327473 0.584202 0.246385 
+Neuronio pos(29,20): 0.69983 0.325327 0.58471 0.250029 
+Neuronio pos(0,21): 0.779836 0.574525 0.245957 0.0358024 
+Neuronio pos(1,21): 0.781111 0.573379 0.242898 0.0458637 
+Neuronio pos(2,21): 0.782206 0.572393 0.240252 0.052909 
+Neuronio pos(3,21): 0.78379 0.571291 0.236803 0.0567724 
+Neuronio pos(4,21): 0.78639 0.568677 0.234055 0.0584443 
+Neuronio pos(5,21): 0.791337 0.560932 0.237798 0.0509196 
+Neuronio pos(6,21): 0.796394 0.55263 0.24213 0.0415934 
+Neuronio pos(7,21): 0.800292 0.547417 0.241785 0.037512 
+Neuronio pos(8,21): 0.80378 0.542622 0.241055 0.037289 
+Neuronio pos(9,21): 0.805333 0.539606 0.242422 0.0386864 
+Neuronio pos(10,21): 0.805807 0.53684 0.24704 0.0380724 
+Neuronio pos(11,21): 0.806751 0.532832 0.252947 0.035497 
+Neuronio pos(12,21): 0.810658 0.526085 0.255346 0.0294314 
+Neuronio pos(13,21): 0.81493 0.519532 0.255695 0.0244003 
+Neuronio pos(14,21): 0.816647 0.516259 0.25659 0.0269344 
+Neuronio pos(15,21): 0.817134 0.514773 0.257706 0.0298092 
+Neuronio pos(16,21): 0.816506 0.512953 0.262894 0.0329151 
+Neuronio pos(17,21): 0.800903 0.488969 0.337956 0.0724513 
+Neuronio pos(18,21): 0.727581 0.411181 0.52089 0.173866 
+Neuronio pos(19,21): 0.705504 0.391522 0.559113 0.190702 
+Neuronio pos(20,21): 0.698077 0.386133 0.571621 0.191934 
+Neuronio pos(21,21): 0.695206 0.384357 0.575912 0.193092 
+Neuronio pos(22,21): 0.696353 0.380368 0.575544 0.197895 
+Neuronio pos(23,21): 0.699162 0.366253 0.575182 0.214937 
+Neuronio pos(24,21): 0.695385 0.351145 0.581436 0.234669 
+Neuronio pos(25,21): 0.693682 0.346851 0.583079 0.241907 
+Neuronio pos(26,21): 0.694499 0.345222 0.581688 0.245218 
+Neuronio pos(27,21): 0.694754 0.340345 0.582485 0.249386 
+Neuronio pos(28,21): 0.694343 0.334221 0.584994 0.252916 
+Neuronio pos(29,21): 0.695867 0.329882 0.585551 0.253135 
+Neuronio pos(0,22): 0.777932 0.578821 0.242112 0.0341898 
+Neuronio pos(1,22): 0.779374 0.577886 0.238345 0.0426153 
+Neuronio pos(2,22): 0.780658 0.576841 0.235579 0.0482738 
+Neuronio pos(3,22): 0.782537 0.574712 0.234034 0.0506872 
+Neuronio pos(4,22): 0.787198 0.568644 0.233173 0.050932 
+Neuronio pos(5,22): 0.793811 0.558636 0.236719 0.0418922 
+Neuronio pos(6,22): 0.797616 0.552372 0.239553 0.0361698 
+Neuronio pos(7,22): 0.800429 0.548294 0.239727 0.0348989 
+Neuronio pos(8,22): 0.803008 0.544542 0.239654 0.0348911 
+Neuronio pos(9,22): 0.80517 0.541349 0.239534 0.0355873 
+Neuronio pos(10,22): 0.806879 0.538583 0.240138 0.0347666 
+Neuronio pos(11,22): 0.8105 0.53134 0.244792 0.0290588 
+Neuronio pos(12,22): 0.816526 0.520019 0.249981 0.0193641 
+Neuronio pos(13,22): 0.817812 0.51765 0.250818 0.0176663 
+Neuronio pos(14,22): 0.817821 0.516853 0.252238 0.0201993 
+Neuronio pos(15,22): 0.817535 0.515498 0.255367 0.0261886 
+Neuronio pos(16,22): 0.816066 0.512775 0.264532 0.0334865 
+Neuronio pos(17,22): 0.779238 0.467634 0.40216 0.111236 
+Neuronio pos(18,22): 0.718665 0.40818 0.531083 0.186711 
+Neuronio pos(19,22): 0.712498 0.402448 0.542159 0.190907 
+Neuronio pos(20,22): 0.704517 0.394866 0.557586 0.191924 
+Neuronio pos(21,22): 0.696743 0.386642 0.571939 0.194788 
+Neuronio pos(22,22): 0.696417 0.381607 0.572769 0.203262 
+Neuronio pos(23,22): 0.697521 0.375131 0.571595 0.214524 
+Neuronio pos(24,22): 0.695542 0.360528 0.577289 0.230172 
+Neuronio pos(25,22): 0.694133 0.349245 0.580571 0.243197 
+Neuronio pos(26,22): 0.694301 0.346826 0.57973 0.248135 
+Neuronio pos(27,22): 0.69252 0.343216 0.581931 0.252934 
+Neuronio pos(28,22): 0.689985 0.338497 0.585786 0.257284 
+Neuronio pos(29,22): 0.689247 0.335145 0.587519 0.259687 
+Neuronio pos(0,23): 0.776461 0.582695 0.237754 0.0323813 
+Neuronio pos(1,23): 0.779053 0.580029 0.234437 0.0410103 
+Neuronio pos(2,23): 0.781265 0.577649 0.232342 0.0443201 
+Neuronio pos(3,23): 0.783835 0.574689 0.231348 0.0425754 
+Neuronio pos(4,23): 0.789966 0.566959 0.230239 0.0387556 
+Neuronio pos(5,23): 0.796744 0.557 0.231733 0.0353459 
+Neuronio pos(6,23): 0.799319 0.551842 0.235173 0.0353904 
+Neuronio pos(7,23): 0.801214 0.548261 0.237109 0.0352809 
+Neuronio pos(8,23): 0.803354 0.545079 0.237405 0.0339302 
+Neuronio pos(9,23): 0.805756 0.541884 0.236746 0.0327028 
+Neuronio pos(10,23): 0.807562 0.539087 0.237121 0.0316646 
+Neuronio pos(11,23): 0.812294 0.530047 0.241999 0.025786 
+Neuronio pos(12,23): 0.817624 0.518884 0.248858 0.0178731 
+Neuronio pos(13,23): 0.818123 0.517508 0.250149 0.0168727 
+Neuronio pos(14,23): 0.818087 0.517294 0.250676 0.0173785 
+Neuronio pos(15,23): 0.818062 0.51623 0.252701 0.0205713 
+Neuronio pos(16,23): 0.812826 0.506343 0.284813 0.0425696 
+Neuronio pos(17,23): 0.7453 0.431963 0.482505 0.158505 
+Neuronio pos(18,23): 0.716517 0.405643 0.534797 0.189866 
+Neuronio pos(19,23): 0.715408 0.404732 0.53671 0.190592 
+Neuronio pos(20,23): 0.712845 0.402039 0.541875 0.19128 
+Neuronio pos(21,23): 0.703543 0.389594 0.560173 0.198621 
+Neuronio pos(22,23): 0.698771 0.380031 0.568525 0.209941 
+Neuronio pos(23,23): 0.698109 0.377955 0.569154 0.214142 
+Neuronio pos(24,23): 0.695416 0.371558 0.573067 0.223462 
+Neuronio pos(25,23): 0.691966 0.356997 0.578937 0.242008 
+Neuronio pos(26,23): 0.692443 0.349514 0.579699 0.249624 
+Neuronio pos(27,23): 0.690375 0.343015 0.583305 0.255888 
+Neuronio pos(28,23): 0.685767 0.336062 0.588919 0.264499 
+Neuronio pos(29,23): 0.682458 0.331961 0.592082 0.271093 
+Neuronio pos(0,24): 0.770276 0.596026 0.22571 0.0219742 
+Neuronio pos(1,24): 0.776927 0.585987 0.227894 0.0326962 
+Neuronio pos(2,24): 0.783675 0.576155 0.228964 0.0384067 
+Neuronio pos(3,24): 0.786994 0.57193 0.228456 0.0366672 
+Neuronio pos(4,24): 0.792023 0.565557 0.22729 0.0344099 
+Neuronio pos(5,24): 0.798416 0.556927 0.226171 0.0347934 
+Neuronio pos(6,24): 0.801173 0.552427 0.227113 0.036963 
+Neuronio pos(7,24): 0.80265 0.549122 0.229957 0.0365719 
+Neuronio pos(8,24): 0.804628 0.545216 0.232777 0.0335906 
+Neuronio pos(9,24): 0.806681 0.54185 0.233795 0.0316801 
+Neuronio pos(10,24): 0.80866 0.538467 0.234928 0.0305187 
+Neuronio pos(11,24): 0.814826 0.527238 0.23978 0.0241839 
+Neuronio pos(12,24): 0.819146 0.517823 0.246046 0.0178958 
+Neuronio pos(13,24): 0.81896 0.51687 0.248713 0.017079 
+Neuronio pos(14,24): 0.819013 0.515828 0.25063 0.0180034 
+Neuronio pos(15,24): 0.820941 0.510261 0.255285 0.022768 
+Neuronio pos(16,24): 0.818155 0.496272 0.287019 0.0442294 
+Neuronio pos(17,24): 0.75662 0.429994 0.468401 0.152423 
+Neuronio pos(18,24): 0.725366 0.403694 0.525294 0.186927 
+Neuronio pos(19,24): 0.724012 0.402942 0.527354 0.187996 
+Neuronio pos(20,24): 0.723368 0.400926 0.52948 0.188808 
+Neuronio pos(21,24): 0.716302 0.387142 0.545973 0.197349 
+Neuronio pos(22,24): 0.706001 0.378688 0.561178 0.207937 
+Neuronio pos(23,24): 0.698997 0.377491 0.567877 0.215454 
+Neuronio pos(24,24): 0.688181 0.373523 0.577339 0.231446 
+Neuronio pos(25,24): 0.680071 0.367879 0.584468 0.246101 
+Neuronio pos(26,24): 0.679936 0.361886 0.586198 0.251192 
+Neuronio pos(27,24): 0.680321 0.348415 0.589914 0.260331 
+Neuronio pos(28,24): 0.679352 0.333769 0.593797 0.27292 
+Neuronio pos(29,24): 0.678533 0.328876 0.595105 0.278 
+Neuronio pos(0,25): 0.768304 0.601348 0.218572 0.0177692 
+Neuronio pos(1,25): 0.774283 0.592656 0.220606 0.0240328 
+Neuronio pos(2,25): 0.786366 0.574727 0.224007 0.0337401 
+Neuronio pos(3,25): 0.789919 0.569626 0.224387 0.0347202 
+Neuronio pos(4,25): 0.793671 0.564518 0.224089 0.0344759 
+Neuronio pos(5,25): 0.800331 0.55535 0.223016 0.0363334 
+Neuronio pos(6,25): 0.802943 0.551679 0.222566 0.0373799 
+Neuronio pos(7,25): 0.80397 0.549947 0.223398 0.0358326 
+Neuronio pos(8,25): 0.805752 0.546418 0.226016 0.0332881 
+Neuronio pos(9,25): 0.808801 0.540665 0.229165 0.0317049 
+Neuronio pos(10,25): 0.811571 0.535886 0.23078 0.0303225 
+Neuronio pos(11,25): 0.817473 0.52494 0.235776 0.0241992 
+Neuronio pos(12,25): 0.821588 0.516272 0.241001 0.0193651 
+Neuronio pos(13,25): 0.822148 0.513578 0.244761 0.0200799 
+Neuronio pos(14,25): 0.823617 0.506786 0.253321 0.025517 
+Neuronio pos(15,25): 0.825697 0.498612 0.261968 0.031353 
+Neuronio pos(16,25): 0.824914 0.493168 0.273519 0.0385927 
+Neuronio pos(17,25): 0.792518 0.442363 0.402686 0.118634 
+Neuronio pos(18,25): 0.753742 0.397675 0.49264 0.176162 
+Neuronio pos(19,25): 0.750954 0.395278 0.497723 0.17915 
+Neuronio pos(20,25): 0.746336 0.392181 0.505999 0.182049 
+Neuronio pos(21,25): 0.729767 0.380746 0.534314 0.192306 
+Neuronio pos(22,25): 0.721019 0.376708 0.546764 0.198169 
+Neuronio pos(23,25): 0.70837 0.375223 0.559264 0.211291 
+Neuronio pos(24,25): 0.683634 0.371132 0.580963 0.239555 
+Neuronio pos(25,25): 0.675555 0.368977 0.587642 0.249316 
+Neuronio pos(26,25): 0.673606 0.365851 0.590622 0.25214 
+Neuronio pos(27,25): 0.672363 0.358958 0.594193 0.256929 
+Neuronio pos(28,25): 0.674445 0.344887 0.595601 0.267274 
+Neuronio pos(29,25): 0.676909 0.331911 0.595824 0.276809 
+Neuronio pos(0,26): 0.772832 0.598749 0.208927 0.024103 
+Neuronio pos(1,26): 0.776913 0.592877 0.209846 0.0294556 
+Neuronio pos(2,26): 0.789621 0.573709 0.214269 0.0380179 
+Neuronio pos(3,26): 0.794534 0.566135 0.216055 0.039081 
+Neuronio pos(4,26): 0.797399 0.561962 0.216781 0.0368674 
+Neuronio pos(5,26): 0.802309 0.553992 0.219509 0.0347692 
+Neuronio pos(6,26): 0.803835 0.551076 0.221282 0.0346298 
+Neuronio pos(7,26): 0.804665 0.549586 0.22212 0.0336464 
+Neuronio pos(8,26): 0.807401 0.545426 0.222619 0.0324922 
+Neuronio pos(9,26): 0.811974 0.538003 0.224127 0.0319083 
+Neuronio pos(10,26): 0.813484 0.534694 0.226618 0.0314742 
+Neuronio pos(11,26): 0.817207 0.526921 0.231812 0.0281155 
+Neuronio pos(12,26): 0.823282 0.514833 0.237737 0.0251783 
+Neuronio pos(13,26): 0.82592 0.508701 0.241432 0.0281 
+Neuronio pos(14,26): 0.826938 0.501337 0.25262 0.031903 
+Neuronio pos(15,26): 0.826967 0.496203 0.26227 0.0335167 
+Neuronio pos(16,26): 0.825666 0.490123 0.276294 0.0414245 
+Neuronio pos(17,26): 0.797998 0.433947 0.400224 0.121288 
+Neuronio pos(18,26): 0.764863 0.393627 0.479852 0.172585 
+Neuronio pos(19,26): 0.759813 0.392092 0.487745 0.176217 
+Neuronio pos(20,26): 0.751794 0.388571 0.501195 0.180614 
+Neuronio pos(21,26): 0.732687 0.37902 0.531995 0.191036 
+Neuronio pos(22,26): 0.725104 0.375762 0.543026 0.195319 
+Neuronio pos(23,26): 0.715981 0.37183 0.554484 0.204112 
+Neuronio pos(24,26): 0.690373 0.364758 0.580314 0.231459 
+Neuronio pos(25,26): 0.677805 0.363454 0.589787 0.246238 
+Neuronio pos(26,26): 0.673835 0.361348 0.593439 0.251402 
+Neuronio pos(27,26): 0.671654 0.359951 0.595546 0.254246 
+Neuronio pos(28,26): 0.671452 0.356511 0.596322 0.257784 
+Neuronio pos(29,26): 0.673146 0.344402 0.597521 0.266889 
+Neuronio pos(0,27): 0.776773 0.596599 0.19886 0.0338768 
+Neuronio pos(1,27): 0.779141 0.592455 0.20067 0.0408523 
+Neuronio pos(2,27): 0.789633 0.576675 0.20434 0.0465935 
+Neuronio pos(3,27): 0.798173 0.564409 0.205922 0.0442535 
+Neuronio pos(4,27): 0.801588 0.560372 0.205327 0.035774 
+Neuronio pos(5,27): 0.803366 0.55617 0.210832 0.0287744 
+Neuronio pos(6,27): 0.804378 0.551955 0.217695 0.0305002 
+Neuronio pos(7,27): 0.806825 0.547605 0.219416 0.0319157 
+Neuronio pos(8,27): 0.812 0.540472 0.218015 0.0318705 
+Neuronio pos(9,27): 0.815133 0.535045 0.219676 0.0320535 
+Neuronio pos(10,27): 0.815301 0.532991 0.223749 0.0337824 
+Neuronio pos(11,27): 0.818621 0.524981 0.229975 0.0369501 
+Neuronio pos(12,27): 0.824922 0.5123 0.236129 0.0360036 
+Neuronio pos(13,27): 0.827687 0.506593 0.238959 0.0345935 
+Neuronio pos(14,27): 0.830203 0.498413 0.247155 0.0355223 
+Neuronio pos(15,27): 0.832406 0.488144 0.259504 0.0384008 
+Neuronio pos(16,27): 0.828505 0.470419 0.297573 0.0611241 
+Neuronio pos(17,27): 0.793696 0.407773 0.427579 0.144718 
+Neuronio pos(18,27): 0.774342 0.388395 0.469545 0.170504 
+Neuronio pos(19,27): 0.76559 0.388444 0.482115 0.17478 
+Neuronio pos(20,27): 0.750356 0.383796 0.506439 0.182171 
+Neuronio pos(21,27): 0.7359 0.377264 0.529308 0.189621 
+Neuronio pos(22,27): 0.727032 0.373182 0.542397 0.194849 
+Neuronio pos(23,27): 0.710596 0.360602 0.567706 0.206711 
+Neuronio pos(24,27): 0.695042 0.349562 0.5884 0.220246 
+Neuronio pos(25,27): 0.686169 0.348404 0.5943 0.233656 
+Neuronio pos(26,27): 0.678917 0.349771 0.597386 0.244666 
+Neuronio pos(27,27): 0.674428 0.352554 0.599175 0.24868 
+Neuronio pos(28,27): 0.670012 0.353122 0.602605 0.251508 
+Neuronio pos(29,27): 0.663133 0.34782 0.611146 0.256469 
+Neuronio pos(0,28): 0.777114 0.598562 0.19041 0.0395215 
+Neuronio pos(1,28): 0.779785 0.593109 0.194865 0.0467453 
+Neuronio pos(2,28): 0.788358 0.580558 0.197132 0.0508235 
+Neuronio pos(3,28): 0.799342 0.566759 0.194736 0.0437501 
+Neuronio pos(4,28): 0.804659 0.560783 0.19259 0.0309096 
+Neuronio pos(5,28): 0.804812 0.558715 0.198829 0.0241441 
+Neuronio pos(6,28): 0.807022 0.552496 0.206904 0.0255823 
+Neuronio pos(7,28): 0.81656 0.538138 0.206668 0.0304179 
+Neuronio pos(8,28): 0.82138 0.531381 0.204865 0.0316177 
+Neuronio pos(9,28): 0.82075 0.530255 0.209985 0.0332519 
+Neuronio pos(10,28): 0.819775 0.526322 0.221694 0.0424893 
+Neuronio pos(11,28): 0.821659 0.51835 0.231366 0.0515667 
+Neuronio pos(12,28): 0.823891 0.51311 0.235722 0.0485387 
+Neuronio pos(13,28): 0.828382 0.50505 0.238459 0.042964 
+Neuronio pos(14,28): 0.84106 0.480349 0.244635 0.0451219 
+Neuronio pos(15,28): 0.851019 0.456795 0.253646 0.0526136 
+Neuronio pos(16,28): 0.842017 0.438715 0.303389 0.080572 
+Neuronio pos(17,28): 0.796438 0.396115 0.430981 0.151772 
+Neuronio pos(18,28): 0.781135 0.385075 0.461641 0.168621 
+Neuronio pos(19,28): 0.772066 0.384105 0.475799 0.173184 
+Neuronio pos(20,28): 0.748542 0.379156 0.511992 0.183818 
+Neuronio pos(21,28): 0.738222 0.375817 0.527464 0.188604 
+Neuronio pos(22,28): 0.726919 0.369148 0.545039 0.195579 
+Neuronio pos(23,28): 0.701529 0.351754 0.582713 0.21112 
+Neuronio pos(24,28): 0.6935 0.346232 0.593227 0.217398 
+Neuronio pos(25,28): 0.688534 0.344597 0.59632 0.227106 
+Neuronio pos(26,28): 0.681006 0.343446 0.601226 0.238336 
+Neuronio pos(27,28): 0.675122 0.343915 0.606545 0.240905 
+Neuronio pos(28,28): 0.666142 0.344024 0.61407 0.246617 
+Neuronio pos(29,28): 0.657103 0.343048 0.620592 0.255731 
+Neuronio pos(0,29): 0.777373 0.60111 0.180987 0.0400251 
+Neuronio pos(1,29): 0.781834 0.592426 0.188347 0.0478716 
+Neuronio pos(2,29): 0.790241 0.579845 0.191191 0.052396 
+Neuronio pos(3,29): 0.800893 0.567888 0.184996 0.0430047 
+Neuronio pos(4,29): 0.8071 0.561136 0.18119 0.0297669 
+Neuronio pos(5,29): 0.807123 0.559156 0.187887 0.0243957 
+Neuronio pos(6,29): 0.812235 0.548434 0.197101 0.0254099 
+Neuronio pos(7,29): 0.823624 0.530469 0.198249 0.0307146 
+Neuronio pos(8,29): 0.825361 0.52774 0.19816 0.0316606 
+Neuronio pos(9,29): 0.82472 0.526956 0.202411 0.0344135 
+Neuronio pos(10,29): 0.822784 0.521148 0.221274 0.0496892 
+Neuronio pos(11,29): 0.822261 0.516594 0.232077 0.0561922 
+Neuronio pos(12,29): 0.822786 0.514405 0.235606 0.0538594 
+Neuronio pos(13,29): 0.828695 0.503448 0.239158 0.0510687 
+Neuronio pos(14,29): 0.850615 0.461544 0.24604 0.0538084 
+Neuronio pos(15,29): 0.859032 0.442834 0.250326 0.0574332 
+Neuronio pos(16,29): 0.85342 0.435347 0.27748 0.0717793 
+Neuronio pos(17,29): 0.81025 0.402853 0.402769 0.137772 
+Neuronio pos(18,29): 0.784084 0.385314 0.457121 0.16669 
+Neuronio pos(19,29): 0.773902 0.382714 0.474104 0.17272 
+Neuronio pos(20,29): 0.748363 0.377895 0.513068 0.184145 
+Neuronio pos(21,29): 0.738145 0.375099 0.528045 0.188711 
+Neuronio pos(22,29): 0.721825 0.365565 0.553273 0.19804 
+Neuronio pos(23,29): 0.696669 0.350431 0.589146 0.211559 
+Neuronio pos(24,29): 0.692078 0.347688 0.594896 0.215032 
+Neuronio pos(25,29): 0.688096 0.345815 0.59767 0.222995 
+Neuronio pos(26,29): 0.679081 0.342926 0.605102 0.23474 
+Neuronio pos(27,29): 0.672394 0.342285 0.611712 0.237774 
+Neuronio pos(28,29): 0.663773 0.342431 0.617771 0.245978 
+Neuronio pos(29,29): 0.656246 0.342505 0.621685 0.256006 
