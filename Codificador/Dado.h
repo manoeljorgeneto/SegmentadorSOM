@@ -32,7 +32,7 @@
 using namespace std;
 
 /**
- * Classe que representa os dados que alimentarão o SOM
+ * Classe que representa os dados que alimentarão o SOM.
  */
 class Dado {
 protected:

@@ -28,7 +28,7 @@
 using namespace std;
 
 /**
- * Sobrecarga de operadores
+ * Sobrecarga de operadores.
  */
 vector<double> operator+(const vector<double>& a, const vector<double>& b); // Soma de vetores
 vector<double> operator-(const vector<double>& a, const vector<double>& b); // Subtração de vetores
@@ -38,7 +38,7 @@ vector<double> operator/(const vector<double>& a, double b); // Divisão por um 
 double operator*(const vector<double>& a, const vector<double>& b); // Produto interno
 
 /**
- * Classe para efetuar cálculos diversos entre vetores de doubles
+ * Classe para efetuar cálculos diversos entre vetores de doubles.
  */
 class Calculos {
 	

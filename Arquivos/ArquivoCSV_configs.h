@@ -48,7 +48,8 @@ struct configs {
 
 /**
  * Classe ArquivoCSV_configs, herdeira da classe ArquivoCSV.
- * O objetivo da classe é ler um arquivo com as configurações do programa, que serão tratadas pela classe Controlador.
+ * O objetivo da classe é ler um arquivo com as configurações do programa, que serão tratadas pela classe
+ * ControladorSegmentadorSOM.
  */
 class ArquivoCSV_configs : public ArquivoCSV {
 protected:
