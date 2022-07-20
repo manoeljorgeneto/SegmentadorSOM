@@ -58,7 +58,7 @@ protected:
     // Para geração de números aleatórios
     std::mt19937 ger_mt; // gerador mersenne_twister
 
-    int lingua; // Língua utilizada
+    int lingua; // Língua utilizada nas mensagens, tratadas pela classe auxiliar 'MensagensSOM'
 
     [[nodiscard]] double calculaSigma(unsigned tempo) const; // Calcula a largura da vizinhança
     [[nodiscard]] double calculaEta(unsigned tempo) const; // Calcula a taxa de aprendizado
@@ -76,9 +76,6 @@ protected:
     // Atualiza todos os neurônios do arranjo
     void atualizaNeuronios(Neuronio* vencedor, Dado* dado, double eta, double sigma);
 
-    // Mensagens durante o algoritmo de treinamento
-    void verboso(unsigned msg, bool verb = true, unsigned iteracoes = 0, unsigned n_it = 0, int64_t tempo = 0) const;
-
 public:
     SOM(unsigned largura, unsigned dimensao_entrada, double sigma = 2.5, double tau2 = 1000.0, double eta = 0.1,
         bool normalizados = true, int semente = 1000, int lingua = ENG); // Construtor
@@ -87,10 +84,35 @@ public:
     // Faz o treinamento do SOM segundo o algoritmo incremental
     void treinaSOM(ConjuntoDados* dados, unsigned iteracoes = 10000, bool inicializa = true, bool verboso = true);
 	
-    // Get
+    // Gets
     [[nodiscard]] Arranjo* getArranjo() const;
+    [[nodiscard]] unsigned getDimensao_entrada() const;
+    [[nodiscard]] double getSigma_ini() const;
+    [[nodiscard]] double getEta_ini() const;
+    [[nodiscard]] double getTau1() const;
+    [[nodiscard]] double getTau2() const;
+    [[nodiscard]] int getLingua() const;
 
-    virtual string sumario(); // Faz um sumário do SOM
+    // Faz um sumário do SOM
+    virtual string sumario();
+};
+
+/**
+ * Classe auxiliar, para a geração de mensagens do SOM.
+ */
+class MensagensSOM {
+protected:
+
+public:
+    MensagensSOM(); // Construtor
+    virtual ~MensagensSOM(); // Destrutor
+
+    // Mensagens durante o algoritmo de treinamento
+    static void verboso(unsigned msg, const SOM* som, bool verb = true, unsigned iteracoes = 0, unsigned n_it = 0,
+                        int64_t tempo = 0);
+
+    // Faz um sumário do SOM
+    static string sumario(const SOM* som);
 };
 
 #endif // SOM_H_

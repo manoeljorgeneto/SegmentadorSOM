@@ -111,13 +111,115 @@ void SOM::atualizaNeuronios(Neuronio* vencedor, Dado* dado, double eta, double s
         n->atualiza(vencedor, dado, eta, sigma);
 }
 
+// Construtor
+SOM::SOM(unsigned largura, unsigned dimensao_entrada, double sigma, double tau2, double eta, bool normalizados,
+         int semente, int lingua) : ger_mt(semente) {
+    this->sigma_ini = sigma;
+    this->tau2 = tau2;
+    this->eta_ini = eta;
+	
+    this->tau1 = tau2/log(sigma);
+
+    this->normalizados = normalizados;
+
+    this->dimensao_entrada = dimensao_entrada;
+    this->arranjo = new Arranjo(largura, dimensao_entrada, normalizados);
+
+    this->lingua = lingua;
+}
+
+// Destrutor
+SOM::~SOM() {
+    delete this->arranjo;
+}
+
+// Faz o treinamento do SOM segundo o algoritmo incremental
+void SOM::treinaSOM(ConjuntoDados* dados, unsigned iteracoes, bool inicializa, bool verb) {
+    MensagensSOM::verboso(0, this, verb, iteracoes); // Começo do sumário do treinamento
+
+    if(inicializa) { // Inicializa os neurônios do arranjo de forma aleatória
+        MensagensSOM::verboso(1, this, verb); // Mensagem de inicialização dos neurônios
+        this->inicializaRand(); // Inicializa os neurônios do arranjo com valores aleatórios
+    }
+
+    SOM::desmarcaDados(dados); // Desmarca todos os dados
+
+    MensagensSOM::verboso(2, this, verb); // Continuando o sumário do treinamento
+
+    auto inicio = high_resolution_clock::now(); // Início da contagem do tempo!
+
+    // Repete até o número máximo de iterações
+    for(unsigned n_it = 0; n_it < iteracoes; n_it++) {
+        double sigma = this->calculaSigma(n_it); // Calcula a largura da vizinhança
+        double eta = this->calculaEta(n_it); // Calcula a taxa de aprendizado
+		
+        // Apresenta todos os dados de forma aleatória e atualiza os pesos sinápticos dos neurônios no arranjo
+        while(!SOM::todosDadosMarcados(dados)) {
+            auto dado = this->getDadoRand(dados); // Obtém um dado de forma aleatória
+            auto vencedor = this->arranjo->getVencedor(dado); // Faz a competição
+            this->atualizaNeuronios(*vencedor, dado, eta, sigma); // Atualiza os neurônios do arranjo!
+        }
+
+        SOM::desmarcaDados(dados); // Desmarca os dados ao final de cada iteração
+
+        MensagensSOM::verboso(3, this, verb, iteracoes, n_it); // Exibição do progresso
+    }
+
+    auto fim = high_resolution_clock::now(); // Fim da contagem do tempo!
+    // Cálculo do tempo passado para o aprendizado
+    auto duracao = duration_cast<nanoseconds>(fim - inicio);
+
+    // Finalizando o sumário de treinamento
+    MensagensSOM::verboso(4, this, verb, iteracoes, 0, duracao.count());
+}
+
+// Gets
+Arranjo* SOM::getArranjo() const {
+    return this->arranjo;
+}
+
+unsigned SOM::getDimensao_entrada() const {
+    return this->dimensao_entrada;
+}
+
+double SOM::getSigma_ini() const {
+    return this->sigma_ini;
+}
+
+double SOM::getEta_ini() const {
+    return this->eta_ini;
+}
+
+double SOM::getTau1() const {
+    return this->tau1;
+}
+
+double SOM::getTau2() const {
+    return this->tau2;
+}
+
+int SOM::getLingua() const {
+    return this->lingua;
+}
+
+// Faz um sumário do SOM
+string SOM::sumario() {
+    return MensagensSOM::sumario(this);
+}
+
+// Construtor
+MensagensSOM::MensagensSOM() = default;
+
+// Destrutor
+MensagensSOM::~MensagensSOM() = default;
+
 // Mensagens durante o algoritmo de treinamento
-void SOM::verboso(unsigned msg, bool verb, unsigned iteracoes, unsigned n_it, int64_t tempo) const {
+void MensagensSOM::verboso(unsigned msg, const SOM* som, bool verb, unsigned iteracoes, unsigned n_it, int64_t tempo) {
     if(!verb)
         return;
 
     string dT, uOMP, nproc, numIt, iniNeu, trSOM, progresso, itr, mpGer, tDec, segs; // Palavras para tradução
-    switch(this->lingua) {
+    switch(som->getLingua()) {
         case PT_BR: {
             dT =        " - Dados de treinamento:",
             uOMP =      " * Utilizando OpenMP: ",
@@ -165,7 +267,7 @@ void SOM::verboso(unsigned msg, bool verb, unsigned iteracoes, unsigned n_it, in
             cout << endl << trSOM << endl << endl;
             break;
         }
-        case 3: { // TODO Verificar melhor isso
+        case 3: {
             if( (10*(n_it + 1) % iteracoes) == 0) // A cada 10%, faz uma exibição do progresso
                 cout << progresso << (n_it + 1) << itr << (100 * (n_it + 1) / iteracoes) << "%)" <<
                      endl;
@@ -180,79 +282,12 @@ void SOM::verboso(unsigned msg, bool verb, unsigned iteracoes, unsigned n_it, in
     }
 }
 
-// Construtor
-SOM::SOM(unsigned largura, unsigned dimensao_entrada, double sigma, double tau2, double eta, bool normalizados,
-         int semente, int lingua) : ger_mt(semente) {
-    this->sigma_ini = sigma;
-    this->tau2 = tau2;
-    this->eta_ini = eta;
-	
-    this->tau1 = tau2/log(sigma);
-
-    this->normalizados = normalizados;
-
-    this->dimensao_entrada = dimensao_entrada;
-    this->arranjo = new Arranjo(largura, dimensao_entrada, normalizados);
-
-    this->lingua = lingua;
-}
-
-// Destrutor
-SOM::~SOM() {
-    delete this->arranjo;
-}
-
-// Faz o treinamento do SOM segundo o algoritmo incremental
-void SOM::treinaSOM(ConjuntoDados* dados, unsigned iteracoes, bool inicializa, bool verb) {
-    this->verboso(0, verb, iteracoes); // Começo do sumário do treinamento
-
-    if(inicializa) { // Inicializa os neurônios do arranjo de forma aleatória
-        this->verboso(1, verb); // Mensagem de inicialização dos neurônios
-        this->inicializaRand(); // Inicializa os neurônios do arranjo com valores aleatórios
-    }
-
-    SOM::desmarcaDados(dados); // Desmarca todos os dados
-
-    this->verboso(2, verb); // Continuando o sumário do treinamento
-
-    auto inicio = high_resolution_clock::now(); // Início da contagem do tempo!
-
-    // Repete até o número máximo de iterações
-    for(unsigned n_it = 0; n_it < iteracoes; n_it++) {
-        double sigma = this->calculaSigma(n_it); // Calcula a largura da vizinhança
-        double eta = this->calculaEta(n_it); // Calcula a taxa de aprendizado
-		
-        // Apresenta todos os dados de forma aleatória e atualiza os pesos sinápticos dos neurônios no arranjo
-        while(!SOM::todosDadosMarcados(dados)) {
-            auto dado = this->getDadoRand(dados); // Obtém um dado de forma aleatória
-            auto vencedor = this->arranjo->getVencedor(dado); // Faz a competição
-            this->atualizaNeuronios(*vencedor, dado, eta, sigma); // Atualiza os neurônios do arranjo!
-        }
-
-        SOM::desmarcaDados(dados); // Desmarca os dados ao final de cada iteração
-
-        this->verboso(3, verb, iteracoes, n_it); // Exibição do progresso
-    }
-
-    auto fim = high_resolution_clock::now(); // Fim da contagem do tempo!
-    // Cálculo do tempo passado para o aprendizado
-    auto duracao = duration_cast<nanoseconds>(fim - inicio);
-
-    // Finalizando o sumário de treinamento
-    this->verboso(4, verb, iteracoes, 0, duracao.count());
-}
-
-// Get
-Arranjo* SOM::getArranjo() const {
-    return this->arranjo;
-}
-
 // Faz um sumário do SOM
-string SOM::sumario() {
+string MensagensSOM::sumario(const SOM* som) {
     ostringstream str("");
 
     string sumSOM, hipPar, dimMp, dimEnt, valSET1T2; // Palavras para tradução
-    switch(this->lingua) {
+    switch(som->getLingua()) {
         case PT_BR: {
             sumSOM      = "╔═══════════════════════════════ Sumário do SOM ═══════════════════════════════╗",
             hipPar      = " - Hiperparâmetros:",
@@ -272,13 +307,13 @@ string SOM::sumario() {
 
     str << sumSOM << endl;
     str << hipPar << endl;
-    str << dimMp << this->arranjo->getLargura() << " x " << this->arranjo->getLargura() << endl;
-    str << dimEnt << this->dimensao_entrada << endl;
+    str << dimMp << som->getArranjo()->getLargura() << " x " << som->getArranjo()->getLargura() << endl;
+    str << dimEnt << som->getDimensao_entrada() << endl;
     str << valSET1T2 << "(sigma, eta, tau1, tau2): " << "(" <<
-        this->sigma_ini << ", " <<
-        this->eta_ini << ", " <<
-        this->tau1 << ", " <<
-        this->tau2 << ")" << endl;
+        som->getSigma_ini() << ", " <<
+        som->getEta_ini() << ", " <<
+        som->getTau1() << ", " <<
+        som->getTau2() << ")" << endl;
     str << "╚══════════════════════════════════════════════════════════════════════════════╝" << endl;
 
     return str.str();
