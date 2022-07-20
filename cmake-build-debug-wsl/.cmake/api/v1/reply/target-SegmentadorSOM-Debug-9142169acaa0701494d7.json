@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "SegmentadorSOM.exe"
-		},
-		{
-			"path" : "SegmentadorSOM.pdb"
+			"path" : "SegmentadorSOM"
 		}
 	],
 	"backtrace" : 1,
@@ -38,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -fopenmp -O3 -DNDEBUG"
+					"fragment" : " -fopenmp -g"
 				}
 			],
 			"language" : "CXX",
@@ -64,8 +61,9 @@
 				18,
 				20,
 				22,
-				24,
-				26
+				23,
+				25,
+				27
 			]
 		}
 	],
@@ -75,22 +73,18 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-fopenmp -O3 -DNDEBUG",
+				"fragment" : "-fopenmp -g",
 				"role" : "flags"
 			},
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "SegmentadorSOM",
-	"nameOnDisk" : "SegmentadorSOM.exe",
+	"nameOnDisk" : "SegmentadorSOM",
 	"paths" : 
 	{
 		"build" : ".",
@@ -114,8 +108,9 @@
 				18,
 				20,
 				22,
-				24,
-				26
+				23,
+				25,
+				27
 			]
 		},
 		{
@@ -133,9 +128,9 @@
 				17,
 				19,
 				21,
-				23,
-				25,
-				27
+				24,
+				26,
+				28
 			]
 		}
 	],
@@ -266,6 +261,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "SOM/SOM.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "SOM/MensagensSOM.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

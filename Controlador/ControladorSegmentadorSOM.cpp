@@ -129,7 +129,7 @@ void ControladorSegmentadorSOM::padrao() {
     auto* som = new SOM(c.largura, dados_treinamento->getDimensao(), c.sigma, c.tau2, c.eta, c.normalizados, c.semente,
                         this->lingua);
 
-    cout << som->sumario(); // Sumário do SOM
+    cout << MensagensSOM::sumario(som); // Sumário do SOM
 
     som->treinaSOM(dados_treinamento, c.iteracoes, c.inicializa, c.verboso); // Treinando o SOM!
 

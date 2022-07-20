@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o.d"
   "CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o"
   "CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o.d"
+  "CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o"
+  "CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o.d"
   "CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o"
   "CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o.d"
   "CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o"

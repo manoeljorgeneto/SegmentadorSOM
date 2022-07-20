@@ -3,8 +3,8 @@
 all: SegmentadorSOM
 	@echo "Compilação do SegmentadorSOM finalizada!"
 
-SegmentadorSOM: main.o ArquivoCSV.o ArquivoCSV_configs.o ArquivoCSV_dados.o Calculos.o Dado.o ConjuntoDados.o Controlador.o ControladorSegmentadorSOM.o Arranjo.o Neuronio.o SOM.o MapaContextual.o Visualizacao.o
-	g++ -fopenmp main.o ArquivoCSV.o ArquivoCSV_configs.o ArquivoCSV_dados.o Calculos.o Dado.o ConjuntoDados.o Controlador.o ControladorSegmentadorSOM.o Arranjo.o Neuronio.o SOM.o MapaContextual.o Visualizacao.o -o SegmentadorSOM
+SegmentadorSOM: main.o ArquivoCSV.o ArquivoCSV_configs.o ArquivoCSV_dados.o Calculos.o Dado.o ConjuntoDados.o Controlador.o ControladorSegmentadorSOM.o Arranjo.o Neuronio.o SOM.o MensagensSOM.o MapaContextual.o Visualizacao.o
+	g++ -fopenmp main.o ArquivoCSV.o ArquivoCSV_configs.o ArquivoCSV_dados.o Calculos.o Dado.o ConjuntoDados.o Controlador.o ControladorSegmentadorSOM.o Arranjo.o Neuronio.o SOM.o MensagensSOM.o MapaContextual.o Visualizacao.o -o SegmentadorSOM
 
 main.o: main.cpp ./Controlador/ControladorSegmentadorSOM.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic main.cpp -o main.o
@@ -39,8 +39,11 @@ Arranjo.o: ./SOM/Arranjo.cpp ./SOM/Arranjo.h ./Codificador/Dado.h ./SOM/Neuronio
 Neuronio.o: ./SOM/Neuronio.cpp ./SOM/Neuronio.h ./Calculos/Calculos.h ./Codificador/Dado.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./SOM/Neuronio.cpp -o Neuronio.o
 
-SOM.o: ./SOM/SOM.cpp ./SOM/SOM.h versao.h ./Calculos/Calculos.h ./Codificador/Dado.h ./Codificador/ConjuntoDados.h ./SOM/Neuronio.h ./SOM/Arranjo.h
+SOM.o: ./SOM/SOM.cpp ./SOM/MensagensSOM.cpp ./SOM/SOM.h versao.h ./Calculos/Calculos.h ./Codificador/Dado.h ./Codificador/ConjuntoDados.h ./SOM/Neuronio.h ./SOM/Arranjo.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./SOM/SOM.cpp -o SOM.o
+
+MensagensSOM.o: ./SOM/MensagensSOM.cpp ./SOM/SOM.h versao.h
+	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./SOM/MensagensSOM.cpp -o MensagensSOM.o
 
 MapaContextual.o: ./Visualizacao/MapaContextual.cpp ./Visualizacao/MapaContextual.h ./Visualizacao/Visualizacao.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Visualizacao/MapaContextual.cpp -o MapaContextual.o
@@ -55,4 +58,4 @@ clean:
 	rm -f *.o ./SegmentadorSOM
 
 # Comando completo
-# g++ -std=c++17 -fopenmp -O3 -Wall -Wextra -pedantic main.cpp ./Arquivos/ArquivoCSV.cpp ./Arquivos/ArquivoCSV_configs.cpp ./Arquivos/ArquivoCSV_dados.cpp ./Calculos/Calculos.cpp ./Codificador/Dado.cpp ./Codificador/ConjuntoDados.cpp ./Controlador/Controlador.cpp ./Controlador/ControladorSegmentadorSOM.cpp ./SOM/Arranjo.cpp ./SOM/Neuronio.cpp ./SOM/SOM.cpp ./Visualizacao/MapaContextual.cpp ./Visualizacao/Visualizacao.cpp -o SegmentadorSOM
+# g++ -std=c++17 -fopenmp -O3 -Wall -Wextra -pedantic main.cpp ./Arquivos/ArquivoCSV.cpp ./Arquivos/ArquivoCSV_configs.cpp ./Arquivos/ArquivoCSV_dados.cpp ./Calculos/Calculos.cpp ./Codificador/Dado.cpp ./Codificador/ConjuntoDados.cpp ./Controlador/Controlador.cpp ./Controlador/ControladorSegmentadorSOM.cpp ./SOM/Arranjo.cpp ./SOM/Neuronio.cpp ./SOM/SOM.cpp ./SOM/MensagensSOM.cpp ./Visualizacao/MapaContextual.cpp ./Visualizacao/Visualizacao.cpp -o SegmentadorSOM

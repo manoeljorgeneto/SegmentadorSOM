@@ -92,9 +92,6 @@ public:
     [[nodiscard]] double getTau1() const;
     [[nodiscard]] double getTau2() const;
     [[nodiscard]] int getLingua() const;
-
-    // Faz um sumário do SOM
-    virtual string sumario();
 };
 
 /**

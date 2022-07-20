@@ -345,6 +345,30 @@ SOM/Arranjo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.s
 .PHONY : SOM/Arranjo.cpp.s
 
+SOM/MensagensSOM.o: SOM/MensagensSOM.cpp.o
+.PHONY : SOM/MensagensSOM.o
+
+# target to build an object file
+SOM/MensagensSOM.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o
+.PHONY : SOM/MensagensSOM.cpp.o
+
+SOM/MensagensSOM.i: SOM/MensagensSOM.cpp.i
+.PHONY : SOM/MensagensSOM.i
+
+# target to preprocess a source file
+SOM/MensagensSOM.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.i
+.PHONY : SOM/MensagensSOM.cpp.i
+
+SOM/MensagensSOM.s: SOM/MensagensSOM.cpp.s
+.PHONY : SOM/MensagensSOM.s
+
+# target to generate assembly for a file
+SOM/MensagensSOM.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.s
+.PHONY : SOM/MensagensSOM.cpp.s
+
 SOM/Neuronio.o: SOM/Neuronio.cpp.o
 .PHONY : SOM/Neuronio.o
 
@@ -501,6 +525,9 @@ help:
 	@echo "... SOM/Arranjo.o"
 	@echo "... SOM/Arranjo.i"
 	@echo "... SOM/Arranjo.s"
+	@echo "... SOM/MensagensSOM.o"
+	@echo "... SOM/MensagensSOM.i"
+	@echo "... SOM/MensagensSOM.s"
 	@echo "... SOM/Neuronio.o"
 	@echo "... SOM/Neuronio.i"
 	@echo "... SOM/Neuronio.s"

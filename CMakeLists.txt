@@ -20,7 +20,7 @@ add_executable(
         Controlador/ControladorSegmentadorSOM.cpp Controlador/ControladorSegmentadorSOM.h
         SOM/Arranjo.cpp SOM/Arranjo.h
         SOM/Neuronio.cpp SOM/Neuronio.h
-        SOM/SOM.cpp SOM/SOM.h
+        SOM/SOM.cpp SOM/MensagensSOM.cpp SOM/SOM.h
         Visualizacao/MapaContextual.cpp Visualizacao/MapaContextual.h
         Visualizacao/Visualizacao.cpp Visualizacao/Visualizacao.h
         )

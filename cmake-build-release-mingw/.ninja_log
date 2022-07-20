@@ -1,6 +1,6 @@
 # ninja log v5
 83	2259	6796219583196982	CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.obj	752b9862ddd5cde4
-0	12	0	clean	212d04b3f049f2ea
+0	15	0	clean	212d04b3f049f2ea
 25	1153	6796219571870955	CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.obj	f8592189f3723266
 3500	4015	6796219600771685	SegmentadorSOM.exe	620b1c4c22d4b8d6
 21	2124	6796219581601079	CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.obj	3947a9cc9d17cdda
@@ -10,10 +10,9 @@
 5	1862	6796219579261021	CMakeFiles/SegmentadorSOM.dir/main.cpp.obj	1cd6156e6ca825a6
 1588	3500	6796219595671145	CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj	118e606755cecfc5
 60	2221	6796219582846975	CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.obj	a546a25eb4d2cba8
-1	310	6800472043681225	build.ninja	4caa41763d566010
+1	310	6800481911326640	build.ninja	4caa41763d566010
 47	2034	6796219580051046	CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.obj	a086816a8b30b90a
 102	1681	6796219577011025	CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.obj	b711903103c624ea
 17	2009	6796219580481108	CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.obj	6178b199c81f233e
 9	2266	6796219583266973	CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.obj	d3e21ef6d851813b
 29	1639	6796219576591090	CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.obj	9536285e3fb912c8
-0	15	0	clean	212d04b3f049f2ea
