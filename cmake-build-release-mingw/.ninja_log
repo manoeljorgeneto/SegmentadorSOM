@@ -10,7 +10,7 @@
 5	1862	6796219579261021	CMakeFiles/SegmentadorSOM.dir/main.cpp.obj	1cd6156e6ca825a6
 1588	3500	6796219595671145	CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.obj	118e606755cecfc5
 60	2221	6796219582846975	CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.obj	a546a25eb4d2cba8
-1	310	6800481911326640	build.ninja	4caa41763d566010
+1	310	6802348002820877	build.ninja	4caa41763d566010
 47	2034	6796219580051046	CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.obj	a086816a8b30b90a
 102	1681	6796219577011025	CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.obj	b711903103c624ea
 17	2009	6796219580481108	CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.obj	6178b199c81f233e

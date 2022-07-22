@@ -65,8 +65,7 @@ vector<vector<string>>* ArquivoCSV::lerArquivo(const string& nomeArquivo) {
         vector<string> linha = ArquivoCSV::obtemLinha(arquivo); // Obtém o vetor de strings
 
         if(!linha.empty()) // Se o vetor conter dados, adiciona no vetor 'linhas'
-            linhas->push_back(linha); // Adiciona o dado no conjunto
-
+            linhas->push_back(linha);
     } while(arquivo);
 
     arquivo.close(); // Fecha o arquivo
