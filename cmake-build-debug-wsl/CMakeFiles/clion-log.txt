@@ -1,16 +1,13 @@
-C:\Windows\system32\wsl.exe --distribution Ubuntu-22.04 --exec /bin/bash -c "export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM -B /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl"
--- The C compiler identification is GNU 11.2.0
--- The CXX compiler identification is GNU 11.2.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+C:\WINDOWS\system32\wsl.exe --distribution Ubuntu-22.04 --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM -B /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl"
 -- Configuring done
--- Generating done
--- Build files have been written to: /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl
+CMake Error at CMakeLists.txt:9 (add_executable):
+  Cannot find source file:
+
+    Calculos/Calculos.cpp
+
+
+CMake Error at CMakeLists.txt:9 (add_executable):
+  No SOURCES given to target: SegmentadorSOM
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

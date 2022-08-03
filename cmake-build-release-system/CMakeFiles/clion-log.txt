@@ -1,0 +1,22 @@
+D:\Programas\JetBrains\CLion\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=D:/Programas/JetBrains/CLion/bin/ninja/win/ninja.exe -G Ninja -S D:\Documentos\CLionProjects\SegmentadorSOM -B D:\Documentos\CLionProjects\SegmentadorSOM\cmake-build-release-system
+-- The C compiler identification is unknown
+-- The CXX compiler identification is unknown
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_C_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CC" or the CMake cache entry CMAKE_C_COMPILER to the full path to
+  the compiler, or to the compiler name if it is in the PATH.
+
+
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_CXX_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path
+  to the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+See also "D:/Documentos/CLionProjects/SegmentadorSOM/cmake-build-release-system/CMakeFiles/CMakeOutput.log".
+See also "D:/Documentos/CLionProjects/SegmentadorSOM/cmake-build-release-system/CMakeFiles/CMakeError.log".
