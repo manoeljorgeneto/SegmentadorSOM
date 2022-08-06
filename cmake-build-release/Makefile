@@ -129,6 +129,78 @@ SegmentadorSOM/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/build
 .PHONY : SegmentadorSOM/fast
 
+Arquivos/ArquivoCSV.o: Arquivos/ArquivoCSV.cpp.o
+.PHONY : Arquivos/ArquivoCSV.o
+
+# target to build an object file
+Arquivos/ArquivoCSV.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o
+.PHONY : Arquivos/ArquivoCSV.cpp.o
+
+Arquivos/ArquivoCSV.i: Arquivos/ArquivoCSV.cpp.i
+.PHONY : Arquivos/ArquivoCSV.i
+
+# target to preprocess a source file
+Arquivos/ArquivoCSV.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.i
+.PHONY : Arquivos/ArquivoCSV.cpp.i
+
+Arquivos/ArquivoCSV.s: Arquivos/ArquivoCSV.cpp.s
+.PHONY : Arquivos/ArquivoCSV.s
+
+# target to generate assembly for a file
+Arquivos/ArquivoCSV.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.s
+.PHONY : Arquivos/ArquivoCSV.cpp.s
+
+Arquivos/ArquivoCSV_configs.o: Arquivos/ArquivoCSV_configs.cpp.o
+.PHONY : Arquivos/ArquivoCSV_configs.o
+
+# target to build an object file
+Arquivos/ArquivoCSV_configs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o
+.PHONY : Arquivos/ArquivoCSV_configs.cpp.o
+
+Arquivos/ArquivoCSV_configs.i: Arquivos/ArquivoCSV_configs.cpp.i
+.PHONY : Arquivos/ArquivoCSV_configs.i
+
+# target to preprocess a source file
+Arquivos/ArquivoCSV_configs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.i
+.PHONY : Arquivos/ArquivoCSV_configs.cpp.i
+
+Arquivos/ArquivoCSV_configs.s: Arquivos/ArquivoCSV_configs.cpp.s
+.PHONY : Arquivos/ArquivoCSV_configs.s
+
+# target to generate assembly for a file
+Arquivos/ArquivoCSV_configs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.s
+.PHONY : Arquivos/ArquivoCSV_configs.cpp.s
+
+Arquivos/ArquivoCSV_dados.o: Arquivos/ArquivoCSV_dados.cpp.o
+.PHONY : Arquivos/ArquivoCSV_dados.o
+
+# target to build an object file
+Arquivos/ArquivoCSV_dados.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o
+.PHONY : Arquivos/ArquivoCSV_dados.cpp.o
+
+Arquivos/ArquivoCSV_dados.i: Arquivos/ArquivoCSV_dados.cpp.i
+.PHONY : Arquivos/ArquivoCSV_dados.i
+
+# target to preprocess a source file
+Arquivos/ArquivoCSV_dados.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.i
+.PHONY : Arquivos/ArquivoCSV_dados.cpp.i
+
+Arquivos/ArquivoCSV_dados.s: Arquivos/ArquivoCSV_dados.cpp.s
+.PHONY : Arquivos/ArquivoCSV_dados.s
+
+# target to generate assembly for a file
+Arquivos/ArquivoCSV_dados.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.s
+.PHONY : Arquivos/ArquivoCSV_dados.cpp.s
+
 Calculos/Calculos.o: Calculos/Calculos.cpp.o
 .PHONY : Calculos/Calculos.o
 
@@ -152,6 +224,30 @@ Calculos/Calculos.s: Calculos/Calculos.cpp.s
 Calculos/Calculos.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.s
 .PHONY : Calculos/Calculos.cpp.s
+
+Codificador/ConjuntoDados.o: Codificador/ConjuntoDados.cpp.o
+.PHONY : Codificador/ConjuntoDados.o
+
+# target to build an object file
+Codificador/ConjuntoDados.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o
+.PHONY : Codificador/ConjuntoDados.cpp.o
+
+Codificador/ConjuntoDados.i: Codificador/ConjuntoDados.cpp.i
+.PHONY : Codificador/ConjuntoDados.i
+
+# target to preprocess a source file
+Codificador/ConjuntoDados.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.i
+.PHONY : Codificador/ConjuntoDados.cpp.i
+
+Codificador/ConjuntoDados.s: Codificador/ConjuntoDados.cpp.s
+.PHONY : Codificador/ConjuntoDados.s
+
+# target to generate assembly for a file
+Codificador/ConjuntoDados.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.s
+.PHONY : Codificador/ConjuntoDados.cpp.s
 
 Codificador/Dado.o: Codificador/Dado.cpp.o
 .PHONY : Codificador/Dado.o
@@ -249,6 +345,30 @@ SOM/Arranjo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.s
 .PHONY : SOM/Arranjo.cpp.s
 
+SOM/MensagensSOM.o: SOM/MensagensSOM.cpp.o
+.PHONY : SOM/MensagensSOM.o
+
+# target to build an object file
+SOM/MensagensSOM.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o
+.PHONY : SOM/MensagensSOM.cpp.o
+
+SOM/MensagensSOM.i: SOM/MensagensSOM.cpp.i
+.PHONY : SOM/MensagensSOM.i
+
+# target to preprocess a source file
+SOM/MensagensSOM.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.i
+.PHONY : SOM/MensagensSOM.cpp.i
+
+SOM/MensagensSOM.s: SOM/MensagensSOM.cpp.s
+.PHONY : SOM/MensagensSOM.s
+
+# target to generate assembly for a file
+SOM/MensagensSOM.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.s
+.PHONY : SOM/MensagensSOM.cpp.s
+
 SOM/Neuronio.o: SOM/Neuronio.cpp.o
 .PHONY : SOM/Neuronio.o
 
@@ -321,6 +441,30 @@ Visualizacao/MapaContextual.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.s
 .PHONY : Visualizacao/MapaContextual.cpp.s
 
+Visualizacao/Visualizacao.o: Visualizacao/Visualizacao.cpp.o
+.PHONY : Visualizacao/Visualizacao.o
+
+# target to build an object file
+Visualizacao/Visualizacao.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o
+.PHONY : Visualizacao/Visualizacao.cpp.o
+
+Visualizacao/Visualizacao.i: Visualizacao/Visualizacao.cpp.i
+.PHONY : Visualizacao/Visualizacao.i
+
+# target to preprocess a source file
+Visualizacao/Visualizacao.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.i
+.PHONY : Visualizacao/Visualizacao.cpp.i
+
+Visualizacao/Visualizacao.s: Visualizacao/Visualizacao.cpp.s
+.PHONY : Visualizacao/Visualizacao.s
+
+# target to generate assembly for a file
+Visualizacao/Visualizacao.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.s
+.PHONY : Visualizacao/Visualizacao.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -354,9 +498,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SegmentadorSOM"
+	@echo "... Arquivos/ArquivoCSV.o"
+	@echo "... Arquivos/ArquivoCSV.i"
+	@echo "... Arquivos/ArquivoCSV.s"
+	@echo "... Arquivos/ArquivoCSV_configs.o"
+	@echo "... Arquivos/ArquivoCSV_configs.i"
+	@echo "... Arquivos/ArquivoCSV_configs.s"
+	@echo "... Arquivos/ArquivoCSV_dados.o"
+	@echo "... Arquivos/ArquivoCSV_dados.i"
+	@echo "... Arquivos/ArquivoCSV_dados.s"
 	@echo "... Calculos/Calculos.o"
 	@echo "... Calculos/Calculos.i"
 	@echo "... Calculos/Calculos.s"
+	@echo "... Codificador/ConjuntoDados.o"
+	@echo "... Codificador/ConjuntoDados.i"
+	@echo "... Codificador/ConjuntoDados.s"
 	@echo "... Codificador/Dado.o"
 	@echo "... Codificador/Dado.i"
 	@echo "... Codificador/Dado.s"
@@ -369,6 +525,9 @@ help:
 	@echo "... SOM/Arranjo.o"
 	@echo "... SOM/Arranjo.i"
 	@echo "... SOM/Arranjo.s"
+	@echo "... SOM/MensagensSOM.o"
+	@echo "... SOM/MensagensSOM.i"
+	@echo "... SOM/MensagensSOM.s"
 	@echo "... SOM/Neuronio.o"
 	@echo "... SOM/Neuronio.i"
 	@echo "... SOM/Neuronio.s"
@@ -378,6 +537,9 @@ help:
 	@echo "... Visualizacao/MapaContextual.o"
 	@echo "... Visualizacao/MapaContextual.i"
 	@echo "... Visualizacao/MapaContextual.s"
+	@echo "... Visualizacao/Visualizacao.o"
+	@echo "... Visualizacao/Visualizacao.i"
+	@echo "... Visualizacao/Visualizacao.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

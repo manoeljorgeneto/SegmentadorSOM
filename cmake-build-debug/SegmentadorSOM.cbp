@@ -82,10 +82,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_configs.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_configs.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_dados.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_dados.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Calculos/Calculos.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Codificador/ConjuntoDados.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Codificador/ConjuntoDados.h">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Codificador/Dado.cpp">
@@ -112,6 +136,9 @@
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/SOM/Arranjo.h">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/SOM/MensagensSOM.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/SOM/Neuronio.cpp">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
@@ -128,6 +155,12 @@
 			<Option target="SegmentadorSOM"/>
 		</Unit>
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Visualizacao/MapaContextual.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Visualizacao/Visualizacao.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Visualizacao/Visualizacao.h">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/main.cpp">

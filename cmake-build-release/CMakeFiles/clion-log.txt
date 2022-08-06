@@ -1,4 +1,4 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" -S /home/manoel/CLionProjects/SegmentadorSOM -B /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -S /home/manoel/CLionProjects/SegmentadorSOM -B /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release
