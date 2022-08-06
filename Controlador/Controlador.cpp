@@ -38,8 +38,7 @@ unsigned Controlador::verificaArgumentos() const {
         return 2;
 
     // Tela de ajuda
-    if(this->args.at(1) == "-h" || this->args.at(1) == "--help" || this->args.at(1) == "-H" ||
-       this->args.at(1) == "--Help")
+    if(this->args.at(1) == "-?" || this->args.at(1) == "-h" || this->args.at(1) == "--help")
         return 3;
 
     // The cake is a lie!
@@ -120,10 +119,10 @@ void Controlador::ajuda() {
         }
     }
 
-    cout << "   " << PROGRAMA_NOME << " [-v] | [--version] " << verPr << endl;
-    cout << "   " << PROGRAMA_NOME << " [-V] | [--Version] " << verPrVb << endl;
-    cout << "   " << PROGRAMA_NOME << " [-h] | [-H] | [--help] | [--Help] " << exAj << endl;
-    cout << "   " << PROGRAMA_NOME << " [-c] | [--cake] " << cake << endl;
+    cout << "   " << PROGRAMA_NOME << " [-v|--version] " << verPr << endl;
+    cout << "   " << PROGRAMA_NOME << " [-V|--Version] " << verPrVb << endl;
+    cout << "   " << PROGRAMA_NOME << " [-?|-h|--help] " << exAj << endl;
+    cout << "   " << PROGRAMA_NOME << " [-c|--cake] " << cake << endl;
     cout << "   " << PROGRAMA_NOME << nArg << exPdr << endl;
 }
 

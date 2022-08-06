@@ -11,12 +11,12 @@
 
 
 * Uso:
-  * $ ./SegmentadorSOM [-t] | [--train] \<arquivo_dados\> (treina informando dados)
-  * $ ./SegmentadorSOM [-t] | [--train] \<arquivo_dados\> \<arquivo_configs\> (treina informando dados e configurações)
-  * $ ./SegmentadorSOM [-v] | [--version] (versão do programa, simples)
-  * $ ./SegmentadorSOM [-V] | [--Version] (versão do programa, verbosa)
-  * $ ./SegmentadorSOM [-h] | [-H] | [--help] | [--Help] (exibe esta ajuda)
-  * $ ./SegmentadorSOM [-c] | [--cake] (para ganhar um bolo)
+  * $ ./SegmentadorSOM [-t|--train] \<arquivo_dados\> (treina informando dados)
+  * $ ./SegmentadorSOM [-t|--train] \<arquivo_dados\> \<arquivo_configs\> (treina informando dados e configurações)
+  * $ ./SegmentadorSOM [-v|--version] (versão do programa, simples)
+  * $ ./SegmentadorSOM [-V|--Version] (versão do programa, verbosa)
+  * $ ./SegmentadorSOM [-?|-h|--help] (exibe esta ajuda)
+  * $ ./SegmentadorSOM [-c|--cake] (para ganhar um bolo)
   * $ ./SegmentadorSOM \<sem argumento\> (faz a execução padrão)
 
 

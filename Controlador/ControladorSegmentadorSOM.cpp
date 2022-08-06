@@ -97,8 +97,8 @@ void ControladorSegmentadorSOM::ajuda() {
     }
 
     cout << uso << endl;
-    cout << "   " << PROGRAMA_NOME << " [-t] | [--train] " << arqDados << " " << trDados << endl;
-    cout << "   " << PROGRAMA_NOME << " [-t] | [--train] " << arqDados << " " << arqConfigs << " " << trDadosCfg
+    cout << "   " << PROGRAMA_NOME << " [-t|--train] " << arqDados << " " << trDados << endl;
+    cout << "   " << PROGRAMA_NOME << " [-t|--train] " << arqDados << " " << arqConfigs << " " << trDadosCfg
          << endl;
 
     Controlador::ajuda(); // Chama o método da classe mãe
