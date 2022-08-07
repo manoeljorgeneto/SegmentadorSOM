@@ -16,7 +16,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.22.1/CMakeSystem.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.22.1/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -260,7 +260,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.22.1/CMakeCCompiler.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.22.1/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -489,7 +489,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -515,6 +515,21 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.22/Modules/CMakeFindCodeBlocks.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.22/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.22/Modules/ProcessorCount.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -613,7 +628,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.22.1/CMakeCCompiler.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.22.1/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -707,7 +722,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
+			"path" : "cmake-build-release/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -1069,8 +1084,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug",
-		"source" : "/mnt/d/Documentos/CLionProjects/SegmentadorSOM"
+		"build" : "/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release",
+		"source" : "/home/manoel/CLionProjects/SegmentadorSOM"
 	},
 	"version" : 
 	{

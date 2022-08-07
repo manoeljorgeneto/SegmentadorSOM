@@ -1,3 +1,3 @@
-/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-release/CMakeFiles/SegmentadorSOM.dir
-/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-release/CMakeFiles/edit_cache.dir
-/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-release/CMakeFiles/rebuild_cache.dir
+/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release/CMakeFiles/SegmentadorSOM.dir
+/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release/CMakeFiles/edit_cache.dir
+/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release/CMakeFiles/rebuild_cache.dir

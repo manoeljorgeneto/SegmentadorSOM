@@ -1,4 +1,4 @@
-C:\WINDOWS\system32\wsl.exe --distribution Ubuntu-22.04 --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-release && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM -B /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-release"
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" -S /home/manoel/CLionProjects/SegmentadorSOM -B /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release
 -- The C compiler identification is GNU 11.2.0
 -- The CXX compiler identification is GNU 11.2.0
 -- Detecting C compiler ABI info
@@ -15,4 +15,4 @@ C:\WINDOWS\system32\wsl.exe --distribution Ubuntu-22.04 --exec /bin/bash -c "exp
 -- Boost found
 -- Configuring done
 -- Generating done
--- Build files have been written to: /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-release
+-- Build files have been written to: /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release

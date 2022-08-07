@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/Documentos/CLionProjects/SegmentadorSOM
+CMAKE_SOURCE_DIR = /home/manoel/CLionProjects/SegmentadorSOM
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug
+CMAKE_BINARY_DIR = /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SegmentadorSOM.dir/depend.make
@@ -72,240 +72,240 @@ include CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/main.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/main.cpp.o: ../main.cpp
 CMakeFiles/SegmentadorSOM.dir/main.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SegmentadorSOM.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/main.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/main.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/main.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SegmentadorSOM.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/main.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/main.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/main.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/main.cpp
 
 CMakeFiles/SegmentadorSOM.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/main.cpp > CMakeFiles/SegmentadorSOM.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/main.cpp > CMakeFiles/SegmentadorSOM.dir/main.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/main.cpp -o CMakeFiles/SegmentadorSOM.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/main.cpp -o CMakeFiles/SegmentadorSOM.dir/main.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.o: ../Arquivos/Arquivo.cpp
 CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/Arquivo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/Arquivo.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/Arquivo.cpp > CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/Arquivo.cpp > CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/Arquivo.cpp -o CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/Arquivo.cpp -o CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.o: ../Arquivos/Arquivo_Arranjo.cpp
 CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/Arquivo_Arranjo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/Arquivo_Arranjo.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/Arquivo_Arranjo.cpp > CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/Arquivo_Arranjo.cpp > CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/Arquivo_Arranjo.cpp -o CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/Arquivo_Arranjo.cpp -o CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o: ../Arquivos/ArquivoCSV.cpp
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV.cpp > CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV.cpp > CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV.cpp -o CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV.cpp -o CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o: ../Arquivos/ArquivoCSV_configs.cpp
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_configs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_configs.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_configs.cpp > CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_configs.cpp > CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_configs.cpp -o CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_configs.cpp -o CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_configs.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o: ../Arquivos/ArquivoCSV_dados.cpp
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_dados.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_dados.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_dados.cpp > CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_dados.cpp > CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_dados.cpp -o CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/Arquivos/ArquivoCSV_dados.cpp -o CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o: ../Calculos/Calculos.cpp
 CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp > CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp > CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp -o CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp -o CMakeFiles/SegmentadorSOM.dir/Calculos/Calculos.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o: ../Codificador/Dado.cpp
 CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/Dado.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/Codificador/Dado.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/Dado.cpp > CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/Codificador/Dado.cpp > CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/Dado.cpp -o CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/Codificador/Dado.cpp -o CMakeFiles/SegmentadorSOM.dir/Codificador/Dado.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o: ../Codificador/ConjuntoDados.cpp
 CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/ConjuntoDados.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/Codificador/ConjuntoDados.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/ConjuntoDados.cpp > CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/Codificador/ConjuntoDados.cpp > CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Codificador/ConjuntoDados.cpp -o CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/Codificador/ConjuntoDados.cpp -o CMakeFiles/SegmentadorSOM.dir/Codificador/ConjuntoDados.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: ../Controlador/Controlador.cpp
 CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp > CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp > CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp -o CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/Controlador/Controlador.cpp -o CMakeFiles/SegmentadorSOM.dir/Controlador/Controlador.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o: ../Controlador/ControladorSegmentadorSOM.cpp
 CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/ControladorSegmentadorSOM.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/Controlador/ControladorSegmentadorSOM.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/ControladorSegmentadorSOM.cpp > CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/Controlador/ControladorSegmentadorSOM.cpp > CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Controlador/ControladorSegmentadorSOM.cpp -o CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/Controlador/ControladorSegmentadorSOM.cpp -o CMakeFiles/SegmentadorSOM.dir/Controlador/ControladorSegmentadorSOM.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o: ../SOM/Arranjo.cpp
 CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/Arranjo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/SOM/Arranjo.cpp
 
 CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/Arranjo.cpp > CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/SOM/Arranjo.cpp > CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/Arranjo.cpp -o CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/SOM/Arranjo.cpp -o CMakeFiles/SegmentadorSOM.dir/SOM/Arranjo.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o: ../SOM/Neuronio.cpp
 CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/Neuronio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/SOM/Neuronio.cpp
 
 CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/Neuronio.cpp > CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/SOM/Neuronio.cpp > CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/Neuronio.cpp -o CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/SOM/Neuronio.cpp -o CMakeFiles/SegmentadorSOM.dir/SOM/Neuronio.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: ../SOM/SOM.cpp
 CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/SOM.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/SOM/SOM.cpp
 
 CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/SOM.cpp > CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/SOM/SOM.cpp > CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/SOM.cpp -o CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/SOM/SOM.cpp -o CMakeFiles/SegmentadorSOM.dir/SOM/SOM.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o: ../SOM/MensagensSOM.cpp
 CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/MensagensSOM.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/SOM/MensagensSOM.cpp
 
 CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/MensagensSOM.cpp > CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/SOM/MensagensSOM.cpp > CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/SOM/MensagensSOM.cpp -o CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/SOM/MensagensSOM.cpp -o CMakeFiles/SegmentadorSOM.dir/SOM/MensagensSOM.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o: ../Visualizacao/MapaContextual.cpp
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/MapaContextual.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/Visualizacao/MapaContextual.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/MapaContextual.cpp > CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/Visualizacao/MapaContextual.cpp > CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/MapaContextual.cpp -o CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/Visualizacao/MapaContextual.cpp -o CMakeFiles/SegmentadorSOM.dir/Visualizacao/MapaContextual.cpp.s
 
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o: CMakeFiles/SegmentadorSOM.dir/flags.make
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o: ../Visualizacao/Visualizacao.cpp
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o: CMakeFiles/SegmentadorSOM.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o -c /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/Visualizacao.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o -MF CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o.d -o CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.o -c /home/manoel/CLionProjects/SegmentadorSOM/Visualizacao/Visualizacao.cpp
 
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/Visualizacao.cpp > CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/manoel/CLionProjects/SegmentadorSOM/Visualizacao/Visualizacao.cpp > CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.i
 
 CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Documentos/CLionProjects/SegmentadorSOM/Visualizacao/Visualizacao.cpp -o CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/manoel/CLionProjects/SegmentadorSOM/Visualizacao/Visualizacao.cpp -o CMakeFiles/SegmentadorSOM.dir/Visualizacao/Visualizacao.cpp.s
 
 # Object files for target SegmentadorSOM
 SegmentadorSOM_OBJECTS = \
@@ -359,7 +359,7 @@ SegmentadorSOM: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.74.0
 SegmentadorSOM: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.74.0
 SegmentadorSOM: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.74.0
 SegmentadorSOM: CMakeFiles/SegmentadorSOM.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable SegmentadorSOM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable SegmentadorSOM"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SegmentadorSOM.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -371,6 +371,6 @@ CMakeFiles/SegmentadorSOM.dir/clean:
 .PHONY : CMakeFiles/SegmentadorSOM.dir/clean
 
 CMakeFiles/SegmentadorSOM.dir/depend:
-	cd /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/d/Documentos/CLionProjects/SegmentadorSOM /mnt/d/Documentos/CLionProjects/SegmentadorSOM /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug /mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles/SegmentadorSOM.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/manoel/CLionProjects/SegmentadorSOM /home/manoel/CLionProjects/SegmentadorSOM /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug/CMakeFiles/SegmentadorSOM.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SegmentadorSOM.dir/depend
 
