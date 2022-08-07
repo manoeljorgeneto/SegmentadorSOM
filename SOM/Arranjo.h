@@ -27,7 +27,6 @@
 #include <omp.h>
 
 #include <boost/serialization/utility.hpp>
-#include <boost/serialization/nvp.hpp>
 #include <boost/serialization/version.hpp>
 #include <boost/serialization/vector.hpp>
 
@@ -54,19 +53,9 @@ protected:
     unsigned dimensao{}; // Dimensão dos vetores de pesos sinápticos do neurônios
     vector<Neuronio*>* neuronios{}; // Contêiner onde estarão os neurônios
 
-    // Para a serialização (binário e texto)
-    //template<class A> void serialize(A& ar, const unsigned /*versao*/) {
-    //    ar & this->largura & this->altura & this->tamanho & this->normalizados & this->dimensao & this->neuronios;
-    //}
-
-    // Para a serialização (xml)
+    // Para a serialização
     template<class A> void serialize(A& ar, const unsigned /*versao*/) {
-        ar & BOOST_SERIALIZATION_NVP(this->largura)
-           & BOOST_SERIALIZATION_NVP(this->altura)
-           & BOOST_SERIALIZATION_NVP(this->tamanho)
-           & BOOST_SERIALIZATION_NVP(this->normalizados)
-           & BOOST_SERIALIZATION_NVP(this->dimensao)
-           & BOOST_SERIALIZATION_NVP(this->neuronios);
+        ar & this->largura & this->altura & this->tamanho & this->normalizados & this->dimensao & this->neuronios;
     }
 	
     [[nodiscard]] vector<unsigned>* criaPosicao2D(unsigned n) const; // Cria uma posição 2D, dado um inteiro

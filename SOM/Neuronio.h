@@ -29,7 +29,6 @@
 #include <utility>
 
 #include <boost/serialization/utility.hpp>
-#include <boost/serialization/nvp.hpp>
 #include <boost/serialization/version.hpp>
 #include <boost/serialization/vector.hpp>
 #include <boost/serialization/string.hpp>
@@ -59,21 +58,10 @@ protected:
 
     bool normalizado{}; // Define se o neurônio sempre normalizará seus pesos ou não
 
-    // Para a serialização (binário e texto)
-    //template<class A> void serialize(A& ar, const unsigned /*versao*/) {
-    //    ar & this->pesos & this->posicao & this->dim_entrada & this->dim_saida & this->rotulo & this->marcado
-    //       & this->normalizado;
-    //}
-
-    // Para a serialização (xml)
+    // Para a serialização
     template<class A> void serialize(A& ar, const unsigned /*versao*/) {
-        ar & BOOST_SERIALIZATION_NVP(this->pesos)
-           & BOOST_SERIALIZATION_NVP(this->posicao)
-           & BOOST_SERIALIZATION_NVP(this->dim_entrada)
-           & BOOST_SERIALIZATION_NVP(this->dim_saida)
-           & BOOST_SERIALIZATION_NVP(this->rotulo)
-           & BOOST_SERIALIZATION_NVP(this->marcado)
-           & BOOST_SERIALIZATION_NVP(this->normalizado);
+        ar & this->pesos & this->posicao & this->dim_entrada & this->dim_saida & this->rotulo & this->marcado
+           & this->normalizado;
     }
 
     // Retorna a distância espacial entre o neurônio e outro no arranjo de neurônios
