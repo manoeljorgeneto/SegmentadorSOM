@@ -23,31 +23,58 @@
 #define NEURONIO_H_
 
 #include <vector>
-#include <cmath>
 #include <string>
-#include <utility>
 #include <sstream>
+#include <cmath>
+#include <utility>
 
+#include <boost/serialization/utility.hpp>
+#include <boost/serialization/nvp.hpp>
+#include <boost/serialization/version.hpp>
+#include <boost/serialization/vector.hpp>
+#include <boost/serialization/string.hpp>
+
+#include "../versao.h"
 #include "../Calculos/Calculos.h"
 #include "../Codificador/Dado.h"
 
 using namespace std;
+using namespace boost::serialization;
 
 /**
  * Classe Neurônio, que é a base do algoritmo SOM de Kohonen.
  */
 class Neuronio {
 protected:
-    vector<double>* pesos; // Vetor de pesos sinápticos
-    vector<unsigned>* posicao; // Vetor da posição do neurônio no arranjo
+    friend class boost::serialization::access; // Para a serialização
+
+    vector<double>* pesos{}; // Vetor de pesos sinápticos
+    vector<unsigned>* posicao{}; // Vetor da posição do neurônio no arranjo
 	
-    unsigned dim_entrada; // Dimensão de entrada dos dados
-    unsigned dim_saida; // Dimensão do arranjo onde o neurônio está localizado
+    unsigned dim_entrada{}; // Dimensão de entrada dos dados
+    unsigned dim_saida{}; // Dimensão do arranjo onde o neurônio está localizado
 	
     string rotulo; // Servem para o Mapa Contextual
-    bool marcado;
+    bool marcado{};
 
-    bool normalizado; // Define se o neurônio sempre normalizará seus pesos ou não
+    bool normalizado{}; // Define se o neurônio sempre normalizará seus pesos ou não
+
+    // Para a serialização (binário e texto)
+    //template<class A> void serialize(A& ar, const unsigned /*versao*/) {
+    //    ar & this->pesos & this->posicao & this->dim_entrada & this->dim_saida & this->rotulo & this->marcado
+    //       & this->normalizado;
+    //}
+
+    // Para a serialização (xml)
+    template<class A> void serialize(A& ar, const unsigned /*versao*/) {
+        ar & BOOST_SERIALIZATION_NVP(this->pesos)
+           & BOOST_SERIALIZATION_NVP(this->posicao)
+           & BOOST_SERIALIZATION_NVP(this->dim_entrada)
+           & BOOST_SERIALIZATION_NVP(this->dim_saida)
+           & BOOST_SERIALIZATION_NVP(this->rotulo)
+           & BOOST_SERIALIZATION_NVP(this->marcado)
+           & BOOST_SERIALIZATION_NVP(this->normalizado);
+    }
 
     // Retorna a distância espacial entre o neurônio e outro no arranjo de neurônios
     virtual double calculaDistanciaEspacial(Neuronio* n);
@@ -60,6 +87,7 @@ public:
     Neuronio(unsigned dim_entrada, vector<unsigned>* posicao, string rotulo = "", bool normalizado = true);
     // Construtor (criando um novo neurônio, definindo o vetor de pesos sinápticos)
     Neuronio(vector<double>* pesos, vector<unsigned>* posicao, string rotulo = "", bool normalizado = true);
+    Neuronio() = default;
     virtual ~Neuronio(); // Destrutor
 
     void normaliza(); // Normaliza seus pesos sinápticos
@@ -86,5 +114,7 @@ public:
 
     virtual string toString(); // Converte para string
 };
+
+BOOST_CLASS_VERSION(Neuronio, VERSAO_INT)
 
 #endif // NEURONIO_H_

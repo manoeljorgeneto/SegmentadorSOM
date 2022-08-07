@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : ArquivoCSV_dados.h
+// Name        : Arquivo_Arranjo.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.3-alpha
@@ -19,31 +19,29 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#ifndef ARQUIVOCSV_DADOS_H
-#define ARQUIVOCSV_DADOS_H
+#ifndef ARQUIVO_ARRANJO_H
+#define ARQUIVO_ARRANJO_H
 
-#include "../Arquivos/ArquivoCSV.h"
-#include "../Codificador/Dado.h"
-#include "../Codificador/ConjuntoDados.h"
+#include <boost/archive/binary_iarchive.hpp>
+#include <boost/archive/binary_oarchive.hpp>
+
+#include "../Arquivos/Arquivo.h"
+#include "../SOM/Arranjo.h"
+
+using namespace boost::archive;
 
 /**
- * Classe ArquivoCSV_dados, herdeira da classe ArquivoCSV.
- *
- * O arquivo CVS deve ser formatado da seguinte forma:\n
- * \<rótulo\>, \<dado_1\>, \<dado_2\>, ..., \<dado_n\>\n
- *
- * Exemplo:\n
- * Ma, 1, 4, 5, 0, 0, 1\n
- * Mi, 0, 4, 4, 1, 0, 0\n
+ * Classe para a leitura e escrita do arranjo de neurônios em arquivo, herdeira da classe Arquivo.
  */
-class ArquivoCSV_dados : public ArquivoCSV {
+class Arquivo_Arranjo : public Arquivo {
 protected:
-    // Cria um objeto Dado a partir de uma linha do arquivo
-    static Dado* criaDado(const vector<string>& linha);
 
 public:
-    // Faz a leitura do arquivo e retorna um objeto com o conjunto de dados
-    static ConjuntoDados* obtemDados(const string& nomeArquivo, bool normalizados = true);
+    // Obtém o arranjo a partir do arquivo
+    static Arranjo* obtemArranjo(const string& nomeArquivo);
+
+    // Grava o arranjo no arquivo
+    static void gravaArranjo(const Arranjo* arr, const string& nomeArquivo);
 };
 
-#endif // ARQUIVOCSV_DADOS_H
+#endif // ARQUIVO_ARRANJO_H

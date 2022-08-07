@@ -121,7 +121,6 @@ void ControladorSegmentadorSOM::padrao() {
     // Exibindo os dados de treinamento
     cout << dados_treinamento->toString() << endl;
 
-    //TODO Incluir métodos para salvar e ler o SOM em disco
     //TODO Atualizar o algoritmo SOM, incluindo paralelização e otimizações
     //TODO Incluir o método de aprendizado batch (verificar literatura)
 
@@ -135,16 +134,23 @@ void ControladorSegmentadorSOM::padrao() {
 
     auto* arr = som->getArranjo(); // Arranjo treinado pelo SOM
 
+    Arquivo_Arranjo::gravaArranjo(arr,"arr.dat"); // Grava o arranjo no arquivo
+
+    // Faz a leitura do arquivo
+    auto* arr2 = Arquivo_Arranjo::obtemArranjo("arr.dat");
+
+    //TODO Criação de métodos para trabalhar com os arquivos gerados
     //TODO Criação de melhores visualizações (verificar literatura)
+    //TODO Adicionar métodos para exportar os dados que possibilitem criar visualizações
 
     cout << endl;
 
     // Geração e exibição do mapa contextual
     auto* mapa = new MapaContextual();
-    cout << mapa->geraMapa(dados_treinamento, arr) << endl << endl;
+    cout << mapa->geraMapa(dados_treinamento, arr2) << endl << endl;
 
     // Exibição dos parâmetros dos neurônios no arranjo
-    cout << arr->toString();
+    cout << arr2->toString();
 }
 
 // Execução informando o arquivo de dados

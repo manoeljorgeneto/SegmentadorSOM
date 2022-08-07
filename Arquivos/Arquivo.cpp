@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : ArquivoCSV_dados.h
+// Name        : Arquivo.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.3-alpha
@@ -19,31 +19,16 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#ifndef ARQUIVOCSV_DADOS_H
-#define ARQUIVOCSV_DADOS_H
+#include "../Arquivos/Arquivo.h"
 
-#include "../Arquivos/ArquivoCSV.h"
-#include "../Codificador/Dado.h"
-#include "../Codificador/ConjuntoDados.h"
+// Abre o arquivo
+ifstream Arquivo::abreArquivo(const string& nomeArquivo) {
+    ifstream arquivo(nomeArquivo); // Referência para o arquivo
+    return arquivo;
+}
 
-/**
- * Classe ArquivoCSV_dados, herdeira da classe ArquivoCSV.
- *
- * O arquivo CVS deve ser formatado da seguinte forma:\n
- * \<rótulo\>, \<dado_1\>, \<dado_2\>, ..., \<dado_n\>\n
- *
- * Exemplo:\n
- * Ma, 1, 4, 5, 0, 0, 1\n
- * Mi, 0, 4, 4, 1, 0, 0\n
- */
-class ArquivoCSV_dados : public ArquivoCSV {
-protected:
-    // Cria um objeto Dado a partir de uma linha do arquivo
-    static Dado* criaDado(const vector<string>& linha);
-
-public:
-    // Faz a leitura do arquivo e retorna um objeto com o conjunto de dados
-    static ConjuntoDados* obtemDados(const string& nomeArquivo, bool normalizados = true);
-};
-
-#endif // ARQUIVOCSV_DADOS_H
+// Cria um novo arquivo
+ofstream Arquivo::criaArquivo(const string& nomeArquivo) {
+    ofstream arquivo(nomeArquivo); // Abre o arquivo
+    return arquivo;
+}

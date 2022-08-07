@@ -25,6 +25,7 @@
 #include "../Controlador/Controlador.h"
 #include "../Arquivos/ArquivoCSV_configs.h"
 #include "../Arquivos/ArquivoCSV_dados.h"
+#include "../Arquivos/Arquivo_Arranjo.h"
 #include "../Codificador/Dado.h"
 #include "../Codificador/ConjuntoDados.h"
 #include "../SOM/Neuronio.h"

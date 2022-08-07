@@ -22,28 +22,22 @@
 #ifndef ARQUIVOCSV_H
 #define ARQUIVOCSV_H
 
-#include <fstream>
 #include <vector>
-#include <string>
 #include <sstream>
+
+#include "../Arquivos/Arquivo.h"
 
 using namespace std;
 
 /**
- * Classe para a leitura de arquivos CSV.
+ * Classe para a leitura de arquivos CSV, herdeira da classe Arquivo.
  */
-class ArquivoCSV {
+class ArquivoCSV : public Arquivo {
 protected:
-    // Abre o arquivo no modo de leitura
-    static fstream abreArquivo(const string& nomeArquivo);
-
     // Obtém um vetor de strings com valores delimitados, a partir de uma linha do arquivo
-    static vector<string> obtemLinha(fstream& arquivo);
+    static vector<string> obtemLinha(ifstream& arquivo);
 
 public:
-    ArquivoCSV(); // Construtor
-    virtual ~ArquivoCSV(); // Destrutor
-
     // Faz a leitura do arquivo e retorna um vetor com as linhas do arquivo
     // Cada linha é um vetor de strings com os valores
     static vector<vector<string>>* lerArquivo(const string& nomeArquivo);

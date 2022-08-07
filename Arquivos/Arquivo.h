@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : ArquivoCSV_dados.h
+// Name        : Arquivo.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.3-alpha
@@ -19,31 +19,28 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#ifndef ARQUIVOCSV_DADOS_H
-#define ARQUIVOCSV_DADOS_H
+#ifndef ARQUIVO_H
+#define ARQUIVO_H
 
-#include "../Arquivos/ArquivoCSV.h"
-#include "../Codificador/Dado.h"
-#include "../Codificador/ConjuntoDados.h"
+#include <fstream>
+#include <string>
+
+using namespace std;
 
 /**
- * Classe ArquivoCSV_dados, herdeira da classe ArquivoCSV.
- *
- * O arquivo CVS deve ser formatado da seguinte forma:\n
- * \<rótulo\>, \<dado_1\>, \<dado_2\>, ..., \<dado_n\>\n
- *
- * Exemplo:\n
- * Ma, 1, 4, 5, 0, 0, 1\n
- * Mi, 0, 4, 4, 1, 0, 0\n
+ * Classe para a manipulação de arquivos.
  */
-class ArquivoCSV_dados : public ArquivoCSV {
+class Arquivo {
 protected:
-    // Cria um objeto Dado a partir de uma linha do arquivo
-    static Dado* criaDado(const vector<string>& linha);
+    // Abre o arquivo
+    static ifstream abreArquivo(const string& nomeArquivo);
+
+    // Cria um novo arquivo
+    static ofstream criaArquivo(const string& nomeArquivo);
 
 public:
-    // Faz a leitura do arquivo e retorna um objeto com o conjunto de dados
-    static ConjuntoDados* obtemDados(const string& nomeArquivo, bool normalizados = true);
+    Arquivo() = default; // Construtor
+    virtual ~Arquivo() = default; // Destrutor
 };
 
-#endif // ARQUIVOCSV_DADOS_H
+#endif // ARQUIVO_H

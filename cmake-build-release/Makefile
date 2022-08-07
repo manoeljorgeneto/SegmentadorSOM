@@ -129,6 +129,30 @@ SegmentadorSOM/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/build
 .PHONY : SegmentadorSOM/fast
 
+Arquivos/Arquivo.o: Arquivos/Arquivo.cpp.o
+.PHONY : Arquivos/Arquivo.o
+
+# target to build an object file
+Arquivos/Arquivo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.o
+.PHONY : Arquivos/Arquivo.cpp.o
+
+Arquivos/Arquivo.i: Arquivos/Arquivo.cpp.i
+.PHONY : Arquivos/Arquivo.i
+
+# target to preprocess a source file
+Arquivos/Arquivo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.i
+.PHONY : Arquivos/Arquivo.cpp.i
+
+Arquivos/Arquivo.s: Arquivos/Arquivo.cpp.s
+.PHONY : Arquivos/Arquivo.s
+
+# target to generate assembly for a file
+Arquivos/Arquivo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo.cpp.s
+.PHONY : Arquivos/Arquivo.cpp.s
+
 Arquivos/ArquivoCSV.o: Arquivos/ArquivoCSV.cpp.o
 .PHONY : Arquivos/ArquivoCSV.o
 
@@ -200,6 +224,30 @@ Arquivos/ArquivoCSV_dados.s: Arquivos/ArquivoCSV_dados.cpp.s
 Arquivos/ArquivoCSV_dados.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/ArquivoCSV_dados.cpp.s
 .PHONY : Arquivos/ArquivoCSV_dados.cpp.s
+
+Arquivos/Arquivo_Arranjo.o: Arquivos/Arquivo_Arranjo.cpp.o
+.PHONY : Arquivos/Arquivo_Arranjo.o
+
+# target to build an object file
+Arquivos/Arquivo_Arranjo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.o
+.PHONY : Arquivos/Arquivo_Arranjo.cpp.o
+
+Arquivos/Arquivo_Arranjo.i: Arquivos/Arquivo_Arranjo.cpp.i
+.PHONY : Arquivos/Arquivo_Arranjo.i
+
+# target to preprocess a source file
+Arquivos/Arquivo_Arranjo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.i
+.PHONY : Arquivos/Arquivo_Arranjo.cpp.i
+
+Arquivos/Arquivo_Arranjo.s: Arquivos/Arquivo_Arranjo.cpp.s
+.PHONY : Arquivos/Arquivo_Arranjo.s
+
+# target to generate assembly for a file
+Arquivos/Arquivo_Arranjo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SegmentadorSOM.dir/build.make CMakeFiles/SegmentadorSOM.dir/Arquivos/Arquivo_Arranjo.cpp.s
+.PHONY : Arquivos/Arquivo_Arranjo.cpp.s
 
 Calculos/Calculos.o: Calculos/Calculos.cpp.o
 .PHONY : Calculos/Calculos.o
@@ -498,6 +546,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SegmentadorSOM"
+	@echo "... Arquivos/Arquivo.o"
+	@echo "... Arquivos/Arquivo.i"
+	@echo "... Arquivos/Arquivo.s"
 	@echo "... Arquivos/ArquivoCSV.o"
 	@echo "... Arquivos/ArquivoCSV.i"
 	@echo "... Arquivos/ArquivoCSV.s"
@@ -507,6 +558,9 @@ help:
 	@echo "... Arquivos/ArquivoCSV_dados.o"
 	@echo "... Arquivos/ArquivoCSV_dados.i"
 	@echo "... Arquivos/ArquivoCSV_dados.s"
+	@echo "... Arquivos/Arquivo_Arranjo.o"
+	@echo "... Arquivos/Arquivo_Arranjo.i"
+	@echo "... Arquivos/Arquivo_Arranjo.s"
 	@echo "... Calculos/Calculos.o"
 	@echo "... Calculos/Calculos.i"
 	@echo "... Calculos/Calculos.s"

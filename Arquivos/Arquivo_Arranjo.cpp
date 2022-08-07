@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : ArquivoCSV_dados.h
+// Name        : Arquivo_Arranjo.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.3-alpha
@@ -19,31 +19,30 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#ifndef ARQUIVOCSV_DADOS_H
-#define ARQUIVOCSV_DADOS_H
+#include "../Arquivos/Arquivo_Arranjo.h"
 
-#include "../Arquivos/ArquivoCSV.h"
-#include "../Codificador/Dado.h"
-#include "../Codificador/ConjuntoDados.h"
+// Obtém o arranjo a partir do arquivo
+Arranjo* Arquivo_Arranjo::obtemArranjo(const string& nomeArquivo) {
+    ifstream arquivo = Arquivo_Arranjo::abreArquivo(nomeArquivo); // Abre o arquivo
+    assert(arquivo.good()); // Testa o arquivo
 
-/**
- * Classe ArquivoCSV_dados, herdeira da classe ArquivoCSV.
- *
- * O arquivo CVS deve ser formatado da seguinte forma:\n
- * \<rótulo\>, \<dado_1\>, \<dado_2\>, ..., \<dado_n\>\n
- *
- * Exemplo:\n
- * Ma, 1, 4, 5, 0, 0, 1\n
- * Mi, 0, 4, 4, 1, 0, 0\n
- */
-class ArquivoCSV_dados : public ArquivoCSV {
-protected:
-    // Cria um objeto Dado a partir de uma linha do arquivo
-    static Dado* criaDado(const vector<string>& linha);
+    auto* arr = new Arranjo; // Cria um objeto Arranjo
 
-public:
-    // Faz a leitura do arquivo e retorna um objeto com o conjunto de dados
-    static ConjuntoDados* obtemDados(const string& nomeArquivo, bool normalizados = true);
-};
+    boost::archive::binary_iarchive ia(arquivo);
+    ia >> *arr; // Faz a cópia do arranjo do arquivo para o objeto
 
-#endif // ARQUIVOCSV_DADOS_H
+    arquivo.close(); // Fecha o arquivo
+
+    return arr;
+}
+
+// Grava o arranjo no arquivo
+void Arquivo_Arranjo::gravaArranjo(const Arranjo* arr, const string& nomeArquivo) {
+    ofstream arquivo = Arquivo_Arranjo::criaArquivo(nomeArquivo); // Cria o arquivo
+    assert(arquivo.good()); // Testa o arquivo
+
+    boost::archive::binary_oarchive oa(arquivo);
+    oa << *arr; // Faz a cópia do objeto para o arquivo
+
+    arquivo.close(); // Fecha o arquivo
+}

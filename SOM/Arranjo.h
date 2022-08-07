@@ -26,30 +26,55 @@
 #include <sstream>
 #include <omp.h>
 
+#include <boost/serialization/utility.hpp>
+#include <boost/serialization/nvp.hpp>
+#include <boost/serialization/version.hpp>
+#include <boost/serialization/vector.hpp>
+
+#include "../versao.h"
 #include "../Codificador/Dado.h"
 #include "../SOM/Neuronio.h"
 
 using namespace std;
+using namespace boost::serialization;
 
 /**
  * Arranjo de neurônios bidimensional e quadrado. Ou seja, com largura e altura idênticas (L*L).
  */
 class Arranjo {
 protected:
-    unsigned largura; // Largura do arranjo
-    unsigned altura; // Altura do arranjo
-    unsigned tamanho; // Tamanho do arranjo
+    friend class boost::serialization::access; // Para a serialização
 
-    bool normalizados; // Define se os neurônios terão seus pesos normalizados
+    unsigned largura{}; // Largura do arranjo
+    unsigned altura{}; // Altura do arranjo
+    unsigned tamanho{}; // Tamanho do arranjo
 
-    unsigned dimensao; // Dimensão dos vetores de pesos sinápticos do neurônios
-    vector<Neuronio*>* neuronios; // Contêiner onde estarão os neurônios
+    bool normalizados{}; // Define se os neurônios terão seus pesos normalizados
+
+    unsigned dimensao{}; // Dimensão dos vetores de pesos sinápticos do neurônios
+    vector<Neuronio*>* neuronios{}; // Contêiner onde estarão os neurônios
+
+    // Para a serialização (binário e texto)
+    //template<class A> void serialize(A& ar, const unsigned /*versao*/) {
+    //    ar & this->largura & this->altura & this->tamanho & this->normalizados & this->dimensao & this->neuronios;
+    //}
+
+    // Para a serialização (xml)
+    template<class A> void serialize(A& ar, const unsigned /*versao*/) {
+        ar & BOOST_SERIALIZATION_NVP(this->largura)
+           & BOOST_SERIALIZATION_NVP(this->altura)
+           & BOOST_SERIALIZATION_NVP(this->tamanho)
+           & BOOST_SERIALIZATION_NVP(this->normalizados)
+           & BOOST_SERIALIZATION_NVP(this->dimensao)
+           & BOOST_SERIALIZATION_NVP(this->neuronios);
+    }
 	
     [[nodiscard]] vector<unsigned>* criaPosicao2D(unsigned n) const; // Cria uma posição 2D, dado um inteiro
     Neuronio* criaNeuronio(unsigned n); // Cria um neurônio na posição correta no arranjo
 	
 public:
     Arranjo(unsigned largura, unsigned dimensao_entrada, bool normalizados = true); // Construtor
+    Arranjo() = default;
     virtual ~Arranjo(); // Destrutor
 
     /**
@@ -69,5 +94,7 @@ public:
 
     virtual string toString(); // Retorna uma string exibindo os parâmetros dos neurônios
 };
+
+BOOST_CLASS_VERSION(Arranjo, VERSAO_INT)
 
 #endif // ARRANJO_H_

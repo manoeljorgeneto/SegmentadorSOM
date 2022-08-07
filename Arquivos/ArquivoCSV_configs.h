@@ -25,8 +25,6 @@
 #include "../versao.h"
 #include "../Arquivos/ArquivoCSV.h"
 
-using namespace std;
-
 /**
  * Estrutura auxiliar, para armazenar as configurações do programa.
  * Os valores padrão são fornecidos.

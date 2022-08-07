@@ -1,4 +1,5 @@
 /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -S /home/manoel/CLionProjects/SegmentadorSOM -B /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug
+-- Boost found
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug

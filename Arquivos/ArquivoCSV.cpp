@@ -21,16 +21,8 @@
 
 #include "../Arquivos/ArquivoCSV.h"
 
-// Abre o arquivo no modo de leitura
-fstream ArquivoCSV::abreArquivo(const string& nomeArquivo) {
-    fstream arquivo; // Referência para o arquivo
-    arquivo.open(nomeArquivo, ios::in); // Abre o arquivo
-
-    return arquivo;
-}
-
 // Obtém um vetor de strings com valores delimitados, a partir de uma linha do arquivo
-vector<string> ArquivoCSV::obtemLinha(fstream& arquivo) {
+vector<string> ArquivoCSV::obtemLinha(ifstream& arquivo) {
     vector<string> resultado; // Vetor de strings, que armazenará os valores da linha
     string linha, valor; // Variáveis auxiliares
 
@@ -44,16 +36,10 @@ vector<string> ArquivoCSV::obtemLinha(fstream& arquivo) {
     return resultado;
 }
 
-// Construtor
-ArquivoCSV::ArquivoCSV() = default;
-
-// Destrutor
-ArquivoCSV::~ArquivoCSV() = default;
-
 // Faz a leitura do arquivo e retorna um vetor com as linhas do arquivo
 // Cada linha é um vetor de strings com os valores
 vector<vector<string>>* ArquivoCSV::lerArquivo(const string& nomeArquivo) {
-    fstream arquivo = ArquivoCSV::abreArquivo(nomeArquivo); // Abre o arquivo
+    ifstream arquivo = ArquivoCSV::abreArquivo(nomeArquivo); // Abre o arquivo
 
     if(!arquivo) // O arquivo não existe
         return nullptr;
