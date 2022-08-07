@@ -6,7 +6,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-release/CMakeFiles/3.22.1/CMakeSystem.cmake"
+			"path" : "cmake-build-debug-wsl/CMakeFiles/3.22.1/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -15,11 +15,11 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-release/CMakeFiles/3.22.1/CMakeCCompiler.cmake"
+			"path" : "cmake-build-debug-wsl/CMakeFiles/3.22.1/CMakeCCompiler.cmake"
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-release/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
+			"path" : "cmake-build-debug-wsl/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -491,8 +491,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release",
-		"source" : "/home/manoel/CLionProjects/SegmentadorSOM"
+		"build" : "/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl",
+		"source" : "/mnt/d/Documentos/CLionProjects/SegmentadorSOM"
 	},
 	"version" : 
 	{

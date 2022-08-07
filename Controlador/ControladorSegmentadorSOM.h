@@ -2,7 +2,7 @@
 // Name        : ControladorSegmentadorSOM.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.3-alpha
+// Version     : v0.1.4-alpha
 // Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -52,6 +52,15 @@ protected:
     void padrao(const string& arqDados); // Execução informando o arquivo de dados
     // Execução informando os arquivos de dados e configurações
     void padrao(const string& arqDados, const string& arqConfigs);
+    // Execução informando os arquivos de dados, configurações e do arranjo a ser salvo
+    void padrao(const string& arqDados, const string& arqConfigs, const string& arqArranjo);
+
+    // Gera um mapa contextual, a partir de um conjunto de dados e de um arranjo de neurônios do SOM
+    static void mapa(ConjuntoDados* dados, Arranjo* arr);
+    // Gera um mapa contextual, a partir dos arquivos de dados e do arranjo de neurônios do SOM
+    void mapa(const string& arqDados, const string& arqArranjo);
+    // Gera um mapa contextual, informando o arquivo de dados
+    void mapa(const string& arqDados);
 
     // TODO Implementar outros métodos, como leitura do conjunto de neurônios, saída do programa etc.
 

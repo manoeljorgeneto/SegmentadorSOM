@@ -2,7 +2,7 @@
 // Name        : SOM.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.3-alpha
+// Version     : v0.1.4-alpha
 // Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -101,8 +101,8 @@ class MensagensSOM {
 protected:
 
 public:
-    MensagensSOM(); // Construtor
-    virtual ~MensagensSOM(); // Destrutor
+    MensagensSOM() = default; // Construtor
+    virtual ~MensagensSOM() = default; // Destrutor
 
     // Mensagens durante o algoritmo de treinamento
     static void verboso(unsigned msg, const SOM* som, bool verb = true, unsigned iteracoes = 0, unsigned n_it = 0,

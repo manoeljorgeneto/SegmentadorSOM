@@ -2,7 +2,7 @@
 // Name        : MensagensSOM.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.3-alpha
+// Version     : v0.1.4-alpha
 // Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -20,12 +20,6 @@
 //======================================================================================================================
 
 #include "../SOM/SOM.h"
-
-// Construtor
-MensagensSOM::MensagensSOM() = default;
-
-// Destrutor
-MensagensSOM::~MensagensSOM() = default;
 
 // Mensagens durante o algoritmo de treinamento
 void MensagensSOM::verboso(unsigned msg, const SOM* som, bool verb, unsigned iteracoes, unsigned n_it, int64_t tempo) {

@@ -2,7 +2,7 @@
 // Name        : ArquivoCSV_configs.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.3-alpha
+// Version     : v0.1.4-alpha
 // Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -32,6 +32,7 @@
 struct configs {
     string dados = "teste.csv"; // Nome do arquivo de dados
     string cfg = "configs.csv"; // Nome do arquivo de configurações
+    string arr = "arr.dat";     // Nome do arquivo para salvar o arranjo de neurônios
     unsigned largura = 10;      // Largura do arranjo de neurônios
     double sigma = 2.5;         // Parâmetro sigma
     double tau2 = 1000.0;       // Parâmetro tau2

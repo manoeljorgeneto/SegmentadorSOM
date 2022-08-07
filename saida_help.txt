@@ -1,6 +1,9 @@
 Usage:
    SegmentadorSOM [-t|--train] <data_file> (train by informing data)
    SegmentadorSOM [-t|--train] <data_file> <configs_file> (train by informing data and settings)
+   SegmentadorSOM [-t|--train] <data_file> <configs_file> <array_file> (saves the trained array to the specified file)
+   SegmentadorSOM [-m|--map] <data_file> (generates a contextual map, informing data)
+   SegmentadorSOM [-m|--map] <data_file> <array_file> (generates a contextual map, informing data and the trained array)
    SegmentadorSOM [-v|--version] (program version, simple)
    SegmentadorSOM [-V|--Version] (program version, verbose)
    SegmentadorSOM [-?|-h|--help] (display this help)

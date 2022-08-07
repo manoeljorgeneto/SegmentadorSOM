@@ -2,7 +2,7 @@
 // Name        : MapaContextual.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.3-alpha
+// Version     : v0.1.4-alpha
 // Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -36,9 +36,6 @@ string MapaContextual::geraStrMapa(Arranjo* arranjo) {
 
     return mapa.str();
 }
-
-// Construtor
-MapaContextual::MapaContextual() : Visualizacao() {}
 
 // Gera um Mapa Contextual
 string MapaContextual::geraMapa(ConjuntoDados* dados, Arranjo* arranjo) {

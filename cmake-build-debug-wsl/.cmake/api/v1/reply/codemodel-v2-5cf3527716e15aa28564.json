@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-debug",
-		"source" : "/home/manoel/CLionProjects/SegmentadorSOM"
+		"build" : "/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-debug-wsl",
+		"source" : "/mnt/d/Documentos/CLionProjects/SegmentadorSOM"
 	},
 	"version" : 
 	{
