@@ -1,59 +1,11 @@
 ./SegmentadorSOM
+-m
+teste.csv
 SegmentadorSOM, version: v0.1.4-alpha
 Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 Licensed under GNU GPL version 3 or later <https://www.gnu.org/licenses/>
 This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it under certain conditions; see the file COPYING for details.
-
-Dado(Pa): 0.316228 0 0.948683 0 0 0 
-Dado(Al): 0.218218 0.654654 0.654654 0.218218 0.218218 0 
-Dado(Ma): 0.152499 0.609994 0.762493 0 0 0.152499 
-Dado(Mi): 0 0.696311 0.696311 0.174078 0 0 
-Dado(Si): 0.229416 0.229416 0.917663 0.229416 0 0 
-Dado(Pe): 0 0.141421 0.989949 0 0 0 
-Dado(Mt): 0 0.19245 0.96225 0 0 0.19245 
-Dado(Ad): 0.258199 0.516398 0.774597 0.258199 0 0 
-Dado(Br): 0 0 1 0 0 0 
-Dado(Jo): 0 0.588348 0.784465 0.196116 0 0 
-Dado(Ti): 0 0 0.948683 0.316228 0 0 
-Dado(Ag): 0 0.5547 0.83205 0 0 0 
-Dado(Le): 0.19245 0 0.96225 0 0 0.19245 
-Dado(Fr): 0.130189 0.390567 0.911322 0 0 0 
-Dado(Ca): 0.213201 0.426401 0.852803 0.213201 0 0 
-Dado(He): 0 0.447214 0.894427 0 0 0 
-Dado(Af): 0 0.833333 0.5 0.166667 0.166667 0 
-Dado(Cr): 0 0.447214 0.894427 0 0 0 
-Dado(Ve): 0.166667 0.5 0.833333 0 0 0.166667 
-Dado(Ju): 0.140028 0.140028 0.980196 0 0 0 
-
-╔════════════════════════════════ SOM summary ═════════════════════════════════╗
- - Hyperparameters:
- * Map dimension: 10 x 10
- * Input dimension: 6
- * Values (sigma, eta, tau1, tau2): (2.5, 0.1, 1091.36, 1000)
-╚══════════════════════════════════════════════════════════════════════════════╝
-╔══════════════════════════════════════════════════════════════════════════════╗
- - Training data:
- * Using OpenMP: 12 processors
- * Number of iterations: 10000
- * Randomly initializing neurons...
-
- * Training SOM...
-
-    * Progress: 1000 iterations (10%)
-    * Progress: 2000 iterations (20%)
-    * Progress: 3000 iterations (30%)
-    * Progress: 4000 iterations (40%)
-    * Progress: 5000 iterations (50%)
-    * Progress: 6000 iterations (60%)
-    * Progress: 7000 iterations (70%)
-    * Progress: 8000 iterations (80%)
-    * Progress: 9000 iterations (90%)
-    * Progress: 10000 iterations (100%)
-
- * Generated map!
- * Elapsed time: 2.79336 second(s).
-╚══════════════════════════════════════════════════════════════════════════════╝
 
 Af		Al		Al		Ad		Ad		Si		Si		Si		Le		Le		
 Af		Al		Al		Ad		Ca		Ad		Si		Si		Pa		Pa		

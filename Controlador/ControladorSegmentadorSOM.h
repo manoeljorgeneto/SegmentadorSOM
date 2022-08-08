@@ -62,7 +62,7 @@ protected:
     // Gera um mapa contextual, informando o arquivo de dados
     void mapa(const string& arqDados);
 
-    // TODO Implementar outros métodos, como leitura do conjunto de neurônios, saída do programa etc.
+    // TODO Implementar outros métodos, de acordo com as novas funcionalidades
 
 public:
     ControladorSegmentadorSOM(int argc, char** argv, const string& arqConfigs = ""); // Construtor
