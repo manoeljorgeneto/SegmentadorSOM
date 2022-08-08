@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/Documentos/CLionProjects/SegmentadorSOM
+# Install script for directory: /home/manoel/CLionProjects/SegmentadorSOM
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

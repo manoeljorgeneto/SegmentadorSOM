@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/mnt/d/Documentos/CLionProjects/SegmentadorSOM/cmake-build-release",
-		"source" : "/mnt/d/Documentos/CLionProjects/SegmentadorSOM"
+		"build" : "/home/manoel/CLionProjects/SegmentadorSOM/cmake-build-release",
+		"source" : "/home/manoel/CLionProjects/SegmentadorSOM"
 	},
 	"version" : 
 	{
