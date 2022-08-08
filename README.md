@@ -19,7 +19,7 @@
 * Pré-requisitos:
   * Utilitários básicos para desenvolvimento de software;
   * Bibliotecas Boost (https://www.boost.org).
-    * Para instalar os pré-requisitos, no Debian, Ubuntu e distros derivadas:
+    * Para instalar os pré-requisitos no Debian, Ubuntu e distros derivadas:
       * `$ sudo apt install build-essential`
       * `$ sudo apt install libboost-all-dev`
 
