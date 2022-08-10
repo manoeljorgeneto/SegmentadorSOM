@@ -8,7 +8,7 @@
   máquina não-supervisionada** para gerar um mapa (normalmente bidimensional), que representa um conjunto de dados
   contidos em uma dimensão maior, preservando a sua estrutura topológica, facilitando a visualização e análise dos
   mesmos (https://en.wikipedia.org/wiki/Self-organizing_map).
-* Este programa implementa o SOM, permitindo a visualização do mapa treinado pelo algoritmo a partir de um conjunto de
+* Este programa implementa o SOM, permitindo a visualização do mapa treinado pelo algoritmo, a partir de um conjunto de
   dados de treinamento, por meio de um **mapa contextual**. A biblioteca que implementa o SOM é flexível o suficiente
   para permitir o emprego de outros métodos de visualização e interpretação do SOM descritos na literatura.
 * Este programa serviu como parte do trabalho de conclusão de curso (TCC) deste autor para o bacharelado em Ciência da
