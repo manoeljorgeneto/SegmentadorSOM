@@ -27,8 +27,8 @@
 
 #define PROGRAMA_NOME "SegmentadorSOM" // Nome do programa
 
-#define VERSAO "v0.1.4-alpha"   // Versão (string)
-#define VERSAO_INT 14          // Versão (int)
+#define VERSAO "v0.1.4-alpha"   // Versão (string), no formato "v<x>.<y>.<z>"; x, y, z inteiros
+#define VERSAO_INT 104          // Versão (int) -> v = x*10000 + y*100 + z
 
 #define COPYRIGHT_ANOS "2007-2022"  // Anos de existência do programa
 #define COPYRIGHT_ANO "2022"        // Ano atual de desenvolvimento do programa
