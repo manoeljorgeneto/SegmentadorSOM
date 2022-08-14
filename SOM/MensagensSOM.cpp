@@ -29,31 +29,31 @@ void MensagensSOM::verboso(unsigned msg, const SOM* som, bool verb, unsigned ite
     string dT, uOMP, nproc, numIt, iniNeu, trSOM, progresso, itr, mpGer, tDec, segs; // Palavras para tradução
     switch(som->getLingua()) {
         case PT_BR: {
-            dT =        " - Dados de treinamento:",
-            uOMP =      " * Utilizando OpenMP: ",
-            nproc =     " processadores",
-            numIt =     " * Número de iterações: ",
-            iniNeu =    " * Inicializando os neurônios de forma aleatória...",
-            trSOM =     " * Treinando o SOM...",
-            progresso = "    * Progresso: ",
-            itr =       " iterações (",
-            mpGer =     " * Mapa gerado!",
-            tDec =      " * Tempo decorrido: ",
-            segs =      " segundo(s).";
+            dT =        PTB::dT,
+            uOMP =      PTB::uOMP,
+            nproc =     PTB::nproc,
+            numIt =     PTB::numIt,
+            iniNeu =    PTB::iniNeu,
+            trSOM =     PTB::trSOM,
+            progresso = PTB::progresso,
+            itr =       PTB::itr,
+            mpGer =     PTB::mpGer,
+            tDec =      PTB::tDec,
+            segs =      PTB::segs;
             break;
         }
         default: {
-            dT =        " - Training data:",
-            uOMP =      " * Using OpenMP: ",
-            nproc =     " processors",
-            numIt =     " * Number of iterations: ",
-            iniNeu =    " * Randomly initializing neurons...",
-            trSOM =     " * Training SOM...",
-            progresso = "    * Progress: ",
-            itr =       " iterations (",
-            mpGer =     " * Generated map!",
-            tDec =      " * Elapsed time: ",
-            segs =      " second(s).";
+            dT =        EN::dT,
+            uOMP =      EN::uOMP,
+            nproc =     EN::nproc,
+            numIt =     EN::numIt,
+            iniNeu =    EN::iniNeu,
+            trSOM =     EN::trSOM,
+            progresso = EN::progresso,
+            itr =       EN::itr,
+            mpGer =     EN::mpGer,
+            tDec =      EN::tDec,
+            segs =      EN::segs;
         }
     }
 
@@ -97,19 +97,19 @@ string MensagensSOM::sumario(const SOM* som) {
     string sumSOM, hipPar, dimMp, dimEnt, valSET1T2; // Palavras para tradução
     switch(som->getLingua()) {
         case PT_BR: {
-            sumSOM      = "╔═══════════════════════════════ Sumário do SOM ═══════════════════════════════╗",
-            hipPar      = " - Hiperparâmetros:",
-            dimMp       = " * Dimensão do mapa: ",
-            dimEnt      = " * Dimensão de entrada: ",
-            valSET1T2   = " * Valores ";
+            sumSOM      = PTB::sumSOM,
+            hipPar      = PTB::hipPar,
+            dimMp       = PTB::dimMp,
+            dimEnt      = PTB::dimEnt,
+            valSET1T2   = PTB::valSET1T2;
             break;
         }
         default: {
-            sumSOM      = "╔════════════════════════════════ SOM summary ═════════════════════════════════╗",
-            hipPar      = " - Hyperparameters:",
-            dimMp       = " * Map dimension: ",
-            dimEnt      = " * Input dimension: ",
-            valSET1T2   = " * Values ";
+            sumSOM      = EN::sumSOM,
+            hipPar      = EN::hipPar,
+            dimMp       = EN::dimMp,
+            dimEnt      = EN::dimEnt,
+            valSET1T2   = EN::valSET1T2;
         }
     }
 

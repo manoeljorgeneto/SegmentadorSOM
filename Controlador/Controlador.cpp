@@ -61,23 +61,17 @@ void Controlador::listaArgumentos() {
 
 // Exibe uma mensagem de argumento inválido
 void Controlador::argumentoInvalido() const {
-    string argIn, exec, ajud; // Para tradução
     switch(this->lingua) {
         case PT_BR: {
-            argIn   = "Argumento(s) inválido(s)!",
-            exec    = "Execute \"",
-            ajud    = "para ajuda.";
+            cout << PTB::argIn << endl;
+            cout << PTB::exec << PROGRAMA_NOME << " -h\" " << PTB::ajud << endl;
             break;
         }
         default: {
-            argIn   = "Invalid argument(s)!",
-            exec    = "Run \"",
-            ajud    = "for help.";
+            cout << EN::argIn << endl;
+            cout << EN::exec << PROGRAMA_NOME << " -h\" " << EN::ajud << endl;
         }
     }
-
-    cout << argIn << endl;
-    cout << exec << PROGRAMA_NOME << " -h\" " << ajud << endl;
 }
 
 // Exibe a versão do programa
@@ -98,32 +92,23 @@ void Controlador::versao(bool verboso) {
 
 // Exibe uma tela de ajuda
 void Controlador::ajuda() {
-    string verPr, verPrVb, exAj, cake, nArg, exPdr; // Para traduções
     switch(this->lingua) {
         case PT_BR: {
-            verPr   = "(versão do programa, simples)",
-            verPrVb = "(versão do programa, verbosa)",
-            exAj    = "(exibe esta ajuda)",
-            cake    = "(para ganhar um bolo)",
-            nArg    = " <sem argumento> ",
-            exPdr   = "(faz a execução padrão)";
+            cout << "   " << PROGRAMA_NOME << " [-v|--version] " << PTB::verPr << endl;
+            cout << "   " << PROGRAMA_NOME << " [-V|--Version] " << PTB::verPrVb << endl;
+            cout << "   " << PROGRAMA_NOME << " [-?|-h|--help] " << PTB::exAj << endl;
+            cout << "   " << PROGRAMA_NOME << " [-c|--cake] " << PTB::cake << endl;
+            cout << "   " << PROGRAMA_NOME << PTB::nArg << PTB::exPdr << endl;
             break;
         }
         default: {
-            verPr   = "(program version, simple)",
-            verPrVb = "(program version, verbose)",
-            exAj    = "(display this help)",
-            cake    = "(to win a cake)",
-            nArg    = " <no argument> ",
-            exPdr   = "(do default execution)";
+            cout << "   " << PROGRAMA_NOME << " [-v|--version] " << EN::verPr << endl;
+            cout << "   " << PROGRAMA_NOME << " [-V|--Version] " << EN::verPrVb << endl;
+            cout << "   " << PROGRAMA_NOME << " [-?|-h|--help] " << EN::exAj << endl;
+            cout << "   " << PROGRAMA_NOME << " [-c|--cake] " << EN::cake << endl;
+            cout << "   " << PROGRAMA_NOME << EN::nArg << EN::exPdr << endl;
         }
     }
-
-    cout << "   " << PROGRAMA_NOME << " [-v|--version] " << verPr << endl;
-    cout << "   " << PROGRAMA_NOME << " [-V|--Version] " << verPrVb << endl;
-    cout << "   " << PROGRAMA_NOME << " [-?|-h|--help] " << exAj << endl;
-    cout << "   " << PROGRAMA_NOME << " [-c|--cake] " << cake << endl;
-    cout << "   " << PROGRAMA_NOME << nArg << exPdr << endl;
 }
 
 // Faz a execução padrão do programa

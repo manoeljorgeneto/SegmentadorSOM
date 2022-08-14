@@ -31,6 +31,7 @@
 #include <chrono>
 #include <omp.h>
 
+#include "../traducoes.h"
 #include "../versao.h"
 #include "../Calculos/Calculos.h"
 #include "../Codificador/Dado.h"

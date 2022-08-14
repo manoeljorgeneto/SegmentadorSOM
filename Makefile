@@ -33,7 +33,7 @@ Dado.o: ./Codificador/Dado.cpp ./Codificador/Dado.h ./Calculos/Calculos.h
 ConjuntoDados.o: ./Codificador/ConjuntoDados.cpp ./Codificador/ConjuntoDados.h ./Codificador/Dado.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Codificador/ConjuntoDados.cpp -o ConjuntoDados.o
 
-Controlador.o: ./Controlador/Controlador.cpp ./Controlador/Controlador.h versao.h
+Controlador.o: ./Controlador/Controlador.cpp ./Controlador/Controlador.h traducoes.h versao.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Controlador/Controlador.cpp -o Controlador.o
 
 ControladorSegmentadorSOM.o: ./Controlador/ControladorSegmentadorSOM.cpp ./Controlador/ControladorSegmentadorSOM.h ./Controlador/Controlador.h ./Arquivos/ArquivoCSV_configs.h ./Arquivos/ArquivoCSV_dados.h ./Codificador/Dado.h ./Codificador/ConjuntoDados.h ./SOM/Neuronio.h ./SOM/Arranjo.h ./SOM/SOM.h ./Visualizacao/MapaContextual.h
@@ -45,10 +45,10 @@ Arranjo.o: ./SOM/Arranjo.cpp ./SOM/Arranjo.h ./Codificador/Dado.h ./SOM/Neuronio
 Neuronio.o: ./SOM/Neuronio.cpp ./SOM/Neuronio.h ./Calculos/Calculos.h ./Codificador/Dado.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./SOM/Neuronio.cpp -o Neuronio.o
 
-SOM.o: ./SOM/SOM.cpp ./SOM/MensagensSOM.cpp ./SOM/SOM.h versao.h ./Calculos/Calculos.h ./Codificador/Dado.h ./Codificador/ConjuntoDados.h ./SOM/Neuronio.h ./SOM/Arranjo.h
+SOM.o: ./SOM/SOM.cpp ./SOM/MensagensSOM.cpp ./SOM/SOM.h traducoes.h versao.h ./Calculos/Calculos.h ./Codificador/Dado.h ./Codificador/ConjuntoDados.h ./SOM/Neuronio.h ./SOM/Arranjo.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./SOM/SOM.cpp -o SOM.o
 
-MensagensSOM.o: ./SOM/MensagensSOM.cpp ./SOM/SOM.h versao.h
+MensagensSOM.o: ./SOM/MensagensSOM.cpp ./SOM/SOM.h traducoes.h versao.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./SOM/MensagensSOM.cpp -o MensagensSOM.o
 
 MapaContextual.o: ./Visualizacao/MapaContextual.cpp ./Visualizacao/MapaContextual.h ./Visualizacao/Visualizacao.h

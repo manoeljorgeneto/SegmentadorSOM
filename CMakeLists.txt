@@ -22,6 +22,7 @@ link_directories(${Boost_LIBRARY_DIRS})
 add_executable(
         SegmentadorSOM
         main.cpp
+        traducoes.h
         versao.h
         Arquivos/Arquivo.cpp Arquivos/Arquivo.h
         Arquivos/Arquivo_Arranjo.cpp Arquivos/Arquivo_Arranjo.h

@@ -72,7 +72,7 @@ void Dado::setMarcado(bool marcado) {
 string Dado::toString() {
     ostringstream str("");
 
-    str << "Dado(" << this->rotulo << "): ";
+    str << "Data(" << this->rotulo << "): ";
     for(unsigned i = 0; i < this->dimensao; i++)
         str << this->dados->at(i) << " ";
 

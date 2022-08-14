@@ -48,17 +48,14 @@ unsigned ControladorSegmentadorSOM::verificaArgumentos() const {
 
 // Exibe uma mensagem de erro de arquivo
 void ControladorSegmentadorSOM::erroArquivo() {
-    string erro_arquivo;
     switch(this->lingua) {
         case PT_BR: {
-            erro_arquivo = "Erro ao ler o arquivo!";
+            cerr << PTB::erro_arquivo << endl;
             break;
         }
         default:
-            erro_arquivo = "Error reading file!";
+            cerr << EN::erro_arquivo << endl;
     }
-
-    cerr << erro_arquivo << endl;
 }
 
 // Atualiza as configurações de acordo com o arquivo de configurações
@@ -89,40 +86,31 @@ bool ControladorSegmentadorSOM::configuraArquivo(const string& arqConfigs) {
 
 // Exibe uma tela de ajuda
 void ControladorSegmentadorSOM::ajuda() {
-    string uso, arqDados, arqConfigs, arqArr, trDados, trDadosCfg, svArr, grMapa, grMapa2; // Para traduções
     switch(this->lingua) {
         case PT_BR: {
-            uso         = "Uso:",
-            arqDados    = "<arquivo_dados>",
-            arqConfigs  = "<arquivo_configs>",
-            arqArr      = "<arquivo_arranjo>",
-            trDados     = "(treina informando dados)",
-            trDadosCfg  = "(treina informando dados e configurações)",
-            svArr       = "(salva o arranjo treinado no arquivo especificado)",
-            grMapa      = "(gera um mapa contextual, informando dados)",
-            grMapa2     = "(gera um mapa contextual, informando dados e o arranjo treinado)";
+            cout << PTB::uso << endl;
+            cout << "   " << PROGRAMA_NOME << " [-t|--train] " << PTB::arqDados << " " << PTB::trDados << endl;
+            cout << "   " << PROGRAMA_NOME << " [-t|--train] " << PTB::arqDados << " " << PTB::arqConfigs << " "
+                 << PTB::trDadosCfg << endl;
+            cout << "   " << PROGRAMA_NOME << " [-t|--train] " << PTB::arqDados << " " << PTB::arqConfigs << " "
+                 << PTB::arqArr << " " << PTB::svArr << endl;
+            cout << "   " << PROGRAMA_NOME << " [-m|--map] " << PTB::arqDados << " " << PTB::grMapa << endl;
+            cout << "   " << PROGRAMA_NOME << " [-m|--map] " << PTB::arqDados << " " << PTB::arqArr << " "
+                 << PTB::grMapa2 << endl;
             break;
         }
         default: {
-            uso         = "Usage:",
-            arqDados    = "<data_file>",
-            arqConfigs  = "<configs_file>",
-            arqArr      = "<array_file>",
-            trDados     = "(train by informing data)",
-            trDadosCfg  = "(train by informing data and settings)",
-            svArr       = "(saves the trained array to the specified file)",
-            grMapa      = "(generates a contextual map, informing data)",
-            grMapa2     = "(generates a contextual map, informing data and the trained array)";
+            cout << EN::uso << endl;
+            cout << "   " << PROGRAMA_NOME << " [-t|--train] " << EN::arqDados << " " << EN::trDados << endl;
+            cout << "   " << PROGRAMA_NOME << " [-t|--train] " << EN::arqDados << " " << EN::arqConfigs << " "
+                 << EN::trDadosCfg << endl;
+            cout << "   " << PROGRAMA_NOME << " [-t|--train] " << EN::arqDados << " " << EN::arqConfigs << " "
+                 << EN::arqArr << " " << EN::svArr << endl;
+            cout << "   " << PROGRAMA_NOME << " [-m|--map] " << EN::arqDados << " " << EN::grMapa << endl;
+            cout << "   " << PROGRAMA_NOME << " [-m|--map] " << EN::arqDados << " " << EN::arqArr << " "
+                 << EN::grMapa2 << endl;
         }
     }
-
-    cout << uso << endl;
-    cout << "   " << PROGRAMA_NOME << " [-t|--train] " << arqDados << " " << trDados << endl;
-    cout << "   " << PROGRAMA_NOME << " [-t|--train] " << arqDados << " " << arqConfigs << " " << trDadosCfg << endl;
-    cout << "   " << PROGRAMA_NOME << " [-t|--train] " << arqDados << " " << arqConfigs << " " << arqArr << " " << svArr
-         << endl;
-    cout << "   " << PROGRAMA_NOME << " [-m|--map] " << arqDados << " " << grMapa << endl;
-    cout << "   " << PROGRAMA_NOME << " [-m|--map] " << arqDados << " " << arqArr << " " << grMapa2 << endl;
 
     Controlador::ajuda(); // Chama o método da classe mãe
 }

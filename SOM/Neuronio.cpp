@@ -143,7 +143,7 @@ void Neuronio::setMarcado(bool marcado) {
 string Neuronio::toString() {
     ostringstream str("");
 
-    str << "Neuronio pos(" << this->posicao->at(0) << "," << this->posicao->at(1) << "): ";
+    str << "Neuron pos(" << this->posicao->at(0) << "," << this->posicao->at(1) << "): ";
     for(unsigned i = 0; i < this->dim_entrada; i++)
         str << this->pesos->at(i) << " ";
 

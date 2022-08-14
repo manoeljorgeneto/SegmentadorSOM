@@ -26,6 +26,7 @@
 #include <vector>
 #include <string>
 
+#include "../traducoes.h"
 #include "../versao.h"
 
 using namespace std;
