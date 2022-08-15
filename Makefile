@@ -3,8 +3,8 @@
 all: SegmentadorSOM
 	@echo "Compilação do SegmentadorSOM finalizada!"
 
-SegmentadorSOM: main.o Arquivo.o Arquivo_Arranjo.o ArquivoCSV.o ArquivoCSV_configs.o ArquivoCSV_dados.o Calculos.o Dado.o ConjuntoDados.o Controlador.o ControladorSegmentadorSOM.o Arranjo.o Neuronio.o SOM.o MensagensSOM.o MapaContextual.o Visualizacao.o
-	g++ -fopenmp main.o Arquivo.o Arquivo_Arranjo.o ArquivoCSV.o ArquivoCSV_configs.o ArquivoCSV_dados.o Calculos.o Dado.o ConjuntoDados.o Controlador.o ControladorSegmentadorSOM.o Arranjo.o Neuronio.o SOM.o MensagensSOM.o MapaContextual.o Visualizacao.o -lboost_serialization -lboost_system -o SegmentadorSOM
+SegmentadorSOM: main.o Arquivo.o Arquivo_Arranjo.o Arquivo_String.o ArquivoCSV.o ArquivoCSV_configs.o ArquivoCSV_dados.o Calculos.o Dado.o ConjuntoDados.o Controlador.o ControladorSegmentadorSOM.o Arranjo.o Neuronio.o SOM.o MensagensSOM.o MapaContextual.o Visualizacao.o
+	g++ -fopenmp main.o Arquivo.o Arquivo_Arranjo.o Arquivo_String.o ArquivoCSV.o ArquivoCSV_configs.o ArquivoCSV_dados.o Calculos.o Dado.o ConjuntoDados.o Controlador.o ControladorSegmentadorSOM.o Arranjo.o Neuronio.o SOM.o MensagensSOM.o MapaContextual.o Visualizacao.o -lboost_serialization -lboost_system -o SegmentadorSOM
 
 main.o: main.cpp ./Controlador/ControladorSegmentadorSOM.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic main.cpp -o main.o
@@ -14,6 +14,9 @@ Arquivo.o: ./Arquivos/Arquivo.cpp ./Arquivos/Arquivo.h
 
 Arquivo_Arranjo.o: ./Arquivos/Arquivo_Arranjo.cpp ./Arquivos/Arquivo_Arranjo.h ./Arquivos/Arquivo.h ./SOM/Arranjo.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Arquivos/Arquivo_Arranjo.cpp -o Arquivo_Arranjo.o
+
+Arquivo_String.o: ./Arquivos/Arquivo_String.cpp ./Arquivos/Arquivo_String.h ./Arquivos/Arquivo.h
+	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Arquivos/Arquivo_String.cpp -o Arquivo_String.o
 
 ArquivoCSV.o: ./Arquivos/ArquivoCSV.cpp ./Arquivos/ArquivoCSV.h ./Arquivos/Arquivo.h
 	g++ -std=c++17 -fopenmp -O3 -c -Wall -Wextra -pedantic ./Arquivos/ArquivoCSV.cpp -o ArquivoCSV.o

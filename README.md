@@ -34,8 +34,10 @@
   * `$ ./SegmentadorSOM [-t|--train] <arquivo_dados>` (treina informando dados)
   * `$ ./SegmentadorSOM [-t|--train] <arquivo_dados> <arquivo_configs>` (treina informando dados e configurações)
   * `$ ./SegmentadorSOM [-t|--train] <arquivo_dados> <arquivo_configs> <arquivo_arranjo>` (salva o arranjo treinado no arquivo especificado)
+  * `$ ./SegmentadorSOM [-t|--train] <arquivo_dados> <arquivo_configs> <arquivo_arranjo> <arquivo_mapa>` (salva o arranjo e o mapa contextual nos arquivos especificados)
   * `$ ./SegmentadorSOM [-m|--map] <arquivo_dados>` (gera um mapa contextual, informando dados)
   * `$ ./SegmentadorSOM [-m|--map] <arquivo_dados> <arquivo_arranjo>` (gera um mapa contextual, informando dados e o arranjo treinado)
+  * `$ ./SegmentadorSOM [-m|--map] <arquivo_dados> <arquivo_arranjo> <arquivo_mapa>` (informa onde salvar o mapa contextual)
   * `$ ./SegmentadorSOM [-v|--version]` (versão do programa, simples)
   * `$ ./SegmentadorSOM [-V|--Version]` (versão do programa, verbosa)
   * `$ ./SegmentadorSOM [-?|-h|--help]` (exibe esta ajuda)
@@ -47,6 +49,8 @@
   * Os arquivos de dados e configurações são no formato **CSV** (_comma-separated values_);
   * O arquivo onde o arranjo de neurônios do SOM é salvo após o treinamento é do tipo binário. Se não for especificado o
     nome do arquivo, este será salvo com o nome `arr.dat`;
+  * O arquivo onde o mapa contextual é salvo é do tipo texto. Se não for especificado o nome do arquivo, este será salvo
+    com o nome `mapa.txt`;
   * O programa não faz nenhuma verificação de validade nos arquivos. Ou seja, ele espera que os arquivos já estejam
     corretos. Além disso, ele não verifica a existência de arquivo com mesmo nome ao criar um novo, sobrescrevendo o
     antigo. Lembre-se disso antes de criar ou editar os arquivos!

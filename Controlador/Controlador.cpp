@@ -2,7 +2,7 @@
 // Name        : Controlador.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.4-alpha
+// Version     : v0.1.5-alpha
 // Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -92,23 +92,24 @@ void Controlador::versao(bool verboso) {
 
 // Exibe uma tela de ajuda
 void Controlador::ajuda() {
+    string verPr, verPrVb, exAj, cake, nArg, exPdr; // Para traduções
     switch(this->lingua) {
         case PT_BR: {
-            cout << "   " << PROGRAMA_NOME << " [-v|--version] " << PTB::verPr << endl;
-            cout << "   " << PROGRAMA_NOME << " [-V|--Version] " << PTB::verPrVb << endl;
-            cout << "   " << PROGRAMA_NOME << " [-?|-h|--help] " << PTB::exAj << endl;
-            cout << "   " << PROGRAMA_NOME << " [-c|--cake] " << PTB::cake << endl;
-            cout << "   " << PROGRAMA_NOME << PTB::nArg << PTB::exPdr << endl;
+            verPr = PTB::verPr, verPrVb = PTB::verPrVb, exAj = PTB::exAj,
+            cake = PTB::cake, nArg = PTB::nArg, exPdr = PTB::exPdr;
             break;
         }
         default: {
-            cout << "   " << PROGRAMA_NOME << " [-v|--version] " << EN::verPr << endl;
-            cout << "   " << PROGRAMA_NOME << " [-V|--Version] " << EN::verPrVb << endl;
-            cout << "   " << PROGRAMA_NOME << " [-?|-h|--help] " << EN::exAj << endl;
-            cout << "   " << PROGRAMA_NOME << " [-c|--cake] " << EN::cake << endl;
-            cout << "   " << PROGRAMA_NOME << EN::nArg << EN::exPdr << endl;
+            verPr = EN::verPr, verPrVb = EN::verPrVb, exAj = EN::exAj,
+            cake = EN::cake, nArg = EN::nArg, exPdr = EN::exPdr;
         }
     }
+
+    cout << "   " << PROGRAMA_NOME << " [-v|--version] " << verPr << endl;
+    cout << "   " << PROGRAMA_NOME << " [-V|--Version] " << verPrVb << endl;
+    cout << "   " << PROGRAMA_NOME << " [-?|-h|--help] " << exAj << endl;
+    cout << "   " << PROGRAMA_NOME << " [-c|--cake] " << cake << endl;
+    cout << "   " << PROGRAMA_NOME << nArg << exPdr << endl;
 }
 
 // Faz a execução padrão do programa

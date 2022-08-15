@@ -1,0 +1,10 @@
+Af		Al		Al		Ad		Ad		Si		Si		Si		Le		Le		
+Af		Al		Al		Ad		Ca		Ad		Si		Si		Pa		Pa		
+Mi		Af		Jo		Ad		Ca		Ca		Ca		Pa		Le		Pa		
+Mi		Mi		Jo		Jo		Ca		Cr		Fr		Ju		Ju		Ju		
+Mi		Af		Jo		Al		Fr		Fr		Fr		Pa		Ju		Le		
+Mi		Ag		Jo		He		Cr		Fr		Ju		Pe		Ti		Br		
+Ag		Ag		Ag		He		He		Cr		Pe		Pe		Br		Br		
+Af		Ag		He		Cr		Cr		He		Pe		Pe		Br		Br		
+Ma		Ma		Ma		Ve		Ve		Le		Mt		Mt		Ti		Ti		
+Ma		Ma		Ve		Ve		Ve		Mt		Mt		Mt		Ti		Ti		

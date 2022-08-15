@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : ConjuntoDados.h
+// Name        : Arquivo_String.cpp
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.5-alpha
@@ -19,41 +19,32 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#ifndef CONJUNTODADOS_H
-#define CONJUNTODADOS_H
+#include "../Arquivos/Arquivo_String.h"
 
-#include <vector>
-#include <sstream>
+// Obtém a string a partir do arquivo
+string* Arquivo_String::obtemString(const string& nomeArquivo) {
+    ifstream arquivo = Arquivo_String::abreArquivo(nomeArquivo); // Abre o arquivo
 
-#include "../Codificador/Dado.h"
+    if(!arquivo) // O arquivo não existe
+        return nullptr;
 
-using namespace std;
+    stringstream buffer; // Cria um fluxo de string
+    buffer << arquivo.rdbuf(); // Copia o conteúdo do arquivo para o buffer
 
-/**
- * Classe que armazena um conjunto de dados.
- */
-class ConjuntoDados {
-protected:
-    unsigned tamanho{}; // Tamanho do conjunto de dados
-    unsigned dimensao{}; // Dimensão dos vetores de dados
+    auto* s = new string;
+    *s = buffer.str(); // Armazena o conteúdo do buffer na string
 
-    bool normalizados; // Define se os dados terão seus valores normalizados
+    arquivo.close(); // Fecha o arquivo
 
-    vector<Dado*>* dados; // Contêiner onde estarão os dados
+    return s;
+}
 
-public:
-    explicit ConjuntoDados(bool normalizados = true); // Construtor
-    virtual ~ConjuntoDados(); // Destrutor
+// Grava a string no arquivo
+void Arquivo_String::gravaString(const string& s, const string& nomeArquivo) {
+    ofstream arquivo = Arquivo_String::criaArquivo(nomeArquivo); // Cria o arquivo
+    assert(arquivo.good()); // Testa o arquivo
 
-    void adicionaDado(Dado* d); // Adiciona um dado ao conjunto
+    arquivo << s; // Grava a string no arquivo
 
-    // Gets
-    [[nodiscard]] unsigned getTamanho() const;
-    [[nodiscard]] unsigned getDimensao() const;
-    [[nodiscard]] bool getNormalizados() const;
-    vector<Dado*>* getDados();
-
-    virtual string toString(); // Retorna uma string com os dados armazenados
-};
-
-#endif // CONJUNTODADOS_H
+    arquivo.close(); // Fecha o arquivo
+}

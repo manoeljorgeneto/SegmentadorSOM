@@ -1,5 +1,5 @@
 //======================================================================================================================
-// Name        : Calculos.h
+// Name        : Arquivo_String.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
 // Version     : v0.1.5-alpha
@@ -19,36 +19,26 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
-#ifndef CALCULOS_H_
-#define CALCULOS_H_
+#ifndef ARQUIVO_STRING_H
+#define ARQUIVO_STRING_H
 
-#include <vector>
-#include <cmath>
+#include <cassert>
+#include <sstream>
 
-using namespace std;
-
-/**
- * Sobrecarga de operadores.
- */
-vector<double> operator+(const vector<double>& a, const vector<double>& b); // Soma de vetores
-vector<double> operator-(const vector<double>& a, const vector<double>& b); // Subtração de vetores
-vector<double> operator*(const vector<double>& a, double b); // Multiplicação por um Real
-vector<double> operator*(double a, const vector<double>& b); // Multiplicação por um Real
-vector<double> operator/(const vector<double>& a, double b); // Divisão por um Real
-double operator*(const vector<double>& a, const vector<double>& b); // Produto interno
+#include "../Arquivos/Arquivo.h"
 
 /**
- * Classe para efetuar cálculos diversos entre vetores de doubles.
+ * Classe para a leitura e escrita de uma string em arquivo, herdeira da classe Arquivo.
  */
-class Calculos {
-	
+class Arquivo_String : public Arquivo {
+protected:
+
 public:
-    Calculos() = default; // Construtor
-    virtual ~Calculos() = default; // Destrutor
+    // Obtém a string a partir do arquivo
+    static string* obtemString(const string& nomeArquivo);
 
-    static double calculaNorma(const vector<double>& a); // Módulo do vetor: ||a|| = √(a * a)
-    static void normalizaVetor(vector<double>* a); // Normaliza o vetor (deixando-o com norma igual a 1)
-    static double calculaDistancia(const vector<double>& a, const vector<double>& b); // Distância euclidiana
+    // Grava a string no arquivo
+    static void gravaString(const string& s, const string& nomeArquivo);
 };
 
-#endif // CALCULOS_H_
+#endif // ARQUIVO_STRING_H

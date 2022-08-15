@@ -134,6 +134,12 @@
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Arquivos/Arquivo_Arranjo.h">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Arquivos/Arquivo_String.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Arquivos/Arquivo_String.h">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/Calculos/Calculos.cpp">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
@@ -198,6 +204,9 @@
 			<Option target="SegmentadorSOM"/>
 		</Unit>
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/main.cpp">
+			<Option target="SegmentadorSOM"/>
+		</Unit>
+		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/traducoes.h">
 			<Option target="SegmentadorSOM"/>
 		</Unit>
 		<Unit filename="/home/manoel/CLionProjects/SegmentadorSOM/versao.h">

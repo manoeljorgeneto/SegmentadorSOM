@@ -26,6 +26,7 @@ add_executable(
         versao.h
         Arquivos/Arquivo.cpp Arquivos/Arquivo.h
         Arquivos/Arquivo_Arranjo.cpp Arquivos/Arquivo_Arranjo.h
+        Arquivos/Arquivo_String.cpp Arquivos/Arquivo_String.h
         Arquivos/ArquivoCSV.cpp Arquivos/ArquivoCSV.h
         Arquivos/ArquivoCSV_configs.cpp Arquivos/ArquivoCSV_configs.h
         Arquivos/ArquivoCSV_dados.cpp Arquivos/ArquivoCSV_dados.h

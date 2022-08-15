@@ -2,7 +2,7 @@
 // Name        : versao.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.4-alpha
+// Version     : v0.1.5-alpha
 // Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -27,8 +27,8 @@
 
 #define PROGRAMA_NOME "SegmentadorSOM" // Nome do programa
 
-#define VERSAO "v0.1.4-alpha"   // Versão (string), no formato "v<x>.<y>.<z>"; x, y, z inteiros
-#define VERSAO_INT 104          // Versão (int) -> v = x*10000 + y*100 + z
+#define VERSAO "v0.1.5-alpha"   // Versão (string), no formato "v<x>.<y>.<z>"; x, y, z inteiros
+#define VERSAO_INT 105          // Versão (int) -> v = x*10000 + y*100 + z
 
 #define COPYRIGHT_ANOS "2007-2022"  // Anos de existência do programa
 #define COPYRIGHT_ANO "2022"        // Ano atual de desenvolvimento do programa

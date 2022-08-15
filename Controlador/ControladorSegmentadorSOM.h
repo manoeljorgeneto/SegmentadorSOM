@@ -2,7 +2,7 @@
 // Name        : ControladorSegmentadorSOM.h
 // Author      : Manoel Jorge Ribeiro Neto
 // e-mail      : manoeljorge.neto@gmail.com
-// Version     : v0.1.4-alpha
+// Version     : v0.1.5-alpha
 // Copyright   : Copyright © 2007-2022 Manoel Jorge Ribeiro Neto <manoeljorge.neto@gmail.com>
 // Description : Programa SegmentadorSOM, que utiliza o algoritmo SOM de Kohonen.
 //
@@ -23,9 +23,10 @@
 #define CONTROLADORSEGMENTADORSOM_H
 
 #include "../Controlador/Controlador.h"
+#include "../Arquivos/Arquivo_Arranjo.h"
+#include "../Arquivos/Arquivo_String.h"
 #include "../Arquivos/ArquivoCSV_configs.h"
 #include "../Arquivos/ArquivoCSV_dados.h"
-#include "../Arquivos/Arquivo_Arranjo.h"
 #include "../Codificador/Dado.h"
 #include "../Codificador/ConjuntoDados.h"
 #include "../SOM/Neuronio.h"
@@ -52,15 +53,16 @@ protected:
     void padrao(const string& arqDados); // Execução informando o arquivo de dados
     // Execução informando os arquivos de dados e configurações
     void padrao(const string& arqDados, const string& arqConfigs);
-    // Execução informando os arquivos de dados, configurações e do arranjo a ser salvo
-    void padrao(const string& arqDados, const string& arqConfigs, const string& arqArranjo);
+    // Execução informando os arquivos de dados e configurações; além do arranjo e mapa contextual a serem salvos
+    void padrao(const string& arqDados, const string& arqConfigs, const string& arqArranjo, const string& arqMapa = "");
 
     // Gera um mapa contextual, a partir de um conjunto de dados e de um arranjo de neurônios do SOM
-    static void mapa(ConjuntoDados* dados, Arranjo* arr);
+    void mapa(ConjuntoDados* dados, Arranjo* arr, bool grava = true, bool exibe = true) const;
     // Gera um mapa contextual, a partir dos arquivos de dados e do arranjo de neurônios do SOM
-    void mapa(const string& arqDados, const string& arqArranjo);
+    void mapa(const string& arqDados, const string& arqArranjo, bool grava = true, bool exibe = true,
+              const string& arqMapa = "");
     // Gera um mapa contextual, informando o arquivo de dados
-    void mapa(const string& arqDados);
+    void mapa(const string& arqDados, bool grava = true, bool exibe = true);
 
     // TODO Implementar outros métodos, de acordo com as novas funcionalidades
 
