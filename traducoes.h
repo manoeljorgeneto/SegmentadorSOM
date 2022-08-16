@@ -19,6 +19,10 @@
 // <https://www.gnu.org/licenses/>
 //======================================================================================================================
 
+/**
+ * Cabeçalho com as strings utilizadas pelo programa.
+ * O objetivo deste arquivo é reunir as strings em um só lugar, para facilitar as possíveis traduções.
+ */
 #ifndef TRADUCOES_H
 #define TRADUCOES_H
 
@@ -27,7 +31,7 @@
 // English
 namespace EN {
 //======================================================================================================================
-    // Mensagens Classe Controlador
+    // Mensagens da classe Controlador
 
     // Método Controlador::argumentoInvalido()
     static std::string argIn    = "Invalid argument(s)!";
@@ -42,7 +46,7 @@ namespace EN {
     static std::string nArg     = " <no argument> ";
     static std::string exPdr    = "(do default execution)";
 //======================================================================================================================
-    //Mensagens Classe ControladorSegmentadorSOM
+    // Mensagens da classe ControladorSegmentadorSOM
 
     // Método ControladorSegmentadorSOM::erroArquivo()
     static std::string erro_arquivo = "Error reading file!";
@@ -61,7 +65,7 @@ namespace EN {
     static std::string grMapa2      = "(generates a contextual map, informing data and the trained array)";
     static std::string grMapa3      = "(informs where to save the contextual map)";
 //======================================================================================================================
-    // Mensagens Classe MensagensSOM
+    // Mensagens da classe MensagensSOM
 
     // Método MensagensSOM::verboso()
     static std::string dT           = " - Training data:";
@@ -88,7 +92,7 @@ namespace EN {
 // PT_BR
 namespace PTB {
 //======================================================================================================================
-    // Mensagens Classe Controlador
+    // Mensagens da classe Controlador
 
     // Método Controlador::argumentoInvalido()
     static std::string argIn    = "Argumento(s) inválido(s)!";
@@ -103,7 +107,7 @@ namespace PTB {
     static std::string nArg     = " <sem argumento> ";
     static std::string exPdr    = "(faz a execução padrão)";
 //======================================================================================================================
-    //Mensagens Classe ControladorSegmentadorSOM
+    // Mensagens da classe ControladorSegmentadorSOM
 
     // Método ControladorSegmentadorSOM::erroArquivo()
     static std::string erro_arquivo = "Erro ao ler o arquivo!";
@@ -120,9 +124,9 @@ namespace PTB {
     static std::string trSOM4       = "(salva o arranjo e o mapa contextual nos arquivos especificados)";
     static std::string grMapa1      = "(gera um mapa contextual, informando dados)";
     static std::string grMapa2      = "(gera um mapa contextual, informando dados e o arranjo treinado)";
-    static std::string grMapa3      = "(informa onde salvar o mapa contextual)";
+    static std::string grMapa3      = "(informa aonde salvar o mapa contextual)";
 //======================================================================================================================
-    // Mensagens Classe MensagensSOM
+    // Mensagens da classe MensagensSOM
 
     // Método MensagensSOM::verboso()
     static std::string dT           = " - Dados de treinamento:";

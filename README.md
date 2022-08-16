@@ -37,7 +37,7 @@
   * `$ ./SegmentadorSOM [-t|--train] <arquivo_dados> <arquivo_configs> <arquivo_arranjo> <arquivo_mapa>` (salva o arranjo e o mapa contextual nos arquivos especificados)
   * `$ ./SegmentadorSOM [-m|--map] <arquivo_dados>` (gera um mapa contextual, informando dados)
   * `$ ./SegmentadorSOM [-m|--map] <arquivo_dados> <arquivo_arranjo>` (gera um mapa contextual, informando dados e o arranjo treinado)
-  * `$ ./SegmentadorSOM [-m|--map] <arquivo_dados> <arquivo_arranjo> <arquivo_mapa>` (informa onde salvar o mapa contextual)
+  * `$ ./SegmentadorSOM [-m|--map] <arquivo_dados> <arquivo_arranjo> <arquivo_mapa>` (informa aonde salvar o mapa contextual)
   * `$ ./SegmentadorSOM [-v|--version]` (versão do programa, simples)
   * `$ ./SegmentadorSOM [-V|--Version]` (versão do programa, verbosa)
   * `$ ./SegmentadorSOM [-?|-h|--help]` (exibe esta ajuda)
