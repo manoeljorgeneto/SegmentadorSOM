@@ -5,19 +5,19 @@
 
 
 * O **algoritmo SOM** (_Self-Organizing Map_) é um tipo de **rede neural artificial**, que utiliza **aprendizagem de
-  máquina não-supervisionada** para gerar um mapa (normalmente bidimensional), que representa um conjunto de dados
-  contidos em uma dimensão maior, preservando a sua estrutura topológica, facilitando a visualização e análise dos
-  mesmos (https://en.wikipedia.org/wiki/Self-organizing_map).
+  máquina competitiva e não-supervisionada** para gerar um mapa (normalmente bidimensional), que representa um conjunto
+  de dados contidos em uma dimensão maior, preservando a sua estrutura topológica, facilitando a visualização e análise
+  dos mesmos (https://en.wikipedia.org/wiki/Self-organizing_map).
 * Este programa implementa o SOM, permitindo a visualização do mapa treinado pelo algoritmo, a partir de um conjunto de
-  dados de treinamento, por meio de um **mapa contextual**. A biblioteca que implementa o SOM é flexível o suficiente
-  para permitir o emprego de outros métodos de visualização e interpretação do SOM descritos na literatura.
+  dados de treinamento, por um **mapa contextual**. A biblioteca que implementa o SOM é flexível o suficiente para
+  permitir o emprego de outros métodos de visualização e interpretação do SOM descritos na literatura.
 * Este programa serviu como parte do trabalho de conclusão de curso (TCC) deste autor para o bacharelado em Ciência da
   Computação pela UFAL (Universidade Federal de Alagoas). Os documentos do TCC e da apresentação realizada estão
   disponíveis neste repositório.
 
 
 * Pré-requisitos:
-  * Utilitários básicos para desenvolvimento de software;
+  * Utilitários básicos para desenvolvimento de _software_;
   * Bibliotecas Boost (https://www.boost.org).
     * Para instalar os pré-requisitos no Debian, Ubuntu e distros derivadas:
       * `$ sudo apt install build-essential`
@@ -27,7 +27,7 @@
 * Para compilar:
   * `$ make clean`
   * `$ make all -j<n>`
-    * onde `<n>` é, normalmente, o número de threads de seu processador.
+    * onde `<n>` é, normalmente, o número de _threads_ de seu processador.
 
 
 * Uso:
@@ -52,5 +52,5 @@
   * O arquivo onde o mapa contextual é salvo é do tipo texto. Se não for especificado o nome do arquivo, este será salvo
     com o nome `mapa.txt`;
   * O programa não faz nenhuma verificação de validade nos arquivos. Ou seja, ele espera que os arquivos já estejam
-    corretos. Além disso, ele não verifica a existência de arquivo com mesmo nome ao criar um novo, sobrescrevendo o
+    corretos. Além disso, ele não verifica a existência de arquivo com mesmo nome em sua criação, sobrescrevendo o
     antigo. Lembre-se disso antes de criar ou editar os arquivos!
