@@ -23,7 +23,7 @@
 
 int main(int argc, char** argv) {
 
-    // Objeto que faz o controle do fluxo do programa, de acordo com os argumentos
+    // Objeto que faz o controle do fluxo do programa, conforme os argumentos
     ControladorSegmentadorSOM ctrl(argc, argv, "configs.csv");
     ctrl.executa(); // Executa o programa!
 
