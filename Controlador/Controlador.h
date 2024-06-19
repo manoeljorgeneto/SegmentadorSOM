@@ -25,6 +25,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cstdint>
 
 #include "../traducoes.h"
 #include "../versao.h"
