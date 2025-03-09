@@ -26,7 +26,7 @@
 
 * Para compilar:
   * `$ make clean`
-  * `$ make all -j$(nproc)`    
+  * `$ make all -j$(nproc)`
 
 
 * Uso:
