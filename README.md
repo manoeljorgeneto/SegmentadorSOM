@@ -26,8 +26,8 @@
 
 * Para compilar:
   * `$ make clean`
-  * `$ make all -j<n>`
-    * onde `<n>` é, normalmente, o número de _threads_ de seu processador.
+  * `$ make all -j$(nproc)`
+    * onde `$(nproc)` é, normalmente, o número de _threads_ de seu processador.
 
 
 * Uso:
